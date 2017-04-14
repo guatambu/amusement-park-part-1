@@ -8,6 +8,8 @@
 
 import Foundation
 
+// getting the ball rolling
+
 class ManagerSource {
     let areaAccess:Bool
     let rideAccess: Bool
