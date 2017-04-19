@@ -10,6 +10,7 @@ import Foundation
 
 // getting the ball rolling
 
+
 enum AreaAccess: String {
     case amusement = "Amusement Areas"
     case kitchen = "Kitchen Areas"
@@ -17,35 +18,6 @@ enum AreaAccess: String {
     case maintenance = "Maintenance Areas"
     case office = "Office Areas"
     
-}
-
-enum RideAccess: String {
-    case all = "Access All Rides"
-    case skip = "Skip All Ride Lines"
-    case deferToRules = "See Entrant Access Rules"
-}
-
-enum DiscountAccess: String {
-    case food = "Discount on Food"
-    case merch = "Discount on Merchandise"
-}
-
-enum DiscountAmount: String {
-    case ten = "10%"
-    case fifteen = "15%"
-    case twenty = "20%"
-    case twentyfive = "25%"
-}
-
-enum RequiredInformationType: String {
-    case personal = "Required Personal Information"
-    case business = "Required Business Information"
-}
-
-enum ManagerType: String {
-    case shift = "Shift"
-    case general = "General"
-    case senior = "Senior"
 }
 
 enum CollectedData: String {
@@ -63,6 +35,18 @@ enum CollectedData: String {
     case projectNumber = "Project Number"
 }
 
+enum DiscountAccess: String {
+    case food = "Discount on Food"
+    case merch = "Discount on Merchandise"
+}
+
+enum DiscountAmount: String {
+    case ten = "10%"
+    case fifteen = "15%"
+    case twenty = "20%"
+    case twentyfive = "25%"
+}
+
 enum EntrantType: String {
     case classic = "Classic Guest"
     case vip = "VIP Guest"
@@ -76,5 +60,26 @@ enum EntrantType: String {
     case manager = "Manager"
     case venfor = "Vendor"
 }
+
+enum ManagerType: String {
+    case shift = "Shift"
+    case general = "General"
+    case senior = "Senior"
+}
+
+enum RequiredInformationType: String {
+    case personal = "Required Personal Information"
+    case business = "Required Business Information"
+}
+
+enum RideAccess: String {
+    case all = "Access All Rides"
+    case skip = "Skip All Ride Lines"
+    case deferToRules = "See Entrant Access Rules"
+}
+
+
+
+
 
 

@@ -10,20 +10,13 @@ import Foundation
 
 // getting the ball rolling
 
-class ManagerSource {
-    let areaAccess:Bool
-    let rideAccess: Bool
-    let discountAccess: Bool
-    let requiredPersonalInfo: Bool
-    
-
-    
-    init(areaAccess: Bool, rideAccess: Bool, discountAccess: Bool, requiredPersonalInfo: Bool){
-        self.areaAccess = areaAccess
-        self.rideAccess = rideAccess
-        self.discountAccess = discountAccess
-        self.requiredPersonalInfo = requiredPersonalInfo
-    
-    }
+struct ManagerSource {
+    var managerTier = [ManagerType.shift, ManagerType.senior, ManagerType.general]
+    var areaAccess = [AreaAccess.amusement, AreaAccess.kitchen, AreaAccess.maintenance, AreaAccess.office, AreaAccess.rideControl]
+    var discountFood = "\(DiscountAmount.twentyfive.rawValue) \(DiscountAccess.food.rawValue)"
+    var discountMerch = "\(DiscountAmount.twentyfive.rawValue) \(DiscountAccess.merch.rawValue)"
+    var rideAccess = RideAccess.all
+    var requiredInfoType = RequiredInformationType.personal
+    var requiredInfo = [CollectedData.firstName, CollectedData.lastName, CollectedData.street, CollectedData.city, CollectedData.state, CollectedData.zip, CollectedData.ssn, CollectedData.birthdate, CollectedData.managementTier]
     
 }
