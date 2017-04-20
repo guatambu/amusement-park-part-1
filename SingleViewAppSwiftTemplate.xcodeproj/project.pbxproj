@@ -22,6 +22,7 @@
 		FA23DAE91EA817610043C063 /* GuestFreeChildSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23DAE81EA817610043C063 /* GuestFreeChildSource.swift */; };
 		FA23DAEB1EA817D20043C063 /* GuestVIPSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23DAEA1EA817D20043C063 /* GuestVIPSource.swift */; };
 		FA23DAED1EA8184F0043C063 /* GuestClassicSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23DAEC1EA8184F0043C063 /* GuestClassicSource.swift */; };
+		FA23DAEF1EA935FF0043C063 /* ErrorSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23DAEE1EA935FF0043C063 /* ErrorSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		FA23DAE81EA817610043C063 /* GuestFreeChildSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestFreeChildSource.swift; sourceTree = "<group>"; };
 		FA23DAEA1EA817D20043C063 /* GuestVIPSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestVIPSource.swift; sourceTree = "<group>"; };
 		FA23DAEC1EA8184F0043C063 /* GuestClassicSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestClassicSource.swift; sourceTree = "<group>"; };
+		FA23DAEE1EA935FF0043C063 /* ErrorSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			children = (
 				3A8AADC81DF9B85E00A2B931 /* AppDelegate.swift */,
 				3A8AADCA1DF9B85E00A2B931 /* ViewController.swift */,
+				FA23DAEE1EA935FF0043C063 /* ErrorSource.swift */,
 				FA23DAEC1EA8184F0043C063 /* GuestClassicSource.swift */,
 				FA23DAE81EA817610043C063 /* GuestFreeChildSource.swift */,
 				FA23DAEA1EA817D20043C063 /* GuestVIPSource.swift */,
@@ -289,6 +292,7 @@
 				FA23DAEB1EA817D20043C063 /* GuestVIPSource.swift in Sources */,
 				FA23DADF1EA148470043C063 /* MacroDataDetail.swift in Sources */,
 				FA23DAE91EA817610043C063 /* GuestFreeChildSource.swift in Sources */,
+				FA23DAEF1EA935FF0043C063 /* ErrorSource.swift in Sources */,
 				FA23DAED1EA8184F0043C063 /* GuestClassicSource.swift in Sources */,
 				FA23DADD1EA144180043C063 /* ManagerSource.swift in Sources */,
 				FA23DAE71EA817300043C063 /* HourlyFoodServicesSource.swift in Sources */,
