@@ -58,7 +58,7 @@ enum EntrantType: String {
     case hourlyRide = "Hourly Employee - Ride Services"
     case hourlyMaintenance = "Hourly Employee - Maintenance"
     case manager = "Manager"
-    case venfor = "Vendor"
+    case vendor = "Vendor"
 }
 
 enum ManagerType: String {
