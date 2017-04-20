@@ -61,17 +61,46 @@ class Swipe: Swipeable {
     /// this function checks the permissions for various Entrant Types and returns Bool
     func Swipe() {
         switch EntrantType {
+            
         case .classic:
+                print("\(.classic.rawValue) is valid")
+            
         case .vip:
+                print("\(.vip.rawValue) is valid")
+            
         case .child:
+                print("\(.child.rawValue) is valid")
+            
         case .seasonPass:
+                print("\(.seasonPass.rawValue) is valid")
+            
         case .senior:
+                print("\(.senior.rawValue) is valid")
+            
         case .contractEmployee:
+                print("\(.contractEmployee.rawValue) is valid")
+            
         case .hourlyFood:
+                print("\(.hourlyFood.rawValue) is valid")
+            
         case .hourlyRide:
+                print("\(.hourlyRide.rawValue) is valid")
+            
         case .hourlyMaintenance:
-        case .manager:
+                print("\(.hourlyMaintenance.rawValue) is valid")
+            
+        case .manager where ManagerType.shift:
+                print("\(ManagerType.shift.rawValue) \(.manager.rawValue) is valid")
+            
+        case .manager where ManagerType.general:
+                print("\(ManagerType.general.rawValue) \(.manager.rawValue) is valid")
+            
+        case .manager where ManagerType.senior:
+                print("\(ManagerType.senior.rawValue) \(.manager.rawValue) is valid")
+            
         case .vendor:
+                print("\(.vendor.rawValue) is valid")
+            
         }
     }
 }
