@@ -15,7 +15,7 @@
 		3A8AADDE1DF9B85E00A2B931 /* SingleViewAppSwiftTemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AADDD1DF9B85E00A2B931 /* SingleViewAppSwiftTemplateTests.swift */; };
 		3A8AADE91DF9B85E00A2B931 /* SingleViewAppSwiftTemplateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AADE81DF9B85E00A2B931 /* SingleViewAppSwiftTemplateUITests.swift */; };
 		FA23DADD1EA144180043C063 /* ManagerSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23DADC1EA144180043C063 /* ManagerSource.swift */; };
-		FA23DADF1EA148470043C063 /* MacroDataDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23DADE1EA148470043C063 /* MacroDataDetail.swift */; };
+		FA23DADF1EA148470043C063 /* MacroCategoryInputDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23DADE1EA148470043C063 /* MacroCategoryInputDetail.swift */; };
 		FA23DAE31EA812310043C063 /* HourlyMaintenanceSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23DAE21EA812310043C063 /* HourlyMaintenanceSource.swift */; };
 		FA23DAE51EA816E10043C063 /* HourlyRideSerivcesSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23DAE41EA816E10043C063 /* HourlyRideSerivcesSource.swift */; };
 		FA23DAE71EA817300043C063 /* HourlyFoodServicesSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23DAE61EA817300043C063 /* HourlyFoodServicesSource.swift */; };
@@ -23,6 +23,7 @@
 		FA23DAEB1EA817D20043C063 /* GuestVIPSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23DAEA1EA817D20043C063 /* GuestVIPSource.swift */; };
 		FA23DAED1EA8184F0043C063 /* GuestClassicSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23DAEC1EA8184F0043C063 /* GuestClassicSource.swift */; };
 		FA23DAEF1EA935FF0043C063 /* ErrorSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23DAEE1EA935FF0043C063 /* ErrorSource.swift */; };
+		FA23DAF11EA93F570043C063 /* Swipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23DAF01EA93F570043C063 /* Swipe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +58,7 @@
 		3A8AADE81DF9B85E00A2B931 /* SingleViewAppSwiftTemplateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewAppSwiftTemplateUITests.swift; sourceTree = "<group>"; };
 		3A8AADEA1DF9B85E00A2B931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA23DADC1EA144180043C063 /* ManagerSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerSource.swift; sourceTree = "<group>"; };
-		FA23DADE1EA148470043C063 /* MacroDataDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacroDataDetail.swift; sourceTree = "<group>"; };
+		FA23DADE1EA148470043C063 /* MacroCategoryInputDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacroCategoryInputDetail.swift; sourceTree = "<group>"; };
 		FA23DAE21EA812310043C063 /* HourlyMaintenanceSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourlyMaintenanceSource.swift; sourceTree = "<group>"; };
 		FA23DAE41EA816E10043C063 /* HourlyRideSerivcesSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourlyRideSerivcesSource.swift; sourceTree = "<group>"; };
 		FA23DAE61EA817300043C063 /* HourlyFoodServicesSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourlyFoodServicesSource.swift; sourceTree = "<group>"; };
@@ -65,6 +66,7 @@
 		FA23DAEA1EA817D20043C063 /* GuestVIPSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestVIPSource.swift; sourceTree = "<group>"; };
 		FA23DAEC1EA8184F0043C063 /* GuestClassicSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestClassicSource.swift; sourceTree = "<group>"; };
 		FA23DAEE1EA935FF0043C063 /* ErrorSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorSource.swift; sourceTree = "<group>"; };
+		FA23DAF01EA93F570043C063 /* Swipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swipe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +127,8 @@
 				FA23DAE21EA812310043C063 /* HourlyMaintenanceSource.swift */,
 				FA23DAE41EA816E10043C063 /* HourlyRideSerivcesSource.swift */,
 				FA23DADC1EA144180043C063 /* ManagerSource.swift */,
-				FA23DADE1EA148470043C063 /* MacroDataDetail.swift */,
+				FA23DADE1EA148470043C063 /* MacroCategoryInputDetail.swift */,
+				FA23DAF01EA93F570043C063 /* Swipe.swift */,
 				3A8AADCC1DF9B85E00A2B931 /* Main.storyboard */,
 				3A8AADCF1DF9B85E00A2B931 /* Assets.xcassets */,
 				3A8AADD11DF9B85E00A2B931 /* LaunchScreen.storyboard */,
@@ -287,10 +290,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA23DAE31EA812310043C063 /* HourlyMaintenanceSource.swift in Sources */,
+				FA23DAF11EA93F570043C063 /* Swipe.swift in Sources */,
 				FA23DAE51EA816E10043C063 /* HourlyRideSerivcesSource.swift in Sources */,
 				3A8AADCB1DF9B85E00A2B931 /* ViewController.swift in Sources */,
 				FA23DAEB1EA817D20043C063 /* GuestVIPSource.swift in Sources */,
-				FA23DADF1EA148470043C063 /* MacroDataDetail.swift in Sources */,
+				FA23DADF1EA148470043C063 /* MacroCategoryInputDetail.swift in Sources */,
 				FA23DAE91EA817610043C063 /* GuestFreeChildSource.swift in Sources */,
 				FA23DAEF1EA935FF0043C063 /* ErrorSource.swift in Sources */,
 				FA23DAED1EA8184F0043C063 /* GuestClassicSource.swift in Sources */,
