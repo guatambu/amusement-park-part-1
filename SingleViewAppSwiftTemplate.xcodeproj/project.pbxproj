@@ -28,6 +28,7 @@
 		FA590EA01EA96BBD0018D398 /* GuestSeniorSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA590E9F1EA96BBD0018D398 /* GuestSeniorSource.swift */; };
 		FA590EA21EA96CB10018D398 /* ContractEmployeeSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA590EA11EA96CB10018D398 /* ContractEmployeeSource.swift */; };
 		FA590EA41EA96D720018D398 /* VendorSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA590EA31EA96D720018D398 /* VendorSource.swift */; };
+		FA590EA61EAA9B010018D398 /* TestUserSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA590EA51EAA9B010018D398 /* TestUserSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		FA590E9F1EA96BBD0018D398 /* GuestSeniorSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestSeniorSource.swift; sourceTree = "<group>"; };
 		FA590EA11EA96CB10018D398 /* ContractEmployeeSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractEmployeeSource.swift; sourceTree = "<group>"; };
 		FA590EA31EA96D720018D398 /* VendorSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorSource.swift; sourceTree = "<group>"; };
+		FA590EA51EAA9B010018D398 /* TestUserSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUserSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				FA590EA31EA96D720018D398 /* VendorSource.swift */,
 				FA23DADE1EA148470043C063 /* MacroCategoryInputDetail.swift */,
 				FA23DAF01EA93F570043C063 /* Swipe.swift */,
+				FA590EA51EAA9B010018D398 /* TestUserSource.swift */,
 				3A8AADCC1DF9B85E00A2B931 /* Main.storyboard */,
 				3A8AADCF1DF9B85E00A2B931 /* Assets.xcassets */,
 				3A8AADD11DF9B85E00A2B931 /* LaunchScreen.storyboard */,
@@ -304,6 +307,7 @@
 				FA23DAE31EA812310043C063 /* HourlyMaintenanceSource.swift in Sources */,
 				FA590EA21EA96CB10018D398 /* ContractEmployeeSource.swift in Sources */,
 				FA23DAF11EA93F570043C063 /* Swipe.swift in Sources */,
+				FA590EA61EAA9B010018D398 /* TestUserSource.swift in Sources */,
 				FA23DAE51EA816E10043C063 /* HourlyRideSerivcesSource.swift in Sources */,
 				3A8AADCB1DF9B85E00A2B931 /* ViewController.swift in Sources */,
 				FA590E9E1EA96AFF0018D398 /* GuestSeasonPassSource.swift in Sources */,
