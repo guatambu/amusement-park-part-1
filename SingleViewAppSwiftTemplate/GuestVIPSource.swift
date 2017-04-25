@@ -8,16 +8,24 @@
 
 import Foundation
 
-struct GuestVipSource {
-
-    enum GuestVIP {
-        
-        case amusementAreas
-        case accessAllRides
-        case skipLines
-        case foodDiscount
-        case merchDiscount
+// Entrant Type: sublassB: tier 2
+class GuestVIPSource: GuestClassicSource {
+    
+    var skipLines: Bool = true
+    var isEligibleForDiscounts: Bool = true
+    var foodDiscount: Double
+    var merchDiscount: Double
+    
+    init(
+        amusementAreaAccess: Bool,
+        allRidesAccess: Bool,
+        foodDiscount: Double,
+        merchDiscount: Double
+        ) {
+        self.foodDiscount = foodDiscount
+        self.merchDiscount = merchDiscount
+        super.init(amusementAreaAccess: amusementAreaAccess, allRidesAccess: allRidesAccess)
         
     }
-
+    
 }

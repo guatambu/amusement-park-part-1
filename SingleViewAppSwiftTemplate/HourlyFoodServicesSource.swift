@@ -8,24 +8,45 @@
 
 import Foundation
 
-struct HourlyFoodServicesSource {
-
-    enum HourlyFoodServices {
-
-        case amusementAreas
-        case kitchenAreas
-        case accessAllRides
-        case foodDiscount
-        case merchDiscount
-        case firstName
-        case lastName
-        case streetAddress
-        case city
-        case state
-        case zipCode
-        case socialSecurityNumber
-        case dateOfBirth
-        
+// Entrant Type: subclassB: tier 4
+class HourlyFoodServiceSource: GuestSeniorSource {
+    
+    var kitchenAreaAccess = true
+    var streetAddress: String
+    var city: String
+    var state: String
+    var zipCode: Int
+    var socialSecurityNumber: String
+    
+    init(
+        amusementAreaAccess: Bool,
+        allRidesAccess: Bool,
+        dateOfBirth: String,
+        firstName: String,
+        lastName: String,
+        streetAddress: String,
+        city: String,
+        state: String,
+        zipCode: Int,
+        socialSecurityNumber: String
+        ) {
+        self.streetAddress = streetAddress
+        self.city = city
+        self.state = state
+        self.zipCode = zipCode
+        self.socialSecurityNumber = socialSecurityNumber
+        super.init(
+            amusementAreaAccess: amusementAreaAccess,
+            allRidesAccess: allRidesAccess,
+            dateOfBirth: dateOfBirth,
+            firstName: firstName,
+            lastName: lastName
+        )
+        self.foodDiscount = 0.15
+        self.merchDiscount = 0.25
+        self.skipLines = false
+        self.isSenior = false
     }
-
+    
+    
 }

@@ -8,28 +8,41 @@
 
 import Foundation
 
-struct ManagerSource {
-
-    enum ManagerType {
-
-        case amusementAreas
-        case kitchenAreas
-        case rideControlAreas
-        case maintenanceAreas
-        case officeAreas
-        case accessAllRides
-        case foodDiscount
-        case merchDiscount
-        case firstName
-        case lastName
-        case streetAddress
-        case city
-        case state
-        case zipCode
-        case socialSecurityNumber
-        case dateOfBirth
-        case managementTier
-        
+// Entrant Type: subclassB: tier6
+class ManagerSource: HourlyMaintenanceSource {
+    
+    var isManager: Bool = true
+    var officeAreasAccess: Bool = true
+    var managementTier: String
+    
+    init(
+        amusementAreaAccess: Bool,
+        allRidesAccess: Bool,
+        dateOfBirth: String,
+        firstName: String,
+        lastName: String,
+        streetAddress: String,
+        city: String,
+        state: String,
+        zipCode: Int,
+        socialSecurityNumber: String,
+        managementTier: String
+        ) {
+        self.managementTier = managementTier
+        super.init(
+            amusementAreaAccess: amusementAreaAccess,
+            allRidesAccess: allRidesAccess,
+            dateOfBirth: dateOfBirth,
+            firstName: firstName,
+            lastName: lastName,
+            streetAddress: streetAddress,
+            city: city,
+            state: state,
+            zipCode: zipCode,
+            socialSecurityNumber: socialSecurityNumber
+        )
+        self.foodDiscount = 0.25
     }
-
+    
+    
 }

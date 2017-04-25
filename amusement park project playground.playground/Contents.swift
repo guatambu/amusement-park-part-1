@@ -3,259 +3,318 @@
 import UIKit
 import Foundation
 
-protocol Swipeable {
-    var isManager: Bool { get }
-    var amusementAreaAccessGranted: Bool { get }
-    var kitchenAreaAccessGranted: Bool { get }
-    var maintenanceAreaAccessGranted: Bool { get }
-    var officeAreaAccessGranted: Bool { get }
-    var rideControlAreaAccessGranted: Bool { get }
-    var rideAccessGranted: Bool { get }
-    var skipLineGranted: Bool { get }
-    var youngEnough: Bool { get }
-    var oldEnough: Bool { get }
-    var todayYourBirthday: Bool { get }
-    var doYouGetDiscount: Bool { get }
-}
 
-enum EntrantType: String {
-    case classic = "Classic Guest"
-    case vip = "VIP Guest"
-    case child = "Free Child Guest"
-    case seasonPass = "Season Pass Guest"
-    case senior = "Senior Guest"
-    case contractEmployee = "Contract Employee"
-    case hourlyFood = "Hourly Employee - Food Services"
-    case hourlyRide = "Hourly Employee - Ride Services"
-    case hourlyMaintenance = "Hourly Employee - Maintenance"
-    case manager = "Manager"
-    case vendor = "Vendor"
-}
 
-class TestUserSource: Swipeable {
+enum EntrantTypeSwipe {
     
-    var isManager: Bool
-    var isVendor: Bool
-    var amusementAreaAccessGranted: Bool
-    var kitchenAreaAccessGranted: Bool
-    var maintenanceAreaAccessGranted: Bool
-    var officeAreaAccessGranted: Bool
-    var rideControlAreaAccessGranted: Bool
-    var rideAccessGranted: Bool
-    var skipLineGranted: Bool
-    var youngEnough: Bool
-    var oldEnough: Bool
-    var todayYourBirthday: Bool
-    var doYouGetDiscount: Bool
+    // cases as various Entrant Types w/ associated values of respective permissions/requirements
+    case classic(
+        amusementAreaAccess: String,
+        accessAllRides: String
+    )
     
-    init(isManager: Bool = true,
-         isVendor: Bool = false,
-         amusementAreaAccessGranted: Bool = true,
-         kitchenAreaAccessGranted: Bool = true,
-         maintenanceAreaAccessGranted: Bool = true,
-         officeAreaAccessGranted: Bool = true,
-         rideControlAreaAccessGranted: Bool = true,
-         rideAccessGranted: Bool = true,
-         skipLineGranted: Bool = false,
-         youngEnough: Bool = false,
-         oldEnough: Bool = false,
-         todayYourBirthday: Bool = false,
-         doYouGetDiscount: Bool = true) {
+    case vip(
+        amusementAreaAccess: String,
+        accessAllRides: String,
+        skipAllLines: String,
+        tenFoodDiscount: String,
+        twentyMerchDiscount: String
+    )
+    
+    case child(
+        amusementAreaAccess: String,
+        accessAllRides: String,
+        dateOfBirth: String
+    )
+    
+    case seasonPass(amusementAreaAccess: String,
+        accessAllRides: String,
+        skipAllLines: String,
+        tenFoodDiscount: String,
+        twentyMerchDiscount: String,
+        firstName: String,
+        lastName: String,
+        streetAddress: String,
+        city: String,
+        state: String,
+        zipCode: String,
+        dateOfBirth: String
+    )
+    
+    case senior(amusementAreaAccess: String,
+        accessAllRides: String,
+        skipAllLines: String,
+        tenFoodDiscount: String,
+        tenMerchDiscount: String,
+        firstName: String,
+        lastName: String,
+        dateOfBirth: String
+    )
+    
+    case contractEmployee(
+        amusementAreaAccess: String,
+        kitchenAreaAccess: String,
+        seeEntrantRules: String,
+        noDiscount: String,
+        firstName: String,
+        lastName: String,
+        streetAddress: String,
+        city: String,
+        state: String,
+        zipCode: String,
+        dateOfBirth: String,
+        socialSecurityNumber: String,
+        projectNumber: String
+    )
+    
+    case hourlyFood(
+        amusementAreaAccess: String,
+        kitchenAreaAccess: String,
+        accessAllRides: String,
+        fifteenFoodDiscount: String,
+        twentyfiveMerchDiscount: String,
+        firstName: String,
+        lastName: String,
+        streetAddress: String,
+        city: String,
+        state: String,
+        zipCode: String,
+        dateOfBirth: String,
+        socialSecurityNumber: String
+    )
+    
+    case hourlyRide(
+        amusementAreaAccess: String,
+        rideControlAreaAccess: String,
+        accessAllRides: String,
+        fifteenFoodDiscount: String,
+        twentyfiveMerchDiscount: String,
+        firstName: String,
+        lastName: String,
+        streetAddress: String,
+        city: String,
+        state: String,
+        zipCode: String,
+        dateOfBirth: String,
+        socialSecurityNumber: String
+    )
+    
+    case hourlyMaintenance(
+        amusementAreaAccess: String,
+        maintenanceAreaAccess: String,
+        rideControlAreaAccess: String,
+        String, accessAllRides: String,
+        fifteenFoodDiscount: String,
+        twentyfiveMerchDiscount: String,
+        firstName: String,
+        lastName: String,
+        streetAddress: String,
+        city: String,
+        state: String,
+        zipCode: String,
+        dateOfBirth: String,
+        socialSecurityNumber: String
+    )
+    
+    case manager(
+        amusementAreaAccess: String,
+        kitchenAreaAccess: String,
+        maintenanceAreaAccess: String,
+        officeAreaAccess: String,
+        rideControlAreaAccess: String,
+        accessAllRides: String,
+        twentyfiveFoodDiscount: String,
+        twentyfiveMerchDiscount: String,
+        firstName: String,
+        lastName: String,
+        streetAddress: String,
+        city: String,
+        state: String,
+        zipCode: String,
+        dateOfBirth: String,
+        socialSecurityNumber: String,
+        managementTier: String
+    )
+    
+    case vendor(
+        amusementAreaAccess: String,
+        kitchenAreaAccess: String,
+        seeEntrantRules: String,
+        noDiscount: String,
+        firstName: String,
+        lastName: String,
+        vendorCompany: String,
+        dateOfBirth: String,
+        dateOfVisit: String
+    )
+    
+    
+    // function to check the type and produce an onbject with its required permissions
+    func Swipe() -> /* a custom type */ {
+        // MARK: this EntrantType needs to be reworked to create the appropriate obect created via inheritance as a class
         
-        self.isManager = isManager
-        self.isVendor = isVendor
-        self.amusementAreaAccessGranted = amusementAreaAccessGranted
-        self.kitchenAreaAccessGranted = kitchenAreaAccessGranted
-        self.maintenanceAreaAccessGranted = maintenanceAreaAccessGranted
-        self.officeAreaAccessGranted = officeAreaAccessGranted
-        self.rideControlAreaAccessGranted = rideControlAreaAccessGranted
-        self.rideAccessGranted = rideAccessGranted
-        self.skipLineGranted = skipLineGranted
-        self.youngEnough = youngEnough
-        self.oldEnough = oldEnough
-        self.todayYourBirthday = todayYourBirthday
-        self.doYouGetDiscount = doYouGetDiscount
-    }
-}
-
-let testUser = TestUserSource()
-
-class ContractEmployeeSource: Swipeable {
-    /*
-    //arrays of entrant type specific required info
-    var areaAccess = [AreaAccess.amusement, AreaAccess.kitchen]
-    var discountFood = "none"
-    var discountMerch = "none"
-    var rideAccess = "see entrant access rules"
-    var requiredInfoType = RequiredInformationType.business
-    var requiredInfo = [CollectedData.firstName, CollectedData.lastName, CollectedData.street, CollectedData.city, CollectedData.state, CollectedData.zip, CollectedData.ssn, CollectedData.birthdate, CollectedData.projectNumber]
-    */
-    var isManager: Bool
-    var isVendor: Bool
-    var amusementAreaAccessGranted: Bool
-    var kitchenAreaAccessGranted: Bool
-    var maintenanceAreaAccessGranted: Bool
-    var officeAreaAccessGranted: Bool
-    var rideControlAreaAccessGranted: Bool
-    var rideAccessGranted: Bool
-    var skipLineGranted: Bool
-    var youngEnough: Bool
-    var oldEnough: Bool
-    var todayYourBirthday: Bool
-    var doYouGetDiscount: Bool
-    
-    init(isManager: Bool = false,
-         isVendor: Bool = false,
-         amusementAreaAccessGranted: Bool = true,
-         kitchenAreaAccessGranted: Bool = true,
-         maintenanceAreaAccessGranted: Bool = false,
-         officeAreaAccessGranted: Bool = false,
-         rideControlAreaAccessGranted: Bool = false,
-         rideAccessGranted: Bool = false,
-         skipLineGranted: Bool = false,
-         youngEnough: Bool = false,
-         oldEnough: Bool = false,
-         todayYourBirthday: Bool = false,
-         doYouGetDiscount: Bool = false) {
-        
-        self.isManager = isManager
-        self.isVendor = isVendor
-        self.amusementAreaAccessGranted = amusementAreaAccessGranted
-        self.kitchenAreaAccessGranted = kitchenAreaAccessGranted
-        self.maintenanceAreaAccessGranted = maintenanceAreaAccessGranted
-        self.officeAreaAccessGranted = officeAreaAccessGranted
-        self.rideControlAreaAccessGranted = rideControlAreaAccessGranted
-        self.rideAccessGranted = rideAccessGranted
-        self.skipLineGranted = skipLineGranted
-        self.youngEnough = youngEnough
-        self.oldEnough = oldEnough
-        self.todayYourBirthday = todayYourBirthday
-        self.doYouGetDiscount = doYouGetDiscount
-    }
-    
-}
-
-
-class Swipe: Swipeable {
-    
-    var isManager: Bool
-    var isVendor: Bool
-    var amusementAreaAccessGranted: Bool
-    var kitchenAreaAccessGranted: Bool
-    var maintenanceAreaAccessGranted: Bool
-    var officeAreaAccessGranted: Bool
-    var rideControlAreaAccessGranted: Bool
-    var rideAccessGranted: Bool
-    var skipLineGranted: Bool
-    var youngEnough: Bool
-    var oldEnough: Bool
-    var todayYourBirthday: Bool
-    var doYouGetDiscount: Bool
-    
-    init(isManager: Bool,
-         isVendor: Bool,
-         amusementAreaAccessGranted: Bool,
-         kitchenAreaAccessGranted: Bool,
-         maintenanceAreaAccessGranted: Bool,
-         officeAreaAccessGranted: Bool,
-         rideControlAreaAccessGranted: Bool,
-         rideAccessGranted: Bool,
-         skipLineGranted: Bool,
-         youngEnough: Bool,
-         oldEnough: Bool,
-         todayYourBirthday: Bool,
-         doYouGetDiscount: Bool) {
-        
-        self.isManager = isManager
-        self.isVendor = isVendor
-        self.amusementAreaAccessGranted = amusementAreaAccessGranted
-        self.kitchenAreaAccessGranted = kitchenAreaAccessGranted
-        self.maintenanceAreaAccessGranted = maintenanceAreaAccessGranted
-        self.officeAreaAccessGranted = officeAreaAccessGranted
-        self.rideControlAreaAccessGranted = rideControlAreaAccessGranted
-        self.rideAccessGranted = rideAccessGranted
-        self.skipLineGranted = skipLineGranted
-        self.youngEnough = youngEnough
-        self.oldEnough = oldEnough
-        self.todayYourBirthday = todayYourBirthday
-        self.doYouGetDiscount = doYouGetDiscount
-    }
-    /// this function checks the permissions for various Entrant Types and returns Bool
-    func checkEntrantValidity(pass holder: TestUserSource) -> EntrantType {
-        
-        var entrant = EntrantType.classic
-        
-        // guest: classic
-        if (amusementAreaAccessGranted == true) && (rideAccessGranted == true){
+        switch self {
             
-            print("\(EntrantType.classic.rawValue) is valid")
+        case .classic(
+            let amusementAreaAccess,
+            let accessAllRides
+            ):
+            return /* a custom type */
             
-            // guest: child
-        } else if (youngEnough == true){
-            entrant = EntrantType.child
-            print("\(EntrantType.child.rawValue) is valid")
+        case .vip(
+            let amusementAreaAccess,
+            let accessAllRides,
+            let skipAllLines,
+            let tenFoodDiscount,
+            let twentyMerchDiscount
+            ):
+            return /* a custom type */
             
-            // guest: seasonPass
-        } else if (amusementAreaAccessGranted == true) && (doYouGetDiscount == true) && (skipLineGranted == true) {
-            entrant = EntrantType.seasonPass
-            print("\(EntrantType.seasonPass.rawValue) is valid")
             
-            // guest: senior
-        } else if (oldEnough == true) {
-            entrant = EntrantType.senior
-            print("\(EntrantType.senior.rawValue) is valid")
+        case .child(
+            let amusementAreaAccess,
+            let accessAllRides,
+            let dateOfBirth
+            ):
+            return /* a custom type */
             
-            // guest: VIP
-        } else if (amusementAreaAccessGranted == true) && (rideAccessGranted == true) && (skipLineGranted == true) && (doYouGetDiscount == true) {
-            entrant = EntrantType.vip
-            print("\(EntrantType.vip.rawValue) is valid")
+        case .seasonPass(
+            let amusementAreaAccess,
+            let accessAllRides,
+            let skipAllLines,
+            let tenFoodDiscount,
+            let twentyMerchDiscount,
+            let firstName,
+            let lastName,
+            let streetAddress,
+            let city,
+            let state,
+            let zipCode,
+            let dateofBirth
+            ):
+            return /* a custom type */
             
-            // hourly: food
-        } else if (kitchenAreaAccessGranted == true) && (doYouGetDiscount == true) {
-            entrant = EntrantType.hourlyFood
-            print("\(EntrantType.hourlyFood.rawValue) is valid")
+        case .senior(
+            let amusementAreaAccess,
+            let accessAllRides,
+            let skipAllLines,
+            let tenFoodDiscount,
+            let tenMerchDiscount,
+            let firstName,
+            let lastName,
+            let dateofBirth
+            ):
+            return /* a custom type */
             
-            // hourly: maintenance
-        } else if (maintenanceAreaAccessGranted == true) && (doYouGetDiscount == true) {
-            entrant = EntrantType.hourlyMaintenance
-            print("\(EntrantType.hourlyMaintenance.rawValue) is valid")
+        case .contractEmployee(
+            let amusementAreaAccess,
+            let kitchenAreaAccess,
+            let seeEntrantRules,
+            let noDiscount,
+            let firstName,
+            let lastName,
+            let streetAddress,
+            let city,
+            let state,
+            let zipCode,
+            let dateofBirth,
+            let socialSecurityNumber,
+            let projectNumber
+            ):
+            return /* a custom type */
             
-            // hourly: ride services
-        } else if (rideControlAreaAccessGranted == true) && (doYouGetDiscount == true) {
-            entrant = EntrantType.hourlyRide
-            print("\(EntrantType.hourlyRide.rawValue) is valid")
+        case .hourlyFood(
+            let amusementAreaAccess,
+            let kitchenAreaAccess,
+            let accessAllRides,
+            let fifteenFoodDiscount,
+            let twentyfiveMerchDiscount,
+            let firstName,
+            let lastName,
+            let streetAddress,
+            let city,
+            let state,
+            let zipCode,
+            let dateofBirth,
+            let socialSecurityNumber
+            ):
+            return /* a custom type */
             
-            // manager
-        } else if (isManager == true) {
-            entrant = EntrantType.manager
-            print("\(EntrantType.manager.rawValue) is valid")
+        case .hourlyRide(
+            let amusementAreaAccess,
+            let rideControlAreaAccess,
+            let accessAllRides,
+            let fifteenFoodDiscount,
+            let twentyfiveMerchDiscount,
+            let firstName,
+            let lastName,
+            let streetAddress,
+            let city,
+            let state,
+            let zipCode,
+            let dateofBirth,
+            let socialSecurityNumber
+            ):
+            return /* a custom type */
             
-            // contract employee
-        } else if (amusementAreaAccessGranted == true) && (kitchenAreaAccessGranted == true) {
-            entrant = EntrantType.contractEmployee
-            print("\(EntrantType.contractEmployee.rawValue) is valid")
-            // vendor
-        } else if (isVendor == true) {
-            entrant = EntrantType.vendor
-            print("\(EntrantType.vendor.rawValue) is valid")
+        case .hourlyMaintenance(
+            let amusementAreaAccess,
+            let kitchenAreaAccess,
+            let maintenanceAreaAccess,
+            let rideControlAreaAccess,
+            let accessAllRides,
+            let fifteenFoodDiscount,
+            let twentyfiveMerchDiscount,
+            let firstName,
+            let lastName,
+            let streetAddress,
+            let city,
+            let state,
+            let zipCode,
+            let dateofBirth,
+            let socialSecurityNumber
+            ):
+            return /* a custom type */
+            
+        case .manager(
+            let amusementAreaAccess,
+            let kitchenAreaAccess,
+            let maintenanceAreaAccess,
+            let officeAreaAccess,
+            let rideControlAreaAccess,
+            let accessAllRides,
+            let twentyfiveFoodDiscount,
+            let twentyfiveMerchDiscount,
+            let firstName,
+            let lastName,
+            let streetAddress,
+            let city,
+            let state,
+            let zipCode,
+            let dateofBirth,
+            let socialSecurityNumber,
+            let managementTier
+            ):
+            return /* a custom type */
+            
+        case .vendor(
+            let amusementAreaAccess,
+            let kitchenAreaAccess,
+            let seeEntrantRules,
+            let noDiscount,
+            let firstName,
+            let lastName,
+            let vendorCompany,
+            let dateofBirth,
+            let dateOfVisit
+            ):
+            return /* a custom type */
+            
+            
         }
         
-        return entrant
-        
     }
 }
-
-
-
-
-let contractEmployee = ContractEmployeeSource.init(isManager: false, isVendor: false, amusementAreaAccessGranted: true, kitchenAreaAccessGranted: true, maintenanceAreaAccessGranted: false, officeAreaAccessGranted: false, rideControlAreaAccessGranted: false, rideAccessGranted: false, skipLineGranted: false, youngEnough: false, oldEnough: false, todayYourBirthday: false, doYouGetDiscount: false)
-
-let contactEmployeePermissions = [contractEmployee.isManager, contractEmployee.isVendor, contractEmployee.amusementAreaAccessGranted, contractEmployee.kitchenAreaAccessGranted, contractEmployee.maintenanceAreaAccessGranted, contractEmployee.officeAreaAccessGranted, contractEmployee.rideControlAreaAccessGranted, contractEmployee.rideAccessGranted, contractEmployee.skipLineGranted, contractEmployee.youngEnough, contractEmployee.oldEnough, contractEmployee.todayYourBirthday, contractEmployee.doYouGetDiscount]
-
-
-
-
-
 
 
 

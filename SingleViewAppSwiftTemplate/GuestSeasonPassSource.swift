@@ -8,22 +8,38 @@
 
 import Foundation
 
-struct GuestPassSource {
-
-    enum GuestSeasonPass {
-
-        case amusementAreas
-        case accessAllRides
-        case skipAllLines
-        case foodDiscount
-        case merchDiscount
-        case firstName
-        case lastName
-        case streetAddress
-        case city
-        case state
-        case zipCode
-        case dateOfBirth
+// Entrant Type: subclassB: tier 4
+class GuestSeasonPassSource: GuestSeniorSource {
+    
+    var streetAddress: String
+    var city: String
+    var state: String
+    var zipCode: String
+    
+    init(
+        amusementAreaAccess: Bool,
+        allRidesAccess: Bool,
+        dateOfBirth: String,
+        firstName: String,
+        lastName: String,
+        streetAddress: String,
+        city: String,
+        state: String,
+        zipCode: String
+        ) {
+        self.streetAddress = streetAddress
+        self.city = city
+        self.state = state
+        self.zipCode = zipCode
+        super.init(
+            amusementAreaAccess: amusementAreaAccess,
+            allRidesAccess: allRidesAccess,
+            dateOfBirth: dateOfBirth,
+            firstName: firstName,
+            lastName: lastName
+        )
+        self.merchDiscount = 0.20
+        self.isSenior = false
         
     }
     

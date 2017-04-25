@@ -8,22 +8,40 @@
 
 import Foundation
 
-struct ContractEmployeeSource {
-
-    enum ContractEmployee {
-        
-        case amusementAreas
-        case kitchenAreas
-        case firstName
-        case lastName
-        case streetAddress
-        case city
-        case state
-        case zipCode
-        case socialSecurityNumber
-        case dateOfBirth
-        case projectNumber
-        
+// Entrant Type: subclassA: tier 3
+class ContractEmployeeSource: VendorSource {
+    
+    var streetAddress: String
+    var city: String
+    var state: String
+    var zipCode: String
+    var socialSecurityNumber: String
+    var projectNumber: String
+    
+    init(
+        amusementAreaAccess: Bool,
+        allRidesAccess: Bool,
+        firstName: String,
+        lastName: String,
+        streetAddress: String,
+        city: String,
+        state: String,
+        zipCode: String,
+        socialSecurityNumber: String,
+        vendorCompany: String,
+        projectNumber: String
+        ) {
+        super.init(
+            amusementAreaAccess: amusementAreaAccess,
+            allRidesAccess: allRidesAccess,
+            firstName: firstName,
+            lastName: lastName,
+            vendorCompany: vendorCompany,
+            dateOfBirth: dateOfBirth,
+            dateOfVisit: dateOfVisit
+        )
+        self.dateOfVisit = "N/A"
+        self.vendorCompany = "N/A"
     }
-
+    
 }

@@ -8,24 +8,36 @@
 
 import Foundation
 
-struct HourlyRideServicesSource {
-
-    enum HourlyRideServices {
-
-        case amusmentAreas
-        case rideControlAreas
-        case accessAllRides
-        case foodDiscount
-        case merchDiscount
-        case firstName
-        case lastName
-        case streetAddress
-        case city
-        case state
-        case zipCode
-        case socialSecurityNumber
-        case dateOfBirth
-
+// Entrant Type: subclassB: tier 6
+class HourlyRideServicesSource: HourlyMaintenanceSource {
+    
+    override init(
+        amusementAreaAccess: Bool,
+        allRidesAccess: Bool,
+        dateOfBirth: String,
+        firstName: String,
+        lastName: String,
+        streetAddress: String,
+        city: String,
+        state: String,
+        zipCode: Int,
+        socialSecurityNumber: String
+        ) {
+        super.init(
+            amusementAreaAccess: amusementAreaAccess,
+            allRidesAccess: allRidesAccess,
+            dateOfBirth: dateOfBirth,
+            firstName: firstName,
+            lastName: lastName,
+            streetAddress: streetAddress,
+            city: city,
+            state: state,
+            zipCode: zipCode,
+            socialSecurityNumber: socialSecurityNumber
+        )
+        self.kitchenAreaAccess = false
+        self.maintenanceAreaAccess = false
+        
     }
-
+    
 }

@@ -8,19 +8,32 @@
 
 import Foundation
 
-struct GuestSeniorSource {
-
-    enum GuestSenior {
-
-        case amusementAreas
-        case accessAllRides
-        case skipAllLines
-        case foodDiscount
-        case merchDiscount
-        case firstName
-        case lastName
-        case dateOfBirth
-        
+// Entrant Type: subclassB: tier 3
+class GuestSeniorSource: GuestVIPSource {
+    
+    var isSenior: Bool = true
+    var dateOfBirth: String
+    var firstName: String
+    var lastName: String
+    
+    init(
+        amusementAreaAccess: Bool,
+        allRidesAccess: Bool,
+        dateOfBirth: String,
+        firstName: String,
+        lastName: String
+        ) {
+        self.dateOfBirth = dateOfBirth
+        self.firstName = firstName
+        self.lastName = lastName
+        super.init(
+            amusementAreaAccess: amusementAreaAccess,
+            allRidesAccess: allRidesAccess,
+            foodDiscount: foodDiscount,
+            merchDiscount: merchDiscount
+        )
+        self.merchDiscount = 0.10
     }
-
+    
+    
 }
