@@ -51,9 +51,6 @@
  guatambu [12:09 PM]
  heh.  ok then in the case of the arrays... would you just loop through an array of say area permissions and check to see what's present, and if something is missing then throw an error?
  
- tayalva [12:11 PM]
- @pasan..tried it..but it gave me a whole mess of other errors I need to fix
- 
  guatambu [12:11 PM]
  and in this case, i was running into the doubt of whether that kind of checking would best be done in one macro swipe method or better broken out into its own kind of swipe method called as well
  
@@ -126,38 +123,31 @@
  */
 import Foundation
 
+
+protocol EntrantTypeable {
+
+    var amusementAreaAccess: Bool { get }
+    var allRidesAccess: Bool { get }
+
+}
+
+
+
 // Entrant Type: base class: tier 1
-class GuestClassicSource {
+
+class GuestClassicSource: EntrantTypeable {
     
-    var amusmentAreaAccess: Bool = true
+    var amusementAreaAccess: Bool = true
     var allRidesAccess: Bool = true
     
     init(amusementAreaAccess: Bool, allRidesAccess: Bool) {
-        self.amusmentAreaAccess = amusementAreaAccess
+        self.amusementAreaAccess = amusementAreaAccess
         self.allRidesAccess = allRidesAccess
     
     }
     
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

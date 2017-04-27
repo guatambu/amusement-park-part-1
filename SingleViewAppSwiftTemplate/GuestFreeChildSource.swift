@@ -8,15 +8,15 @@
 
 import Foundation
 
-struct GuestFreeChildSource {
-
-    enum GuestFreeChild {
-
-        case amusementAreas
-        case accessAllRides
-        case dateOfBirth
-        case youngEnough
-
+// Entrant Type: subclassA: tier 2
+class GuestFreeChildSource: GuestClassicSource {
+    
+    var isChild: Bool = true
+    var dateOfBirth: String
+    
+    init(amusementAreaAccess: Bool, allRideAccess: Bool, dateOfBirth: String) {
+        self.dateOfBirth = dateOfBirth
+        super.init(amusementAreaAccess: amusementAreaAccess, allRidesAccess: allRidesAccess)
     }
-
+    
 }

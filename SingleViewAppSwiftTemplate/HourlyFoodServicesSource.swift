@@ -9,7 +9,7 @@
 import Foundation
 
 // Entrant Type: subclassB: tier 4
-class HourlyFoodServiceSource: GuestSeniorSource {
+class HourlyFoodServicesSource: GuestSeniorSource {
     
     var kitchenAreaAccess = true
     var streetAddress: String
