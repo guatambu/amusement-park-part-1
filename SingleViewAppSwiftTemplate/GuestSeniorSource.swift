@@ -8,34 +8,16 @@
 
 import Foundation
 
-// Entrant Type: subclassB: tier 3
-class GuestSeniorSource: GuestVIPSource {
+
+struct GuestSeniorSource: EntrantTypeable {
     
-    var isSenior: Bool = true
+    var amusementAreaAccess: Bool
+    var allRidesAccess: Bool
+    var skipLines: Bool
+    var foodDiscount: Double
+    var merchDiscount: Double
     var birthday: String
     var firstName: String
     var lastName: String
-    
-    init(
-        amusementAreaAccess: Bool,
-        allRidesAccess: Bool,
-        birthday: String,
-        firstName: String,
-        lastName: String,
-        foodDiscount: Double,
-        merchDiscount: Double
-        ) {
-        self.birthday = birthday
-        self.firstName = firstName
-        self.lastName = lastName
-        super.init(
-            amusementAreaAccess: amusementAreaAccess,
-            allRidesAccess: allRidesAccess,
-            foodDiscount: foodDiscount,
-            merchDiscount: merchDiscount
-        )
-        self.merchDiscount = 0.10
-    }
-    
     
 }

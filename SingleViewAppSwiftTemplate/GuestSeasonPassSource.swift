@@ -8,43 +8,20 @@
 
 import Foundation
 
-// Entrant Type: subclassB: tier 4
-class GuestSeasonPassSource: GuestSeniorSource {
+
+struct GuestSeasonPassSource: EntrantTypeable {
     
-    var streetAddress: String
-    var city: String
-    var state: String
-    var zipCode: Int
-    
-    init(
-        amusementAreaAccess: Bool,
-        allRidesAccess: Bool,
-        birthday: String,
-        firstName: String,
-        lastName: String,
-        foodDiscount: Double,
-        merchDiscount: Double,
-        streetAddress: String,
-        city: String,
-        state: String,
-        zipCode: Int
-        ) {
-        self.streetAddress = streetAddress
-        self.city = city
-        self.state = state
-        self.zipCode = zipCode
-        super.init(
-            amusementAreaAccess: amusementAreaAccess,
-            allRidesAccess: allRidesAccess,
-            birthday: birthday,
-            firstName: firstName,
-            lastName: lastName,
-            foodDiscount: foodDiscount,
-            merchDiscount: merchDiscount
-        )
-        self.merchDiscount = 0.20
-        self.isSenior = false
-        
-    }
+        let amusementAreaAccess: Bool
+        let allRidesAccess: Bool
+        let skipLines: Bool
+        let foodDiscount: Double
+        let merchDiscount: Double
+        let birthday: String
+        let firstName: String
+        let lastName: String
+        let streetAddress: String
+        let city: String
+        let state: String
+        let zipCode: Int
     
 }

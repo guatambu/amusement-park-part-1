@@ -8,40 +8,21 @@
 
 import Foundation
 
-// Entrant Type: subclassB: tier 6
-class HourlyRideServicesSource: HourlyMaintenanceSource {
+
+struct HourlyRideSerivcesSource: EntrantTypeable {
     
-    override init(
-        amusementAreaAccess: Bool,
-        allRidesAccess: Bool,
-        birthday: String,
-        firstName: String,
-        lastName: String,
-        foodDiscount: Double,
-        merchDiscount: Double,
-        streetAddress: String,
-        city: String,
-        state: String,
-        zipCode: Int,
-        socialSecurityNumber: String
-        ) {
-        super.init(
-            amusementAreaAccess: amusementAreaAccess,
-            allRidesAccess: allRidesAccess,
-            birthday: birthday,
-            firstName: firstName,
-            lastName: lastName,
-            foodDiscount: foodDiscount,
-            merchDiscount: merchDiscount,
-            streetAddress: streetAddress,
-            city: city,
-            state: state,
-            zipCode: zipCode,
-            socialSecurityNumber: socialSecurityNumber
-        )
-        self.kitchenAreaAccess = false
-        self.maintenanceAreaAccess = false
-        
-    }
+    var amusementAreaAccess: Bool
+    var allRidesAccess: Bool
+    var rideControlAreaAccess: Bool = true
+    var foodDiscount: Double
+    var merchDiscount: Double
+    var birthday: String
+    var firstName: String
+    var lastName: String
+    var streetAddress: String
+    var city: String
+    var state: String
+    var zipCode: Int
+    var socialSecurityNumber: String
     
 }

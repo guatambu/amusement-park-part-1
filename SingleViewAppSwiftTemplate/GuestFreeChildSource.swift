@@ -8,18 +8,11 @@
 
 import Foundation
 
-// Entrant Type: subclassA: tier 2
-class GuestFreeChildSource: GuestClassicSource {
+
+struct GuestFreeChildSource: EntrantTypeable {
     
-    var isChild: Bool = true
+    var amusementAreaAccess: Bool
+    var allRidesAccess: Bool
     var birthday: String
-    
-    init(amusementAreaAccess: Bool, allRidesAccess: Bool, birthday: String) {
-        self.birthday = birthday
-        super.init(
-            amusementAreaAccess: amusementAreaAccess,
-            allRidesAccess: allRidesAccess
-        )
-    }
     
 }

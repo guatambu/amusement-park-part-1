@@ -135,17 +135,10 @@ protocol EntrantTypeable {
 
 // Entrant Type: base class: tier 1
 
-class GuestClassicSource: EntrantTypeable {
+struct GuestClassicSource: EntrantTypeable {
     
-    var amusementAreaAccess: Bool = true
-    var allRidesAccess: Bool = true
-    
-    init(amusementAreaAccess: Bool, allRidesAccess: Bool) {
-        self.amusementAreaAccess = amusementAreaAccess
-        self.allRidesAccess = allRidesAccess
-    
-    }
-    
+    var amusementAreaAccess: Bool
+    var allRidesAccess: Bool
     
 }
 

@@ -8,26 +8,23 @@
 
 import Foundation
 
-struct HourlyMaintenanceSource {
 
-    enum HourlyMaintenance {
-
-        case amusementAreas
-        case kitchenAreas
-        case rideControlAreas
-        case maintenanceAreas
-        case accessAllRides
-        case foodDiscount
-        case merchDiscount
-        case firstName
-        case lastName
-        case streetAddress
-        case city
-        case state
-        case zipCode
-        case socialSecurityNumber
-        case dateOfBirth
-        
-    }
-
+struct HourlyMaintenanceSource: EntrantTypeable {
+    
+    var amusementAreaAccess: Bool
+    var allRidesAccess: Bool
+    var kitchenAreaAccess: Bool
+    var maintenanceAreaAccess: Bool
+    var rideControlAreaAccess: Bool
+    var foodDiscount: Double
+    var merchDiscount: Double
+    var birthday: String
+    var firstName: String
+    var lastName: String
+    var streetAddress: String
+    var city: String
+    var state: String
+    var zipCode: Int
+    var socialSecurityNumber: String
+    
 }
