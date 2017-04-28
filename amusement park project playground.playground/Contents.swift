@@ -4,323 +4,801 @@ import UIKit
 import Foundation
 
 
+protocol EntrantTypeable {
+    
+    var amusementAreaAccess: Bool { get }
+    var allRidesAccess: Bool { get }
+    
+}
 
-enum EntrantTypeSwipe {
+
+
+// Entrant Type: base class: tier 1
+
+class GuestClassicSource: EntrantTypeable {
+    
+    var amusementAreaAccess: Bool = true
+    var allRidesAccess: Bool = true
+    
+    init(amusementAreaAccess: Bool, allRidesAccess: Bool) {
+        self.amusementAreaAccess = amusementAreaAccess
+        self.allRidesAccess = allRidesAccess
+        
+    }
+    
+    
+}
+
+
+class GuestFreeChildSource: GuestClassicSource {
+    
+    var isChild: Bool = true
+    var birthday: String
+    
+    init(amusementAreaAccess: Bool, allRidesAccess: Bool, birthday: String) {
+        self.birthday = birthday
+        super.init(
+            amusementAreaAccess: amusementAreaAccess,
+            allRidesAccess: allRidesAccess
+        )
+    }
+    
+}
+
+
+class GuestVIPSource: GuestClassicSource {
+    
+    var skipLines: Bool = true
+    var foodDiscount: Double
+    var merchDiscount: Double
+    
+    init(
+        amusementAreaAccess: Bool,
+        allRidesAccess: Bool,
+        foodDiscount: Double,
+        merchDiscount: Double
+        ) {
+        self.foodDiscount = foodDiscount
+        self.merchDiscount = merchDiscount
+        super.init(amusementAreaAccess: amusementAreaAccess, allRidesAccess: allRidesAccess)
+        
+    }
+    
+}
+
+
+class GuestSeniorSource: GuestVIPSource {
+    
+    var isSenior: Bool = true
+    var birthday: String
+    var firstName: String
+    var lastName: String
+    
+    init(
+        amusementAreaAccess: Bool,
+        allRidesAccess: Bool,
+        birthday: String,
+        firstName: String,
+        lastName: String,
+        foodDiscount: Double,
+        merchDiscount: Double
+        ) {
+        self.birthday = birthday
+        self.firstName = firstName
+        self.lastName = lastName
+        super.init(
+            amusementAreaAccess: amusementAreaAccess,
+            allRidesAccess: allRidesAccess,
+            foodDiscount: foodDiscount,
+            merchDiscount: merchDiscount
+        )
+        self.merchDiscount = 0.10
+    }
+    
+    
+}
+
+
+class GuestSeasonPassSource: GuestSeniorSource {
+    
+    var streetAddress: String
+    var city: String
+    var state: String
+    var zipCode: Int
+    
+    init(
+        amusementAreaAccess: Bool,
+        allRidesAccess: Bool,
+        birthday: String,
+        firstName: String,
+        lastName: String,
+        foodDiscount: Double,
+        merchDiscount: Double,
+        streetAddress: String,
+        city: String,
+        state: String,
+        zipCode: Int
+        ) {
+        self.streetAddress = streetAddress
+        self.city = city
+        self.state = state
+        self.zipCode = zipCode
+        super.init(
+            amusementAreaAccess: amusementAreaAccess,
+            allRidesAccess: allRidesAccess,
+            birthday: birthday,
+            firstName: firstName,
+            lastName: lastName,
+            foodDiscount: foodDiscount,
+            merchDiscount: merchDiscount
+        )
+        self.merchDiscount = 0.20
+        self.isSenior = false
+        
+    }
+    
+}
+
+
+
+class HourlyFoodServicesSource: GuestSeniorSource {
+    
+    var kitchenAreaAccess = true
+    var streetAddress: String
+    var city: String
+    var state: String
+    var zipCode: Int
+    var socialSecurityNumber: String
+    
+    init(
+        amusementAreaAccess: Bool,
+        allRidesAccess: Bool,
+        birthday: String,
+        firstName: String,
+        lastName: String,
+        foodDiscount: Double,
+        merchDiscount: Double,
+        streetAddress: String,
+        city: String,
+        state: String,
+        zipCode: Int,
+        socialSecurityNumber: String
+        ) {
+        self.streetAddress = streetAddress
+        self.city = city
+        self.state = state
+        self.zipCode = zipCode
+        self.socialSecurityNumber = socialSecurityNumber
+        super.init(
+            amusementAreaAccess: amusementAreaAccess,
+            allRidesAccess: allRidesAccess,
+            birthday: birthday,
+            firstName: firstName,
+            lastName: lastName,
+            foodDiscount: foodDiscount,
+            merchDiscount: merchDiscount
+        )
+        self.foodDiscount = 0.15
+        self.merchDiscount = 0.25
+        self.skipLines = false
+        self.isSenior = false
+    }
+    
+    
+}
+
+
+class HourlyMaintenanceSource: HourlyFoodServicesSource {
+    
+    var rideControlAreaAccess: Bool = true
+    var maintenanceAreaAccess: Bool = true
+    
+}
+
+
+
+class HourlyRideServicesSource: HourlyMaintenanceSource {
+    
+    override init(
+        amusementAreaAccess: Bool,
+        allRidesAccess: Bool,
+        birthday: String,
+        firstName: String,
+        lastName: String,
+        foodDiscount: Double,
+        merchDiscount: Double,
+        streetAddress: String,
+        city: String,
+        state: String,
+        zipCode: Int,
+        socialSecurityNumber: String
+        ) {
+        super.init(
+            amusementAreaAccess: amusementAreaAccess,
+            allRidesAccess: allRidesAccess,
+            birthday: birthday,
+            firstName: firstName,
+            lastName: lastName,
+            foodDiscount: foodDiscount,
+            merchDiscount: merchDiscount,
+            streetAddress: streetAddress,
+            city: city,
+            state: state,
+            zipCode: zipCode,
+            socialSecurityNumber: socialSecurityNumber
+        )
+        self.kitchenAreaAccess = false
+        self.maintenanceAreaAccess = false
+        
+    }
+    
+}
+
+
+
+class ManagerSource: HourlyMaintenanceSource {
+    
+    var isManager: Bool = true
+    var officeAreasAccess: Bool = true
+    var managementTier: String
+    
+    init(
+        amusementAreaAccess: Bool,
+        allRidesAccess: Bool,
+        birthday: String,
+        firstName: String,
+        lastName: String,
+        foodDiscount: Double,
+        merchDiscount: Double,
+        streetAddress: String,
+        city: String,
+        state: String,
+        zipCode: Int,
+        socialSecurityNumber: String,
+        managementTier: String
+        ) {
+        self.managementTier = managementTier
+        super.init(
+            amusementAreaAccess: amusementAreaAccess,
+            allRidesAccess: allRidesAccess,
+            birthday: birthday,
+            firstName: firstName,
+            lastName: lastName,
+            foodDiscount: foodDiscount,
+            merchDiscount: merchDiscount,
+            streetAddress: streetAddress,
+            city: city,
+            state: state,
+            zipCode: zipCode,
+            socialSecurityNumber: socialSecurityNumber
+        )
+        self.foodDiscount = 0.25
+    }
+    
+    
+}
+
+
+
+class ContractEmployeeSource: VendorSource {
+    
+    var streetAddress: String
+    var city: String
+    var state: String
+    var zipCode: String
+    var socialSecurityNumber: String
+    var projectNumber: String
+    
+    init(
+        amusementAreaAccess: Bool,
+        allRidesAccess: Bool,
+        birthday: String,
+        firstName: String,
+        lastName: String,
+        streetAddress: String,
+        city: String,
+        state: String,
+        zipCode: String,
+        socialSecurityNumber: String,
+        vendorCompany: String,
+        projectNumber: String,
+        dateOfVisit: String
+        ) {
+        self.streetAddress = streetAddress
+        self.city = city
+        self.state = state
+        self.zipCode = zipCode
+        self.socialSecurityNumber = socialSecurityNumber
+        self.projectNumber = projectNumber
+        super.init(
+            amusementAreaAccess: amusementAreaAccess,
+            allRidesAccess: allRidesAccess,
+            birthday: birthday,
+            firstName: firstName,
+            lastName: lastName,
+            vendorCompany: vendorCompany,
+            dateOfVisit: dateOfVisit
+        )
+        self.dateOfVisit = "N/A"
+        self.vendorCompany = "N/A"
+    }
+    
+}
+
+
+class VendorSource: GuestClassicSource {
+    
+    var birthday: String
+    var kitchenAreaAccess: Bool = true
+    var rideAccessInstructions: String = "See Entrant Access Rules"
+    var firstName: String
+    var lastName: String
+    var vendorCompany: String
+    var dateOfVisit: String
+    
+    init(
+        amusementAreaAccess: Bool,
+        allRidesAccess: Bool,
+        birthday: String,
+        firstName: String,
+        lastName: String,
+        vendorCompany: String,
+        dateOfVisit: String
+        ) {
+        self.birthday = birthday
+        self.firstName = firstName
+        self.lastName = lastName
+        self.vendorCompany = vendorCompany
+        self.dateOfVisit = dateOfVisit
+        super.init(
+            amusementAreaAccess: amusementAreaAccess,
+            allRidesAccess: allRidesAccess
+        )
+        self.allRidesAccess = false
+    }
+    
+    
+}
+
+
+enum Entrants {
     
     // cases as various Entrant Types w/ associated values of respective permissions/requirements
     case classic(
-        amusementAreaAccess: String,
-        accessAllRides: String
-    )
-    
-    case vip(
-        amusementAreaAccess: String,
-        accessAllRides: String,
-        skipAllLines: String,
-        tenFoodDiscount: String,
-        twentyMerchDiscount: String
+        amusementAreaAccess: Bool,
+        allRidesAccess: Bool
     )
     
     case child(
-        amusementAreaAccess: String,
-        accessAllRides: String,
-        dateOfBirth: String
+        amusementAreaAccess: Bool,
+        allRidesAccess: Bool,
+        birthday: String
     )
     
-    case seasonPass(amusementAreaAccess: String,
-        accessAllRides: String,
-        skipAllLines: String,
-        tenFoodDiscount: String,
-        twentyMerchDiscount: String,
+    case seasonPass(
+        amusementAreaAccess: Bool,
+        allRidesAccess: Bool,
+        birthday: String,
+        skipLines: Bool,
+        foodDiscount: Double,
+        merchDiscount: Double,
         firstName: String,
         lastName: String,
         streetAddress: String,
         city: String,
         state: String,
-        zipCode: String,
-        dateOfBirth: String
+        zipCode: Int
+        
     )
     
-    case senior(amusementAreaAccess: String,
-        accessAllRides: String,
-        skipAllLines: String,
-        tenFoodDiscount: String,
-        tenMerchDiscount: String,
+    case senior(
+        amusementAreaAccess: Bool,
+        allRidesAccess: Bool,
+        birthday: String,
+        skipLines: Bool,
+        foodDiscount: Double,
+        merchDiscount: Double,
         firstName: String,
-        lastName: String,
-        dateOfBirth: String
+        lastName: String
+    )
+    
+    case vip(
+        amusementAreaAccess: Bool,
+        allRidesAccess: Bool,
+        skipLines: Bool,
+        foodDiscount: Double,
+        merchDiscount: Double
     )
     
     case contractEmployee(
-        amusementAreaAccess: String,
-        kitchenAreaAccess: String,
+        amusementAreaAccess: Bool,
+        allRidesAccess: Bool,
+        birthday: String,
+        kitchenAreaAccess: Bool,
         seeEntrantRules: String,
-        noDiscount: String,
         firstName: String,
         lastName: String,
         streetAddress: String,
         city: String,
         state: String,
-        zipCode: String,
-        dateOfBirth: String,
+        zipCode: Int,
         socialSecurityNumber: String,
-        projectNumber: String
+        projectNumber: String,
+        dateOfVisit: String
     )
     
     case hourlyFood(
-        amusementAreaAccess: String,
-        kitchenAreaAccess: String,
-        accessAllRides: String,
-        fifteenFoodDiscount: String,
-        twentyfiveMerchDiscount: String,
+        amusementAreaAccess: Bool,
+        allRidesAccess: Bool,
+        birthday: String,
+        kitchenAreaAccess: Bool,
+        foodDiscount: Double,
+        merchDiscount: Double,
         firstName: String,
         lastName: String,
         streetAddress: String,
         city: String,
         state: String,
-        zipCode: String,
-        dateOfBirth: String,
+        zipCode: Int,
         socialSecurityNumber: String
     )
     
     case hourlyRide(
-        amusementAreaAccess: String,
-        rideControlAreaAccess: String,
-        accessAllRides: String,
-        fifteenFoodDiscount: String,
-        twentyfiveMerchDiscount: String,
+        amusementAreaAccess: Bool,
+        allRidesAccess: Bool,
+        birthday: String,
+        rideControlAreaAccess: Bool,
+        foodDiscount: Double,
+        merchDiscount: Double,
         firstName: String,
         lastName: String,
         streetAddress: String,
         city: String,
         state: String,
-        zipCode: String,
-        dateOfBirth: String,
+        zipCode: Int,
         socialSecurityNumber: String
     )
     
     case hourlyMaintenance(
-        amusementAreaAccess: String,
-        maintenanceAreaAccess: String,
-        rideControlAreaAccess: String,
-        String, accessAllRides: String,
-        fifteenFoodDiscount: String,
-        twentyfiveMerchDiscount: String,
+        amusementAreaAccess: Bool,
+        allRidesAccess: Bool,
+        birthday: String,
+        kitchenAreaAccess: Bool,
+        maintenanceAreaAccess: Bool,
+        rideControlAreaAccess: Bool,
+        accessAllRides: Bool,
+        foodDiscount: Double,
+        merchDiscount: Double,
         firstName: String,
         lastName: String,
         streetAddress: String,
         city: String,
         state: String,
-        zipCode: String,
-        dateOfBirth: String,
+        zipCode: Int,
         socialSecurityNumber: String
     )
     
     case manager(
-        amusementAreaAccess: String,
-        kitchenAreaAccess: String,
-        maintenanceAreaAccess: String,
-        officeAreaAccess: String,
-        rideControlAreaAccess: String,
-        accessAllRides: String,
-        twentyfiveFoodDiscount: String,
-        twentyfiveMerchDiscount: String,
+        amusementAreaAccess: Bool,
+        allRidesAccess: Bool,
+        birthday: String,
+        kitchenAreaAccess: Bool,
+        maintenanceAreaAccess: Bool,
+        officeAreaAccess: Bool,
+        rideControlAreaAccess: Bool,
+        foodDiscount: Double,
+        merchDiscount: Double,
         firstName: String,
         lastName: String,
         streetAddress: String,
         city: String,
         state: String,
-        zipCode: String,
-        dateOfBirth: String,
+        zipCode: Int,
         socialSecurityNumber: String,
         managementTier: String
     )
     
     case vendor(
-        amusementAreaAccess: String,
-        kitchenAreaAccess: String,
+        amusementAreaAccess: Bool,
+        birthday: String,
+        kitchenAreaAccess: Bool,
         seeEntrantRules: String,
-        noDiscount: String,
         firstName: String,
         lastName: String,
         vendorCompany: String,
-        dateOfBirth: String,
         dateOfVisit: String
     )
     
     
     // function to check the type and produce an onbject with its required permissions
-    func Swipe() -> /* a custom type */ {
-        // MARK: this EntrantType needs to be reworked to create the appropriate obect created via inheritance as a class
+    func Swipe() -> EntrantTypeable {
         
         switch self {
             
         case .classic(
             let amusementAreaAccess,
-            let accessAllRides
+            let allRidesAccess
             ):
-            return /* a custom type */
+            
+            return GuestClassicSource(
+                amusementAreaAccess: amusementAreaAccess,
+                allRidesAccess: allRidesAccess
+            )
             
         case .vip(
             let amusementAreaAccess,
-            let accessAllRides,
+            let allRidesAccess,
             let skipAllLines,
-            let tenFoodDiscount,
-            let twentyMerchDiscount
+            let foodDiscount,
+            let merchDiscount
             ):
-            return /* a custom type */
             
+            return GuestVIPSource(
+                amusementAreaAccess: amusementAreaAccess,
+                allRidesAccess: allRidesAccess,
+                //skipAllLines: skipAllLines,
+                foodDiscount: foodDiscount,
+                merchDiscount: merchDiscount
+            )
             
         case .child(
             let amusementAreaAccess,
-            let accessAllRides,
-            let dateOfBirth
+            let allRidesAccess,
+            let birthday
             ):
-            return /* a custom type */
+            return GuestFreeChildSource(
+                amusementAreaAccess: amusementAreaAccess,
+                allRidesAccess: allRidesAccess,
+                birthday: birthday
+            )
             
         case .seasonPass(
             let amusementAreaAccess,
-            let accessAllRides,
+            let allRidesAccess,
+            let birthday,
             let skipAllLines,
-            let tenFoodDiscount,
-            let twentyMerchDiscount,
+            let foodDiscount,
+            let merchDiscount,
             let firstName,
             let lastName,
             let streetAddress,
             let city,
             let state,
-            let zipCode,
-            let dateofBirth
+            let zipCode
             ):
-            return /* a custom type */
+            return GuestSeasonPassSource(
+                amusementAreaAccess: amusementAreaAccess,
+                allRidesAccess: allRidesAccess,
+                //foodDiscount: foodDiscount,
+                //merchDiscount: merchDiscount,
+                birthday: birthday,
+                firstName: firstName,
+                lastName: lastName,
+                foodDiscount: foodDiscount,
+                merchDiscount: merchDiscount,
+                streetAddress: streetAddress,
+                city: city,
+                state: state,
+                zipCode: zipCode
+                
+            )
             
         case .senior(
             let amusementAreaAccess,
-            let accessAllRides,
+            let allRidesAccess,
+            let birthday,
             let skipAllLines,
-            let tenFoodDiscount,
-            let tenMerchDiscount,
+            let foodDiscount,
+            let merchDiscount,
             let firstName,
-            let lastName,
-            let dateofBirth
+            let lastName
             ):
-            return /* a custom type */
+            return GuestSeniorSource(
+                amusementAreaAccess: amusementAreaAccess,
+                allRidesAccess: allRidesAccess,
+                skipAllLines: skipAllLines,
+                foodDiscount: foodDiscount,
+                merchDiscount: merchDiscount,
+                birthday: birthday,
+                firstName: firstName,
+                lastName: lastName,
+                foodDiscount: foodDiscount,
+                merchDiscount: merchDiscount
+            )
             
         case .contractEmployee(
             let amusementAreaAccess,
+            let birthday,
             let kitchenAreaAccess,
             let seeEntrantRules,
-            let noDiscount,
             let firstName,
             let lastName,
             let streetAddress,
             let city,
             let state,
             let zipCode,
-            let dateofBirth,
             let socialSecurityNumber,
-            let projectNumber
+            let projectNumber,
+            let dateOfVisit
             ):
-            return /* a custom type */
+            return ContractEmployeeSource(
+                amusementAreaAccess: amusementAreaAccess,
+                birthday: birthday,
+                kitchenAreaAccess: kitchenAreaAccess,
+                seeEntrantRules: seeEntrantRules,
+                firstName: firstName,
+                lastName: lastName,
+                streetAddress: streetAddress,
+                city: city,
+                state: state,
+                zipCode: zipCode,
+                socialSecurityNumber: socialSecurityNumber,
+                projectNumber: projectNumber,
+                dateOfVisit: dateOfVisit
+            )
             
         case .hourlyFood(
             let amusementAreaAccess,
+            let allRidesAccess,
+            let birthday,
             let kitchenAreaAccess,
-            let accessAllRides,
-            let fifteenFoodDiscount,
-            let twentyfiveMerchDiscount,
+            let foodDiscount,
+            let merchDiscount,
             let firstName,
             let lastName,
             let streetAddress,
             let city,
             let state,
             let zipCode,
-            let dateofBirth,
             let socialSecurityNumber
             ):
-            return /* a custom type */
+            return HourlyFoodServicesSource(
+                amusementAreaAccess: amusementAreaAccess,
+                kitchenAreaAccess: kitchenAreaAccess,
+                allRidesAccess: allRidesAccess,
+                foodDiscount: foodDiscount,
+                merchDiscount: merchDiscount,
+                birthday: birthday,
+                firstName: firstName,
+                lastName: lastName,
+                foodDiscount: foodDiscount,
+                merchDiscount: merchDiscount,
+                streetAddress: streetAddress,
+                city: city,
+                state: state,
+                zipCode: zipCode,
+                socialSecurityNumber: socialSecurityNumber
+            )
             
         case .hourlyRide(
             let amusementAreaAccess,
+            let allRidesAccess,
+            let birthday,
             let rideControlAreaAccess,
-            let accessAllRides,
-            let fifteenFoodDiscount,
-            let twentyfiveMerchDiscount,
+            let foodDiscount,
+            let merchDiscount,
             let firstName,
             let lastName,
             let streetAddress,
             let city,
             let state,
             let zipCode,
-            let dateofBirth,
             let socialSecurityNumber
             ):
-            return /* a custom type */
+            return HourlyRideServicesSource(
+                amusementAreaAccess: amusementAreaAccess,
+                allRidesAccess: allRidesAccess,
+                birthday: birthday,
+                rideControlAreaAccess: rideControlAreaAccess,
+                foodDiscount: foodDiscount,
+                merchDiscount: merchDiscount,
+                firstName: firstName,
+                lastName: lastName,
+                streetAddress: streetAddress,
+                city: city,
+                state: state,
+                zipCode: zipCode,
+                socialSecurityNumber: socialSecurityNumber
+            )
             
         case .hourlyMaintenance(
             let amusementAreaAccess,
+            let allRidesAccess,
+            let birthday,
             let kitchenAreaAccess,
             let maintenanceAreaAccess,
             let rideControlAreaAccess,
-            let accessAllRides,
-            let fifteenFoodDiscount,
-            let twentyfiveMerchDiscount,
+            let foodDiscount,
+            let merchDiscount,
             let firstName,
             let lastName,
             let streetAddress,
             let city,
             let state,
             let zipCode,
-            let dateofBirth,
             let socialSecurityNumber
             ):
-            return /* a custom type */
+            return HourlyMaintenanceSource(
+                amusementAreaAccess: amusementAreaAccess,
+                allRidesAccess: allRidesAccess,
+                birthday: birthday,
+                kitchenAreaAccess: kitchenAreaAccess,
+                maintenanceAreaAccess: maintenanceAreaAccess,
+                rideControlAreaAccess: rideControlAreaAccess,
+                foodDiscount: foodDiscount,
+                merchDiscount: merchDiscount,
+                firstName: firstName,
+                lastName: lastName,
+                streetAddress: streetAddress,
+                city: city,
+                state: state,
+                zipCode: zipCode,
+                socialSecurityNumber: socialSecurityNumber
+            )
             
         case .manager(
             let amusementAreaAccess,
+            let allRidesAccess,
+            let birthday,
             let kitchenAreaAccess,
             let maintenanceAreaAccess,
             let officeAreaAccess,
             let rideControlAreaAccess,
-            let accessAllRides,
-            let twentyfiveFoodDiscount,
-            let twentyfiveMerchDiscount,
+            let foodDiscount,
+            let merchDiscount,
             let firstName,
             let lastName,
             let streetAddress,
             let city,
             let state,
             let zipCode,
-            let dateofBirth,
             let socialSecurityNumber,
             let managementTier
             ):
-            return /* a custom type */
+            return ManagerSource(
+                amusementAreaAccess: amusementAreaAccess,
+                allRidesAccess: allRidesAccess,
+                birthday: birthday,
+                kitchenAreaAccess: kitchenAreaAccess,
+                maintenanceAreaAccess: maintenanceAreaAccess,
+                officeAreaAccess: officeAreaAccess,
+                rideControlAreaAccess: rideControlAreaAccess,
+                foodDiscount: foodDiscount,
+                merchDiscount: merchDiscount,
+                firstName: firstName,
+                lastName: lastName,
+                streetAddress: streetAddress,
+                city: city,
+                state: state,
+                zipCode: zipCode,
+                socialSecurityNumber: socialSecurityNumber,
+                managementTier: managementTier
+            )
             
         case .vendor(
             let amusementAreaAccess,
+            let birthday,
             let kitchenAreaAccess,
             let seeEntrantRules,
-            let noDiscount,
             let firstName,
             let lastName,
             let vendorCompany,
-            let dateofBirth,
             let dateOfVisit
             ):
-            return /* a custom type */
+            return VendorSource(
+                amusementAreaAccess: amusementAreaAccess,
+                birthday: birthday,
+                kitchenAreaAccess: kitchenAreaAccess,
+                seeEntrantRules: seeEntrantRules,
+                firstName: firstName,
+                lastName: lastName,
+                vendorCompany: vendorCompany,
+                dateOfVisit: dateOfVisit
+            )
             
             
         }
         
     }
+    
 }
-
-
-
-
-
-
-
-
-

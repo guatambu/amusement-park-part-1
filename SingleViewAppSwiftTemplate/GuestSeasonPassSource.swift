@@ -14,18 +14,20 @@ class GuestSeasonPassSource: GuestSeniorSource {
     var streetAddress: String
     var city: String
     var state: String
-    var zipCode: String
+    var zipCode: Int
     
     init(
         amusementAreaAccess: Bool,
         allRidesAccess: Bool,
-        dateOfBirth: String,
+        birthday: String,
         firstName: String,
         lastName: String,
+        foodDiscount: Double,
+        merchDiscount: Double,
         streetAddress: String,
         city: String,
         state: String,
-        zipCode: String
+        zipCode: Int
         ) {
         self.streetAddress = streetAddress
         self.city = city
@@ -34,9 +36,11 @@ class GuestSeasonPassSource: GuestSeniorSource {
         super.init(
             amusementAreaAccess: amusementAreaAccess,
             allRidesAccess: allRidesAccess,
-            dateOfBirth: dateOfBirth,
+            birthday: birthday,
             firstName: firstName,
-            lastName: lastName
+            lastName: lastName,
+            foodDiscount: foodDiscount,
+            merchDiscount: merchDiscount
         )
         self.merchDiscount = 0.20
         self.isSenior = false

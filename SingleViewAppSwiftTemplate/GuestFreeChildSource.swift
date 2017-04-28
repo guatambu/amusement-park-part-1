@@ -12,11 +12,14 @@ import Foundation
 class GuestFreeChildSource: GuestClassicSource {
     
     var isChild: Bool = true
-    var dateOfBirth: String
+    var birthday: String
     
-    init(amusementAreaAccess: Bool, allRideAccess: Bool, dateOfBirth: String) {
-        self.dateOfBirth = dateOfBirth
-        super.init(amusementAreaAccess: amusementAreaAccess, allRidesAccess: allRidesAccess)
+    init(amusementAreaAccess: Bool, allRidesAccess: Bool, birthday: String) {
+        self.birthday = birthday
+        super.init(
+            amusementAreaAccess: amusementAreaAccess,
+            allRidesAccess: allRidesAccess
+        )
     }
     
 }

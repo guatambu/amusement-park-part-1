@@ -21,6 +21,7 @@ class ContractEmployeeSource: VendorSource {
     init(
         amusementAreaAccess: Bool,
         allRidesAccess: Bool,
+        birthday: String,
         firstName: String,
         lastName: String,
         streetAddress: String,
@@ -29,15 +30,22 @@ class ContractEmployeeSource: VendorSource {
         zipCode: String,
         socialSecurityNumber: String,
         vendorCompany: String,
-        projectNumber: String
+        projectNumber: String,
+        dateOfVisit: String
         ) {
+        self.streetAddress = streetAddress
+        self.city = city
+        self.state = state
+        self.zipCode = zipCode
+        self.socialSecurityNumber = socialSecurityNumber
+        self.projectNumber = projectNumber
         super.init(
             amusementAreaAccess: amusementAreaAccess,
             allRidesAccess: allRidesAccess,
+            birthday: birthday,
             firstName: firstName,
             lastName: lastName,
             vendorCompany: vendorCompany,
-            dateOfBirth: dateOfBirth,
             dateOfVisit: dateOfVisit
         )
         self.dateOfVisit = "N/A"

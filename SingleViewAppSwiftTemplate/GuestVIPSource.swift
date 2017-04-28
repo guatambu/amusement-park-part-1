@@ -12,7 +12,6 @@ import Foundation
 class GuestVIPSource: GuestClassicSource {
     
     var skipLines: Bool = true
-    var isEligibleForDiscounts: Bool = true
     var foodDiscount: Double
     var merchDiscount: Double
     

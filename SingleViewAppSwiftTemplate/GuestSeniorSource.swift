@@ -12,18 +12,20 @@ import Foundation
 class GuestSeniorSource: GuestVIPSource {
     
     var isSenior: Bool = true
-    var dateOfBirth: String
+    var birthday: String
     var firstName: String
     var lastName: String
     
     init(
         amusementAreaAccess: Bool,
         allRidesAccess: Bool,
-        dateOfBirth: String,
+        birthday: String,
         firstName: String,
-        lastName: String
+        lastName: String,
+        foodDiscount: Double,
+        merchDiscount: Double
         ) {
-        self.dateOfBirth = dateOfBirth
+        self.birthday = birthday
         self.firstName = firstName
         self.lastName = lastName
         super.init(
