@@ -132,9 +132,6 @@ protocol EntrantTypeable {
 }
 
 
-
-// Entrant Type: base class: tier 1
-
 struct GuestClassicSource: EntrantTypeable {
     
     var amusementAreaAccess: Bool

@@ -23,12 +23,14 @@
 		FA23DAEB1EA817D20043C063 /* GuestVIPSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23DAEA1EA817D20043C063 /* GuestVIPSource.swift */; };
 		FA23DAED1EA8184F0043C063 /* GuestClassicSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23DAEC1EA8184F0043C063 /* GuestClassicSource.swift */; };
 		FA23DAEF1EA935FF0043C063 /* ErrorSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23DAEE1EA935FF0043C063 /* ErrorSource.swift */; };
-		FA23DAF11EA93F570043C063 /* EntrantTypeSwipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23DAF01EA93F570043C063 /* EntrantTypeSwipe.swift */; };
+		FA23DAF11EA93F570043C063 /* GuestTypeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23DAF01EA93F570043C063 /* GuestTypeGenerator.swift */; };
 		FA590E9E1EA96AFF0018D398 /* GuestSeasonPassSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA590E9D1EA96AFF0018D398 /* GuestSeasonPassSource.swift */; };
 		FA590EA01EA96BBD0018D398 /* GuestSeniorSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA590E9F1EA96BBD0018D398 /* GuestSeniorSource.swift */; };
 		FA590EA21EA96CB10018D398 /* ContractEmployeeSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA590EA11EA96CB10018D398 /* ContractEmployeeSource.swift */; };
 		FA590EA41EA96D720018D398 /* VendorSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA590EA31EA96D720018D398 /* VendorSource.swift */; };
 		FA590EA61EAA9B010018D398 /* TestUserSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA590EA51EAA9B010018D398 /* TestUserSource.swift */; };
+		FACCCAC81EB6B0D400E8BD76 /* EmployeeTypeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACCCAC71EB6B0D400E8BD76 /* EmployeeTypeGenerator.swift */; };
+		FACCCACB1EB6B16200E8BD76 /* SwipeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACCCACA1EB6B16200E8BD76 /* SwipeTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,12 +73,14 @@
 		FA23DAEA1EA817D20043C063 /* GuestVIPSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestVIPSource.swift; sourceTree = "<group>"; };
 		FA23DAEC1EA8184F0043C063 /* GuestClassicSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestClassicSource.swift; sourceTree = "<group>"; };
 		FA23DAEE1EA935FF0043C063 /* ErrorSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorSource.swift; sourceTree = "<group>"; };
-		FA23DAF01EA93F570043C063 /* EntrantTypeSwipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntrantTypeSwipe.swift; sourceTree = "<group>"; };
+		FA23DAF01EA93F570043C063 /* GuestTypeGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestTypeGenerator.swift; sourceTree = "<group>"; };
 		FA590E9D1EA96AFF0018D398 /* GuestSeasonPassSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestSeasonPassSource.swift; sourceTree = "<group>"; };
 		FA590E9F1EA96BBD0018D398 /* GuestSeniorSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestSeniorSource.swift; sourceTree = "<group>"; };
 		FA590EA11EA96CB10018D398 /* ContractEmployeeSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractEmployeeSource.swift; sourceTree = "<group>"; };
 		FA590EA31EA96D720018D398 /* VendorSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorSource.swift; sourceTree = "<group>"; };
 		FA590EA51EAA9B010018D398 /* TestUserSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUserSource.swift; sourceTree = "<group>"; };
+		FACCCAC71EB6B0D400E8BD76 /* EmployeeTypeGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeTypeGenerator.swift; sourceTree = "<group>"; };
+		FACCCACA1EB6B16200E8BD76 /* SwipeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,8 +136,7 @@
 				3A8AADCA1DF9B85E00A2B931 /* ViewController.swift */,
 				FA41758D1EB2C0B900E80291 /* GuestSources */,
 				FA41758E1EB2C0CB00E80291 /* EmployeeSources */,
-				FA23DAF01EA93F570043C063 /* EntrantTypeSwipe.swift */,
-				FA590EA51EAA9B010018D398 /* TestUserSource.swift */,
+				FACCCAC91EB6B14D00E8BD76 /* Testing */,
 				FA23DAEE1EA935FF0043C063 /* ErrorSource.swift */,
 				3A8AADCC1DF9B85E00A2B931 /* Main.storyboard */,
 				3A8AADCF1DF9B85E00A2B931 /* Assets.xcassets */,
@@ -164,6 +167,7 @@
 		FA41758D1EB2C0B900E80291 /* GuestSources */ = {
 			isa = PBXGroup;
 			children = (
+				FA23DAF01EA93F570043C063 /* GuestTypeGenerator.swift */,
 				FA23DAEC1EA8184F0043C063 /* GuestClassicSource.swift */,
 				FA23DAE81EA817610043C063 /* GuestFreeChildSource.swift */,
 				FA23DAEA1EA817D20043C063 /* GuestVIPSource.swift */,
@@ -176,6 +180,7 @@
 		FA41758E1EB2C0CB00E80291 /* EmployeeSources */ = {
 			isa = PBXGroup;
 			children = (
+				FACCCAC71EB6B0D400E8BD76 /* EmployeeTypeGenerator.swift */,
 				FA23DAE61EA817300043C063 /* HourlyFoodServicesSource.swift */,
 				FA23DAE21EA812310043C063 /* HourlyMaintenanceSource.swift */,
 				FA23DAE41EA816E10043C063 /* HourlyRideSerivcesSource.swift */,
@@ -184,6 +189,15 @@
 				FA590EA31EA96D720018D398 /* VendorSource.swift */,
 			);
 			name = EmployeeSources;
+			sourceTree = "<group>";
+		};
+		FACCCAC91EB6B14D00E8BD76 /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+				FA590EA51EAA9B010018D398 /* TestUserSource.swift */,
+				FACCCACA1EB6B16200E8BD76 /* SwipeTest.swift */,
+			);
+			name = Testing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,11 +336,12 @@
 			files = (
 				FA23DAE31EA812310043C063 /* HourlyMaintenanceSource.swift in Sources */,
 				FA590EA21EA96CB10018D398 /* ContractEmployeeSource.swift in Sources */,
-				FA23DAF11EA93F570043C063 /* EntrantTypeSwipe.swift in Sources */,
+				FA23DAF11EA93F570043C063 /* GuestTypeGenerator.swift in Sources */,
 				FA590EA61EAA9B010018D398 /* TestUserSource.swift in Sources */,
 				FA23DAE51EA816E10043C063 /* HourlyRideSerivcesSource.swift in Sources */,
 				3A8AADCB1DF9B85E00A2B931 /* ViewController.swift in Sources */,
 				FA590E9E1EA96AFF0018D398 /* GuestSeasonPassSource.swift in Sources */,
+				FACCCAC81EB6B0D400E8BD76 /* EmployeeTypeGenerator.swift in Sources */,
 				FA23DAEB1EA817D20043C063 /* GuestVIPSource.swift in Sources */,
 				FA23DADF1EA148470043C063 /* MacroInputCategories.swift in Sources */,
 				FA590EA01EA96BBD0018D398 /* GuestSeniorSource.swift in Sources */,
@@ -334,6 +349,7 @@
 				FA23DAEF1EA935FF0043C063 /* ErrorSource.swift in Sources */,
 				FA23DAED1EA8184F0043C063 /* GuestClassicSource.swift in Sources */,
 				FA590EA41EA96D720018D398 /* VendorSource.swift in Sources */,
+				FACCCACB1EB6B16200E8BD76 /* SwipeTest.swift in Sources */,
 				FA23DADD1EA144180043C063 /* ManagerSource.swift in Sources */,
 				FA23DAE71EA817300043C063 /* HourlyFoodServicesSource.swift in Sources */,
 				3A8AADC91DF9B85E00A2B931 /* AppDelegate.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import Foundation
 
-// Entrant Type: subclassA: tier 2
+
 struct VendorSource: EntrantTypeable {
     
     var amusementAreaAccess: Bool
