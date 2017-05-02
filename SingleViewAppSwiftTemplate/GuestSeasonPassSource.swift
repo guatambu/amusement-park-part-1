@@ -11,17 +11,18 @@ import Foundation
 
 struct GuestSeasonPassSource: EntrantTypeable {
     
-        let amusementAreaAccess: Bool
-        let allRidesAccess: Bool
-        let skipLines: Bool
-        let foodDiscount: Double
-        let merchDiscount: Double
-        let birthday: String
-        let firstName: String
-        let lastName: String
-        let streetAddress: String
-        let city: String
-        let state: String
-        let zipCode: Int
+    let isSeasonPass: Bool
+    let amusementAreaAccess: Bool
+    let allRidesAccess: Bool
+    let skipLines: Bool
+    let foodDiscount: Double
+    let merchDiscount: Double
+    let birthday: String
+    let firstName: String
+    let lastName: String
+    let streetAddress: String
+    let city: String
+    let state: String
+    let zipCode: Int
     
 }

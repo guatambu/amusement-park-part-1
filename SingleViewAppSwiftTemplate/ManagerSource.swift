@@ -11,6 +11,7 @@ import Foundation
 
 struct ManagerSource: EntrantTypeable {
     
+    let isManager: Bool
     var amusementAreaAccess: Bool
     var allRidesAccess: Bool
     var kitchenAreaAccess: Bool

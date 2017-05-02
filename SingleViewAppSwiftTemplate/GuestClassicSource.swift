@@ -134,6 +134,7 @@ protocol EntrantTypeable {
 
 struct GuestClassicSource: EntrantTypeable {
     
+    let isClassic: Bool
     var amusementAreaAccess: Bool
     var allRidesAccess: Bool
     

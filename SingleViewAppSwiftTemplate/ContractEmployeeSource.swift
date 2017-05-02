@@ -11,6 +11,7 @@ import Foundation
 
 struct ContractEmployeeSource: EntrantTypeable {
     
+    let isContractEmployee: Bool
     var amusementAreaAccess: Bool
     var allRidesAccess: Bool
     var kitchenAreaAccess: Bool
@@ -21,7 +22,7 @@ struct ContractEmployeeSource: EntrantTypeable {
     var streetAddress: String
     var city: String
     var state: String
-    var zipCode: String
+    var zipCode: Int 
     var socialSecurityNumber: String
     var projectNumber: String
     var dateOfVisit: String

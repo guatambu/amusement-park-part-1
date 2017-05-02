@@ -11,6 +11,7 @@ import Foundation
 
 struct GuestFreeChildSource: EntrantTypeable {
     
+    let isChild:Bool
     var amusementAreaAccess: Bool
     var allRidesAccess: Bool
     var birthday: String

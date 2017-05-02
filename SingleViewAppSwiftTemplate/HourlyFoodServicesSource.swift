@@ -11,6 +11,7 @@ import Foundation
 
 struct HourlyFoodServicesSource: EntrantTypeable {
     
+    let isFoodEmployee: Bool
     var amusementAreaAccess: Bool
     var allRidesAccess: Bool
     var kitchenAreaAccess: Bool

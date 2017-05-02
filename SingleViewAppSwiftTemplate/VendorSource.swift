@@ -11,6 +11,7 @@ import Foundation
 
 struct VendorSource: EntrantTypeable {
     
+    let isVendor: Bool
     var amusementAreaAccess: Bool
     var allRidesAccess: Bool
     var kitchenAreaAccess: Bool

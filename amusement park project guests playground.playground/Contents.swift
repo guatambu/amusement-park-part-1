@@ -14,6 +14,7 @@ protocol EntrantTypeable {
 
 struct GuestClassicSource: EntrantTypeable {
     
+    let isClassic: Bool
     var amusementAreaAccess: Bool
     var allRidesAccess: Bool
     
@@ -23,6 +24,7 @@ struct GuestClassicSource: EntrantTypeable {
 
 struct GuestChildSource: EntrantTypeable {
     
+    let isChild:Bool
     var amusementAreaAccess: Bool
     var allRidesAccess: Bool
     var birthday: String
@@ -32,6 +34,7 @@ struct GuestChildSource: EntrantTypeable {
 
 struct GuestVIPSource: EntrantTypeable {
     
+    let isVIP: Bool
     var amusementAreaAccess: Bool
     var allRidesAccess: Bool
     var skipLines: Bool
@@ -43,6 +46,7 @@ struct GuestVIPSource: EntrantTypeable {
 
 struct GuestSeniorSource: EntrantTypeable {
     
+    let isSenior: Bool
     var amusementAreaAccess: Bool
     var allRidesAccess: Bool
     var skipLines: Bool
@@ -57,6 +61,7 @@ struct GuestSeniorSource: EntrantTypeable {
 
 struct GuestSeasonPassSource: EntrantTypeable {
     
+    let isSeasonPass: Bool
     var amusementAreaAccess: Bool
     var allRidesAccess: Bool
     var skipLines: Bool
@@ -74,15 +79,17 @@ struct GuestSeasonPassSource: EntrantTypeable {
 }
 
 
-enum GuestTypes {
+enum Guest {
     
     case classic(
+        isClassic: Bool,
         amusementAreaAccess: Bool,
         allRidesAccess: Bool
         
     )
     
     case child(
+        isChild: Bool,
         amusementAreaAccess: Bool,
         allRidesAccess: Bool,
         birthday: String
@@ -90,6 +97,7 @@ enum GuestTypes {
     
     
     case vip(
+        isVIP: Bool,
         amusementAreaAccess: Bool,
         allRidesAccess: Bool,
         skipLines: Bool,
@@ -99,6 +107,7 @@ enum GuestTypes {
     )
     
     case senior(
+        isSenior: Bool,
         amusementAreaAccess: Bool,
         allRidesAccess: Bool,
         skipLines: Bool,
@@ -112,6 +121,7 @@ enum GuestTypes {
     
     
     case seasonPass(
+        isSeasonPass: Bool,
         amusementAreaAccess: Bool,
         allRidesAccess: Bool,
         skipLines: Bool,
@@ -134,21 +144,25 @@ enum GuestTypes {
             // guests of all types
             
         case .classic(
+            let isClassic,
             let amusementAreaAccess,
             let allRidesAccess
             ):
             return GuestClassicSource (
+                isClassic: isClassic,
                 amusementAreaAccess: amusementAreaAccess,
                 allRidesAccess: allRidesAccess
             )
             
  
         case .child(
+            let isChild,
             let amusementAreaAccess,
             let allRidesAccess,
             let birthday
             ):
             return GuestChildSource(
+                isChild: isChild,
                 amusementAreaAccess: amusementAreaAccess,
                 allRidesAccess: allRidesAccess,
                 birthday: birthday
@@ -156,6 +170,7 @@ enum GuestTypes {
             
      
         case .vip(
+            let isVIP,
             let amusementAreaAccess,
             let allRidesAccess,
             let skipLines,
@@ -163,6 +178,7 @@ enum GuestTypes {
             let merchDiscount
             ):
             return GuestVIPSource(
+                isVIP: isVIP,
                 amusementAreaAccess: amusementAreaAccess,
                 allRidesAccess: allRidesAccess,
                 skipLines: skipLines,
@@ -172,6 +188,7 @@ enum GuestTypes {
         
      
         case .senior(
+            let isSenior,
             let amusementAreaAccess,
             let allRidesAccess,
             let skipLines,
@@ -182,6 +199,7 @@ enum GuestTypes {
             let lastName
             ):
             return GuestSeniorSource(
+                isSenior: isSenior,
                 amusementAreaAccess: amusementAreaAccess,
                 allRidesAccess: allRidesAccess,
                 skipLines: skipLines,
@@ -194,6 +212,7 @@ enum GuestTypes {
             
        
         case .seasonPass(
+        let isSeasonPass,
             let amusementAreaAccess,
             let allRidesAccess,
             let skipLines,
@@ -208,6 +227,7 @@ enum GuestTypes {
             let zipCode
             ):
             return GuestSeasonPassSource(
+                isSeasonPass: isSeasonPass,
                 amusementAreaAccess: amusementAreaAccess,
                 allRidesAccess: allRidesAccess,
                 skipLines: skipLines,

@@ -11,6 +11,7 @@ import Foundation
 
 struct HourlyRideSerivcesSource: EntrantTypeable {
     
+    let isRideControlEmployee: Bool
     var amusementAreaAccess: Bool
     var allRidesAccess: Bool
     var rideControlAreaAccess: Bool = true

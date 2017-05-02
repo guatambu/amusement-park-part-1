@@ -11,6 +11,7 @@ import Foundation
 
 struct GuestSeniorSource: EntrantTypeable {
     
+    let isSenior: Bool
     var amusementAreaAccess: Bool
     var allRidesAccess: Bool
     var skipLines: Bool

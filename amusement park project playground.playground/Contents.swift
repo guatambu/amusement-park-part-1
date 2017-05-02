@@ -4,7 +4,6 @@ import UIKit
 import Foundation
 
 
-
 protocol EntrantTypeable {
     
     var amusementAreaAccess: Bool { get }
@@ -12,9 +11,9 @@ protocol EntrantTypeable {
     
 }
 
-
-struct HourlyRideServicesSource: EntrantTypeable {
+struct HourlyRideSerivcesSource: EntrantTypeable {
     
+    let isRideControlEmployee: Bool
     var amusementAreaAccess: Bool
     var allRidesAccess: Bool
     var rideControlAreaAccess: Bool
@@ -29,11 +28,46 @@ struct HourlyRideServicesSource: EntrantTypeable {
     var zipCode: Int
     var socialSecurityNumber: String
     
+    /*
+     init(
+     isRideControlEmployee: Bool = true,
+     amusementAreaAccess: Bool = true,
+     allRidesAccess: Bool = true,
+     rideControlAreaAccess: Bool = true,
+     foodDiscount: Double = 0.15,
+     merchDiscount: Double = 0.15,
+     birthday: String,
+     firstName: String,
+     lastName: String,
+     streetAddress: String,
+     city: String,
+     state: String,
+     zipCode: Int,
+     socialSecurityNumber: String
+     ) {
+     self.isRideControlEmployee = isRideControlEmployee
+     self.amusementAreaAccess = amusementAreaAccess
+     self.allRidesAccess = allRidesAccess
+     self.rideControlAreaAccess = rideControlAreaAccess
+     self.foodDiscount = foodDiscount
+     self.merchDiscount = merchDiscount
+     self.birthday = birthday
+     self.firstName = firstName
+     self.lastName = lastName
+     self.streetAddress = streetAddress
+     self.city = city
+     self.state = state
+     self.zipCode = zipCode
+     self.socialSecurityNumber = socialSecurityNumber
+     }
+     */
+    
 }
 
 
 struct HourlyFoodServicesSource: EntrantTypeable {
     
+    let isFoodEmployee: Bool
     var amusementAreaAccess: Bool
     var allRidesAccess: Bool
     var kitchenAreaAccess: Bool
@@ -48,11 +82,14 @@ struct HourlyFoodServicesSource: EntrantTypeable {
     var zipCode: Int
     var socialSecurityNumber: String
     
+    
+    
 }
 
 
 struct HourlyMaintenanceSource: EntrantTypeable {
     
+    let isMaintenanceEmployee: Bool
     var amusementAreaAccess: Bool
     var allRidesAccess: Bool
     var kitchenAreaAccess: Bool
@@ -74,11 +111,12 @@ struct HourlyMaintenanceSource: EntrantTypeable {
 
 struct ManagerSource: EntrantTypeable {
     
+    let isManager: Bool
     var amusementAreaAccess: Bool
     var allRidesAccess: Bool
     var kitchenAreaAccess: Bool
     var maintenanceAreaAccess: Bool
-    var officeAreasAccess: Bool
+    var officeAreaAccess: Bool
     var rideControlAreaAccess: Bool
     var foodDiscount: Double
     var merchDiscount: Double
@@ -97,6 +135,7 @@ struct ManagerSource: EntrantTypeable {
 
 struct ContractEmployeeSource: EntrantTypeable {
     
+    let isContractEmployee: Bool
     var amusementAreaAccess: Bool
     var allRidesAccess: Bool
     var kitchenAreaAccess: Bool
@@ -112,12 +151,12 @@ struct ContractEmployeeSource: EntrantTypeable {
     var projectNumber: String
     var dateOfVisit: String
     
-    
 }
 
 
 struct VendorSource: EntrantTypeable {
     
+    let isVendor: Bool
     var amusementAreaAccess: Bool
     var allRidesAccess: Bool
     var kitchenAreaAccess: Bool
@@ -128,12 +167,14 @@ struct VendorSource: EntrantTypeable {
     var vendorCompany: String
     var dateOfVisit: String
     
+    
 }
 
 
-enum Employees {
+enum Employee {
     
     case contractEmployee(
+        isContractEmployee: Bool,
         amusementAreaAccess: Bool,
         allRidesAccess: Bool,
         kitchenAreaAccess: Bool,
@@ -151,6 +192,7 @@ enum Employees {
     )
     
     case hourlyFood(
+        isFoodEmployee: Bool,
         amusementAreaAccess: Bool,
         allRidesAccess: Bool,
         kitchenAreaAccess: Bool,
@@ -167,6 +209,7 @@ enum Employees {
     )
     
     case hourlyRide(
+        isRideControlEmployee: Bool,
         amusementAreaAccess: Bool,
         allRidesAccess: Bool,
         rideControlAreaAccess: Bool,
@@ -183,6 +226,7 @@ enum Employees {
     )
     
     case hourlyMaintenance(
+        isMaintenanceEmployee: Bool,
         amusementAreaAccess: Bool,
         allRidesAccess: Bool,
         kitchenAreaAccess: Bool,
@@ -201,11 +245,12 @@ enum Employees {
     )
     
     case manager(
+        isManager: Bool,
         amusementAreaAccess: Bool,
         allRidesAccess: Bool,
         kitchenAreaAccess: Bool,
         maintenanceAreaAccess: Bool,
-        officeAreaAccess: Bool,
+        officeAreasAccess: Bool,
         rideControlAreaAccess: Bool,
         foodDiscount: Double,
         merchDiscount: Double,
@@ -221,10 +266,11 @@ enum Employees {
     )
     
     case vendor(
+        isVendor: Bool,
         amusementAreaAccess: Bool,
         allRidesAccess: Bool,
         kitchenAreaAccess: Bool,
-        seeEntrantRules: String,
+        rideAccessInstructions: String,
         birthday: String,
         firstName: String,
         lastName: String,
@@ -238,6 +284,7 @@ enum Employees {
         switch self {
             
         case .hourlyFood(
+            let isFoodEmployee,
             let amusementAreaAccess,
             let allRidesAccess,
             let kitchenAreaAccess,
@@ -253,6 +300,7 @@ enum Employees {
             let socialSecurityNumber
             ):
             return HourlyFoodServicesSource(
+                isFoodEmployee: isFoodEmployee,
                 amusementAreaAccess: amusementAreaAccess,
                 allRidesAccess: allRidesAccess,
                 kitchenAreaAccess: kitchenAreaAccess,
@@ -268,7 +316,9 @@ enum Employees {
                 socialSecurityNumber: socialSecurityNumber
             )
             
+            
         case .hourlyRide(
+            let isRideControlEmployee,
             let amusementAreaAccess,
             let allRidesAccess,
             let rideControlAreaAccess,
@@ -283,7 +333,8 @@ enum Employees {
             let zipCode,
             let socialSecurityNumber
             ):
-            return HourlyRideServicesSource(
+            return HourlyRideSerivcesSource (
+                isRideControlEmployee: isRideControlEmployee,
                 amusementAreaAccess: amusementAreaAccess,
                 allRidesAccess: allRidesAccess,
                 rideControlAreaAccess: rideControlAreaAccess,
@@ -299,7 +350,8 @@ enum Employees {
                 socialSecurityNumber: socialSecurityNumber
             )
             
-        case .hourlyMaintenance(
+        case .hourlyMaintenance (
+            let isMaintenanceEmployee,
             let amusementAreaAccess,
             let allRidesAccess,
             let kitchenAreaAccess,
@@ -316,7 +368,8 @@ enum Employees {
             let zipCode,
             let socialSecurityNumber
             ):
-            return HourlyMaintenanceSource(
+            return HourlyMaintenanceSource (
+                isMaintenanceEmployee: isMaintenanceEmployee,
                 amusementAreaAccess: amusementAreaAccess,
                 allRidesAccess: allRidesAccess,
                 kitchenAreaAccess: kitchenAreaAccess,
@@ -338,6 +391,7 @@ enum Employees {
             // managers
             
         case .manager(
+            let isManager,
             let amusementAreaAccess,
             let allRidesAccess,
             let kitchenAreaAccess,
@@ -356,12 +410,13 @@ enum Employees {
             let socialSecurityNumber,
             let managementTier
             ):
-            return ManagerSource(
+            return ManagerSource (
+                isManager: isManager,
                 amusementAreaAccess: amusementAreaAccess,
                 allRidesAccess: allRidesAccess,
                 kitchenAreaAccess: kitchenAreaAccess,
                 maintenanceAreaAccess: maintenanceAreaAccess,
-                officeAreasAccess: officeAreaAccess,
+                officeAreaAccess: officeAreaAccess,
                 rideControlAreaAccess: rideControlAreaAccess,
                 foodDiscount: foodDiscount,
                 merchDiscount: merchDiscount,
@@ -380,6 +435,7 @@ enum Employees {
             // contract employees and Vendors
             
         case .contractEmployee(
+            let isContractEmployee,
             let amusementAreaAccess,
             let allRidesAccess,
             let kitchenAreaAccess,
@@ -395,7 +451,8 @@ enum Employees {
             let projectNumber,
             let dateOfVisit
             ):
-            return ContractEmployeeSource(
+            return ContractEmployeeSource (
+                isContractEmployee: isContractEmployee,
                 amusementAreaAccess: amusementAreaAccess,
                 allRidesAccess: allRidesAccess,
                 kitchenAreaAccess: kitchenAreaAccess,
@@ -414,6 +471,7 @@ enum Employees {
             
             
         case .vendor(
+            let isVendor,
             let amusementAreaAccess,
             let allRidesAccess,
             let kitchenAreaAccess,
@@ -424,7 +482,8 @@ enum Employees {
             let vendorCompany,
             let dateOfVisit
             ):
-            return VendorSource(
+            return VendorSource (
+                isVendor: isVendor,
                 amusementAreaAccess: amusementAreaAccess,
                 allRidesAccess: allRidesAccess,
                 kitchenAreaAccess: kitchenAreaAccess,
@@ -439,5 +498,8 @@ enum Employees {
         }
     }
 }
+
+var newVendor = Employee.vendor(isVendor: true, amusementAreaAccess: true, allRidesAccess: false, kitchenAreaAccess: true, rideAccessInstructions: "See Entrant Rules", birthday: "01/01/2001", firstName: "Mike", lastName: "Smith", vendorCompany: "my Company", dateOfVisit: "01/01/2015")
+
 
 
