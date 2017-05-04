@@ -84,6 +84,7 @@ protocol EntrantTypeable {
     
 }
 
+// base class with swipe helper methods
 
 class GuestClassic: EntrantTypeable {
 
@@ -107,8 +108,76 @@ class GuestClassic: EntrantTypeable {
         self.discountAmount = discountAmount
         self.requiredInformation = requiredInformation
     }
+    
+    func swipeAreaAccess(check entrant: GuestClassic) {
+        
+        for person in entrant.areaAccess {
+            switch person {
+            case .maintenance:
+                print("VALID: hourly employee: maintenance")
+            case .kitchen:
+                print("VALID: hourly employee: food service, vendor, contract employee")
+            case .rideControl:
+                print("VALID: hourly employee: ride services")
+            case .office:
+                print("VALID: manager")
+            default:
+                print("INVALID")
+            }
+        }
+        
+        
+    }
+    
+    
+    func swipeRidePrivileges(check entrant: GuestClassic) {
+        
+        for person in entrant.ridePrivileges {
+            switch person {
+            case .all:
+                print("VALID: pass holder may ride the attraction")
+            case .skip:
+                print("VALID: pass holder may skip line of attractions")
+            case .deferToRules:
+                print("INVALID: pass holder must provide permissions")
+            }
+        }
+    
+    }
+    
+    
+    func swipeDiscount(check entrant: GuestClassic) {
+        
+        for person in entrant.discountAccess {
+            switch person {
+            case .food:
+                print("VALID: pass holder receives food discount")
+            case .merch:
+                print("VALID: pass holder receives merch discount")
+            case .none:
+                print("INVALID: no discounts")
+            }
+        }
+        
+    }
+    
+    func swipeRequiredInfo(check entrant: GuestClassic) {
+        
+        for person in entrant.requiredInformation {
+            switch person {
+            case .business:
+                print("pass holder must provide required business information")
+            case .personal:
+                print("pass holder must provide required personal information")
+            case .none:
+                print("none")
+            }
+        }
+        
+    }
 
 }
+
 
 
 class GuestChild: GuestClassic {
@@ -137,7 +206,25 @@ class GuestChild: GuestClassic {
 }
 
 
-class GuestVIP: GuestClassic {}
+class GuestVIP: GuestClassic {
+
+    override init (
+        areaAccess: [AreaAccess],
+        ridePrivileges: [RidePrivilege],
+        discountAccess: [DiscountAccess],
+        discountAmount: [DiscountAmount],
+        requiredInformation: [RequiredInformation]
+        )
+    {
+        super.init(
+            areaAccess: areaAccess,
+            ridePrivileges: ridePrivileges,
+            discountAccess: discountAccess,
+            discountAmount: discountAmount,
+            requiredInformation: requiredInformation)
+    }
+
+}
 
 
 class GuestSenior: GuestChild {
@@ -252,10 +339,80 @@ class HourlyFoodEmployee: GuestSeasonPass {
 }
 
 
-class HourlyMaintenanceEmployee: HourlyFoodEmployee {}
+class HourlyMaintenanceEmployee: HourlyFoodEmployee {
+
+    override init (
+        areaAccess: [AreaAccess],
+        ridePrivileges: [RidePrivilege],
+        discountAccess: [DiscountAccess],
+        discountAmount: [DiscountAmount],
+        requiredInformation: [RequiredInformation],
+        dateOfBirth: String,
+        firstName: String,
+        lastName: String,
+        streetAddress: String,
+        city: String,
+        state: String,
+        zipCode: Int,
+        socialSecurityNumber: String
+        )
+    {
+        super.init(
+            areaAccess: areaAccess,
+            ridePrivileges: ridePrivileges,
+            discountAccess: discountAccess,
+            discountAmount: discountAmount,
+            requiredInformation: requiredInformation,
+            dateOfBirth: dateOfBirth,
+            firstName: firstName,
+            lastName: lastName,
+            streetAddress: streetAddress,
+            city: city,
+            state: state,
+            zipCode: zipCode,
+            socialSecurityNumber: socialSecurityNumber
+        )
+        
+    }
+}
 
 
-class HourlyRideServicesEmployee: HourlyFoodEmployee {}
+class HourlyRideServicesEmployee: HourlyFoodEmployee {
+
+    override init (
+        areaAccess: [AreaAccess],
+        ridePrivileges: [RidePrivilege],
+        discountAccess: [DiscountAccess],
+        discountAmount: [DiscountAmount],
+        requiredInformation: [RequiredInformation],
+        dateOfBirth: String,
+        firstName: String,
+        lastName: String,
+        streetAddress: String,
+        city: String,
+        state: String,
+        zipCode: Int,
+        socialSecurityNumber: String
+        )
+    {
+        super.init(
+            areaAccess: areaAccess,
+            ridePrivileges: ridePrivileges,
+            discountAccess: discountAccess,
+            discountAmount: discountAmount,
+            requiredInformation: requiredInformation,
+            dateOfBirth: dateOfBirth,
+            firstName: firstName,
+            lastName: lastName,
+            streetAddress: streetAddress,
+            city: city,
+            state: state,
+            zipCode: zipCode,
+            socialSecurityNumber: socialSecurityNumber
+        )
+    
+    }
+}
 
 
 class ManagerEmployee: HourlyFoodEmployee {
@@ -374,6 +531,28 @@ class Vendor: GuestSenior {
         
     }
 }
+
+// MARK: swipe method goes here
+
+
+
+
+var maintenanceWorker = HourlyMaintenanceEmployee(areaAccess: [.amusement, .kitchen, .maintenance, .rideControl], ridePrivileges: [.all], discountAccess: [.food, .merch], discountAmount: [.fifteen, .twentyfive], requiredInformation: [.personal], dateOfBirth: "09/08/1990", firstName: "Daniel", lastName: "Smith", streetAddress: "123 my street", city: "towntown", state: "CA", zipCode: 91203, socialSecurityNumber: "552-041-9412")
+
+
+
+
+
+
+
+
+
+
+
+
+// MARK: test cases go here
+
+
 
 
 
