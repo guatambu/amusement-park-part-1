@@ -532,25 +532,33 @@ class Vendor: GuestSenior {
     }
 }
 
-// MARK: swipe method goes here
+
+
+
+
+// MARK: test cases go here
 
 
 
 
 var maintenanceWorker = HourlyMaintenanceEmployee(areaAccess: [.amusement, .kitchen, .maintenance, .rideControl], ridePrivileges: [.all], discountAccess: [.food, .merch], discountAmount: [.fifteen, .twentyfive], requiredInformation: [.personal], dateOfBirth: "09/08/1990", firstName: "Daniel", lastName: "Smith", streetAddress: "123 my street", city: "towntown", state: "CA", zipCode: 91203, socialSecurityNumber: "552-041-9412")
 
+var foodServicesWorker = HourlyFoodEmployee(areaAccess: [.amusement, .kitchen], ridePrivileges: [.all], discountAccess: [.food, .merch], discountAmount: [.fifteen, .twentyfive], requiredInformation: [.personal], dateOfBirth: "09/12/1987", firstName: "harry", lastName: "stevens", streetAddress: "442 buckled ave.", city: "harrisburg", state: "VA", zipCode: 01459, socialSecurityNumber: "899-234-4532")
+
+var vip = GuestVIP(areaAccess: [.amusement], ridePrivileges: [.all, .skip], discountAccess: [.food, .merch], discountAmount: [.ten, .twenty], requiredInformation: [.none])
+
+
+var classicGuest = GuestClassic(areaAccess: [.amusement], ridePrivileges: [.all], discountAccess: [.none], discountAmount: [.none], requiredInformation: [.none])
+
+var childGuest = GuestChild(areaAccess: [.amusement], ridePrivileges: [.all], discountAccess: [.none], discountAmount: [.none], requiredInformation: [.personal], dateOfBirth: "07/08/2013")
+
+
+var shiftManager = ManagerEmployee(areaAccess: [.amusement, .kitchen, .maintenance, .office, .rideControl], ridePrivileges: [.all], discountAccess: [.food, .merch], discountAmount: [.twentyfive, .twentyfive], requiredInformation: [.personal], dateOfBirth: "12/23/1999", firstName: "robyn", lastName: "henderson", streetAddress: "6723 who knows where dr.", city: "township", state: "CA", zipCode: 91234, socialSecurityNumber: "123-654-9807", managementTier: [.shift])
+
+var rideServices = HourlyRideServicesEmployee(areaAccess: [.amusement, .rideControl], ridePrivileges: [.all], discountAccess: [.food, .merch], discountAmount: [.fifteen, .twentyfive], requiredInformation: [.personal], dateOfBirth: "05/25/2000", firstName: "kevin", lastName: "grant", streetAddress: "98 round the corner ave.", city: "paradise" , state: "CA", zipCode: 98023, socialSecurityNumber: "654-234-0987")
 
 
 
-
-
-
-
-
-
-
-
-// MARK: test cases go here
 
 
 
