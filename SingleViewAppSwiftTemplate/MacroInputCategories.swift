@@ -36,11 +36,13 @@ enum CollectedData: String {
 }
 
 enum DiscountAccess: String {
+    case none = "none"
     case food = "Discount on Food"
     case merch = "Discount on Merchandise"
 }
 
 enum DiscountAmount: String {
+    case none = "none"
     case ten = "10%"
     case fifteen = "15%"
     case twenty = "20%"
@@ -49,15 +51,15 @@ enum DiscountAmount: String {
 
 enum EntrantType: String {
     case classic = "Classic Guest"
-    case vip = "VIP Guest"
     case child = "Free Child Guest"
     case seasonPass = "Season Pass Guest"
     case senior = "Senior Guest"
-    case contractEmployee = "Contract Employee"
+    case vip = "VIP Guest"
     case hourlyFood = "Hourly Employee - Food Services"
     case hourlyRide = "Hourly Employee - Ride Services"
     case hourlyMaintenance = "Hourly Employee - Maintenance"
     case manager = "Manager"
+    case contractEmployee = "Contract Employee"
     case vendor = "Vendor"
 }
 
@@ -67,19 +69,16 @@ enum ManagerType: String {
     case senior = "Senior"
 }
 
-enum RequiredInformationType: String {
-    case personal = "Required Personal Information"
-    case business = "Required Business Information"
+enum RequiredInformation: String {
+    case none = "none"
+    case personal = "Personal Information"
+    case business = "Business Information"
 }
 
-enum RideAccess: String {
+enum RidePrivilege: String {
     case all = "Access All Rides"
     case skip = "Skip All Ride Lines"
     case deferToRules = "See Entrant Access Rules"
 }
-
-
-
-
 
 

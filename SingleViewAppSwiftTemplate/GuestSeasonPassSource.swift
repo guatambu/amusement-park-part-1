@@ -9,20 +9,45 @@
 import Foundation
 
 
-struct GuestSeasonPassSource: EntrantTypeable {
+
+class GuestSeasonPassSource: GuestSeniorSource {
     
-    let isSeasonPass: Bool
-    let amusementAreaAccess: Bool
-    let allRidesAccess: Bool
-    let skipLines: Bool
-    let foodDiscount: Double
-    let merchDiscount: Double
-    let birthday: String
-    let firstName: String
-    let lastName: String
-    let streetAddress: String
-    let city: String
-    let state: String
-    let zipCode: Int
+    var streetAddress: String
+    var city: String
+    var state: String
+    var zipCode: Int
     
+    init (
+        areaAccess: [AreaAccess],
+        ridePrivileges: [RidePrivilege],
+        discountAccess: [DiscountAccess],
+        discountAmount: [DiscountAmount],
+        requiredInformation: [RequiredInformation],
+        dateOfBirth: String,
+        firstName: String,
+        lastName: String,
+        streetAddress: String,
+        city: String,
+        state: String,
+        zipCode: Int
+        
+        )
+    {
+        self.streetAddress = streetAddress
+        self.city = city
+        self.state = state
+        self.zipCode = zipCode
+        super.init(
+            areaAccess: areaAccess,
+            ridePrivileges: ridePrivileges,
+            discountAccess: discountAccess,
+            discountAmount: discountAmount,
+            requiredInformation: requiredInformation,
+            dateOfBirth: dateOfBirth,
+            firstName: firstName,
+            lastName: lastName
+        )
+        self.discountAmount = [.ten, .twenty]
+        
+    }
 }

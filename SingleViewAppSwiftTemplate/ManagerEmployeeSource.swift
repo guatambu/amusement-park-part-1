@@ -1,8 +1,8 @@
 //
-//  HourlyFoodServicesSource.swift
+//  ManagerSource.swift
 //  SingleViewAppSwiftTemplate
 //
-//  Created by Michael Guatambu Davis on 4/19/17.
+//  Created by Michael Guatambu Davis on 4/14/17.
 //  Copyright © 2017 Treehouse. All rights reserved.
 //
 
@@ -10,9 +10,9 @@ import Foundation
 
 
 
-class HourlyFoodEmployeeSource: GuestSeasonPassSource {
+class ManagerEmployeeSource: HourlyFoodEmployeeSource {
     
-    var socialSecurityNumber: String
+    var managementTier: [ManagerType]
     
     init (
         areaAccess: [AreaAccess],
@@ -27,10 +27,11 @@ class HourlyFoodEmployeeSource: GuestSeasonPassSource {
         city: String,
         state: String,
         zipCode: Int,
-        socialSecurityNumber: String
+        socialSecurityNumber: String,
+        managementTier: [ManagerType]
         )
     {
-        self.socialSecurityNumber = socialSecurityNumber
+        self.managementTier = managementTier
         super.init(
             areaAccess: areaAccess,
             ridePrivileges: ridePrivileges,
@@ -43,10 +44,11 @@ class HourlyFoodEmployeeSource: GuestSeasonPassSource {
             streetAddress: streetAddress,
             city: city,
             state: state,
-            zipCode: zipCode
+            zipCode: zipCode,
+            socialSecurityNumber: socialSecurityNumber
         )
-        self.areaAccess = [.amusement, .kitchen]
-        self.discountAmount = [.fifteen, .twentyfive]
+        self.areaAccess = [.amusement, .kitchen, .maintenance, .office, .rideControl]
+        self.discountAmount = [.twentyfive, .twentyfive]
         
     }
 }

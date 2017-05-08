@@ -9,16 +9,35 @@
 import Foundation
 
 
-struct GuestSeniorSource: EntrantTypeable {
+
+class GuestSeniorSource: GuestChildSource {
     
-    let isSenior: Bool
-    var amusementAreaAccess: Bool
-    var allRidesAccess: Bool
-    var skipLines: Bool
-    var foodDiscount: Double
-    var merchDiscount: Double
-    var birthday: String
     var firstName: String
     var lastName: String
     
+    init (
+        areaAccess: [AreaAccess],
+        ridePrivileges: [RidePrivilege],
+        discountAccess: [DiscountAccess],
+        discountAmount: [DiscountAmount],
+        requiredInformation: [RequiredInformation],
+        dateOfBirth: String,
+        firstName: String,
+        lastName: String
+        )
+    {
+        self.firstName = firstName
+        self.lastName = lastName
+        super.init(
+            areaAccess: areaAccess,
+            ridePrivileges: ridePrivileges,
+            discountAccess: discountAccess,
+            discountAmount: discountAmount,
+            requiredInformation: requiredInformation,
+            dateOfBirth: dateOfBirth
+        )
+        self.ridePrivileges = [.all, .skip]
+        self.discountAmount = [.ten, .ten]
+        
+    }
 }

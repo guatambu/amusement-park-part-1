@@ -124,22 +124,28 @@
 import Foundation
 
 
-protocol EntrantTypeable {
 
-    var amusementAreaAccess: Bool { get }
-    var allRidesAccess: Bool { get }
-
-}
-
-
-struct GuestClassicSource: EntrantTypeable {
+class GuestClassicSource: PersonSource {
     
-    let isClassic: Bool
-    var amusementAreaAccess: Bool
-    var allRidesAccess: Bool
-    
+    override init (
+        areaAccess: [AreaAccess],
+        ridePrivileges: [RidePrivilege],
+        discountAccess: [DiscountAccess],
+        discountAmount: [DiscountAmount],
+        requiredInformation: [RequiredInformation]
+        )
+    {
+        super.init(
+            areaAccess: areaAccess,
+            ridePrivileges: ridePrivileges,
+            discountAccess: discountAccess,
+            discountAmount: discountAmount,
+            requiredInformation: requiredInformation
+        )
+        self.areaAccess = [.amusement]
+        self.ridePrivileges = [.all]
+    }
 }
-
 
 
 

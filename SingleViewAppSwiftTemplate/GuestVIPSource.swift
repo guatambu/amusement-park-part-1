@@ -8,23 +8,29 @@
 
 import Foundation
 
-// Entrant Type: sublassB: tier 2
+
 class GuestVIPSource: GuestClassicSource {
     
-    var skipLines: Bool = true
-    var foodDiscount: Double
-    var merchDiscount: Double
-    
-    init(
-        amusementAreaAccess: Bool,
-        allRidesAccess: Bool,
-        foodDiscount: Double,
-        merchDiscount: Double
-        ) {
-        self.foodDiscount = foodDiscount
-        self.merchDiscount = merchDiscount
-        super.init(amusementAreaAccess: amusementAreaAccess, allRidesAccess: allRidesAccess)
-        
+    override init (
+        areaAccess: [AreaAccess],
+        ridePrivileges: [RidePrivilege],
+        discountAccess: [DiscountAccess],
+        discountAmount: [DiscountAmount],
+        requiredInformation: [RequiredInformation]
+        )
+    {
+        super.init(
+            areaAccess: areaAccess,
+            ridePrivileges: ridePrivileges,
+            discountAccess: discountAccess,
+            discountAmount: discountAmount,
+            requiredInformation: requiredInformation
+        )
+        self.areaAccess = [.amusement]
+        self.ridePrivileges = [.all, .skip]
+        self.discountAccess = [.food, .merch]
+        self.discountAmount = [.ten, .twenty]
+        self.requiredInformation = [.none]
     }
     
 }
