@@ -9,18 +9,40 @@
 import Foundation
 
 
-struct VendorSource: EntrantTypeable {
+class VendorSource: GuestSeniorSource {
     
-    let isVendor: Bool
-    var amusementAreaAccess: Bool
-    var allRidesAccess: Bool
-    var kitchenAreaAccess: Bool
-    var rideAccessInstructions: String
-    var birthday: String
-    var firstName: String
-    var lastName: String
-    var vendorCompany: String
-    var dateOfVisit: String
+    var vendorCompany: String?
+    var dateOfVisit: String?
     
-    
+    init (
+        areaAccess: [AreaAccess],
+        ridePrivileges: [RidePrivilege],
+        discountAccess: [DiscountAccess],
+        discountAmount: [DiscountAmount],
+        requiredInformation: [RequiredInformation],
+        dateOfBirth: String?,
+        firstName: String?,
+        lastName: String?,
+        vendorCompany: String?,
+        dateOfVisit: String?
+        )
+    {
+        self.vendorCompany = vendorCompany
+        self.dateOfVisit = dateOfVisit
+        super.init(
+            areaAccess: areaAccess,
+            ridePrivileges: ridePrivileges,
+            discountAccess: discountAccess,
+            discountAmount: discountAmount,
+            requiredInformation: requiredInformation,
+            dateOfBirth: dateOfBirth,
+            firstName: firstName,
+            lastName: lastName
+        )
+        
+        self.ridePrivileges = [.deferToRules]
+        self.discountAccess = [.none]
+        self.discountAmount = [.none]
+        
+    }
 }

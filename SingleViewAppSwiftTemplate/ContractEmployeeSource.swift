@@ -9,27 +9,49 @@
 import Foundation
 
 
-struct ContractEmployeeSource: EntrantTypeable {
+
+class ContractEmployeeSource: HourlyFoodEmployeeSource {
     
-    let isContractEmployee: Bool
-    var amusementAreaAccess: Bool
-    var allRidesAccess: Bool
-    var kitchenAreaAccess: Bool
-    var rideAccessInstructions: String
-    var birthday: String
-    var firstName: String
-    var lastName: String
-    var streetAddress: String
-    var city: String
-    var state: String
-    var zipCode: Int 
-    var socialSecurityNumber: String
-    var projectNumber: String
-    var dateOfVisit: String
-
+    var projectNumber: Int?
+    
+    init(
+        areaAccess: [AreaAccess],
+        ridePrivileges: [RidePrivilege],
+        discountAccess: [DiscountAccess],
+        discountAmount: [DiscountAmount],
+        requiredInformation: [RequiredInformation],
+        dateOfBirth: String?,
+        firstName: String?,
+        lastName: String?,
+        streetAddress: String?,
+        city: String?,
+        state: String?,
+        zipCode: Int?,
+        socialSecurityNumber: String?,
+        projectNumber: Int?
+        )
+    {
+        self.projectNumber = projectNumber
+        super.init(
+            areaAccess: areaAccess,
+            ridePrivileges: ridePrivileges,
+            discountAccess: discountAccess,
+            discountAmount: discountAmount,
+            requiredInformation: requiredInformation,
+            dateOfBirth: dateOfBirth,
+            firstName: firstName,
+            lastName: lastName,
+            streetAddress: streetAddress,
+            city: city,
+            state: state,
+            zipCode: zipCode,
+            socialSecurityNumber: socialSecurityNumber
+        )
+        self.ridePrivileges = [.deferToRules]
+        self.discountAccess = [.none]
+        self.discountAmount = [.none]
+        
+    }
 }
-
-
-
 
 

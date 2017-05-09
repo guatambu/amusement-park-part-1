@@ -9,11 +9,30 @@
 import Foundation
 
 
-struct GuestFreeChildSource: EntrantTypeable {
+
+class GuestChildSource: GuestClassicSource {
     
-    let isChild:Bool
-    var amusementAreaAccess: Bool
-    var allRidesAccess: Bool
-    var birthday: String
+    var dateOfBirth: String?
     
+    init (
+        areaAccess: [AreaAccess],
+        ridePrivileges: [RidePrivilege],
+        discountAccess: [DiscountAccess],
+        discountAmount: [DiscountAmount],
+        requiredInformation: [RequiredInformation],
+        dateOfBirth: String?
+        )
+    {
+        self.dateOfBirth = dateOfBirth
+        super.init(
+            areaAccess: areaAccess,
+            ridePrivileges: ridePrivileges,
+            discountAccess: discountAccess,
+            discountAmount: discountAmount,
+            requiredInformation: requiredInformation
+        )
+        self.requiredInformation = [.personal]
+        
+        
+    }
 }

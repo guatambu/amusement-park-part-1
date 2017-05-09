@@ -769,3 +769,6 @@ func swipeRequiredInfo(check entrant: GuestClassic) {
  */
 
 
+
+
+
