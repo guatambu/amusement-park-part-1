@@ -12,7 +12,7 @@ import Foundation
 
 class HourlyFoodEmployeeSource: GuestSeasonPassSource {
     
-    var socialSecurityNumber: String
+    var socialSecurityNumber: String?
     
     init (
         areaAccess: [AreaAccess],
@@ -20,14 +20,14 @@ class HourlyFoodEmployeeSource: GuestSeasonPassSource {
         discountAccess: [DiscountAccess],
         discountAmount: [DiscountAmount],
         requiredInformation: [RequiredInformation],
-        dateOfBirth: String,
-        firstName: String,
-        lastName: String,
-        streetAddress: String,
-        city: String,
-        state: String,
-        zipCode: Int,
-        socialSecurityNumber: String
+        dateOfBirth: String?,
+        firstName: String?,
+        lastName: String?,
+        streetAddress: String?,
+        city: String?,
+        state: String?,
+        zipCode: Int?,
+        socialSecurityNumber: String?
         )
     {
         self.socialSecurityNumber = socialSecurityNumber

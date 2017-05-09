@@ -20,14 +20,14 @@ class ManagerEmployeeSource: HourlyFoodEmployeeSource {
         discountAccess: [DiscountAccess],
         discountAmount: [DiscountAmount],
         requiredInformation: [RequiredInformation],
-        dateOfBirth: String,
-        firstName: String,
-        lastName: String,
-        streetAddress: String,
-        city: String,
-        state: String,
-        zipCode: Int,
-        socialSecurityNumber: String,
+        dateOfBirth: String?,
+        firstName: String?,
+        lastName: String?,
+        streetAddress: String?,
+        city: String?,
+        state: String?,
+        zipCode: Int?,
+        socialSecurityNumber: String?,
         managementTier: [ManagerType]
         )
     {

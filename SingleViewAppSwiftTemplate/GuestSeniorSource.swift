@@ -12,8 +12,8 @@ import Foundation
 
 class GuestSeniorSource: GuestChildSource {
     
-    var firstName: String
-    var lastName: String
+    var firstName: String?
+    var lastName: String?
     
     init (
         areaAccess: [AreaAccess],
@@ -21,9 +21,9 @@ class GuestSeniorSource: GuestChildSource {
         discountAccess: [DiscountAccess],
         discountAmount: [DiscountAmount],
         requiredInformation: [RequiredInformation],
-        dateOfBirth: String,
-        firstName: String,
-        lastName: String
+        dateOfBirth: String?,
+        firstName: String?,
+        lastName: String?
         )
     {
         self.firstName = firstName
@@ -41,3 +41,5 @@ class GuestSeniorSource: GuestChildSource {
         
     }
 }
+
+

@@ -12,10 +12,10 @@ import Foundation
 
 class GuestSeasonPassSource: GuestSeniorSource {
     
-    var streetAddress: String
-    var city: String
-    var state: String
-    var zipCode: Int
+    var streetAddress: String?
+    var city: String?
+    var state: String?
+    var zipCode: Int?
     
     init (
         areaAccess: [AreaAccess],
@@ -23,13 +23,13 @@ class GuestSeasonPassSource: GuestSeniorSource {
         discountAccess: [DiscountAccess],
         discountAmount: [DiscountAmount],
         requiredInformation: [RequiredInformation],
-        dateOfBirth: String,
-        firstName: String,
-        lastName: String,
-        streetAddress: String,
-        city: String,
-        state: String,
-        zipCode: Int
+        dateOfBirth: String?,
+        firstName: String?,
+        lastName: String?,
+        streetAddress: String?,
+        city: String?,
+        state: String?,
+        zipCode: Int?
         
         )
     {

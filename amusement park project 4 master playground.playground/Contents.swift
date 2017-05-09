@@ -771,4 +771,7 @@ func swipeRequiredInfo(check entrant: GuestClassic) {
 
 
 
+// Init & Handle Error
+
+
 
