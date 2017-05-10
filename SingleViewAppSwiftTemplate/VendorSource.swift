@@ -11,8 +11,8 @@ import Foundation
 
 class VendorSource: GuestSeniorSource {
     
-    var vendorCompany: String?
-    var dateOfVisit: String?
+    var vendorCompany: String
+    var dateOfVisit: String
     
     init (
         areaAccess: [AreaAccess],
@@ -25,11 +25,20 @@ class VendorSource: GuestSeniorSource {
         lastName: String?,
         vendorCompany: String?,
         dateOfVisit: String?
-        )
+        ) throws
     {
+        guard let vendorCompany = vendorCompany else {
+            throw ErrorSource.missingFirstName(description: "Please enter your Vendor Company")
+        }
+        guard let dateOfVisit = dateOfVisit else {
+            throw ErrorSource.missingFirstName(description: "Please enter your Date of Visit")
+        }
+
+
+    
         self.vendorCompany = vendorCompany
         self.dateOfVisit = dateOfVisit
-        super.init(
+        try super.init(
             areaAccess: areaAccess,
             ridePrivileges: ridePrivileges,
             discountAccess: discountAccess,

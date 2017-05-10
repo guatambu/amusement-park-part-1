@@ -12,7 +12,7 @@ import Foundation
 
 class GuestChildSource: GuestClassicSource {
     
-    var dateOfBirth: String?
+    var dateOfBirth: String
     
     init (
         areaAccess: [AreaAccess],
@@ -21,10 +21,14 @@ class GuestChildSource: GuestClassicSource {
         discountAmount: [DiscountAmount],
         requiredInformation: [RequiredInformation],
         dateOfBirth: String?
-        )
+        ) throws
     {
+        guard let dateOfBirth = dateOfBirth else {
+            throw ErrorSource.missingBirthdate(description: "Please enter your Date of Birth")
+        }
+        
         self.dateOfBirth = dateOfBirth
-        super.init(
+        try super.init(
             areaAccess: areaAccess,
             ridePrivileges: ridePrivileges,
             discountAccess: discountAccess,
@@ -32,7 +36,6 @@ class GuestChildSource: GuestClassicSource {
             requiredInformation: requiredInformation
         )
         self.requiredInformation = [.personal]
-        
         
     }
 }

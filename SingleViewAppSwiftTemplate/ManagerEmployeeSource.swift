@@ -32,7 +32,7 @@ class ManagerEmployeeSource: HourlyFoodEmployeeSource {
         )
     {
         self.managementTier = managementTier
-        super.init(
+        try super.init(
             areaAccess: areaAccess,
             ridePrivileges: ridePrivileges,
             discountAccess: discountAccess,

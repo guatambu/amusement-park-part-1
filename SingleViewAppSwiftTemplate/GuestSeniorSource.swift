@@ -12,8 +12,8 @@ import Foundation
 
 class GuestSeniorSource: GuestChildSource {
     
-    var firstName: String?
-    var lastName: String?
+    var firstName: String
+    var lastName: String
     
     init (
         areaAccess: [AreaAccess],
@@ -24,20 +24,27 @@ class GuestSeniorSource: GuestChildSource {
         dateOfBirth: String?,
         firstName: String?,
         lastName: String?
-        )
+        ) throws
     {
+        guard let firstName = firstName else {
+            throw ErrorSource.missingFirstName(description: "Please enter your First Name")
+        }
+        guard let lastName = lastName else {
+            throw ErrorSource.missingLastName(description: "Please enter your Last Name")
+        }
+        
         self.firstName = firstName
         self.lastName = lastName
-        super.init(
-            areaAccess: areaAccess,
-            ridePrivileges: ridePrivileges,
-            discountAccess: discountAccess,
-            discountAmount: discountAmount,
-            requiredInformation: requiredInformation,
-            dateOfBirth: dateOfBirth
-        )
+        
+        //do {
+        try super.init(areaAccess: areaAccess, ridePrivileges: ridePrivileges, discountAccess: discountAccess, discountAmount: discountAmount, requiredInformation: requiredInformation, dateOfBirth: dateOfBirth)
         self.ridePrivileges = [.all, .skip]
         self.discountAmount = [.ten, .ten]
+       // } catch ErrorSource.missingFirstName(let description) {
+        //    print(description)
+       // } catch ErrorSource.missingLastName(let description) {
+       //     print(description)
+       // }
         
     }
 }

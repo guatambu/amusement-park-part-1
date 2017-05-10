@@ -28,7 +28,7 @@ class HourlyRideServicesEmployeeSource: HourlyFoodEmployeeSource {
         socialSecurityNumber: String?
         )
     {
-        super.init(
+        try super.init(
             areaAccess: areaAccess,
             ridePrivileges: ridePrivileges,
             discountAccess: discountAccess,

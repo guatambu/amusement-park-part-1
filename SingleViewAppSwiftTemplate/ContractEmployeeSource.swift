@@ -12,7 +12,7 @@ import Foundation
 
 class ContractEmployeeSource: HourlyFoodEmployeeSource {
     
-    var projectNumber: Int?
+    var projectNumber: Int
     
     init(
         areaAccess: [AreaAccess],
@@ -29,10 +29,14 @@ class ContractEmployeeSource: HourlyFoodEmployeeSource {
         zipCode: Int?,
         socialSecurityNumber: String?,
         projectNumber: Int?
-        )
+        )throws
     {
+        guard let projectNumber = projectNumber else {
+            throw ErrorSource.missingFirstName(description: "Please enter your Project Number")
+        }
+        
         self.projectNumber = projectNumber
-        super.init(
+        try super.init(
             areaAccess: areaAccess,
             ridePrivileges: ridePrivileges,
             discountAccess: discountAccess,

@@ -12,7 +12,7 @@ import Foundation
 
 class HourlyFoodEmployeeSource: GuestSeasonPassSource {
     
-    var socialSecurityNumber: String?
+    var socialSecurityNumber: String
     
     init (
         areaAccess: [AreaAccess],
@@ -28,10 +28,14 @@ class HourlyFoodEmployeeSource: GuestSeasonPassSource {
         state: String?,
         zipCode: Int?,
         socialSecurityNumber: String?
-        )
+        ) throws
     {
+        guard let socialSecurityNumber = socialSecurityNumber else {
+            throw ErrorSource.missingFirstName(description: "Please enter your Social Security Number")
+        }
+
         self.socialSecurityNumber = socialSecurityNumber
-        super.init(
+        try super.init(
             areaAccess: areaAccess,
             ridePrivileges: ridePrivileges,
             discountAccess: discountAccess,
