@@ -29,7 +29,7 @@ class ManagerEmployeeSource: HourlyFoodEmployeeSource {
         zipCode: Int?,
         socialSecurityNumber: String?,
         managementTier: [ManagerType]
-        )
+        ) throws
     {
         self.managementTier = managementTier
         try super.init(

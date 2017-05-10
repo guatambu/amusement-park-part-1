@@ -26,7 +26,7 @@ class HourlyRideServicesEmployeeSource: HourlyFoodEmployeeSource {
         state: String?,
         zipCode: Int?,
         socialSecurityNumber: String?
-        )
+        ) throws
     {
         try super.init(
             areaAccess: areaAccess,
