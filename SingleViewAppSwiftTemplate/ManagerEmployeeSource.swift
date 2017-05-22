@@ -9,7 +9,6 @@
 import Foundation
 
 
-
 class ManagerEmployeeSource: HourlyFoodEmployeeSource {
     
     var managementTier: [ManagerType]
