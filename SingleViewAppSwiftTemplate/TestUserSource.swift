@@ -2,7 +2,7 @@
 //  TestUserSource.swift
 //  SingleViewAppSwiftTemplate
 //
-//  Created by Kelly Johnson on 4/21/17.
+//  Created by Michael Guatambu Davis on 4/21/17.
 //  Copyright © 2017 Treehouse. All rights reserved.
 //
 
