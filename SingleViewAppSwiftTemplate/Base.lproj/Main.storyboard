@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="reG-CC-U6Z">
             <objects>
-                <viewController id="ZLT-ai-B4a" sceneMemberID="viewController">
+                <viewController id="ZLT-ai-B4a" customClass="MainViewController" customModule="SingleViewAppSwiftTemplate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CgP-8X-bcs"/>
                         <viewControllerLayoutGuide type="bottom" id="pAG-g3-fl0"/>
@@ -199,6 +199,9 @@
                                         <state key="normal" title="Child">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="SubNavOption1:" destination="ZLT-ai-B4a" eventType="touchUpInside" id="ezu-Oq-sHx"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdo-oa-ox6">
                                         <rect key="frame" x="205" y="0.0" width="58" height="41"/>
@@ -207,22 +210,31 @@
                                         <state key="normal" title="Adult">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="SubNavOption2:" destination="ZLT-ai-B4a" eventType="touchUpInside" id="mQh-aJ-8Wg"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRh-Ln-Bau">
-                                        <rect key="frame" x="562" y="0.0" width="136" height="41"/>
+                                        <rect key="frame" x="582" y="0.0" width="136" height="41"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                         <state key="normal" title="Season Pass">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="SubNavOption5:" destination="ZLT-ai-B4a" eventType="touchUpInside" id="ccQ-TV-aLC"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOx-KU-WYU">
-                                        <rect key="frame" x="472" y="0.0" width="36" height="41"/>
+                                        <rect key="frame" x="492" y="0.0" width="36" height="41"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                         <state key="normal" title="VIP">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="SubNavOption4:" destination="ZLT-ai-B4a" eventType="touchUpInside" id="6oJ-Lv-3MN"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IoZ-i1-Cc4">
                                         <rect key="frame" x="350" y="-1" width="68" height="41"/>
@@ -231,6 +243,9 @@
                                         <state key="normal" title="Senior">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="SubNavOption3:" destination="ZLT-ai-B4a" eventType="touchUpInside" id="dz0-cd-k7N"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1510594546124315" green="0.097025277022055198" blue="0.27870306144923862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -240,36 +255,60 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfE-hN-2JW">
-                                        <rect key="frame" x="40" y="7" width="98" height="41"/>
+                                        <rect key="frame" x="20" y="7" width="125" height="41"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <state key="normal" title="Guest">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ni2-i3-sbp">
-                                        <rect key="frame" x="410" y="7" width="143" height="41"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                        <state key="normal" title="Manager">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
+                                        <connections>
+                                            <action selector="GuestNavButton:" destination="ZLT-ai-B4a" eventType="touchUpInside" id="I4p-HP-fd1"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3L-gH-Qqh">
-                                        <rect key="frame" x="614" y="7" width="106" height="41"/>
+                                        <rect key="frame" x="624" y="7" width="125" height="41"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <state key="normal" title="Vendor">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="VendorNavButton:" destination="ZLT-ai-B4a" eventType="touchUpInside" id="6np-U6-k0F"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tE5-uR-Tek">
-                                        <rect key="frame" x="220" y="7" width="145" height="41"/>
+                                        <rect key="frame" x="170" y="7" width="125" height="41"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <state key="normal" title="Employee">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="EmployeeNavButton:" destination="ZLT-ai-B4a" eventType="touchUpInside" id="qal-0u-Cgo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a63-8c-r3a">
+                                        <rect key="frame" x="476" y="7" width="125" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <state key="normal" title="Contractor">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="ContractorNavButton:" destination="ZLT-ai-B4a" eventType="touchUpInside" id="eNl-zT-o2O"/>
+                                            <action selector="EmployeeNavButton:" destination="ZLT-ai-B4a" eventType="touchUpInside" id="ieO-Db-M90"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ni2-i3-sbp">
+                                        <rect key="frame" x="322" y="7" width="125" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <state key="normal" title="Manager">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="ManagerNavButton:" destination="ZLT-ai-B4a" eventType="touchUpInside" id="jCg-6f-lFb"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.54288762810000002" green="0.42922091480000002" blue="0.66512626409999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -291,6 +330,9 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="GeneratePass:" destination="ZLT-ai-B4a" eventType="touchUpInside" id="uso-Mj-uPZ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARH-ww-LiE" customClass="ButtonDesign" customModule="SingleViewAppSwiftTemplate" customModuleProvider="target">
                                         <rect key="frame" x="409" y="45" width="320" height="70"/>
@@ -305,6 +347,9 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="PopulateData:" destination="ZLT-ai-B4a" eventType="touchUpInside" id="9pJ-Ew-8Ij"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.8591353893" green="0.83851373200000001" blue="0.87559646369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -393,15 +438,39 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="City" destination="H5c-kJ-1Wi" id="amk-mO-p40"/>
+                        <outlet property="Company" destination="Zvm-xN-2V2" id="N0m-oE-252"/>
+                        <outlet property="ContractorNavButton" destination="a63-8c-r3a" id="NYE-90-q2u"/>
+                        <outlet property="DateOfBirth" destination="PKJ-is-ybP" id="wuJ-ES-B3r"/>
+                        <outlet property="EmployeeNavButton" destination="tE5-uR-Tek" id="b8q-Ak-Tzt"/>
+                        <outlet property="FirstName" destination="Ze2-Mq-nnu" id="Uwv-Ke-Okc"/>
+                        <outlet property="GuestNavButton" destination="mfE-hN-2JW" id="ekX-Zg-3hJ"/>
+                        <outlet property="LastName" destination="2OJ-CH-DkG" id="3eZ-wg-rgD"/>
+                        <outlet property="ManagerNavButton" destination="Ni2-i3-sbp" id="oyG-8v-UgJ"/>
+                        <outlet property="ProjectNumber" destination="sRF-Cm-RFK" id="9S5-77-rlz"/>
+                        <outlet property="SocialSecurityNumber" destination="OY9-Mb-xGv" id="Da7-Rv-vrB"/>
+                        <outlet property="State" destination="QFF-dh-O7g" id="XFF-Mo-Tx7"/>
+                        <outlet property="StreetAddress" destination="wQ4-Fh-hn8" id="DzW-05-Ty5"/>
+                        <outlet property="SubNavOption1" destination="mvC-Ej-qgp" id="QJB-Lv-pA3"/>
+                        <outlet property="SubNavOption1Button" destination="mvC-Ej-qgp" id="uQp-HD-HZP"/>
+                        <outlet property="SubNavOption2" destination="Vdo-oa-ox6" id="Mjd-xB-nO1"/>
+                        <outlet property="SubNavOption2Button" destination="Vdo-oa-ox6" id="23i-xz-KLA"/>
+                        <outlet property="SubNavOption3" destination="IoZ-i1-Cc4" id="IcJ-8D-sYZ"/>
+                        <outlet property="SubNavOption4" destination="AOx-KU-WYU" id="SrF-EZ-Tub"/>
+                        <outlet property="SubNavOption5" destination="NRh-Ln-Bau" id="73J-xt-vBA"/>
+                        <outlet property="VendorNavButton" destination="H3L-gH-Qqh" id="Na2-lC-9C3"/>
+                        <outlet property="ZipCode" destination="w3d-Gm-p05" id="3Mu-qs-4Ab"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coj-W9-frm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="626.5625" y="143.5546875"/>
         </scene>
-        <!--View Controller-->
+        <!--Create New Pass View Controller-->
         <scene sceneID="eXR-pB-iZv">
             <objects>
-                <viewController id="12V-6h-t0W" sceneMemberID="viewController">
+                <viewController id="12V-6h-t0W" customClass="CreateNewPassViewController" customModule="SingleViewAppSwiftTemplate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="c3J-nv-Sdj"/>
                         <viewControllerLayoutGuide type="bottom" id="hxK-3r-4RT"/>
@@ -427,6 +496,9 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="CreateNewPass:" destination="12V-6h-t0W" eventType="touchUpInside" id="1nr-C0-8KT"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H5Y-GO-zgn" customClass="UIViewDesign" customModule="SingleViewAppSwiftTemplate" customModuleProvider="target">
                                         <rect key="frame" x="60" y="205" width="648" height="200"/>
@@ -460,6 +532,9 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="RideAccess:" destination="12V-6h-t0W" eventType="touchUpInside" id="Oxd-R0-xPS"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVX-fv-hXl" customClass="ButtonDesign" customModule="SingleViewAppSwiftTemplate" customModuleProvider="target">
                                         <rect key="frame" x="508" y="122" width="200" height="65"/>
@@ -474,6 +549,9 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="DiscountAccess:" destination="12V-6h-t0W" eventType="touchUpInside" id="BQ8-hI-A2B"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1N-d6-d74" customClass="ButtonDesign" customModule="SingleViewAppSwiftTemplate" customModuleProvider="target">
                                         <rect key="frame" x="60" y="122" width="200" height="65"/>
@@ -488,6 +566,9 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="AreaAccess:" destination="12V-6h-t0W" eventType="touchUpInside" id="Kfo-sf-fHD"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Confirm the pass has the correct level of access when swiped at a kiosk." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHy-2Z-UFq">
                                         <rect key="frame" x="53" y="67" width="663" height="32"/>
@@ -593,6 +674,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="PassEntrantType" destination="A99-yF-mKh" id="2Sk-ED-Tjh"/>
+                        <outlet property="PassFullName" destination="zID-kQ-h12" id="7Ku-OR-2Fi"/>
+                        <outlet property="PassPermissions" destination="H2K-2l-INM" id="PmU-hz-do7"/>
+                        <outlet property="TestResults" destination="ks7-aR-9zR" id="WBV-in-JPB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zq6-9N-n8J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
