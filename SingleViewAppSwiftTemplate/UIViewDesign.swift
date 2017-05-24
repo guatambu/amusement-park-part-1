@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UIViewDesign: UIView {
+@IBDesignable class UIViewDesign: UIView {
     @IBInspectable var cornerRadius: CGFloat = 0    {
         didSet {
             self.layer.cornerRadius = cornerRadius
