@@ -27,6 +27,8 @@ import UIKit
             self.layer.borderColor = borderColor.cgColor
         }
     }
+    
+}
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -36,4 +38,4 @@ import UIKit
     }
     */
 
-}
+
