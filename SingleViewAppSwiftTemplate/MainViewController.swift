@@ -13,63 +13,116 @@ class MainViewController: UIViewController {
     /* MARK: - Navigation */
     
     // Navigation @IBOutlets
-    @IBOutlet weak var GuestNavButton: UIButton!
-    @IBOutlet weak var EmployeeNavButton: UIButton!
-    @IBOutlet weak var ManagerNavButton: UIButton!
-    @IBOutlet weak var ContractorNavButton: UIButton!
-    @IBOutlet weak var VendorNavButton: UIButton!
+    @IBOutlet weak var guestNavButton: UIButton!
+    @IBOutlet weak var employeeNavButton: UIStackView!
+    @IBOutlet weak var managerNavButton: UIButton!
+    @IBOutlet weak var contractorNavButton: UIButton!
+    @IBOutlet weak var vendorNavButton: UIButton!
 
     // SubNavigation @IBOutlets
-    @IBOutlet weak var SubNavOption1: UIButton!
-    @IBOutlet weak var SubNavOption2: UIButton!
-    @IBOutlet weak var SubNavOption3: UIButton!
-    @IBOutlet weak var SubNavOption4: UIButton!
-    @IBOutlet weak var SubNavOption5: UIButton!
+    @IBOutlet weak var subNavStackView: UIView!
+    @IBOutlet weak var subNavOption1: UIButton!
+    @IBOutlet weak var subNavOption2: UIButton!
+    @IBOutlet weak var subNavOption3: UIButton!
+    @IBOutlet weak var subNavOption4: UIButton!
+    @IBOutlet weak var subNavOption5: UIButton!
     
     // User Data TextField @IBOutlets
-    @IBOutlet weak var DateOfBirth: UITextField!
-    @IBOutlet weak var SocialSecurityNumber: UITextField!
-    @IBOutlet weak var ProjectNumber: UITextField!
-    @IBOutlet weak var FirstName: UITextField!
-    @IBOutlet weak var LastName: UITextField!
-    @IBOutlet weak var Company: UITextField!
-    @IBOutlet weak var StreetAddress: UITextField!
-    @IBOutlet weak var City: UITextField!
-    @IBOutlet weak var State: UITextField!
-    @IBOutlet weak var ZipCode: UITextField!
+    @IBOutlet weak var dateOfBirth: UITextField!
+    @IBOutlet weak var socialSecurityNumber: UITextField!
+    @IBOutlet weak var projectNumber: UITextField!
+    @IBOutlet weak var firstName: UITextField!
+    @IBOutlet weak var lastName: UITextField!
+    @IBOutlet weak var company: UITextField!
+    @IBOutlet weak var streetAddress: UITextField!
+    @IBOutlet weak var city: UITextField!
+    @IBOutlet weak var state: UITextField!
+    @IBOutlet weak var zipCode: UITextField!
     
     
     /* Buttons @IBActions  */
     
-    // Navigation
-    @IBAction func GuestNavButton(_ sender: UIButton) {
-    }
-    @IBAction func EmployeeNavButton(_ sender: UIButton) {
-    }
-    @IBAction func ManagerNavButton(_ sender: UIButton) {
-    }
-    @IBAction func ContractorNavButton(_ sender: UIButton) {
-    }
-    @IBAction func VendorNavButton(_ sender: UIButton) {
-    }
-    
-    // SubNavigation
-    @IBAction func SubNavOption1(_ sender: UIButton) {
-    }
-    @IBAction func SubNavOption2(_ sender: UIButton) {
-    }
-    @IBAction func SubNavOption3(_ sender: UIButton) {
-    }
-    @IBAction func SubNavOption4(_ sender: UIButton) {
-    }
-    @IBAction func SubNavOption5(_ sender: UIButton) {
+    // Navigation Buttons
+    @IBAction func guestNavButton(_ sender: UIButton) {
+        if subNavStackView.isHidden {
+            animateView(view: subNavStackView, toHidden: false)
+        } else {
+            animateView(view: subNavStackView, toHidden: true)
+        }
+        
     }
 
+    @IBAction func employeeNavButton(_ sender: UIButton) {
+        if subNavStackView.isHidden {
+            animateView(view: subNavStackView, toHidden: false)
+            subNavOption1.setTitle("Hourly - Food Services", for: .normal)
+            subNavOption2.setTitle("Hourly - Ride Services", for: .normal)
+            subNavOption3.setTitle("Hourly - Maintenance", for: .normal)
+            subNavOption4.isHidden = true
+            subNavOption5.isHidden = true
+        } else {
+            animateView(view: subNavStackView, toHidden: true)
+        }
+    }
+    
+    @IBAction func managerNavButton(_ sender: UIButton) {
+        if subNavStackView.isHidden {
+            animateView(view: subNavStackView, toHidden: false)
+            subNavOption1.setTitle("Shift Manager", for: .normal)
+            subNavOption2.setTitle("General Manager", for: .normal)
+            subNavOption3.setTitle("Senior Manager", for: .normal)
+            subNavOption4.isHidden = true
+            subNavOption5.isHidden = true
+        } else {
+            animateView(view: subNavStackView, toHidden: true)
+        }
+    }
+    @IBAction func contractorNavButton(_ sender: UIButton) {
+        if subNavStackView.isHidden {
+            animateView(view: subNavStackView, toHidden: false)
+            subNavOption1.setTitle("Proj #1001", for: .normal)
+            subNavOption2.setTitle("Proj #1002", for: .normal)
+            subNavOption3.setTitle("Proj #1003", for: .normal)
+            subNavOption4.setTitle("Proj #2001", for: .normal)
+            subNavOption5.setTitle("Proj #2002", for: .normal)
+        } else {
+            animateView(view: subNavStackView, toHidden: true)
+        }
+    }
+    @IBAction func vendorNavButton(_ sender: UIButton) {
+        if subNavStackView.isHidden {
+            animateView(view: subNavStackView, toHidden: false)
+            subNavOption1.setTitle("Acme", for: .normal)
+            subNavOption2.setTitle("Orkin", for: .normal)
+            subNavOption3.setTitle("FedEx", for: .normal)
+            subNavOption4.setTitle("NW Electrical", for: .normal)
+            subNavOption5.isHidden = true
+        } else {
+            animateView(view: subNavStackView, toHidden: true)
+        }
+    }
+    
+    
+    // SubNavigation Buttons
+    @IBAction func subNavOption1(_ sender: UIButton) {
+    }
+    @IBAction func subNavOption2(_ sender: UIButton) {
+    }
+    @IBAction func subNavOption3(_ sender: UIButton) {
+    }
+    @IBAction func subNavOption4(_ sender: UIButton) {
+    }
+    @IBAction func subNavOption5(_ sender: UIButton) {
+    }
+
+
     // Pass Generators
-    @IBAction func GeneratePass(_ sender: UIButton) {
+    @IBAction func generatePass(_ sender: ButtonDesign) {
     }
-    @IBAction func PopulateData(_ sender: UIButton) {
+
+    @IBAction func populateData(_ sender: ButtonDesign) {
     }
+
     
     
     
@@ -84,6 +137,10 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    private func animateView(view: UIView, toHidden hidden: Bool) {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 5.0, options: UIViewAnimationOptions(), animations: {() -> Void in view.isHidden = hidden }, completion: nil)
+        
+    }
 
     /*
 

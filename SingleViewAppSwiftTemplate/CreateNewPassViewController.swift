@@ -14,26 +14,26 @@ class CreateNewPassViewController: UIViewController {
     /* Pass Display @IBOutlets */
     
     // Pass @IBOutlets
-    @IBOutlet weak var PassFullName: UILabel!
-    @IBOutlet weak var PassEntrantType: UILabel!
-    @IBOutlet weak var PassPermissions: UILabel!
+    @IBOutlet weak var passFullNmae: UILabel!
+    @IBOutlet weak var passEntrantType: UILabel!
+    @IBOutlet weak var passPermissions: UILabel!
     
     // Access Testing @IBOutlets
-    @IBOutlet weak var TestResults: UILabel!
-    
+    @IBOutlet weak var testResults: UILabel!
     
     /* Access Testing @IBAction Buttons */
     
     // Testing Buttons
-    @IBAction func AreaAccess(_ sender: UIButton) {
+    @IBAction func areaAccessButton(_ sender: ButtonDesign) {
     }
-    @IBAction func RideAccess(_ sender: UIButton) {
+    @IBAction func rideAccessButton(_ sender: ButtonDesign) {
     }
-    @IBAction func DiscountAccess(_ sender: UIButton) {
+    @IBAction func discountAccessButton(_ sender: ButtonDesign) {
     }
+
     
     // Create New Pass @IBOutlet
-    @IBAction func CreateNewPass(_ sender: UIButton) {
+    @IBAction func createNewPass(_ sender: ButtonDesign) {
     }
     
     
