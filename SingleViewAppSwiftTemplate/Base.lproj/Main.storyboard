@@ -505,6 +505,7 @@
                                                         <connections>
                                                             <action selector="GeneratePass:" destination="ZLT-ai-B4a" eventType="touchUpInside" id="uso-Mj-uPZ"/>
                                                             <action selector="generatePass:" destination="ZLT-ai-B4a" eventType="touchUpInside" id="1VA-Ig-L9n"/>
+                                                            <segue destination="12V-6h-t0W" kind="show" id="I40-92-Z9M"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARH-ww-LiE" customClass="ButtonDesign" customModule="SingleViewAppSwiftTemplate" customModuleProvider="target">
@@ -891,6 +892,7 @@
                                                         <connections>
                                                             <action selector="CreateNewPass:" destination="12V-6h-t0W" eventType="touchUpInside" id="1nr-C0-8KT"/>
                                                             <action selector="createNewPass:" destination="12V-6h-t0W" eventType="touchUpInside" id="otx-k0-qoS"/>
+                                                            <segue destination="ZLT-ai-B4a" kind="show" id="x8c-vk-8h7"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
