@@ -106,6 +106,8 @@ class MainViewController: UIViewController {
     // SubNavigation Buttons
     @IBAction func subNavOption1(_ sender: UIButton) {
         if subNavOption1.currentTitle == "Child" && subNavOption1.isSelected == true {
+            
+            /* UITextField appearance */
             //dateOfBirth.alpha = 0.5
             socialSecurityNumber.alpha = 0.5
             projectNumber.alpha = 0.5
@@ -117,6 +119,7 @@ class MainViewController: UIViewController {
             state.alpha = 0.5
             zipCode.alpha = 0.5
             
+            /* UITextField Editing active/inactive */
             //dateOfBirth.allowsEditingTextAttributes = false
             socialSecurityNumber.allowsEditingTextAttributes = false
             projectNumber.allowsEditingTextAttributes = false
@@ -128,6 +131,8 @@ class MainViewController: UIViewController {
             state.allowsEditingTextAttributes = false
             zipCode.allowsEditingTextAttributes = false
         } else if (subNavOption1.currentTitle == "Hourly - Food Services" || subNavOption1.currentTitle == "Shift Manager")  && subNavOption1.isSelected == true {
+            
+            /* UITextField appearance */
             //dateOfBirth.alpha = 0.5
             //socialSecurityNumber.alpha = 0.5
             projectNumber.alpha = 0.5
@@ -139,6 +144,7 @@ class MainViewController: UIViewController {
             //state.alpha = 0.5
             //zipCode.alpha = 0.5
             
+            /* UITextField Editing active/inactive */
             //dateOfBirth.allowsEditingTextAttributes = false
             //socialSecurityNumber.allowsEditingTextAttributes = false
             projectNumber.allowsEditingTextAttributes = false
@@ -150,6 +156,8 @@ class MainViewController: UIViewController {
             //state.allowsEditingTextAttributes = false
             //zipCode.allowsEditingTextAttributes = false
         } else if subNavOption1.currentTitle == "Proj #1001" && subNavOption1.isSelected == true {
+            
+            /* UITextField appearance */
             //dateOfBirth.alpha = 0.5
             //socialSecurityNumber.alpha = 0.5
             //projectNumber.alpha = 0.5
@@ -161,6 +169,7 @@ class MainViewController: UIViewController {
             //state.alpha = 0.5
             //zipCode.alpha = 0.5
             
+            /* UITextField Editing active/inactive */
             //dateOfBirth.allowsEditingTextAttributes = false
             //socialSecurityNumber.allowsEditingTextAttributes = false
             //projectNumber.allowsEditingTextAttributes = false
@@ -172,6 +181,8 @@ class MainViewController: UIViewController {
             //state.allowsEditingTextAttributes = false
             //zipCode.allowsEditingTextAttributes = false
         } else if subNavOption1.currentTitle == "Acme" && subNavOption1.isSelected == true {
+            
+            /* UITextField appearance */
             //dateOfBirth.alpha = 0.5
             socialSecurityNumber.alpha = 0.5
             projectNumber.alpha = 0.5
@@ -184,6 +195,7 @@ class MainViewController: UIViewController {
             zipCode.alpha = 0.5
 /*MARK: *** dateOfVisit ***   */
             
+            /* UITextField Editing active/inactive */
             //dateOfBirth.allowsEditingTextAttributes = false
             socialSecurityNumber.allowsEditingTextAttributes = false
             projectNumber.allowsEditingTextAttributes = false
@@ -199,6 +211,8 @@ class MainViewController: UIViewController {
     }
     @IBAction func subNavOption2(_ sender: UIButton) {
         if subNavOption2.currentTitle == "Adult" && subNavOption2.isSelected == true {
+            
+            /* UITextField appearance */
             dateOfBirth.alpha = 0.5
             socialSecurityNumber.alpha = 0.5
             projectNumber.alpha = 0.5
@@ -210,6 +224,7 @@ class MainViewController: UIViewController {
             state.alpha = 0.5
             zipCode.alpha = 0.5
             
+            /* UITextField Editing active/inactive */
             dateOfBirth.allowsEditingTextAttributes = false
             socialSecurityNumber.allowsEditingTextAttributes = false
             projectNumber.allowsEditingTextAttributes = false
@@ -224,6 +239,8 @@ class MainViewController: UIViewController {
     }
     @IBAction func subNavOption3(_ sender: UIButton) {
         if subNavOption2.currentTitle == "Senior" && subNavOption2.isSelected == true {
+            
+            /* UITextField appearance */
             //dateOfBirth.alpha = 0.5
             socialSecurityNumber.alpha = 0.5
             projectNumber.alpha = 0.5
@@ -235,6 +252,7 @@ class MainViewController: UIViewController {
             state.alpha = 0.5
             zipCode.alpha = 0.5
             
+            /* UITextField Editing active/inactive */
             //dateOfBirth.allowsEditingTextAttributes = false
             socialSecurityNumber.allowsEditingTextAttributes = false
             projectNumber.allowsEditingTextAttributes = false
@@ -249,6 +267,8 @@ class MainViewController: UIViewController {
     }
     @IBAction func subNavOption4(_ sender: UIButton) {
         if subNavOption2.currentTitle == "VIP" && subNavOption2.isSelected == true {
+            
+            /* UITextField appearance */
             dateOfBirth.alpha = 0.5
             socialSecurityNumber.alpha = 0.5
             projectNumber.alpha = 0.5
@@ -260,6 +280,7 @@ class MainViewController: UIViewController {
             state.alpha = 0.5
             zipCode.alpha = 0.5
             
+            /* UITextField Editing active/inactive */
             dateOfBirth.allowsEditingTextAttributes = false
             socialSecurityNumber.allowsEditingTextAttributes = false
             projectNumber.allowsEditingTextAttributes = false
@@ -274,6 +295,8 @@ class MainViewController: UIViewController {
     }
     @IBAction func subNavOption5(_ sender: UIButton) {
         if subNavOption2.currentTitle == "Season Pass" && subNavOption2.isSelected == true {
+            
+            /* UITextField appearance */
             //dateOfBirth.alpha = 0.5
             socialSecurityNumber.alpha = 0.5
             projectNumber.alpha = 0.5
@@ -285,6 +308,7 @@ class MainViewController: UIViewController {
             //state.alpha = 0.5
             //zipCode.alpha = 0.5
             
+            /* UITextField Editing active/inactive */
             //dateOfBirth.allowsEditingTextAttributes = false
             socialSecurityNumber.allowsEditingTextAttributes = false
             projectNumber.allowsEditingTextAttributes = false
