@@ -127,27 +127,23 @@ import Foundation
 
 class GuestClassicSource: PersonSource {
     
-    override init (
-        areaAccess: [AreaAccess],
-        ridePrivileges: [RidePrivilege],
+    
+    
+    convenience init (
         discountAccess: [DiscountAccess],
-        discountAmount: [DiscountAmount],
-        requiredInformation: [RequiredInformation]
+        discountAmount: [DiscountAmount]
         )
     {
-        super.init(
-            areaAccess: areaAccess,
-            ridePrivileges: ridePrivileges,
+        self.init(
+            areaAccess: [.amusement],
+            ridePrivileges: [.all],
             discountAccess: discountAccess,
             discountAmount: discountAmount,
-            requiredInformation: requiredInformation
+            requiredInformation: [.none]
         )
-        self.areaAccess = [.amusement]
-        self.ridePrivileges = [.all]
+        
     }
 }
-
-
 
 
 

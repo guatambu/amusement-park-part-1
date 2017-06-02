@@ -11,26 +11,22 @@ import Foundation
 
 class GuestVIPSource: GuestClassicSource {
     
-    override init (
-        areaAccess: [AreaAccess],
-        ridePrivileges: [RidePrivilege],
-        discountAccess: [DiscountAccess],
-        discountAmount: [DiscountAmount],
-        requiredInformation: [RequiredInformation]
-        )
+    convenience init ()
     {
-        super.init(
-            areaAccess: areaAccess,
-            ridePrivileges: ridePrivileges,
-            discountAccess: discountAccess,
-            discountAmount: discountAmount,
-            requiredInformation: requiredInformation
+        self.init(
+            areaAccess: [.amusement],
+            ridePrivileges: [.all, .skip],
+            discountAccess: [.food, .merch],
+            discountAmount: [.ten, .twenty],
+            requiredInformation: [.none]
         )
-        self.areaAccess = [.amusement]
-        self.ridePrivileges = [.all, .skip]
-        self.discountAccess = [.food, .merch]
-        self.discountAmount = [.ten, .twenty]
-        self.requiredInformation = [.none]
+        
     }
     
 }
+
+// var newUser = GuestVIPSource()
+
+
+
+

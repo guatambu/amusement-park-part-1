@@ -12,10 +12,10 @@ import Foundation
 
 class GuestSeasonPassSource: GuestSeniorSource {
     
-    var streetAddress: String
-    var city: String
-    var state: String
-    var zipCode: Int
+    var streetAddress: String?
+    var city: String?
+    var state: String?
+    var zipCode: Int?
     
     init (
         areaAccess: [AreaAccess],
@@ -30,40 +30,52 @@ class GuestSeasonPassSource: GuestSeniorSource {
         city: String?,
         state: String?,
         zipCode: Int?
-        ) throws
+        )
     {
-        guard let streetAddress = streetAddress else {
-            throw ErrorSource.missingFirstName(description: "Please enter your Street Address")
-        }
-        guard let city = city else {
-            throw ErrorSource.missingLastName(description: "Please enter your City")
-        }
-        guard let state = state else {
-            throw ErrorSource.missingLastName(description: "Please enter your State")
-        }
-        guard let zipCode = zipCode else {
-            throw ErrorSource.missingLastName(description: "Please enter your ZIP Code")
-        }
         
         self.streetAddress = streetAddress
         self.city = city
         self.state = state
         self.zipCode = zipCode
         
-        //do {
-        try super.init(areaAccess: areaAccess, ridePrivileges: ridePrivileges, discountAccess: discountAccess, discountAmount: discountAmount, requiredInformation: requiredInformation, dateOfBirth: dateOfBirth, firstName: firstName, lastName: lastName)
-        self.discountAmount = [.ten, .twenty]
-            
-         //   } catch ErrorSource.missingStreet(let description) {
-         //       print(description)
-         //   } catch ErrorSource.missingCity(let description) {
-         //       print(description)
-         //   } catch ErrorSource.MissingState(let description) {
-         //       print(description)
-         //   } catch ErrorSource.missingZip(let description) {
-         //       print(description)
-         //   }
-        
+
+        super.init(
+            areaAccess: areaAccess,
+            ridePrivileges: ridePrivileges,
+            discountAccess: discountAccess,
+            discountAmount: discountAmount,
+            requiredInformation: requiredInformation,
+            dateOfBirth: dateOfBirth,
+            firstName: firstName,
+            lastName: lastName)
+    }
+    
+    convenience init (
+        dateOfBirth: String?,
+        firstName: String?,
+        lastName: String?,
+        streetAddress: String?,
+        city: String?,
+        state: String?,
+        zipCode: Int?
+        )
+    {
+        self.init(
+            areaAccess: [.amusement],
+            ridePrivileges: [.all, .skip],
+            discountAccess: [.food, .merch],
+            discountAmount: [.ten, .twenty],
+            requiredInformation: [.personal],
+            dateOfBirth: dateOfBirth,
+            firstName: firstName,
+            lastName: lastName,
+            streetAddress: streetAddress,
+            city: city,
+            state: state,
+            zipCode: zipCode
+        )
         
     }
+    
+    
 }
