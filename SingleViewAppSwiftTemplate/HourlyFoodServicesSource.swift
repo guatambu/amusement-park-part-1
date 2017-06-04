@@ -12,7 +12,7 @@ import Foundation
 
 class HourlyFoodEmployeeSource: GuestSeasonPassSource {
     
-    var socialSecurityNumber: String
+    var socialSecurityNumber: String?
     
     init (
         areaAccess: [AreaAccess],
@@ -28,14 +28,11 @@ class HourlyFoodEmployeeSource: GuestSeasonPassSource {
         state: String?,
         zipCode: Int?,
         socialSecurityNumber: String?
-        ) throws
+        )
     {
-        guard let socialSecurityNumber = socialSecurityNumber else {
-            throw ErrorSource.missingFirstName(description: "Please enter your Social Security Number")
-        }
-
+    
         self.socialSecurityNumber = socialSecurityNumber
-        try super.init(
+        super.init(
             areaAccess: areaAccess,
             ridePrivileges: ridePrivileges,
             discountAccess: discountAccess,
@@ -49,8 +46,35 @@ class HourlyFoodEmployeeSource: GuestSeasonPassSource {
             state: state,
             zipCode: zipCode
         )
-        self.areaAccess = [.amusement, .kitchen]
-        self.discountAmount = [.fifteen, .twentyfive]
+        
+    }
+    
+    convenience init (
+        dateOfBirth: String?,
+        firstName: String?,
+        lastName: String?,
+        streetAddress: String?,
+        city: String?,
+        state: String?,
+        zipCode: Int?,
+        socialSecurityNumber: String?
+        )
+    {
+        self.init(
+            areaAccess: [.amusement, .kitchen],
+            ridePrivileges: [.all, .skip],
+            discountAccess: [.food, .merch],
+            discountAmount: [.fifteen, .twentyfive],
+            requiredInformation: [.personal],
+            dateOfBirth: dateOfBirth,
+            firstName: firstName,
+            lastName: lastName,
+            streetAddress: streetAddress,
+            city: city,
+            state: state,
+            zipCode: zipCode,
+            socialSecurityNumber: socialSecurityNumber
+        )
         
     }
 }

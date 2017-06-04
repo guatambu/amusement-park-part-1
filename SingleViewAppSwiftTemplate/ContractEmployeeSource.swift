@@ -29,14 +29,12 @@ class ContractEmployeeSource: HourlyFoodEmployeeSource {
         zipCode: Int?,
         socialSecurityNumber: String?,
         projectNumber: Int?
-        )throws
+        )
     {
-        guard let projectNumber = projectNumber else {
-            throw ErrorSource.missingFirstName(description: "Please enter your Project Number")
-        }
+        
         
         self.projectNumber = projectNumber
-        try super.init(
+        super.init(
             areaAccess: areaAccess,
             ridePrivileges: ridePrivileges,
             discountAccess: discountAccess,
@@ -51,9 +49,40 @@ class ContractEmployeeSource: HourlyFoodEmployeeSource {
             zipCode: zipCode,
             socialSecurityNumber: socialSecurityNumber
         )
-        self.ridePrivileges = [.deferToRules]
-        self.discountAccess = [.none]
-        self.discountAmount = [.none]
+       // self.ridePrivileges = [.deferToRules]
+       // self.discountAccess = [.none]
+       // self.discountAmount = [.none]
+        
+    }
+    
+    convenience init (
+        dateOfBirth: String?,
+        firstName: String?,
+        lastName: String?,
+        streetAddress: String?,
+        city: String?,
+        state: String?,
+        zipCode: Int?,
+        socialSecurityNumber: String?,
+        projectNumber: Int?
+        )
+    {
+        self.init(
+            areaAccess: [.amusement],
+            ridePrivileges: [.deferToRules],
+            discountAccess: [.none],
+            discountAmount: [.none],
+            requiredInformation: [.personal],
+            dateOfBirth: dateOfBirth,
+            firstName: firstName,
+            lastName: lastName,
+            streetAddress: streetAddress,
+            city: city,
+            state: state,
+            zipCode: zipCode,
+            socialSecurityNumber: socialSecurityNumber,
+            projectNumber: projectNumber
+        )
         
     }
 }

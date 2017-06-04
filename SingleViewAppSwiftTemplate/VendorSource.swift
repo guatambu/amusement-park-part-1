@@ -11,8 +11,8 @@ import Foundation
 
 class VendorSource: GuestSeniorSource {
     
-    var vendorCompany: String
-    var dateOfVisit: String
+    var vendorCompany: String?
+    var dateOfVisit: String?
     
     init (
         areaAccess: [AreaAccess],
@@ -25,20 +25,11 @@ class VendorSource: GuestSeniorSource {
         lastName: String?,
         vendorCompany: String?,
         dateOfVisit: String?
-        ) throws
+        )
     {
-        guard let vendorCompany = vendorCompany else {
-            throw ErrorSource.missingFirstName(description: "Please enter your Vendor Company")
-        }
-        guard let dateOfVisit = dateOfVisit else {
-            throw ErrorSource.missingFirstName(description: "Please enter your Date of Visit")
-        }
-
-
-    
         self.vendorCompany = vendorCompany
         self.dateOfVisit = dateOfVisit
-        try super.init(
+        super.init(
             areaAccess: areaAccess,
             ridePrivileges: ridePrivileges,
             discountAccess: discountAccess,
@@ -49,9 +40,33 @@ class VendorSource: GuestSeniorSource {
             lastName: lastName
         )
         
-        self.ridePrivileges = [.deferToRules]
-        self.discountAccess = [.none]
-        self.discountAmount = [.none]
+        //self.ridePrivileges = [.deferToRules]
+        //self.discountAccess = [.none]
+        //self.discountAmount = [.none]
+        
+    }
+    
+    convenience init (
+        dateOfBirth: String?,
+        firstName: String?,
+        lastName: String?,
+        vendorCompany: String?,
+        dateOfVisit: String?
+        
+        )
+    {
+        self.init(
+            areaAccess: [.amusement],
+            ridePrivileges: [.deferToRules],
+            discountAccess: [.none],
+            discountAmount: [.none],
+            requiredInformation: [.personal],
+            dateOfBirth: dateOfBirth,
+            firstName: firstName,
+            lastName: lastName,
+            vendorCompany: vendorCompany,
+            dateOfVisit: dateOfVisit
+        )
         
     }
 }

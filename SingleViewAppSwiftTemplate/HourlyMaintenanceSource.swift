@@ -11,12 +11,7 @@ import Foundation
 
 class HourlyMaintenanceEmployeeSource: HourlyFoodEmployeeSource {
     
-    override init (
-        areaAccess: [AreaAccess],
-        ridePrivileges: [RidePrivilege],
-        discountAccess: [DiscountAccess],
-        discountAmount: [DiscountAmount],
-        requiredInformation: [RequiredInformation],
+    convenience init (
         dateOfBirth: String?,
         firstName: String?,
         lastName: String?,
@@ -25,14 +20,14 @@ class HourlyMaintenanceEmployeeSource: HourlyFoodEmployeeSource {
         state: String?,
         zipCode: Int?,
         socialSecurityNumber: String?
-        ) throws
+        )
     {
-        try super.init(
-            areaAccess: areaAccess,
-            ridePrivileges: ridePrivileges,
-            discountAccess: discountAccess,
-            discountAmount: discountAmount,
-            requiredInformation: requiredInformation,
+        self.init(
+            areaAccess: [.amusement, .kitchen, .maintenance, .rideControl],
+            ridePrivileges: [.all, .skip],
+            discountAccess: [.food, .merch],
+            discountAmount: [.fifteen, .twentyfive],
+            requiredInformation: [.personal],
             dateOfBirth: dateOfBirth,
             firstName: firstName,
             lastName: lastName,
@@ -42,7 +37,6 @@ class HourlyMaintenanceEmployeeSource: HourlyFoodEmployeeSource {
             zipCode: zipCode,
             socialSecurityNumber: socialSecurityNumber
         )
-        self.areaAccess = [.amusement, .kitchen, .maintenance, .rideControl]
         
     }
 }

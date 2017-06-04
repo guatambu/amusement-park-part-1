@@ -12,12 +12,7 @@ import Foundation
 
 class HourlyRideServicesEmployeeSource: HourlyFoodEmployeeSource {
     
-    override init (
-        areaAccess: [AreaAccess],
-        ridePrivileges: [RidePrivilege],
-        discountAccess: [DiscountAccess],
-        discountAmount: [DiscountAmount],
-        requiredInformation: [RequiredInformation],
+    convenience init (
         dateOfBirth: String?,
         firstName: String?,
         lastName: String?,
@@ -26,14 +21,14 @@ class HourlyRideServicesEmployeeSource: HourlyFoodEmployeeSource {
         state: String?,
         zipCode: Int?,
         socialSecurityNumber: String?
-        ) throws
+        )
     {
-        try super.init(
-            areaAccess: areaAccess,
-            ridePrivileges: ridePrivileges,
-            discountAccess: discountAccess,
-            discountAmount: discountAmount,
-            requiredInformation: requiredInformation,
+        self.init(
+            areaAccess: [.amusement, .rideControl],
+            ridePrivileges: [.all, .skip],
+            discountAccess: [.food, .merch],
+            discountAmount: [.fifteen, .twentyfive],
+            requiredInformation: [.personal],
             dateOfBirth: dateOfBirth,
             firstName: firstName,
             lastName: lastName,
@@ -43,7 +38,6 @@ class HourlyRideServicesEmployeeSource: HourlyFoodEmployeeSource {
             zipCode: zipCode,
             socialSecurityNumber: socialSecurityNumber
         )
-        self.areaAccess = [.amusement, .rideControl]
         
     }
 }
