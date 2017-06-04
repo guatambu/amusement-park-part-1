@@ -12,7 +12,7 @@ import Foundation
 
 class ContractEmployeeSource: HourlyFoodEmployeeSource {
     
-    var projectNumber: Int
+    var projectNumber: String?
     
     init(
         areaAccess: [AreaAccess],
@@ -26,9 +26,9 @@ class ContractEmployeeSource: HourlyFoodEmployeeSource {
         streetAddress: String?,
         city: String?,
         state: String?,
-        zipCode: Int?,
+        zipCode: String?,
         socialSecurityNumber: String?,
-        projectNumber: Int?
+        projectNumber: String?
         )
     {
         
@@ -49,24 +49,51 @@ class ContractEmployeeSource: HourlyFoodEmployeeSource {
             zipCode: zipCode,
             socialSecurityNumber: socialSecurityNumber
         )
-       // self.ridePrivileges = [.deferToRules]
-       // self.discountAccess = [.none]
-       // self.discountAmount = [.none]
+       
         
     }
     
-    convenience init (
+    convenience init? (
         dateOfBirth: String?,
         firstName: String?,
         lastName: String?,
         streetAddress: String?,
         city: String?,
         state: String?,
-        zipCode: Int?,
+        zipCode: String?,
         socialSecurityNumber: String?,
-        projectNumber: Int?
+        projectNumber: String?
         )
     {
+        
+        guard dateOfBirth == nil || dateOfBirth == "" else {
+            return nil
+        }
+        guard firstName == nil || firstName == "" else {
+            return nil
+        }
+        guard lastName == nil || lastName == "" else {
+            return nil
+        }
+        guard streetAddress == nil || streetAddress == "" else {
+            return nil
+        }
+        guard city == nil || city == "" else {
+            return nil
+        }
+        guard state == nil || state == "" else {
+            return nil
+        }
+        guard zipCode == nil || zipCode == "" else {
+            return nil
+        }
+        guard socialSecurityNumber == nil || socialSecurityNumber == "" else {
+            return nil
+        }
+        guard projectNumber == nil || projectNumber == "" else {
+            return nil
+        }
+        
         self.init(
             areaAccess: [.amusement],
             ridePrivileges: [.deferToRules],

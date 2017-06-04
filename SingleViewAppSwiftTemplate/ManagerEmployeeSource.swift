@@ -25,7 +25,7 @@ class ManagerEmployeeSource: HourlyFoodEmployeeSource {
         streetAddress: String?,
         city: String?,
         state: String?,
-        zipCode: Int?,
+        zipCode: String?,
         socialSecurityNumber: String?,
         managementTier: [ManagerType]
         )
@@ -51,18 +51,48 @@ class ManagerEmployeeSource: HourlyFoodEmployeeSource {
         
     }
     
-    convenience init (
+    convenience init? (
         dateOfBirth: String?,
         firstName: String?,
         lastName: String?,
         streetAddress: String?,
         city: String?,
         state: String?,
-        zipCode: Int?,
+        zipCode: String?,
         socialSecurityNumber: String?,
         managementTier: [ManagerType]
         )
     {
+        
+        guard dateOfBirth == nil || dateOfBirth == "" else {
+            return nil
+        }
+        guard firstName == nil || firstName == "" else {
+            return nil
+        }
+        guard lastName == nil || lastName == "" else {
+            return nil
+        }
+        guard streetAddress == nil || streetAddress == "" else {
+            return nil
+        }
+        guard city == nil || city == "" else {
+            return nil
+        }
+        guard state == nil || state == "" else {
+            return nil
+        }
+        guard zipCode == nil || zipCode == "" else {
+            return nil
+        }
+        guard socialSecurityNumber == nil || socialSecurityNumber == "" else {
+            return nil
+        }
+        guard managementTier == [] else {
+            return nil
+        }
+        
+        
         self.init(
             areaAccess: [.amusement, .kitchen, .maintenance, .office, .rideControl],
             ridePrivileges: [.all, .skip],

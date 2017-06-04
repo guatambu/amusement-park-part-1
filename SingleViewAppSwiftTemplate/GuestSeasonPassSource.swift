@@ -15,7 +15,7 @@ class GuestSeasonPassSource: GuestSeniorSource {
     var streetAddress: String?
     var city: String?
     var state: String?
-    var zipCode: Int?
+    var zipCode: String?
     
     init (
         areaAccess: [AreaAccess],
@@ -29,7 +29,7 @@ class GuestSeasonPassSource: GuestSeniorSource {
         streetAddress: String?,
         city: String?,
         state: String?,
-        zipCode: Int?
+        zipCode: String?
         )
     {
         
@@ -50,16 +50,39 @@ class GuestSeasonPassSource: GuestSeniorSource {
             lastName: lastName)
     }
     
-    convenience init (
+    convenience init? (
         dateOfBirth: String?,
         firstName: String?,
         lastName: String?,
         streetAddress: String?,
         city: String?,
         state: String?,
-        zipCode: Int?
+        zipCode: String?
         )
     {
+        
+        guard dateOfBirth == nil || dateOfBirth == "" else {
+            return nil
+        }
+        guard firstName == nil || firstName == "" else {
+            return nil
+        }
+        guard lastName == nil || lastName == "" else {
+            return nil
+        }
+        guard streetAddress == nil || streetAddress == "" else {
+            return nil
+        }
+        guard city == nil || city == "" else {
+            return nil
+        }
+        guard state == nil || state == "" else {
+            return nil
+        }
+        guard zipCode == nil || zipCode == "" else {
+            return nil
+        }
+        
         self.init(
             areaAccess: [.amusement],
             ridePrivileges: [.all, .skip],

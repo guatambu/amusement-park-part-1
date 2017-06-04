@@ -39,14 +39,11 @@ class VendorSource: GuestSeniorSource {
             firstName: firstName,
             lastName: lastName
         )
-        
-        //self.ridePrivileges = [.deferToRules]
-        //self.discountAccess = [.none]
-        //self.discountAmount = [.none]
+
         
     }
     
-    convenience init (
+    convenience init? (
         dateOfBirth: String?,
         firstName: String?,
         lastName: String?,
@@ -55,12 +52,29 @@ class VendorSource: GuestSeniorSource {
         
         )
     {
+        
+        guard dateOfBirth == nil || dateOfBirth == "" else {
+            return nil
+        }
+        guard firstName == nil || firstName == "" else {
+            return nil
+        }
+        guard lastName == nil || lastName == "" else {
+            return nil
+        }
+        guard vendorCompany == nil || vendorCompany == "" else {
+            return nil
+        }
+        guard dateOfVisit == nil || dateOfVisit == "" else {
+            return nil
+        }
+        
         self.init(
             areaAccess: [.amusement],
             ridePrivileges: [.deferToRules],
             discountAccess: [.none],
             discountAmount: [.none],
-            requiredInformation: [.personal],
+            requiredInformation: [.business],
             dateOfBirth: dateOfBirth,
             firstName: firstName,
             lastName: lastName,
@@ -70,3 +84,10 @@ class VendorSource: GuestSeniorSource {
         
     }
 }
+
+
+
+
+
+
+

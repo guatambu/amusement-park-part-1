@@ -30,16 +30,36 @@ class GuestSeniorSource: GuestChildSource {
         self.firstName = firstName
         self.lastName = lastName
         
-        super.init(areaAccess: areaAccess, ridePrivileges: ridePrivileges, discountAccess: discountAccess, discountAmount: discountAmount, requiredInformation: requiredInformation, dateOfBirth: dateOfBirth)
+        super.init(
+            areaAccess: areaAccess,
+            ridePrivileges: ridePrivileges,
+            discountAccess: discountAccess,
+            discountAmount: discountAmount,
+            requiredInformation: requiredInformation,
+            dateOfBirth: dateOfBirth
+        )
         
     }
     
-    convenience init (
+    convenience init? (
         dateOfBirth: String?,
         firstName: String?,
         lastName: String?
         )
     {
+        
+        guard dateOfBirth == nil || dateOfBirth == "" else {
+            return nil
+        }
+        guard firstName == nil || firstName == "" else {
+            return nil
+        }
+        guard lastName == nil || lastName == "" else {
+            return nil
+        }
+        
+        
+        
         self.init(
             areaAccess: [.amusement],
             ridePrivileges: [.all, .skip],

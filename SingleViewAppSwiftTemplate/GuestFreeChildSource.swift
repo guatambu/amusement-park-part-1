@@ -34,12 +34,17 @@ class GuestChildSource: GuestClassicSource {
         
     }
     
-    convenience init (
+    convenience init? (
         discountAccess: [DiscountAccess],
         discountAmount: [DiscountAmount],
         dateOfBirth: String?
         )
     {
+        
+        guard dateOfBirth == nil || dateOfBirth == "" else {
+            return nil
+        }
+        
         self.init(
             areaAccess: [.amusement],
             ridePrivileges: [.all],
