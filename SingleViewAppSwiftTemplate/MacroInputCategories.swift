@@ -49,15 +49,25 @@ enum DiscountAmount: String {
     case twentyfive = "25%"
 }
 
-enum EntrantType: String {
-    case classic = "Classic Guest"
-    case child = "Free Child Guest"
-    case seasonPass = "Season Pass Guest"
-    case senior = "Senior Guest"
-    case vip = "VIP Guest"
-    case hourlyFood = "Hourly Employee - Food Services"
-    case hourlyRide = "Hourly Employee - Ride Services"
-    case hourlyMaintenance = "Hourly Employee - Maintenance"
+/*
+ enum EntrantTypeNav: String {
+    case guest = "Guest"
+    case employee = "Employee"
+    case manager = "Manager"
+    case contractor = "Contractor"
+    case vendor = "Vendor"
+}
+*/
+
+enum EntrantTypeSubNav: String {
+    case adult = "Adult"
+    case child = "Child"
+    case seasonPass = "Season Pass"
+    case senior = "Senior"
+    case vip = "VIP"
+    case hourlyFood = "Food Services"
+    case hourlyRide = "Ride Services"
+    case hourlyMaintenance = "Maintenance"
     case manager = "Manager"
     case contractEmployee = "Contract Employee"
     case vendor = "Vendor"
@@ -67,6 +77,21 @@ enum ManagerType: String {
     case shift = "Shift"
     case general = "General"
     case senior = "Senior"
+}
+
+enum ContractorSubNav: String {
+    case proj1001 = "Proj #1001"
+    case proj1002 = "Proj #1002"
+    case proj1003 = "Proj #1003"
+    case proj2001 = "Proj #2001"
+    case proj2002 = "Proj #2002"
+}
+
+enum Vendors: String {
+    case acme = "Acme"
+    case orkin = "Orkin"
+    case fedex = "FedEx"
+    case nwElectrical = "NW Electrical"
 }
 
 enum RequiredInformation: String {

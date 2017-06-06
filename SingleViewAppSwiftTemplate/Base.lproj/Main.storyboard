@@ -755,10 +755,10 @@
                                         <rect key="frame" x="0.0" y="430" width="768" height="535"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="cD8-1H-OiI" userLabel="Macro Testing Stack View">
-                                                <rect key="frame" x="59" y="31" width="650" height="478"/>
+                                                <rect key="frame" x="50" y="31" width="669" height="478"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="afF-uz-ePH">
-                                                        <rect key="frame" x="0.5" y="0.0" width="649.5" height="63"/>
+                                                        <rect key="frame" x="10" y="0.0" width="649.5" height="63"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Access Testing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="056-mG-Yxg">
                                                                 <rect key="frame" x="226" y="0.0" width="197" height="35"/>
@@ -778,16 +778,16 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eBY-9b-Rdx">
-                                                        <rect key="frame" x="1" y="88" width="648" height="285"/>
+                                                        <rect key="frame" x="1" y="88" width="667" height="285"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="L2Q-lH-WTd">
-                                                                <rect key="frame" x="0.0" y="0.0" width="648" height="65"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="667" height="65"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1N-d6-d74" customClass="ButtonDesign" customModule="SingleViewAppSwiftTemplate" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="202" height="65"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="148" height="65"/>
                                                                         <color key="backgroundColor" red="0.93740326169999999" green="0.92513066529999999" blue="0.94564527269999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="198" id="P5s-jZ-Vdz"/>
+                                                                            <constraint firstAttribute="width" constant="148" id="0oj-Vr-SAd"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                                         <state key="normal" title="Area Access">
@@ -804,10 +804,10 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWO-23-Ghq" customClass="ButtonDesign" customModule="SingleViewAppSwiftTemplate" customModuleProvider="target">
-                                                                        <rect key="frame" x="227" y="0.0" width="198" height="65"/>
+                                                                        <rect key="frame" x="173" y="0.0" width="148" height="65"/>
                                                                         <color key="backgroundColor" red="0.93740326169999999" green="0.92513066529999999" blue="0.94564527269999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="198" id="sv5-cw-Pxs"/>
+                                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="148" id="uhh-OS-hcq"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                                         <state key="normal" title="Ride Access">
@@ -824,13 +824,14 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVX-fv-hXl" customClass="ButtonDesign" customModule="SingleViewAppSwiftTemplate" customModuleProvider="target">
-                                                                        <rect key="frame" x="450" y="0.0" width="198" height="65"/>
+                                                                        <rect key="frame" x="346" y="0.0" width="148" height="65"/>
                                                                         <color key="backgroundColor" red="0.93740326169999999" green="0.92513066529999999" blue="0.94564527269999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="198" id="rkN-HY-K6h"/>
+                                                                            <constraint firstAttribute="width" constant="148" id="DiB-PE-88Z"/>
+                                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="148" id="kLR-H2-w1B"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                                        <state key="normal" title="Discount Access">
+                                                                        <state key="normal" title="Discounts">
                                                                             <color key="titleColor" red="0.344119966" green="0.58548295500000003" blue="0.56190145020000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         </state>
                                                                         <userDefinedRuntimeAttributes>
@@ -843,13 +844,38 @@
                                                                             <action selector="discountAccessButton:" destination="12V-6h-t0W" eventType="touchUpInside" id="p8V-dB-wh7"/>
                                                                         </connections>
                                                                     </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tdk-JO-XdN" customClass="ButtonDesign" customModule="SingleViewAppSwiftTemplate" customModuleProvider="target">
+                                                                        <rect key="frame" x="519" y="0.0" width="148" height="65"/>
+                                                                        <color key="backgroundColor" red="0.93740326169999999" green="0.92513066529999999" blue="0.94564527269999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="148" id="7vy-X4-zkh"/>
+                                                                            <constraint firstAttribute="width" constant="148" id="PTf-h8-17h"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                        <state key="normal" title="Required Info">
+                                                                            <color key="titleColor" red="0.344119966" green="0.58548295500000003" blue="0.56190145020000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="5"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="DiscountAccess:" destination="12V-6h-t0W" eventType="touchUpInside" id="4rb-8l-VXN"/>
+                                                                            <action selector="discountAccessButton:" destination="12V-6h-t0W" eventType="touchUpInside" id="52p-xi-FYP"/>
+                                                                            <action selector="requiredInfoButton:" destination="12V-6h-t0W" eventType="touchUpInside" id="KzV-Ej-qRY"/>
+                                                                        </connections>
+                                                                    </button>
                                                                 </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="hVX-fv-hXl" firstAttribute="leading" secondItem="L2Q-lH-WTd" secondAttribute="leading" constant="346" id="50J-cq-6Lf"/>
+                                                                </constraints>
                                                             </stackView>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H5Y-GO-zgn" userLabel="Test Results View Design" customClass="UIViewDesign" customModule="SingleViewAppSwiftTemplate" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="85" width="648" height="200"/>
+                                                                <rect key="frame" x="0.0" y="85" width="667" height="200"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ks7-aR-9zR">
-                                                                        <rect key="frame" x="20" y="10" width="608" height="180"/>
+                                                                        <rect key="frame" x="20" y="10" width="627" height="180"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                         <color key="textColor" red="0.34509803919999998" green="0.3411764706" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -874,7 +900,7 @@
                                                         </constraints>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="463-6a-RVc" customClass="ButtonDesign" customModule="SingleViewAppSwiftTemplate" customModuleProvider="target">
-                                                        <rect key="frame" x="165" y="398" width="320" height="80"/>
+                                                        <rect key="frame" x="174.5" y="398" width="320" height="80"/>
                                                         <color key="backgroundColor" red="0.79639607670000001" green="0.77576333279999998" blue="0.81285625699999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="80" id="AWM-VM-pGP"/>
@@ -949,7 +975,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zq6-9N-n8J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1339.84375" y="143.5546875"/>
+            <point key="canvasLocation" x="1437" y="144"/>
         </scene>
     </scenes>
     <resources>

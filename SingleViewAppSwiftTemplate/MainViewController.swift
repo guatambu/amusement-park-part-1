@@ -46,6 +46,11 @@ class MainViewController: UIViewController {
     @IBAction func guestNavButton(_ sender: UIButton) {
         if subNavStackView.isHidden {
             animateView(view: subNavStackView, toHidden: false)
+            subNavOption1.setTitle(EntrantTypeSubNav.child.rawValue, for: .normal)
+            subNavOption2.setTitle(EntrantTypeSubNav.adult.rawValue, for: .normal)
+            subNavOption3.setTitle(EntrantTypeSubNav.senior.rawValue, for: .normal)
+            subNavOption4.setTitle(EntrantTypeSubNav.vip.rawValue, for: .normal)
+            subNavOption5.setTitle(EntrantTypeSubNav.seasonPass.rawValue, for: .normal)
         } else {
             animateView(view: subNavStackView, toHidden: true)
         }
@@ -55,9 +60,9 @@ class MainViewController: UIViewController {
     @IBAction func employeeNavButton(_ sender: UIButton) {
         if subNavStackView.isHidden {
             animateView(view: subNavStackView, toHidden: false)
-            subNavOption1.setTitle("Hourly - Food Services", for: .normal)
-            subNavOption2.setTitle("Hourly - Ride Services", for: .normal)
-            subNavOption3.setTitle("Hourly - Maintenance", for: .normal)
+            subNavOption1.setTitle(EntrantTypeSubNav.hourlyFood.rawValue, for: .normal)
+            subNavOption2.setTitle(EntrantTypeSubNav.hourlyRide.rawValue, for: .normal)
+            subNavOption3.setTitle(EntrantTypeSubNav.hourlyMaintenance.rawValue, for: .normal)
             subNavOption4.isHidden = true
             subNavOption5.isHidden = true
         } else {
@@ -68,9 +73,9 @@ class MainViewController: UIViewController {
     @IBAction func managerNavButton(_ sender: UIButton) {
         if subNavStackView.isHidden {
             animateView(view: subNavStackView, toHidden: false)
-            subNavOption1.setTitle("Shift Manager", for: .normal)
-            subNavOption2.setTitle("General Manager", for: .normal)
-            subNavOption3.setTitle("Senior Manager", for: .normal)
+            subNavOption1.setTitle(ManagerType.shift.rawValue, for: .normal)
+            subNavOption2.setTitle(ManagerType.general.rawValue, for: .normal)
+            subNavOption3.setTitle(ManagerType.senior.rawValue, for: .normal)
             subNavOption4.isHidden = true
             subNavOption5.isHidden = true
         } else {
@@ -80,11 +85,11 @@ class MainViewController: UIViewController {
     @IBAction func contractorNavButton(_ sender: UIButton) {
         if subNavStackView.isHidden {
             animateView(view: subNavStackView, toHidden: false)
-            subNavOption1.setTitle("Proj #1001", for: .normal)
-            subNavOption2.setTitle("Proj #1002", for: .normal)
-            subNavOption3.setTitle("Proj #1003", for: .normal)
-            subNavOption4.setTitle("Proj #2001", for: .normal)
-            subNavOption5.setTitle("Proj #2002", for: .normal)
+            subNavOption1.setTitle(ContractorSubNav.proj1001.rawValue, for: .normal)
+            subNavOption2.setTitle(ContractorSubNav.proj1002.rawValue, for: .normal)
+            subNavOption3.setTitle(ContractorSubNav.proj1003.rawValue, for: .normal)
+            subNavOption4.setTitle(ContractorSubNav.proj2001.rawValue, for: .normal)
+            subNavOption5.setTitle(ContractorSubNav.proj2002.rawValue, for: .normal)
         } else {
             animateView(view: subNavStackView, toHidden: true)
         }
@@ -92,10 +97,10 @@ class MainViewController: UIViewController {
     @IBAction func vendorNavButton(_ sender: UIButton) {
         if subNavStackView.isHidden {
             animateView(view: subNavStackView, toHidden: false)
-            subNavOption1.setTitle("Acme", for: .normal)
-            subNavOption2.setTitle("Orkin", for: .normal)
-            subNavOption3.setTitle("FedEx", for: .normal)
-            subNavOption4.setTitle("NW Electrical", for: .normal)
+            subNavOption1.setTitle(Vendors.acme.rawValue, for: .normal)
+            subNavOption2.setTitle(Vendors.orkin.rawValue, for: .normal)
+            subNavOption3.setTitle(Vendors.fedex.rawValue, for: .normal)
+            subNavOption4.setTitle(Vendors.nwElectrical.rawValue, for: .normal)
             subNavOption5.isHidden = true
         } else {
             animateView(view: subNavStackView, toHidden: true)
@@ -105,7 +110,7 @@ class MainViewController: UIViewController {
     
     // SubNavigation Buttons
     @IBAction func subNavOption1(_ sender: UIButton) {
-        if subNavOption1.currentTitle == "Child" && subNavOption1.isSelected == true {
+        if subNavOption1.currentTitle == EntrantTypeSubNav.child.rawValue && subNavOption1.isSelected == true {
             
             /* UITextField appearance */
             //dateOfBirth.alpha = 0.5
@@ -130,7 +135,7 @@ class MainViewController: UIViewController {
             city.allowsEditingTextAttributes = false
             state.allowsEditingTextAttributes = false
             zipCode.allowsEditingTextAttributes = false
-        } else if (subNavOption1.currentTitle == "Hourly - Food Services" || subNavOption1.currentTitle == "Shift Manager")  && subNavOption1.isSelected == true {
+        } else if (subNavOption1.currentTitle == EntrantTypeSubNav.hourlyFood.rawValue || subNavOption1.currentTitle == ManagerType.shift.rawValue)  && subNavOption1.isSelected == true {
             
             /* UITextField appearance */
             //dateOfBirth.alpha = 0.5
@@ -155,7 +160,7 @@ class MainViewController: UIViewController {
             //city.allowsEditingTextAttributes = false
             //state.allowsEditingTextAttributes = false
             //zipCode.allowsEditingTextAttributes = false
-        } else if subNavOption1.currentTitle == "Proj #1001" && subNavOption1.isSelected == true {
+        } else if subNavOption1.currentTitle == ContractorSubNav.proj1001.rawValue && subNavOption1.isSelected == true {
             
             /* UITextField appearance */
             //dateOfBirth.alpha = 0.5
@@ -180,7 +185,7 @@ class MainViewController: UIViewController {
             //city.allowsEditingTextAttributes = false
             //state.allowsEditingTextAttributes = false
             //zipCode.allowsEditingTextAttributes = false
-        } else if subNavOption1.currentTitle == "Acme" && subNavOption1.isSelected == true {
+        } else if subNavOption1.currentTitle == Vendors.acme.rawValue && subNavOption1.isSelected == true {
             
             /* UITextField appearance */
             //dateOfBirth.alpha = 0.5
@@ -210,7 +215,7 @@ class MainViewController: UIViewController {
         }
     }
     @IBAction func subNavOption2(_ sender: UIButton) {
-        if subNavOption2.currentTitle == "Adult" && subNavOption2.isSelected == true {
+        if subNavOption2.currentTitle == EntrantTypeSubNav.adult.rawValue && subNavOption2.isSelected == true {
             
             /* UITextField appearance */
             dateOfBirth.alpha = 0.5
@@ -238,7 +243,7 @@ class MainViewController: UIViewController {
         }
     }
     @IBAction func subNavOption3(_ sender: UIButton) {
-        if subNavOption2.currentTitle == "Senior" && subNavOption2.isSelected == true {
+        if subNavOption2.currentTitle == EntrantTypeSubNav.senior.rawValue && subNavOption2.isSelected == true {
             
             /* UITextField appearance */
             //dateOfBirth.alpha = 0.5
@@ -266,7 +271,7 @@ class MainViewController: UIViewController {
         }
     }
     @IBAction func subNavOption4(_ sender: UIButton) {
-        if subNavOption2.currentTitle == "VIP" && subNavOption2.isSelected == true {
+        if subNavOption2.currentTitle == EntrantTypeSubNav.vip.rawValue && subNavOption2.isSelected == true {
             
             /* UITextField appearance */
             dateOfBirth.alpha = 0.5
@@ -294,7 +299,7 @@ class MainViewController: UIViewController {
         }
     }
     @IBAction func subNavOption5(_ sender: UIButton) {
-        if subNavOption2.currentTitle == "Season Pass" && subNavOption2.isSelected == true {
+        if subNavOption2.currentTitle == EntrantTypeSubNav.seasonPass.rawValue && subNavOption2.isSelected == true {
             
             /* UITextField appearance */
             //dateOfBirth.alpha = 0.5
@@ -325,6 +330,7 @@ class MainViewController: UIViewController {
 
     // Pass Generators
     @IBAction func generatePass(_ sender: ButtonDesign) {
+        
     }
 
     @IBAction func populateData(_ sender: ButtonDesign) {
