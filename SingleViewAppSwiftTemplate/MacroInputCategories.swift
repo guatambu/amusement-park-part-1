@@ -68,9 +68,6 @@ enum EntrantTypeSubNav: String {
     case hourlyFood = "Food Services"
     case hourlyRide = "Ride Services"
     case hourlyMaintenance = "Maintenance"
-    case manager = "Manager"
-    case contractEmployee = "Contract Employee"
-    case vendor = "Vendor"
 }
 
 enum ManagerType: String {

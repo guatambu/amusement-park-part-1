@@ -35,8 +35,6 @@ class GuestChildSource: GuestClassicSource {
     }
     
     convenience init? (
-        discountAccess: [DiscountAccess],
-        discountAmount: [DiscountAmount],
         dateOfBirth: String?
         )
     {
@@ -48,12 +46,14 @@ class GuestChildSource: GuestClassicSource {
         self.init(
             areaAccess: [.amusement],
             ridePrivileges: [.all],
-            discountAccess: discountAccess,
-            discountAmount: discountAmount,
+            discountAccess: [.none],
+            discountAmount: [.none],
             requiredInformation: [.personal],
             dateOfBirth: dateOfBirth
         )
         
     }
 }
+
+
 
