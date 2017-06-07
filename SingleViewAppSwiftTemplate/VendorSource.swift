@@ -12,7 +12,7 @@ import Foundation
 class VendorSource: GuestSeniorSource {
     
     var vendorCompany: String?
-    var dateOfVisit: String?
+    var dateOfVisit: Date
     
     init (
         areaAccess: [AreaAccess],
@@ -24,7 +24,7 @@ class VendorSource: GuestSeniorSource {
         firstName: String?,
         lastName: String?,
         vendorCompany: String?,
-        dateOfVisit: String?
+        dateOfVisit: Date
         )
     {
         self.vendorCompany = vendorCompany
@@ -48,7 +48,7 @@ class VendorSource: GuestSeniorSource {
         firstName: String?,
         lastName: String?,
         vendorCompany: String?,
-        dateOfVisit: String?
+        dateOfVisit: Date
         
         )
     {
@@ -65,9 +65,7 @@ class VendorSource: GuestSeniorSource {
         guard vendorCompany == nil || vendorCompany == "" else {
             return nil
         }
-        guard dateOfVisit == nil || dateOfVisit == "" else {
-            return nil
-        }
+        
         
         self.init(
             areaAccess: [.amusement],

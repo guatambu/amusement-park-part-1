@@ -343,87 +343,608 @@ class MainViewController: UIViewController {
          @IBOutlet weak var zipCode: UITextField!
         */
         
-        var newUser: PersonSource
-        
         if subNavOption1.currentTitle == EntrantTypeSubNav.child.rawValue && subNavOption1.isSelected == true {
             
-            newUser = GuestChildSource(dateOfBirth: dateOfBirth.text)
+            guard let newUser = GuestChildSource(dateOfBirth: dateOfBirth.text), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
+                print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
+                return
+            }
             
         } else if subNavOption1.currentTitle == EntrantTypeSubNav.adult.rawValue && subNavOption1.isSelected == true {
             
-            newUser = GuestClassicSource()
+            let newUser = GuestClassicSource()
         
         } else if subNavOption1.currentTitle == EntrantTypeSubNav.senior.rawValue && subNavOption1.isSelected == true {
             
-            newUser = GuestSeniorSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text)
+            guard let newUser = GuestSeniorSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
+                print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
+                return
+            }
+            
+            guard newUser.firstName != nil || newUser.firstName == "" else {
+                print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
+                return
+            }
+            
+            guard newUser.lastName != nil || newUser.lastName != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
+                return
+            }
+            
         
         } else if subNavOption1.currentTitle == EntrantTypeSubNav.vip.rawValue && subNavOption1.isSelected == true {
             
-            newUser = GuestVIPSource()
+            let newUser = GuestVIPSource()
         
         } else if subNavOption1.currentTitle == EntrantTypeSubNav.seasonPass.rawValue && subNavOption1.isSelected == true {
             
-            newUser = GuestSeasonPassSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text)
+            guard let newUser = GuestSeasonPassSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
+                print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
+                return
+            }
+            
+            guard newUser.firstName != nil || newUser.firstName == "" else {
+                print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
+                return
+            }
+            
+            guard newUser.lastName != nil || newUser.lastName != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
+                return
+            }
+            
+            guard newUser.streetAddress != nil || newUser.streetAddress != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
+                return
+            }
+            
+            guard newUser.city != nil || newUser.city != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your City"))
+                return
+            }
+            
+            guard newUser.state != nil || newUser.state != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your State"))
+                return
+            }
+            
+            guard newUser.zipCode != nil || newUser.zipCode != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
+                return
+            }
             
         } else if subNavOption1.currentTitle == EntrantTypeSubNav.hourlyFood.rawValue && subNavOption1.isSelected == true {
             
-            newUser = HourlyFoodEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text)
+            guard let newUser = HourlyFoodEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
+                print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
+                return
+            }
+            
+            guard newUser.firstName != nil || newUser.firstName == "" else {
+                print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
+                return
+            }
+            
+            guard newUser.lastName != nil || newUser.lastName != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
+                return
+            }
+            
+            guard newUser.streetAddress != nil || newUser.streetAddress != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
+                return
+            }
+            
+            guard newUser.city != nil || newUser.city != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your City"))
+                return
+            }
+            
+            guard newUser.state != nil || newUser.state != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your State"))
+                return
+            }
+            
+            guard newUser.zipCode != nil || newUser.zipCode != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
+                return
+            }
+            
+            guard newUser.socialSecurityNumber != nil || newUser.socialSecurityNumber != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
+                return
+            }
+
             
         } else if subNavOption1.currentTitle == EntrantTypeSubNav.hourlyRide.rawValue && subNavOption1.isSelected == true {
             
-            newUser = HourlyRideServicesEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text)
+            guard let newUser = HourlyRideServicesEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
+                print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
+                return
+            }
+            
+            guard newUser.firstName != nil || newUser.firstName == "" else {
+                print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
+                return
+            }
+            
+            guard newUser.lastName != nil || newUser.lastName != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
+                return
+            }
+            
+            guard newUser.streetAddress != nil || newUser.streetAddress != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
+                return
+            }
+            
+            guard newUser.city != nil || newUser.city != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your City"))
+                return
+            }
+            
+            guard newUser.state != nil || newUser.state != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your State"))
+                return
+            }
+            
+            guard newUser.zipCode != nil || newUser.zipCode != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
+                return
+            }
+            
+            guard newUser.socialSecurityNumber != nil || newUser.socialSecurityNumber != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
+                return
+            }
         
         } else if subNavOption1.currentTitle == EntrantTypeSubNav.hourlyMaintenance.rawValue && subNavOption1.isSelected == true {
             
-            newUser = HourlyMaintenanceEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text)
+            guard let newUser = HourlyMaintenanceEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
+                print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
+                return
+            }
+            
+            guard newUser.firstName != nil || newUser.firstName == "" else {
+                print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
+                return
+            }
+            
+            guard newUser.lastName != nil || newUser.lastName != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
+                return
+            }
+            
+            guard newUser.streetAddress != nil || newUser.streetAddress != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
+                return
+            }
+            
+            guard newUser.city != nil || newUser.city != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your City"))
+                return
+            }
+            
+            guard newUser.state != nil || newUser.state != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your State"))
+                return
+            }
+            
+            guard newUser.zipCode != nil || newUser.zipCode != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
+                return
+            }
+            
+            guard newUser.socialSecurityNumber != nil || newUser.socialSecurityNumber != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
+                return
+            }
         
         } else if subNavOption1.currentTitle == ManagerType.shift.rawValue && subNavOption1.isSelected == true {
             
-            newUser = ManagerEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, managementTier: [.shift])
+            guard let newUser = ManagerEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, managementTier: [.shift]), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
+                print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
+                return
+            }
+            
+            guard newUser.firstName != nil || newUser.firstName == "" else {
+                print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
+                return
+            }
+            
+            guard newUser.lastName != nil || newUser.lastName != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
+                return
+            }
+            
+            guard newUser.streetAddress != nil || newUser.streetAddress != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
+                return
+            }
+            
+            guard newUser.city != nil || newUser.city != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your City"))
+                return
+            }
+            
+            guard newUser.state != nil || newUser.state != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your State"))
+                return
+            }
+            
+            guard newUser.zipCode != nil || newUser.zipCode != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
+                return
+            }
+            
+            guard newUser.socialSecurityNumber != nil || newUser.socialSecurityNumber != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
+                return
+            }
         
         } else if subNavOption1.currentTitle == ManagerType.general.rawValue && subNavOption1.isSelected == true {
             
-            newUser = ManagerEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, managementTier: [.general])
+            guard let newUser = ManagerEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, managementTier: [.general]), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
+                print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
+                return
+            }
+            
+            guard newUser.firstName != nil || newUser.firstName == "" else {
+                print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
+                return
+            }
+            
+            guard newUser.lastName != nil || newUser.lastName != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
+                return
+            }
+            
+            guard newUser.streetAddress != nil || newUser.streetAddress != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
+                return
+            }
+            
+            guard newUser.city != nil || newUser.city != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your City"))
+                return
+            }
+            
+            guard newUser.state != nil || newUser.state != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your State"))
+                return
+            }
+            
+            guard newUser.zipCode != nil || newUser.zipCode != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
+                return
+            }
+            
+            guard newUser.socialSecurityNumber != nil || newUser.socialSecurityNumber != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
+                return
+            }
         
         } else if subNavOption1.currentTitle == ManagerType.senior.rawValue && subNavOption1.isSelected == true {
+        
+            guard let newUser = ManagerEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, managementTier: [.senior]), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
+                print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
+                return
+            }
             
-            newUser = ManagerEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, managementTier: [.senior])
+            guard newUser.firstName != nil || newUser.firstName == "" else {
+                print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
+                return
+            }
+            
+            guard newUser.lastName != nil || newUser.lastName != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
+                return
+            }
+            
+            guard newUser.streetAddress != nil || newUser.streetAddress != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
+                return
+            }
+            
+            guard newUser.city != nil || newUser.city != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your City"))
+                return
+            }
+            
+            guard newUser.state != nil || newUser.state != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your State"))
+                return
+            }
+            
+            guard newUser.zipCode != nil || newUser.zipCode != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
+                return
+            }
+            
+            guard newUser.socialSecurityNumber != nil || newUser.socialSecurityNumber != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
+                return
+            }
             
         } else if subNavOption1.currentTitle == ContractorSubNav.proj1001.rawValue && subNavOption1.isSelected == true {
             
-            newUser = ContractEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, projectNumber: ContractorSubNav.proj1001.rawValue)
+            guard let newUser = ContractEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, projectNumber: ContractorSubNav.proj1001.rawValue), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
+                print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
+                return
+            }
+            
+            guard newUser.firstName != nil || newUser.firstName == "" else {
+                print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
+                return
+            }
+            
+            guard newUser.lastName != nil || newUser.lastName != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
+                return
+            }
+            
+            guard newUser.streetAddress != nil || newUser.streetAddress != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
+                return
+            }
+            
+            guard newUser.city != nil || newUser.city != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your City"))
+                return
+            }
+            
+            guard newUser.state != nil || newUser.state != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your State"))
+                return
+            }
+            
+            guard newUser.zipCode != nil || newUser.zipCode != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
+                return
+            }
+            
+            guard newUser.socialSecurityNumber != nil || newUser.socialSecurityNumber != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
+                return
+            }
         
         } else if subNavOption1.currentTitle == ContractorSubNav.proj1002.rawValue && subNavOption1.isSelected == true {
             
-            newUser = ContractEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, projectNumber: ContractorSubNav.proj1002.rawValue)
+            guard let newUser = ContractEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, projectNumber: ContractorSubNav.proj1002.rawValue), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
+                print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
+                return
+            }
+            
+            guard newUser.firstName != nil || newUser.firstName == "" else {
+                print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
+                return
+            }
+            
+            guard newUser.lastName != nil || newUser.lastName != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
+                return
+            }
+            
+            guard newUser.streetAddress != nil || newUser.streetAddress != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
+                return
+            }
+            
+            guard newUser.city != nil || newUser.city != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your City"))
+                return
+            }
+            
+            guard newUser.state != nil || newUser.state != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your State"))
+                return
+            }
+            
+            guard newUser.zipCode != nil || newUser.zipCode != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
+                return
+            }
+            
+            guard newUser.socialSecurityNumber != nil || newUser.socialSecurityNumber != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
+                return
+            }
+            
+            
         
         } else if subNavOption1.currentTitle == ContractorSubNav.proj1003.rawValue && subNavOption1.isSelected == true {
             
-            newUser = ContractEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, projectNumber: ContractorSubNav.proj1003.rawValue)
+            guard let newUser = ContractEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, projectNumber: ContractorSubNav.proj1003.rawValue), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
+                print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
+                return
+            }
+            
+            guard newUser.firstName != nil || newUser.firstName == "" else {
+                print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
+                return
+            }
+            
+            guard newUser.lastName != nil || newUser.lastName != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
+                return
+            }
+            
+            guard newUser.streetAddress != nil || newUser.streetAddress != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
+                return
+            }
+            
+            guard newUser.city != nil || newUser.city != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your City"))
+                return
+            }
+            
+            guard newUser.state != nil || newUser.state != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your State"))
+                return
+            }
+            
+            guard newUser.zipCode != nil || newUser.zipCode != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
+                return
+            }
+            
+            guard newUser.socialSecurityNumber != nil || newUser.socialSecurityNumber != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
+                return
+            }
         
         } else if subNavOption1.currentTitle == ContractorSubNav.proj2001.rawValue && subNavOption1.isSelected == true {
             
-            newUser = ContractEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, projectNumber: ContractorSubNav.proj2001.rawValue)
+            guard let newUser = ContractEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, projectNumber: ContractorSubNav.proj2001.rawValue), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
+                print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
+                return
+            }
+            
+            guard newUser.firstName != nil || newUser.firstName == "" else {
+                print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
+                return
+            }
+            
+            guard newUser.lastName != nil || newUser.lastName != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
+                return
+            }
+            
+            guard newUser.streetAddress != nil || newUser.streetAddress != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
+                return
+            }
+            
+            guard newUser.city != nil || newUser.city != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your City"))
+                return
+            }
+            
+            guard newUser.state != nil || newUser.state != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your State"))
+                return
+            }
+            
+            guard newUser.zipCode != nil || newUser.zipCode != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
+                return
+            }
+            
+            guard newUser.socialSecurityNumber != nil || newUser.socialSecurityNumber != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
+                return
+            }
             
         } else if subNavOption1.currentTitle == ContractorSubNav.proj2002.rawValue && subNavOption1.isSelected == true {
             
-            newUser = ContractEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, projectNumber: ContractorSubNav.proj2002.rawValue)
+            guard let newUser = ContractEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, projectNumber: ContractorSubNav.proj2002.rawValue), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
+                print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
+                return
+            }
+            
+            guard newUser.firstName != nil || newUser.firstName == "" else {
+                print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
+                return
+            }
+            
+            guard newUser.lastName != nil || newUser.lastName != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
+                return
+            }
+            
+            guard newUser.streetAddress != nil || newUser.streetAddress != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
+                return
+            }
+            
+            guard newUser.city != nil || newUser.city != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your City"))
+                return
+            }
+            
+            guard newUser.state != nil || newUser.state != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your State"))
+                return
+            }
+            
+            guard newUser.zipCode != nil || newUser.zipCode != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
+                return
+            }
+            
+            guard newUser.socialSecurityNumber != nil || newUser.socialSecurityNumber != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
+                return
+            }
         
         } else if subNavOption1.currentTitle == Vendors.acme.rawValue && subNavOption1.isSelected == true {
             
-            newUser = VendorSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, vendorCompany: Vendors.acme.rawValue, dateOfVisit: Date())
+            guard let newUser = VendorSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, vendorCompany: Vendors.acme.rawValue, dateOfVisit: Date()), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
+                print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
+                return
+            }
+            
+            guard newUser.firstName != nil || newUser.firstName == "" else {
+                print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
+                return
+            }
+            
+            guard newUser.lastName != nil || newUser.lastName != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
+                return
+            }
         
         } else if subNavOption1.currentTitle == Vendors.orkin.rawValue && subNavOption1.isSelected == true {
             
-            newUser = VendorSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, vendorCompany: Vendors.orkin.rawValue, dateOfVisit: Date())
+            guard let newUser = VendorSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, vendorCompany: Vendors.orkin.rawValue, dateOfVisit: Date()), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
+                print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
+                return
+            }
+            
+            guard newUser.firstName != nil || newUser.firstName == "" else {
+                print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
+                return
+            }
+            
+            guard newUser.lastName != nil || newUser.lastName != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
+                return
+            }
         
         } else if subNavOption1.currentTitle == Vendors.fedex.rawValue && subNavOption1.isSelected == true {
             
-            newUser = VendorSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, vendorCompany: Vendors.fedex.rawValue, dateOfVisit: Date())
+            guard let newUser = VendorSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, vendorCompany: Vendors.fedex.rawValue, dateOfVisit: Date()), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
+                print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
+                return
+            }
+            
+            guard newUser.firstName != nil || newUser.firstName == "" else {
+                print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
+                return
+            }
+            
+            guard newUser.lastName != nil || newUser.lastName != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
+                return
+            }
         
         } else if subNavOption1.currentTitle == Vendors.nwElectrical.rawValue && subNavOption1.isSelected == true {
             
-            newUser = VendorSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, vendorCompany: Vendors.nwElectrical.rawValue, dateOfVisit: Date())
+            guard let newUser = VendorSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, vendorCompany: Vendors.nwElectrical.rawValue, dateOfVisit: Date()), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
+                print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
+                return
+            }
+            
+            guard newUser.firstName != nil || newUser.firstName == "" else {
+                print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
+                return
+            }
+            
+            guard newUser.lastName != nil || newUser.lastName != "" else {
+                print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
+                return
+            }
         
         }
         

@@ -129,16 +129,13 @@ class GuestClassicSource: PersonSource {
     
     
     
-    convenience init (
-        discountAccess: [DiscountAccess],
-        discountAmount: [DiscountAmount]
-        )
+    convenience init ()
     {
         self.init(
             areaAccess: [.amusement],
             ridePrivileges: [.all],
-            discountAccess: discountAccess,
-            discountAmount: discountAmount,
+            discountAccess: [.none],
+            discountAmount: [.none],
             requiredInformation: [.none]
         )
         
