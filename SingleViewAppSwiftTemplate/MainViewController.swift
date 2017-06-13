@@ -39,10 +39,6 @@ class MainViewController: UIViewController {
     @IBOutlet weak var stateLabel: UILabel!
     @IBOutlet weak var zipCodeLabel: UILabel!
     
-    
-        
-    
-    
     // User Data TextField @IBOutlets
     @IBOutlet weak var dateOfBirth: UITextField!
     @IBOutlet weak var socialSecurityNumber: UITextField!
@@ -70,6 +66,7 @@ class MainViewController: UIViewController {
         } else {
             animateView(view: subNavStackView, toHidden: true)
         }
+        labelFontReset()
         
     }
 
@@ -84,6 +81,7 @@ class MainViewController: UIViewController {
         } else {
             animateView(view: subNavStackView, toHidden: true)
         }
+        labelFontReset()
     }
     
     @IBAction func managerNavButton(_ sender: UIButton) {
@@ -97,6 +95,7 @@ class MainViewController: UIViewController {
         } else {
             animateView(view: subNavStackView, toHidden: true)
         }
+        labelFontReset()
     }
     @IBAction func contractorNavButton(_ sender: UIButton) {
         if subNavStackView.isHidden {
@@ -109,6 +108,7 @@ class MainViewController: UIViewController {
         } else {
             animateView(view: subNavStackView, toHidden: true)
         }
+        labelFontReset()
     }
     @IBAction func vendorNavButton(_ sender: UIButton) {
         if subNavStackView.isHidden {
@@ -121,13 +121,14 @@ class MainViewController: UIViewController {
         } else {
             animateView(view: subNavStackView, toHidden: true)
         }
+        labelFontReset()
     }
     
     
     // SubNavigation Buttons
     @IBAction func subNavOption1(_ sender: UIButton) {
         if subNavOption1.currentTitle == EntrantTypeSubNav.child.rawValue && subNavOption1.isSelected == true {
-            
+            labelFontReset()
             /* UITextField appearance */
             //dateOfBirth.alpha = 0.5
             socialSecurityNumber.alpha = 0.5
@@ -152,7 +153,7 @@ class MainViewController: UIViewController {
             state.allowsEditingTextAttributes = false
             zipCode.allowsEditingTextAttributes = false
         } else if (subNavOption1.currentTitle == EntrantTypeSubNav.hourlyFood.rawValue || subNavOption1.currentTitle == ManagerType.shift.rawValue)  && subNavOption1.isSelected == true {
-            
+            labelFontReset()
             /* UITextField appearance */
             //dateOfBirth.alpha = 0.5
             //socialSecurityNumber.alpha = 0.5
@@ -177,7 +178,7 @@ class MainViewController: UIViewController {
             //state.allowsEditingTextAttributes = false
             //zipCode.allowsEditingTextAttributes = false
         } else if subNavOption1.currentTitle == ContractorSubNav.proj1001.rawValue && subNavOption1.isSelected == true {
-            
+            labelFontReset()
             /* UITextField appearance */
             //dateOfBirth.alpha = 0.5
             //socialSecurityNumber.alpha = 0.5
@@ -202,7 +203,7 @@ class MainViewController: UIViewController {
             //state.allowsEditingTextAttributes = false
             //zipCode.allowsEditingTextAttributes = false
         } else if subNavOption1.currentTitle == Vendors.acme.rawValue && subNavOption1.isSelected == true {
-            
+            labelFontReset()
             /* UITextField appearance */
             //dateOfBirth.alpha = 0.5
             socialSecurityNumber.alpha = 0.5
@@ -232,7 +233,7 @@ class MainViewController: UIViewController {
     }
     @IBAction func subNavOption2(_ sender: UIButton) {
         if subNavOption2.currentTitle == EntrantTypeSubNav.adult.rawValue && subNavOption2.isSelected == true {
-            
+            labelFontReset()
             /* UITextField appearance */
             dateOfBirth.alpha = 0.5
             socialSecurityNumber.alpha = 0.5
@@ -260,7 +261,7 @@ class MainViewController: UIViewController {
     }
     @IBAction func subNavOption3(_ sender: UIButton) {
         if subNavOption2.currentTitle == EntrantTypeSubNav.senior.rawValue && subNavOption2.isSelected == true {
-            
+            labelFontReset()
             /* UITextField appearance */
             //dateOfBirth.alpha = 0.5
             socialSecurityNumber.alpha = 0.5
@@ -288,7 +289,7 @@ class MainViewController: UIViewController {
     }
     @IBAction func subNavOption4(_ sender: UIButton) {
         if subNavOption2.currentTitle == EntrantTypeSubNav.vip.rawValue && subNavOption2.isSelected == true {
-            
+            labelFontReset()
             /* UITextField appearance */
             dateOfBirth.alpha = 0.5
             socialSecurityNumber.alpha = 0.5
@@ -316,7 +317,7 @@ class MainViewController: UIViewController {
     }
     @IBAction func subNavOption5(_ sender: UIButton) {
         if subNavOption2.currentTitle == EntrantTypeSubNav.seasonPass.rawValue && subNavOption2.isSelected == true {
-            
+            labelFontReset()
             /* UITextField appearance */
             //dateOfBirth.alpha = 0.5
             socialSecurityNumber.alpha = 0.5
@@ -1063,6 +1064,10 @@ class MainViewController: UIViewController {
         
         }
         
+        else {
+            labelFontReset()
+        }
+        
         
         
         
@@ -1093,6 +1098,21 @@ class MainViewController: UIViewController {
         
         self.present(alert, animated: true, completion: nil)
     }
+    
+    // function to reset UILabel font to neutral
+    func labelFontReset () {
+        dateOfBirthLabel.font = UIFont.systemFont(ofSize: dateOfBirthLabel.font.pointSize)
+        socialSecurityNumberLabel.font = UIFont.systemFont(ofSize: socialSecurityNumberLabel.font.pointSize)
+        projectNumberLabel.font = UIFont.systemFont(ofSize: projectNumberLabel.font.pointSize)
+        firstNameLabel.font = UIFont.systemFont(ofSize: firstNameLabel.font.pointSize)
+        lastNameLabel.font = UIFont.systemFont(ofSize: lastNameLabel.font.pointSize)
+        companyLabel.font = UIFont.systemFont(ofSize: companyLabel.font.pointSize)
+        streetAddressLabel.font = UIFont.systemFont(ofSize: streetAddressLabel.font.pointSize)
+        cityLabel.font = UIFont.systemFont(ofSize: cityLabel.font.pointSize)
+        stateLabel.font = UIFont.systemFont(ofSize: stateLabel.font.pointSize)
+        zipCodeLabel.font = UIFont.systemFont(ofSize: zipCodeLabel.font.pointSize)
+    }
+    
     
     // allows me to animate stack views and their display
     private func animateView(view: UIView, toHidden hidden: Bool) {
