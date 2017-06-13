@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZLT-ai-B4a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZLT-ai-B4a">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -586,18 +586,28 @@
                         <outlet property="VendorNavButton" destination="H3L-gH-Qqh" id="Na2-lC-9C3"/>
                         <outlet property="ZipCode" destination="w3d-Gm-p05" id="3Mu-qs-4Ab"/>
                         <outlet property="city" destination="H5c-kJ-1Wi" id="3vo-xu-mQy"/>
+                        <outlet property="cityLabel" destination="tb1-5h-kJA" id="E3i-RP-Oy6"/>
                         <outlet property="company" destination="Zvm-xN-2V2" id="pEe-bq-reO"/>
+                        <outlet property="companyLabel" destination="Bmm-4b-PQh" id="biI-TG-cvr"/>
                         <outlet property="contractorNavButton" destination="a63-8c-r3a" id="O1z-jZ-6kJ"/>
-                        <outlet property="dateOfBirth" destination="PKJ-is-ybP" id="4lU-bN-0eP"/>
+                        <outlet property="dateOfBirth" destination="4DL-cZ-i2R" id="cQq-EG-R5B"/>
+                        <outlet property="dateOfBirthLabel" destination="4DL-cZ-i2R" id="K5v-IN-qrr"/>
                         <outlet property="employeeNavButton" destination="SIB-0R-aRU" id="BBc-yo-TJg"/>
                         <outlet property="firstName" destination="Ze2-Mq-nnu" id="F6L-tt-oxt"/>
+                        <outlet property="firstNameLabel" destination="d1e-Oc-dog" id="tgW-Op-mKK"/>
                         <outlet property="guestNavButton" destination="mfE-hN-2JW" id="E6G-dH-MsV"/>
                         <outlet property="lastName" destination="2OJ-CH-DkG" id="hWg-io-xJu"/>
+                        <outlet property="lastNameLabel" destination="oMa-l4-FqT" id="u1F-7P-lbr"/>
                         <outlet property="managerNavButton" destination="Ni2-i3-sbp" id="oPy-bd-iwa"/>
                         <outlet property="projectNumber" destination="sRF-Cm-RFK" id="SxJ-Tx-Odp"/>
+                        <outlet property="projectNumberLabel" destination="T0F-0o-TOU" id="CwJ-hN-9nu"/>
                         <outlet property="socialSecurityNumber" destination="OY9-Mb-xGv" id="RbR-wh-XTO"/>
+                        <outlet property="socialSecurityNumberLabel" destination="1PB-0b-VmI" id="8ZI-3T-tCP"/>
+                        <outlet property="ssn" destination="1PB-0b-VmI" id="7xN-8k-Sea"/>
                         <outlet property="state" destination="QFF-dh-O7g" id="v5O-BL-RDk"/>
+                        <outlet property="stateLabel" destination="rZp-s9-Z19" id="s6g-cn-PxF"/>
                         <outlet property="streetAddress" destination="wQ4-Fh-hn8" id="G1M-UA-tXE"/>
+                        <outlet property="streetAddressLabel" destination="DIC-ge-Dms" id="zpy-wf-7Si"/>
                         <outlet property="subNavOption1" destination="mvC-Ej-qgp" id="SPi-R9-yrG"/>
                         <outlet property="subNavOption2" destination="Vdo-oa-ox6" id="Nwk-NA-Iwf"/>
                         <outlet property="subNavOption3" destination="IoZ-i1-Cc4" id="ZBT-gF-4d8"/>
@@ -606,6 +616,7 @@
                         <outlet property="subNavStackView" destination="wME-4a-Rn9" id="cP1-ef-OHN"/>
                         <outlet property="vendorNavButton" destination="H3L-gH-Qqh" id="rrn-oV-ghh"/>
                         <outlet property="zipCode" destination="w3d-Gm-p05" id="hgq-MW-zNp"/>
+                        <outlet property="zipCodeLabel" destination="WnZ-Sx-wTh" id="yIJ-LG-2YP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coj-W9-frm" userLabel="First Responder" sceneMemberID="firstResponder"/>
