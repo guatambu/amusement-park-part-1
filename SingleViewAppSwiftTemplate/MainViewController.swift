@@ -358,7 +358,7 @@ class MainViewController: UIViewController {
             
         } else if subNavOption1.currentTitle == EntrantTypeSubNav.adult.rawValue && subNavOption1.isSelected == true {
             
-            let newUser = GuestClassicSource()
+            //let newUser = GuestClassicSource()
         
         } else if subNavOption1.currentTitle == EntrantTypeSubNav.senior.rawValue && subNavOption1.isSelected == true {
             
@@ -383,7 +383,7 @@ class MainViewController: UIViewController {
         
         } else if subNavOption1.currentTitle == EntrantTypeSubNav.vip.rawValue && subNavOption1.isSelected == true {
             
-            let newUser = GuestVIPSource()
+            //let newUser = GuestVIPSource()
         
         } else if subNavOption1.currentTitle == EntrantTypeSubNav.seasonPass.rawValue && subNavOption1.isSelected == true {
             
