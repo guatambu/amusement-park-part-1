@@ -1114,12 +1114,19 @@ class MainViewController: UIViewController {
     }
     
     
+    
+// possible user input error function
+ 
+ 
+
+
+
     // allows me to animate stack views and their display
     private func animateView(view: UIView, toHidden hidden: Bool) {
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 5.0, options: UIViewAnimationOptions(), animations: {() -> Void in view.isHidden = hidden }, completion: nil)
         
     }
-    
-    
+
+
 
 }
