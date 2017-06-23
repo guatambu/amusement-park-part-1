@@ -57,19 +57,26 @@ class MainViewController: UIViewController {
     // Navigation Buttons
     @IBAction func guestNavButton(_ sender: UIButton) {
         
-            contractorNavButton.isSelected = false
-            guestNavButton.isSelected = true
-            employeeNavButton.isSelected = false
-            managerNavButton.isSelected = false
-            vendorNavButton.isSelected = false
+        contractorNavButton.isSelected = false
+        guestNavButton.isSelected = false
+        employeeNavButton.isSelected = false
+        managerNavButton.isSelected = false
+        vendorNavButton.isSelected = false
         
-            subNavOption1.setTitle(EntrantTypeSubNav.child.rawValue, for: .normal)
-            subNavOption2.setTitle(EntrantTypeSubNav.adult.rawValue, for: .normal)
-            subNavOption3.setTitle(EntrantTypeSubNav.senior.rawValue, for: .normal)
-            subNavOption4.setTitle(EntrantTypeSubNav.vip.rawValue, for: .normal)
-            subNavOption5.setTitle(EntrantTypeSubNav.seasonPass.rawValue, for: .normal)
-            subNavOption4.isHidden = false
-            subNavOption5.isHidden = false
+        subNavOption1.isSelected = false
+        subNavOption2.isSelected = false
+        subNavOption3.isSelected = false
+        subNavOption4.isSelected = false
+        subNavOption5.isSelected = false
+        
+        subNavOption1.setTitle(EntrantTypeSubNav.child.rawValue, for: .normal)
+        subNavOption2.setTitle(EntrantTypeSubNav.adult.rawValue, for: .normal)
+        subNavOption3.setTitle(EntrantTypeSubNav.senior.rawValue, for: .normal)
+        subNavOption4.setTitle(EntrantTypeSubNav.vip.rawValue, for: .normal)
+        subNavOption5.setTitle(EntrantTypeSubNav.seasonPass.rawValue, for: .normal)
+        
+        subNavOption4.isHidden = false
+        subNavOption5.isHidden = false
         
         labelFontReset()
         
@@ -77,69 +84,98 @@ class MainViewController: UIViewController {
 
     @IBAction func employeeNavButton(_ sender: UIButton) {
         
-            contractorNavButton.isSelected = false
-            guestNavButton.isSelected = false
-            employeeNavButton.isSelected = true
-            managerNavButton.isSelected = false
-            vendorNavButton.isSelected = false
+        contractorNavButton.isSelected = false
+        guestNavButton.isSelected = false
+        employeeNavButton.isSelected = true
+        managerNavButton.isSelected = false
+        vendorNavButton.isSelected = false
         
-            subNavOption1.setTitle(EntrantTypeSubNav.hourlyFood.rawValue, for: .normal)
-            subNavOption2.setTitle(EntrantTypeSubNav.hourlyRide.rawValue, for: .normal)
-            subNavOption3.setTitle(EntrantTypeSubNav.hourlyMaintenance.rawValue, for: .normal)
-            subNavOption4.isHidden = true
-            subNavOption5.isHidden = true
+        subNavOption1.isSelected = false
+        subNavOption2.isSelected = false
+        subNavOption3.isSelected = false
+        subNavOption4.isSelected = false
+        subNavOption5.isSelected = false
+        
+        subNavOption1.setTitle(EntrantTypeSubNav.hourlyFood.rawValue, for: .normal)
+        subNavOption2.setTitle(EntrantTypeSubNav.hourlyRide.rawValue, for: .normal)
+        subNavOption3.setTitle(EntrantTypeSubNav.hourlyMaintenance.rawValue, for: .normal)
+        
+        subNavOption4.isHidden = true
+        subNavOption5.isHidden = true
         
         labelFontReset()
     }
     
     @IBAction func managerNavButton(_ sender: UIButton) {
         
-            contractorNavButton.isSelected = false
-            guestNavButton.isSelected = false
-            employeeNavButton.isSelected = false
-            managerNavButton.isSelected = true
-            vendorNavButton.isSelected = false
+        contractorNavButton.isSelected = false
+        guestNavButton.isSelected = false
+        employeeNavButton.isSelected = false
+        managerNavButton.isSelected = true
+        vendorNavButton.isSelected = false
         
-            subNavOption1.setTitle(ManagerType.shift.rawValue, for: .normal)
-            subNavOption2.setTitle(ManagerType.general.rawValue, for: .normal)
-            subNavOption3.setTitle(ManagerType.senior.rawValue, for: .normal)
-            subNavOption4.isHidden = true
-            subNavOption5.isHidden = true
+        subNavOption1.isSelected = false
+        subNavOption2.isSelected = false
+        subNavOption3.isSelected = false
+        subNavOption4.isSelected = false
+        subNavOption5.isSelected = false
+        
+        subNavOption1.setTitle(ManagerType.shift.rawValue, for: .normal)
+        subNavOption2.setTitle(ManagerType.general.rawValue, for: .normal)
+        subNavOption3.setTitle(ManagerType.senior.rawValue, for: .normal)
+        
+        subNavOption4.isHidden = true
+        subNavOption5.isHidden = true
         
         labelFontReset()
     }
     @IBAction func contractorNavButton(_ sender: UIButton) {
         
-            contractorNavButton.isSelected = true
-            guestNavButton.isSelected = false
-            employeeNavButton.isSelected = false
-            managerNavButton.isSelected = false
-            vendorNavButton.isSelected = false
+        contractorNavButton.isSelected = true
+        guestNavButton.isSelected = false
+        employeeNavButton.isSelected = false
+        managerNavButton.isSelected = false
+        vendorNavButton.isSelected = false
         
-            subNavOption1.setTitle(ContractorSubNav.proj1001.rawValue, for: .normal)
-            subNavOption2.setTitle(ContractorSubNav.proj1002.rawValue, for: .normal)
-            subNavOption3.setTitle(ContractorSubNav.proj1003.rawValue, for: .normal)
-            subNavOption4.setTitle(ContractorSubNav.proj2001.rawValue, for: .normal)
-            subNavOption5.setTitle(ContractorSubNav.proj2002.rawValue, for: .normal)
-            subNavOption4.isHidden = false
-            subNavOption5.isHidden = false
+        subNavOption1.isSelected = false
+        subNavOption2.isSelected = false
+        subNavOption3.isSelected = false
+        subNavOption4.isSelected = false
+        subNavOption5.isSelected = false
+        
+        subNavOption1.setTitle(ContractorSubNav.proj1001.rawValue, for: .normal)
+        subNavOption2.setTitle(ContractorSubNav.proj1002.rawValue, for: .normal)
+        subNavOption3.setTitle(ContractorSubNav.proj1003.rawValue, for: .normal)
+        subNavOption4.setTitle(ContractorSubNav.proj2001.rawValue, for: .normal)
+        subNavOption5.setTitle(ContractorSubNav.proj2002.rawValue, for: .normal)
+        
+        subNavOption4.isHidden = false
+        subNavOption5.isHidden = false
         
         labelFontReset()
     }
     @IBAction func vendorNavButton(_ sender: UIButton) {
         
-            contractorNavButton.isSelected = false
-            guestNavButton.isSelected = false
-            employeeNavButton.isSelected = false
-            managerNavButton.isSelected = false
-            vendorNavButton.isSelected = true
         
-            subNavOption1.setTitle(Vendors.acme.rawValue, for: .normal)
-            subNavOption2.setTitle(Vendors.orkin.rawValue, for: .normal)
-            subNavOption3.setTitle(Vendors.fedex.rawValue, for: .normal)
-            subNavOption4.setTitle(Vendors.nwElectrical.rawValue, for: .normal)
-            subNavOption4.isHidden = false
-            subNavOption5.isHidden = true
+        contractorNavButton.isSelected = false
+        guestNavButton.isSelected = false
+        employeeNavButton.isSelected = false
+        managerNavButton.isSelected = false
+        vendorNavButton.isSelected = true
+        
+        subNavOption1.isSelected = false
+        subNavOption2.isSelected = false
+        subNavOption3.isSelected = false
+        subNavOption4.isSelected = false
+        subNavOption5.isSelected = false
+        
+        subNavOption1.setTitle(Vendors.acme.rawValue, for: .normal)
+        subNavOption2.setTitle(Vendors.orkin.rawValue, for: .normal)
+        subNavOption3.setTitle(Vendors.fedex.rawValue, for: .normal)
+        subNavOption4.setTitle(Vendors.nwElectrical.rawValue, for: .normal)
+        
+        subNavOption4.isHidden = false
+        subNavOption5.isHidden = true
         
         labelFontReset()
     }
@@ -147,6 +183,13 @@ class MainViewController: UIViewController {
     
     // SubNavigation Buttons
     @IBAction func subNavOption1(_ sender: UIButton) {
+        
+        subNavOption1.isSelected = true
+        subNavOption2.isSelected = false
+        subNavOption3.isSelected = false
+        subNavOption4.isSelected = false
+        subNavOption5.isSelected = false
+        
         if subNavOption1.currentTitle == EntrantTypeSubNav.child.rawValue && subNavOption1.isSelected == true {
             labelFontReset()
             /* UITextField appearance */
@@ -252,6 +295,13 @@ class MainViewController: UIViewController {
         }
     }
     @IBAction func subNavOption2(_ sender: UIButton) {
+        
+        subNavOption1.isSelected = false
+        subNavOption2.isSelected = true
+        subNavOption3.isSelected = false
+        subNavOption4.isSelected = false
+        subNavOption5.isSelected = false
+        
         if subNavOption2.currentTitle == EntrantTypeSubNav.adult.rawValue && subNavOption2.isSelected == true {
             labelFontReset()
             /* UITextField appearance */
@@ -280,6 +330,13 @@ class MainViewController: UIViewController {
         }
     }
     @IBAction func subNavOption3(_ sender: UIButton) {
+        
+        subNavOption1.isSelected = false
+        subNavOption2.isSelected = false
+        subNavOption3.isSelected = true
+        subNavOption4.isSelected = false
+        subNavOption5.isSelected = false
+        
         if subNavOption2.currentTitle == EntrantTypeSubNav.senior.rawValue && subNavOption2.isSelected == true {
             labelFontReset()
             /* UITextField appearance */
@@ -308,6 +365,13 @@ class MainViewController: UIViewController {
         }
     }
     @IBAction func subNavOption4(_ sender: UIButton) {
+        
+        subNavOption1.isSelected = false
+        subNavOption2.isSelected = false
+        subNavOption3.isSelected = false
+        subNavOption4.isSelected = true
+        subNavOption5.isSelected = false
+        
         if subNavOption2.currentTitle == EntrantTypeSubNav.vip.rawValue && subNavOption2.isSelected == true {
             labelFontReset()
             /* UITextField appearance */
@@ -336,6 +400,13 @@ class MainViewController: UIViewController {
         }
     }
     @IBAction func subNavOption5(_ sender: UIButton) {
+        
+        subNavOption1.isSelected = false
+        subNavOption2.isSelected = false
+        subNavOption3.isSelected = false
+        subNavOption4.isSelected = false
+        subNavOption5.isSelected = true
+        
         if subNavOption2.currentTitle == EntrantTypeSubNav.seasonPass.rawValue && subNavOption2.isSelected == true {
             labelFontReset()
             /* UITextField appearance */
