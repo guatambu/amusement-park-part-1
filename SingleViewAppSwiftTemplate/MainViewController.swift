@@ -58,7 +58,7 @@ class MainViewController: UIViewController {
     @IBAction func guestNavButton(_ sender: UIButton) {
         
         contractorNavButton.isSelected = false
-        guestNavButton.isSelected = false
+        guestNavButton.isSelected = true
         employeeNavButton.isSelected = false
         managerNavButton.isSelected = false
         vendorNavButton.isSelected = false
@@ -182,7 +182,7 @@ class MainViewController: UIViewController {
     
     
     // SubNavigation Buttons
-    @IBAction func subNavOption1(_ sender: UIButton) {
+    @IBAction func subNavOption1Choice(_ sender: UIButton) {
         
         subNavOption1.isSelected = true
         subNavOption2.isSelected = false
@@ -193,108 +193,108 @@ class MainViewController: UIViewController {
         if subNavOption1.currentTitle == EntrantTypeSubNav.child.rawValue && subNavOption1.isSelected == true {
             labelFontReset()
             /* UITextField appearance */
-            //dateOfBirth.alpha = 0.5
-            socialSecurityNumber.alpha = 0.5
-            projectNumber.alpha = 0.5
-            firstName.alpha = 0.5
-            lastName.alpha = 0.5
-            company.alpha = 0.5
-            streetAddress.alpha = 0.5
-            city.alpha = 0.5
-            state.alpha = 0.5
-            zipCode.alpha = 0.5
+            dateOfBirth.alpha = 1.0
+            socialSecurityNumber.alpha = 0.2
+            projectNumber.alpha = 0.2
+            firstName.alpha = 0.2
+            lastName.alpha = 0.2
+            company.alpha = 0.2
+            streetAddress.alpha = 0.2
+            city.alpha = 0.2
+            state.alpha = 0.2
+            zipCode.alpha = 0.2
             
             /* UITextField Editing active/inactive */
-            //dateOfBirth.allowsEditingTextAttributes = false
-            socialSecurityNumber.allowsEditingTextAttributes = false
-            projectNumber.allowsEditingTextAttributes = false
-            firstName.allowsEditingTextAttributes = false
-            lastName.allowsEditingTextAttributes = false
-            company.allowsEditingTextAttributes = false
-            streetAddress.allowsEditingTextAttributes = false
-            city.allowsEditingTextAttributes = false
-            state.allowsEditingTextAttributes = false
-            zipCode.allowsEditingTextAttributes = false
-        } else if (subNavOption1.currentTitle == EntrantTypeSubNav.hourlyFood.rawValue || subNavOption1.currentTitle == ManagerType.shift.rawValue)  && subNavOption1.isSelected == true {
+            dateOfBirth.isUserInteractionEnabled = true
+            socialSecurityNumber.isUserInteractionEnabled = false
+            projectNumber.isUserInteractionEnabled = false
+            firstName.isUserInteractionEnabled = false
+            lastName.isUserInteractionEnabled = false
+            company.isUserInteractionEnabled = false
+            streetAddress.isUserInteractionEnabled = false
+            city.isUserInteractionEnabled = false
+            state.isUserInteractionEnabled = false
+            zipCode.isUserInteractionEnabled = false
+        } else if (subNavOption1.currentTitle == EntrantTypeSubNav.hourlyFood.rawValue || subNavOption1.currentTitle == ManagerType.shift.rawValue) && subNavOption1.isSelected == true {
             labelFontReset()
             /* UITextField appearance */
-            //dateOfBirth.alpha = 0.5
-            //socialSecurityNumber.alpha = 0.5
-            projectNumber.alpha = 0.5
-            //firstName.alpha = 0.5
-            //lastName.alpha = 0.5
-            company.alpha = 0.5
-            //streetAddress.alpha = 0.5
-            //city.alpha = 0.5
-            //state.alpha = 0.5
-            //zipCode.alpha = 0.5
+            dateOfBirth.alpha = 1.0
+            socialSecurityNumber.alpha = 1.0
+            projectNumber.alpha = 0.2
+            firstName.alpha = 1.0
+            lastName.alpha = 1.0
+            company.alpha = 0.2
+            streetAddress.alpha = 1.0
+            city.alpha = 1.0
+            state.alpha = 1.0
+            zipCode.alpha = 1.0
             
             /* UITextField Editing active/inactive */
-            //dateOfBirth.allowsEditingTextAttributes = false
-            //socialSecurityNumber.allowsEditingTextAttributes = false
-            projectNumber.allowsEditingTextAttributes = false
-            //firstName.allowsEditingTextAttributes = false
-            //lastName.allowsEditingTextAttributes = false
-            company.allowsEditingTextAttributes = false
-            //streetAddress.allowsEditingTextAttributes = false
-            //city.allowsEditingTextAttributes = false
-            //state.allowsEditingTextAttributes = false
-            //zipCode.allowsEditingTextAttributes = false
+            dateOfBirth.isUserInteractionEnabled = true
+            socialSecurityNumber.isUserInteractionEnabled = true
+            projectNumber.isUserInteractionEnabled = false
+            firstName.isUserInteractionEnabled = true
+            lastName.isUserInteractionEnabled = true
+            company.isUserInteractionEnabled = false
+            streetAddress.isUserInteractionEnabled = true
+            city.isUserInteractionEnabled = true
+            state.isUserInteractionEnabled = true
+            zipCode.isUserInteractionEnabled = true
         } else if subNavOption1.currentTitle == ContractorSubNav.proj1001.rawValue && subNavOption1.isSelected == true {
             labelFontReset()
             /* UITextField appearance */
-            //dateOfBirth.alpha = 0.5
-            //socialSecurityNumber.alpha = 0.5
-            //projectNumber.alpha = 0.5
-            //firstName.alpha = 0.5
-            //lastName.alpha = 0.5
-            company.alpha = 0.5
-            //streetAddress.alpha = 0.5
-            //city.alpha = 0.5
-            //state.alpha = 0.5
-            //zipCode.alpha = 0.5
+            dateOfBirth.alpha = 1.0
+            socialSecurityNumber.alpha = 1.0
+            projectNumber.alpha = 1.0
+            firstName.alpha = 1.0
+            lastName.alpha = 1.0
+            company.alpha = 0.2
+            streetAddress.alpha = 1.0
+            city.alpha = 1.0
+            state.alpha = 1.0
+            zipCode.alpha = 1.0
             
             /* UITextField Editing active/inactive */
-            //dateOfBirth.allowsEditingTextAttributes = false
-            //socialSecurityNumber.allowsEditingTextAttributes = false
-            //projectNumber.allowsEditingTextAttributes = false
-            //firstName.allowsEditingTextAttributes = false
-            //lastName.allowsEditingTextAttributes = false
-            company.allowsEditingTextAttributes = false
-            //streetAddress.allowsEditingTextAttributes = false
-            //city.allowsEditingTextAttributes = false
-            //state.allowsEditingTextAttributes = false
-            //zipCode.allowsEditingTextAttributes = false
+            dateOfBirth.isUserInteractionEnabled = true
+            socialSecurityNumber.isUserInteractionEnabled = true
+            projectNumber.isUserInteractionEnabled = true
+            firstName.isUserInteractionEnabled = true
+            lastName.isUserInteractionEnabled = true
+            company.isUserInteractionEnabled = false
+            streetAddress.isUserInteractionEnabled = true
+            city.isUserInteractionEnabled = true
+            state.isUserInteractionEnabled = true
+            zipCode.isUserInteractionEnabled = true
         } else if subNavOption1.currentTitle == Vendors.acme.rawValue && subNavOption1.isSelected == true {
             labelFontReset()
             /* UITextField appearance */
-            //dateOfBirth.alpha = 0.5
-            socialSecurityNumber.alpha = 0.5
-            projectNumber.alpha = 0.5
-            //firstName.alpha = 0.5
-            //lastName.alpha = 0.5
-            //company.alpha = 0.5
-            streetAddress.alpha = 0.5
-            city.alpha = 0.5
-            state.alpha = 0.5
-            zipCode.alpha = 0.5
+            dateOfBirth.alpha = 1.0
+            socialSecurityNumber.alpha = 0.2
+            projectNumber.alpha = 0.2
+            firstName.alpha = 1.0
+            lastName.alpha = 1.0
+            company.alpha = 1.0
+            streetAddress.alpha = 0.2
+            city.alpha = 0.2
+            state.alpha = 0.2
+            zipCode.alpha = 0.2
 /*MARK: *** dateOfVisit ***   */
             
             /* UITextField Editing active/inactive */
-            //dateOfBirth.allowsEditingTextAttributes = false
-            socialSecurityNumber.allowsEditingTextAttributes = false
-            projectNumber.allowsEditingTextAttributes = false
-            //firstName.allowsEditingTextAttributes = false
-            //lastName.allowsEditingTextAttributes = false
-            //company.allowsEditingTextAttributes = false
-            streetAddress.allowsEditingTextAttributes = false
-            city.allowsEditingTextAttributes = false
-            state.allowsEditingTextAttributes = false
-            zipCode.allowsEditingTextAttributes = false
+            dateOfBirth.isUserInteractionEnabled = true
+            socialSecurityNumber.isUserInteractionEnabled = false
+            projectNumber.isUserInteractionEnabled = false
+            firstName.isUserInteractionEnabled = true
+            lastName.isUserInteractionEnabled = true
+            company.isUserInteractionEnabled = true
+            streetAddress.isUserInteractionEnabled = false
+            city.isUserInteractionEnabled = false
+            state.isUserInteractionEnabled = false
+            zipCode.isUserInteractionEnabled = false
 /*MARK: *** dateOfVisit ***   */
         }
     }
-    @IBAction func subNavOption2(_ sender: UIButton) {
+    @IBAction func subNavOption2Choice(_ sender: UIButton) {
         
         subNavOption1.isSelected = false
         subNavOption2.isSelected = true
@@ -305,31 +305,31 @@ class MainViewController: UIViewController {
         if subNavOption2.currentTitle == EntrantTypeSubNav.adult.rawValue && subNavOption2.isSelected == true {
             labelFontReset()
             /* UITextField appearance */
-            dateOfBirth.alpha = 0.5
-            socialSecurityNumber.alpha = 0.5
-            projectNumber.alpha = 0.5
-            firstName.alpha = 0.5
-            lastName.alpha = 0.5
-            company.alpha = 0.5
-            streetAddress.alpha = 0.5
-            city.alpha = 0.5
-            state.alpha = 0.5
-            zipCode.alpha = 0.5
+            dateOfBirth.alpha = 0.2
+            socialSecurityNumber.alpha = 0.2
+            projectNumber.alpha = 0.2
+            firstName.alpha = 0.2
+            lastName.alpha = 0.2
+            company.alpha = 0.2
+            streetAddress.alpha = 0.2
+            city.alpha = 0.2
+            state.alpha = 0.2
+            zipCode.alpha = 0.2
             
             /* UITextField Editing active/inactive */
-            dateOfBirth.allowsEditingTextAttributes = false
-            socialSecurityNumber.allowsEditingTextAttributes = false
-            projectNumber.allowsEditingTextAttributes = false
-            firstName.allowsEditingTextAttributes = false
-            lastName.allowsEditingTextAttributes = false
-            company.allowsEditingTextAttributes = false
-            streetAddress.allowsEditingTextAttributes = false
-            city.allowsEditingTextAttributes = false
-            state.allowsEditingTextAttributes = false
-            zipCode.allowsEditingTextAttributes = false
+            dateOfBirth.isUserInteractionEnabled = false
+            socialSecurityNumber.isUserInteractionEnabled = false
+            projectNumber.isUserInteractionEnabled = false
+            firstName.isUserInteractionEnabled = false
+            lastName.isUserInteractionEnabled = false
+            company.isUserInteractionEnabled = false
+            streetAddress.isUserInteractionEnabled = false
+            city.isUserInteractionEnabled = false
+            state.isUserInteractionEnabled = false
+            zipCode.isUserInteractionEnabled = false
         }
     }
-    @IBAction func subNavOption3(_ sender: UIButton) {
+    @IBAction func subNavOption3Choice(_ sender: UIButton) {
         
         subNavOption1.isSelected = false
         subNavOption2.isSelected = false
@@ -340,31 +340,31 @@ class MainViewController: UIViewController {
         if subNavOption2.currentTitle == EntrantTypeSubNav.senior.rawValue && subNavOption2.isSelected == true {
             labelFontReset()
             /* UITextField appearance */
-            //dateOfBirth.alpha = 0.5
-            socialSecurityNumber.alpha = 0.5
-            projectNumber.alpha = 0.5
-            //firstName.alpha = 0.5
-            //lastName.alpha = 0.5
-            company.alpha = 0.5
-            streetAddress.alpha = 0.5
-            city.alpha = 0.5
-            state.alpha = 0.5
-            zipCode.alpha = 0.5
+            dateOfBirth.alpha = 1.0
+            socialSecurityNumber.alpha = 0.2
+            projectNumber.alpha = 0.2
+            firstName.alpha = 1.0
+            lastName.alpha = 1.0
+            company.alpha = 0.2
+            streetAddress.alpha = 0.2
+            city.alpha = 0.2
+            state.alpha = 0.2
+            zipCode.alpha = 0.2
             
             /* UITextField Editing active/inactive */
-            //dateOfBirth.allowsEditingTextAttributes = false
-            socialSecurityNumber.allowsEditingTextAttributes = false
-            projectNumber.allowsEditingTextAttributes = false
-            //firstName.allowsEditingTextAttributes = false
-            //lastName.allowsEditingTextAttributes = false
-            company.allowsEditingTextAttributes = false
-            streetAddress.allowsEditingTextAttributes = false
-            city.allowsEditingTextAttributes = false
-            state.allowsEditingTextAttributes = false
-            zipCode.allowsEditingTextAttributes = false
+            dateOfBirth.isUserInteractionEnabled = true
+            socialSecurityNumber.isUserInteractionEnabled = false
+            projectNumber.isUserInteractionEnabled = false
+            firstName.isUserInteractionEnabled = true
+            lastName.isUserInteractionEnabled = true
+            company.isUserInteractionEnabled = false
+            streetAddress.isUserInteractionEnabled = false
+            city.isUserInteractionEnabled = false
+            state.isUserInteractionEnabled = false
+            zipCode.isUserInteractionEnabled = false
         }
     }
-    @IBAction func subNavOption4(_ sender: UIButton) {
+    @IBAction func subNavOption4Choice(_ sender: UIButton) {
         
         subNavOption1.isSelected = false
         subNavOption2.isSelected = false
@@ -375,28 +375,28 @@ class MainViewController: UIViewController {
         if subNavOption2.currentTitle == EntrantTypeSubNav.vip.rawValue && subNavOption2.isSelected == true {
             labelFontReset()
             /* UITextField appearance */
-            dateOfBirth.alpha = 0.5
-            socialSecurityNumber.alpha = 0.5
-            projectNumber.alpha = 0.5
-            firstName.alpha = 0.5
-            lastName.alpha = 0.5
-            company.alpha = 0.5
-            streetAddress.alpha = 0.5
-            city.alpha = 0.5
-            state.alpha = 0.5
-            zipCode.alpha = 0.5
+            dateOfBirth.alpha = 0.2
+            socialSecurityNumber.alpha = 0.2
+            projectNumber.alpha = 0.2
+            firstName.alpha = 0.2
+            lastName.alpha = 0.2
+            company.alpha = 0.2
+            streetAddress.alpha = 0.2
+            city.alpha = 0.2
+            state.alpha = 0.2
+            zipCode.alpha = 0.2
             
             /* UITextField Editing active/inactive */
-            dateOfBirth.allowsEditingTextAttributes = false
-            socialSecurityNumber.allowsEditingTextAttributes = false
-            projectNumber.allowsEditingTextAttributes = false
-            firstName.allowsEditingTextAttributes = false
-            lastName.allowsEditingTextAttributes = false
-            company.allowsEditingTextAttributes = false
-            streetAddress.allowsEditingTextAttributes = false
-            city.allowsEditingTextAttributes = false
-            state.allowsEditingTextAttributes = false
-            zipCode.allowsEditingTextAttributes = false
+            dateOfBirth.isUserInteractionEnabled = false
+            socialSecurityNumber.isUserInteractionEnabled = false
+            projectNumber.isUserInteractionEnabled = false
+            firstName.isUserInteractionEnabled = false
+            lastName.isUserInteractionEnabled = false
+            company.isUserInteractionEnabled = false
+            streetAddress.isUserInteractionEnabled = false
+            city.isUserInteractionEnabled = false
+            state.isUserInteractionEnabled = false
+            zipCode.isUserInteractionEnabled = false
         }
     }
     @IBAction func subNavOption5(_ sender: UIButton) {
@@ -410,28 +410,28 @@ class MainViewController: UIViewController {
         if subNavOption2.currentTitle == EntrantTypeSubNav.seasonPass.rawValue && subNavOption2.isSelected == true {
             labelFontReset()
             /* UITextField appearance */
-            //dateOfBirth.alpha = 0.5
-            socialSecurityNumber.alpha = 0.5
-            projectNumber.alpha = 0.5
-            //firstName.alpha = 0.5
-            //lastName.alpha = 0.5
-            company.alpha = 0.5
-            //streetAddress.alpha = 0.5
-            //city.alpha = 0.5
-            //state.alpha = 0.5
-            //zipCode.alpha = 0.5
+            dateOfBirth.alpha = 1.0
+            socialSecurityNumber.alpha = 0.2
+            projectNumber.alpha = 0.2
+            firstName.alpha = 1.0
+            lastName.alpha = 1.0
+            company.alpha = 0.2
+            streetAddress.alpha = 1.0
+            city.alpha = 1.0
+            state.alpha = 1.0
+            zipCode.alpha = 1.0
             
             /* UITextField Editing active/inactive */
-            //dateOfBirth.allowsEditingTextAttributes = false
-            socialSecurityNumber.allowsEditingTextAttributes = false
-            projectNumber.allowsEditingTextAttributes = false
-            //firstName.allowsEditingTextAttributes = false
-            //lastName.allowsEditingTextAttributes = false
-            company.allowsEditingTextAttributes = false
-            //streetAddress.allowsEditingTextAttributes = false
-            //city.allowsEditingTextAttributes = false
-            //state.allowsEditingTextAttributes = false
-            //zipCode.allowsEditingTextAttributes = false
+            dateOfBirth.isUserInteractionEnabled = true
+            socialSecurityNumber.isUserInteractionEnabled = false
+            projectNumber.isUserInteractionEnabled = false
+            firstName.isUserInteractionEnabled = true
+            lastName.isUserInteractionEnabled = true
+            company.isUserInteractionEnabled = false
+            streetAddress.isUserInteractionEnabled = true
+            city.isUserInteractionEnabled = true
+            state.isUserInteractionEnabled = true
+            zipCode.isUserInteractionEnabled = true
         }
     }
 

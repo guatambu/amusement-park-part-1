@@ -104,61 +104,61 @@
                                                 <rect key="frame" x="0.0" y="100" width="768" height="80"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="irA-nX-FXZ">
-                                                        <rect key="frame" x="20" y="20.5" width="728" height="39"/>
+                                                        <rect key="frame" x="20" y="20.5" width="688" height="39"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mvC-Ej-qgp">
-                                                                <rect key="frame" x="0.0" y="0.0" width="145.5" height="39"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="137.5" height="39"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="0.7520066353" colorSpace="calibratedRGB"/>
                                                                 <state key="normal" title="Child">
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="subNavOption1:" destination="ZLT-ai-B4a" eventType="touchUpInside" id="8Fr-xj-mFx"/>
+                                                                    <action selector="subNavOption1Choice:" destination="ZLT-ai-B4a" eventType="touchUpInside" id="bYF-hP-bPM"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdo-oa-ox6">
-                                                                <rect key="frame" x="145.5" y="0.0" width="145.5" height="39"/>
+                                                                <rect key="frame" x="137.5" y="0.0" width="137.5" height="39"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="0.7520066353" colorSpace="calibratedRGB"/>
                                                                 <state key="normal" title="Adult">
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="subNavOption2:" destination="ZLT-ai-B4a" eventType="touchUpInside" id="5Ov-cz-1DD"/>
+                                                                    <action selector="subNavOption2Choice:" destination="ZLT-ai-B4a" eventType="touchUpInside" id="T9n-eK-zeP"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IoZ-i1-Cc4">
-                                                                <rect key="frame" x="291" y="0.0" width="146" height="39"/>
+                                                                <rect key="frame" x="275" y="0.0" width="138" height="39"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="0.7520066353" colorSpace="calibratedRGB"/>
                                                                 <state key="normal" title="Senior">
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="subNavOption3:" destination="ZLT-ai-B4a" eventType="touchUpInside" id="fKT-Iy-oWu"/>
-                                                                </connections>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="NRh-Ln-Bau">
-                                                                <rect key="frame" x="437" y="0.0" width="145.5" height="39"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
-                                                                <color key="tintColor" red="1" green="1" blue="1" alpha="0.7520066353" colorSpace="calibratedRGB"/>
-                                                                <state key="normal" title="Season Pass">
-                                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                </state>
-                                                                <connections>
-                                                                    <action selector="subNavOption5:" destination="ZLT-ai-B4a" eventType="touchUpInside" id="aMW-ac-hM9"/>
+                                                                    <action selector="subNavOption3Choice:" destination="ZLT-ai-B4a" eventType="touchUpInside" id="SQa-QJ-k5W"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOx-KU-WYU">
-                                                                <rect key="frame" x="582.5" y="0.0" width="145.5" height="39"/>
+                                                                <rect key="frame" x="413" y="0.0" width="137.5" height="39"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="0.7520066352739726" colorSpace="calibratedRGB"/>
                                                                 <state key="normal" title="VIP">
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="subNavOption4:" destination="ZLT-ai-B4a" eventType="touchUpInside" id="kAp-AV-mk1"/>
+                                                                    <action selector="subNavOption4Choice:" destination="ZLT-ai-B4a" eventType="touchUpInside" id="FU2-3l-7Ht"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="NRh-Ln-Bau">
+                                                                <rect key="frame" x="550.5" y="0.0" width="137.5" height="39"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                                                <color key="tintColor" red="1" green="1" blue="1" alpha="0.7520066353" colorSpace="calibratedRGB"/>
+                                                                <state key="normal" title="Season Pass">
+                                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="subNavOption5:" destination="ZLT-ai-B4a" eventType="touchUpInside" id="na4-jN-bHo"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -169,7 +169,7 @@
                                                     <constraint firstItem="irA-nX-FXZ" firstAttribute="centerY" secondItem="Su1-yW-SxH" secondAttribute="centerY" id="8lT-pY-dVU"/>
                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="9i0-iX-Zbt"/>
                                                     <constraint firstItem="irA-nX-FXZ" firstAttribute="leading" secondItem="Su1-yW-SxH" secondAttribute="leading" constant="20" id="trx-tL-7ws"/>
-                                                    <constraint firstAttribute="trailing" secondItem="irA-nX-FXZ" secondAttribute="trailing" constant="20" id="vcp-wU-Ewf"/>
+                                                    <constraint firstAttribute="trailing" secondItem="irA-nX-FXZ" secondAttribute="trailing" constant="60" id="vcp-wU-Ewf"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
