@@ -10,7 +10,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    /* MARK: - Navigation */
+    /* Navigation */
     
     // Navigation @IBOutlets
     @IBOutlet weak var guestNavButton: UIButton!
@@ -84,6 +84,8 @@ class MainViewController: UIViewController {
 
     @IBAction func employeeNavButton(_ sender: UIButton) {
         
+        labelFontReset()
+        
         contractorNavButton.isSelected = false
         guestNavButton.isSelected = false
         employeeNavButton.isSelected = true
@@ -103,10 +105,35 @@ class MainViewController: UIViewController {
         subNavOption4.isHidden = true
         subNavOption5.isHidden = true
         
-        labelFontReset()
+        /* UITextField appearance */
+        dateOfBirth.alpha = 1.0
+        socialSecurityNumber.alpha = 1.0
+        projectNumber.alpha = 0.2
+        firstName.alpha = 1.0
+        lastName.alpha = 1.0
+        company.alpha = 0.2
+        streetAddress.alpha = 1.0
+        city.alpha = 1.0
+        state.alpha = 1.0
+        zipCode.alpha = 1.0
+        
+        /* UITextField Editing active/inactive */
+        dateOfBirth.isUserInteractionEnabled = true
+        socialSecurityNumber.isUserInteractionEnabled = true
+        projectNumber.isUserInteractionEnabled = false
+        firstName.isUserInteractionEnabled = true
+        lastName.isUserInteractionEnabled = true
+        company.isUserInteractionEnabled = false
+        streetAddress.isUserInteractionEnabled = true
+        city.isUserInteractionEnabled = true
+        state.isUserInteractionEnabled = true
+        zipCode.isUserInteractionEnabled = true
+        
     }
     
     @IBAction func managerNavButton(_ sender: UIButton) {
+        
+        labelFontReset()
         
         contractorNavButton.isSelected = false
         guestNavButton.isSelected = false
@@ -127,9 +154,35 @@ class MainViewController: UIViewController {
         subNavOption4.isHidden = true
         subNavOption5.isHidden = true
         
-        labelFontReset()
+        /* UITextField appearance */
+        dateOfBirth.alpha = 1.0
+        socialSecurityNumber.alpha = 1.0
+        projectNumber.alpha = 0.2
+        firstName.alpha = 1.0
+        lastName.alpha = 1.0
+        company.alpha = 0.2
+        streetAddress.alpha = 1.0
+        city.alpha = 1.0
+        state.alpha = 1.0
+        zipCode.alpha = 1.0
+        
+        /* UITextField Editing active/inactive */
+        dateOfBirth.isUserInteractionEnabled = true
+        socialSecurityNumber.isUserInteractionEnabled = true
+        projectNumber.isUserInteractionEnabled = false
+        firstName.isUserInteractionEnabled = true
+        lastName.isUserInteractionEnabled = true
+        company.isUserInteractionEnabled = false
+        streetAddress.isUserInteractionEnabled = true
+        city.isUserInteractionEnabled = true
+        state.isUserInteractionEnabled = true
+        zipCode.isUserInteractionEnabled = true
+        
     }
+    
     @IBAction func contractorNavButton(_ sender: UIButton) {
+        
+        labelFontReset()
         
         contractorNavButton.isSelected = true
         guestNavButton.isSelected = false
@@ -152,10 +205,35 @@ class MainViewController: UIViewController {
         subNavOption4.isHidden = false
         subNavOption5.isHidden = false
         
-        labelFontReset()
+        /* UITextField appearance */
+        dateOfBirth.alpha = 1.0
+        socialSecurityNumber.alpha = 1.0
+        projectNumber.alpha = 1.0
+        firstName.alpha = 1.0
+        lastName.alpha = 1.0
+        company.alpha = 0.2
+        streetAddress.alpha = 1.0
+        city.alpha = 1.0
+        state.alpha = 1.0
+        zipCode.alpha = 1.0
+        
+        /* UITextField Editing active/inactive */
+        dateOfBirth.isUserInteractionEnabled = true
+        socialSecurityNumber.isUserInteractionEnabled = true
+        projectNumber.isUserInteractionEnabled = true
+        firstName.isUserInteractionEnabled = true
+        lastName.isUserInteractionEnabled = true
+        company.isUserInteractionEnabled = false
+        streetAddress.isUserInteractionEnabled = true
+        city.isUserInteractionEnabled = true
+        state.isUserInteractionEnabled = true
+        zipCode.isUserInteractionEnabled = true
+        
     }
+    
     @IBAction func vendorNavButton(_ sender: UIButton) {
         
+        labelFontReset()
         
         contractorNavButton.isSelected = false
         guestNavButton.isSelected = false
@@ -177,7 +255,32 @@ class MainViewController: UIViewController {
         subNavOption4.isHidden = false
         subNavOption5.isHidden = true
         
-        labelFontReset()
+        /* UITextField appearance */
+        dateOfBirth.alpha = 1.0
+        socialSecurityNumber.alpha = 0.2
+        projectNumber.alpha = 0.2
+        firstName.alpha = 1.0
+        lastName.alpha = 1.0
+        company.alpha = 1.0
+        streetAddress.alpha = 0.2
+        city.alpha = 0.2
+        state.alpha = 0.2
+        zipCode.alpha = 0.2
+        /*MARK: *** dateOfVisit ***   */
+        
+        /* UITextField Editing active/inactive */
+        dateOfBirth.isUserInteractionEnabled = true
+        socialSecurityNumber.isUserInteractionEnabled = false
+        projectNumber.isUserInteractionEnabled = false
+        firstName.isUserInteractionEnabled = true
+        lastName.isUserInteractionEnabled = true
+        company.isUserInteractionEnabled = true
+        streetAddress.isUserInteractionEnabled = false
+        city.isUserInteractionEnabled = false
+        state.isUserInteractionEnabled = false
+        zipCode.isUserInteractionEnabled = false
+        /*MARK: *** dateOfVisit ***   */
+        
     }
     
     
@@ -215,85 +318,10 @@ class MainViewController: UIViewController {
             city.isUserInteractionEnabled = false
             state.isUserInteractionEnabled = false
             zipCode.isUserInteractionEnabled = false
-        } else if (subNavOption1.currentTitle == EntrantTypeSubNav.hourlyFood.rawValue || subNavOption1.currentTitle == ManagerType.shift.rawValue) && subNavOption1.isSelected == true {
-            labelFontReset()
-            /* UITextField appearance */
-            dateOfBirth.alpha = 1.0
-            socialSecurityNumber.alpha = 1.0
-            projectNumber.alpha = 0.2
-            firstName.alpha = 1.0
-            lastName.alpha = 1.0
-            company.alpha = 0.2
-            streetAddress.alpha = 1.0
-            city.alpha = 1.0
-            state.alpha = 1.0
-            zipCode.alpha = 1.0
-            
-            /* UITextField Editing active/inactive */
-            dateOfBirth.isUserInteractionEnabled = true
-            socialSecurityNumber.isUserInteractionEnabled = true
-            projectNumber.isUserInteractionEnabled = false
-            firstName.isUserInteractionEnabled = true
-            lastName.isUserInteractionEnabled = true
-            company.isUserInteractionEnabled = false
-            streetAddress.isUserInteractionEnabled = true
-            city.isUserInteractionEnabled = true
-            state.isUserInteractionEnabled = true
-            zipCode.isUserInteractionEnabled = true
-        } else if subNavOption1.currentTitle == ContractorSubNav.proj1001.rawValue && subNavOption1.isSelected == true {
-            labelFontReset()
-            /* UITextField appearance */
-            dateOfBirth.alpha = 1.0
-            socialSecurityNumber.alpha = 1.0
-            projectNumber.alpha = 1.0
-            firstName.alpha = 1.0
-            lastName.alpha = 1.0
-            company.alpha = 0.2
-            streetAddress.alpha = 1.0
-            city.alpha = 1.0
-            state.alpha = 1.0
-            zipCode.alpha = 1.0
-            
-            /* UITextField Editing active/inactive */
-            dateOfBirth.isUserInteractionEnabled = true
-            socialSecurityNumber.isUserInteractionEnabled = true
-            projectNumber.isUserInteractionEnabled = true
-            firstName.isUserInteractionEnabled = true
-            lastName.isUserInteractionEnabled = true
-            company.isUserInteractionEnabled = false
-            streetAddress.isUserInteractionEnabled = true
-            city.isUserInteractionEnabled = true
-            state.isUserInteractionEnabled = true
-            zipCode.isUserInteractionEnabled = true
-        } else if subNavOption1.currentTitle == Vendors.acme.rawValue && subNavOption1.isSelected == true {
-            labelFontReset()
-            /* UITextField appearance */
-            dateOfBirth.alpha = 1.0
-            socialSecurityNumber.alpha = 0.2
-            projectNumber.alpha = 0.2
-            firstName.alpha = 1.0
-            lastName.alpha = 1.0
-            company.alpha = 1.0
-            streetAddress.alpha = 0.2
-            city.alpha = 0.2
-            state.alpha = 0.2
-            zipCode.alpha = 0.2
-/*MARK: *** dateOfVisit ***   */
-            
-            /* UITextField Editing active/inactive */
-            dateOfBirth.isUserInteractionEnabled = true
-            socialSecurityNumber.isUserInteractionEnabled = false
-            projectNumber.isUserInteractionEnabled = false
-            firstName.isUserInteractionEnabled = true
-            lastName.isUserInteractionEnabled = true
-            company.isUserInteractionEnabled = true
-            streetAddress.isUserInteractionEnabled = false
-            city.isUserInteractionEnabled = false
-            state.isUserInteractionEnabled = false
-            zipCode.isUserInteractionEnabled = false
-/*MARK: *** dateOfVisit ***   */
         }
+        
     }
+        
     @IBAction func subNavOption2Choice(_ sender: UIButton) {
         
         subNavOption1.isSelected = false
@@ -303,7 +331,9 @@ class MainViewController: UIViewController {
         subNavOption5.isSelected = false
         
         if subNavOption2.currentTitle == EntrantTypeSubNav.adult.rawValue && subNavOption2.isSelected == true {
+            
             labelFontReset()
+            
             /* UITextField appearance */
             dateOfBirth.alpha = 0.2
             socialSecurityNumber.alpha = 0.2
@@ -337,8 +367,10 @@ class MainViewController: UIViewController {
         subNavOption4.isSelected = false
         subNavOption5.isSelected = false
         
-        if subNavOption2.currentTitle == EntrantTypeSubNav.senior.rawValue && subNavOption2.isSelected == true {
+        if subNavOption3.currentTitle == EntrantTypeSubNav.senior.rawValue && subNavOption3.isSelected == true && guestNavButton.isSelected == true {
+            
             labelFontReset()
+            
             /* UITextField appearance */
             dateOfBirth.alpha = 1.0
             socialSecurityNumber.alpha = 0.2
@@ -372,8 +404,10 @@ class MainViewController: UIViewController {
         subNavOption4.isSelected = true
         subNavOption5.isSelected = false
         
-        if subNavOption2.currentTitle == EntrantTypeSubNav.vip.rawValue && subNavOption2.isSelected == true {
+        if subNavOption4.currentTitle == EntrantTypeSubNav.vip.rawValue && subNavOption4.isSelected == true {
+            
             labelFontReset()
+            
             /* UITextField appearance */
             dateOfBirth.alpha = 0.2
             socialSecurityNumber.alpha = 0.2
@@ -399,6 +433,7 @@ class MainViewController: UIViewController {
             zipCode.isUserInteractionEnabled = false
         }
     }
+    
     @IBAction func subNavOption5(_ sender: UIButton) {
         
         subNavOption1.isSelected = false
@@ -407,8 +442,10 @@ class MainViewController: UIViewController {
         subNavOption4.isSelected = false
         subNavOption5.isSelected = true
         
-        if subNavOption2.currentTitle == EntrantTypeSubNav.seasonPass.rawValue && subNavOption2.isSelected == true {
+        if subNavOption5.currentTitle == EntrantTypeSubNav.seasonPass.rawValue && subNavOption5.isSelected == true {
+            
             labelFontReset()
+            
             /* UITextField appearance */
             dateOfBirth.alpha = 1.0
             socialSecurityNumber.alpha = 0.2
