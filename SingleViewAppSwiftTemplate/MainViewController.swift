@@ -495,13 +495,11 @@ class MainViewController: UIViewController {
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            
             guard newUser.firstName != nil || newUser.firstName == "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            
             guard newUser.lastName != nil || newUser.lastName != "" else {
                 lastNameLabel.font = UIFont.italicSystemFont(ofSize: lastNameLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
@@ -520,37 +518,31 @@ class MainViewController: UIViewController {
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            
             guard newUser.firstName != nil || newUser.firstName == "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            
             guard newUser.lastName != nil || newUser.lastName != "" else {
                 lastNameLabel.font = UIFont.italicSystemFont(ofSize: lastNameLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
                 return
             }
-            
             guard newUser.streetAddress != nil || newUser.streetAddress != "" else {
                 streetAddressLabel.font = UIFont.italicSystemFont(ofSize: streetAddressLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
                 return
             }
-            
             guard newUser.city != nil || newUser.city != "" else {
                 cityLabel.font = UIFont.italicSystemFont(ofSize: cityLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your City"))
                 return
             }
-            
             guard newUser.state != nil || newUser.state != "" else {
                 stateLabel.font = UIFont.italicSystemFont(ofSize: stateLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your State"))
                 return
             }
-            
             guard newUser.zipCode != nil || newUser.zipCode != "" else {
                 zipCodeLabel.font = UIFont.italicSystemFont(ofSize: zipCodeLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
@@ -564,43 +556,36 @@ class MainViewController: UIViewController {
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            
             guard newUser.firstName != nil || newUser.firstName == "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            
             guard newUser.lastName != nil || newUser.lastName != "" else {
                 lastNameLabel.font = UIFont.italicSystemFont(ofSize: lastNameLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
                 return
             }
-            
             guard newUser.streetAddress != nil || newUser.streetAddress != "" else {
                 streetAddressLabel.font = UIFont.italicSystemFont(ofSize: streetAddressLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
                 return
             }
-            
             guard newUser.city != nil || newUser.city != "" else {
                 cityLabel.font = UIFont.italicSystemFont(ofSize: cityLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your City"))
                 return
             }
-            
             guard newUser.state != nil || newUser.state != "" else {
                 stateLabel.font = UIFont.italicSystemFont(ofSize: stateLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your State"))
                 return
             }
-            
             guard newUser.zipCode != nil || newUser.zipCode != "" else {
                 zipCodeLabel.font = UIFont.italicSystemFont(ofSize: zipCodeLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
                 return
             }
-            
             guard newUser.socialSecurityNumber != nil || newUser.socialSecurityNumber != "" else {
                 socialSecurityNumberLabel.font = UIFont.italicSystemFont(ofSize: socialSecurityNumberLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
@@ -615,43 +600,36 @@ class MainViewController: UIViewController {
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            
             guard newUser.firstName != nil || newUser.firstName == "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            
             guard newUser.lastName != nil || newUser.lastName != "" else {
                 lastNameLabel.font = UIFont.italicSystemFont(ofSize: lastNameLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
                 return
             }
-            
             guard newUser.streetAddress != nil || newUser.streetAddress != "" else {
                 streetAddressLabel.font = UIFont.italicSystemFont(ofSize: streetAddressLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
                 return
             }
-            
             guard newUser.city != nil || newUser.city != "" else {
                 cityLabel.font = UIFont.italicSystemFont(ofSize: cityLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your City"))
                 return
             }
-            
             guard newUser.state != nil || newUser.state != "" else {
                 stateLabel.font = UIFont.italicSystemFont(ofSize: stateLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your State"))
                 return
             }
-            
             guard newUser.zipCode != nil || newUser.zipCode != "" else {
                 zipCodeLabel.font = UIFont.italicSystemFont(ofSize: zipCodeLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
                 return
             }
-            
             guard newUser.socialSecurityNumber != nil || newUser.socialSecurityNumber != "" else {
                 socialSecurityNumberLabel.font = UIFont.italicSystemFont(ofSize: socialSecurityNumberLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
@@ -665,43 +643,36 @@ class MainViewController: UIViewController {
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            
             guard newUser.firstName != nil || newUser.firstName == "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            
             guard newUser.lastName != nil || newUser.lastName != "" else {
                 lastNameLabel.font = UIFont.italicSystemFont(ofSize: lastNameLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
                 return
             }
-            
             guard newUser.streetAddress != nil || newUser.streetAddress != "" else {
                 streetAddressLabel.font = UIFont.italicSystemFont(ofSize: streetAddressLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
                 return
             }
-            
             guard newUser.city != nil || newUser.city != "" else {
                 cityLabel.font = UIFont.italicSystemFont(ofSize: cityLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your City"))
                 return
             }
-            
             guard newUser.state != nil || newUser.state != "" else {
                 stateLabel.font = UIFont.italicSystemFont(ofSize: stateLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your State"))
                 return
             }
-            
             guard newUser.zipCode != nil || newUser.zipCode != "" else {
                 zipCodeLabel.font = UIFont.italicSystemFont(ofSize: zipCodeLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
                 return
             }
-            
             guard newUser.socialSecurityNumber != nil || newUser.socialSecurityNumber != "" else {
                 socialSecurityNumberLabel.font = UIFont.italicSystemFont(ofSize: socialSecurityNumberLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
@@ -715,43 +686,36 @@ class MainViewController: UIViewController {
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            
             guard newUser.firstName != nil || newUser.firstName == "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            
             guard newUser.lastName != nil || newUser.lastName != "" else {
                 lastNameLabel.font = UIFont.italicSystemFont(ofSize: lastNameLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
                 return
             }
-            
             guard newUser.streetAddress != nil || newUser.streetAddress != "" else {
                 streetAddressLabel.font = UIFont.italicSystemFont(ofSize: streetAddressLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
                 return
             }
-            
             guard newUser.city != nil || newUser.city != "" else {
                 cityLabel.font = UIFont.italicSystemFont(ofSize: cityLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your City"))
                 return
             }
-            
             guard newUser.state != nil || newUser.state != "" else {
                 stateLabel.font = UIFont.italicSystemFont(ofSize: stateLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your State"))
                 return
             }
-            
             guard newUser.zipCode != nil || newUser.zipCode != "" else {
                 zipCodeLabel.font = UIFont.italicSystemFont(ofSize: zipCodeLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
                 return
             }
-            
             guard newUser.socialSecurityNumber != nil || newUser.socialSecurityNumber != "" else {
                 socialSecurityNumberLabel.font = UIFont.italicSystemFont(ofSize: socialSecurityNumberLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
@@ -765,43 +729,36 @@ class MainViewController: UIViewController {
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            
             guard newUser.firstName != nil || newUser.firstName == "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            
             guard newUser.lastName != nil || newUser.lastName != "" else {
                 lastNameLabel.font = UIFont.italicSystemFont(ofSize: lastNameLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
                 return
             }
-            
             guard newUser.streetAddress != nil || newUser.streetAddress != "" else {
                 streetAddressLabel.font = UIFont.italicSystemFont(ofSize: streetAddressLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
                 return
             }
-            
             guard newUser.city != nil || newUser.city != "" else {
                 cityLabel.font = UIFont.italicSystemFont(ofSize: cityLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your City"))
                 return
             }
-            
             guard newUser.state != nil || newUser.state != "" else {
                 stateLabel.font = UIFont.italicSystemFont(ofSize: stateLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your State"))
                 return
             }
-            
             guard newUser.zipCode != nil || newUser.zipCode != "" else {
                 zipCodeLabel.font = UIFont.italicSystemFont(ofSize: zipCodeLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
                 return
             }
-            
             guard newUser.socialSecurityNumber != nil || newUser.socialSecurityNumber != "" else {
                 socialSecurityNumberLabel.font = UIFont.italicSystemFont(ofSize: socialSecurityNumberLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
@@ -815,43 +772,36 @@ class MainViewController: UIViewController {
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            
             guard newUser.firstName != nil || newUser.firstName == "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            
             guard newUser.lastName != nil || newUser.lastName != "" else {
                 lastNameLabel.font = UIFont.italicSystemFont(ofSize: lastNameLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
                 return
             }
-            
             guard newUser.streetAddress != nil || newUser.streetAddress != "" else {
                 streetAddressLabel.font = UIFont.italicSystemFont(ofSize: streetAddressLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
                 return
             }
-            
             guard newUser.city != nil || newUser.city != "" else {
                 cityLabel.font = UIFont.italicSystemFont(ofSize: cityLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your City"))
                 return
             }
-            
             guard newUser.state != nil || newUser.state != "" else {
                 stateLabel.font = UIFont.italicSystemFont(ofSize: stateLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your State"))
                 return
             }
-            
             guard newUser.zipCode != nil || newUser.zipCode != "" else {
                 zipCodeLabel.font = UIFont.italicSystemFont(ofSize: zipCodeLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
                 return
             }
-            
             guard newUser.socialSecurityNumber != nil || newUser.socialSecurityNumber != "" else {
                 socialSecurityNumberLabel.font = UIFont.italicSystemFont(ofSize: socialSecurityNumberLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
@@ -865,43 +815,36 @@ class MainViewController: UIViewController {
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            
             guard newUser.firstName != nil || newUser.firstName == "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            
             guard newUser.lastName != nil || newUser.lastName != "" else {
                 lastNameLabel.font = UIFont.italicSystemFont(ofSize: lastNameLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
                 return
             }
-            
             guard newUser.streetAddress != nil || newUser.streetAddress != "" else {
                 streetAddressLabel.font = UIFont.italicSystemFont(ofSize: streetAddressLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
                 return
             }
-            
             guard newUser.city != nil || newUser.city != "" else {
                 cityLabel.font = UIFont.italicSystemFont(ofSize: cityLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your City"))
                 return
             }
-            
             guard newUser.state != nil || newUser.state != "" else {
                 stateLabel.font = UIFont.italicSystemFont(ofSize: stateLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your State"))
                 return
             }
-            
             guard newUser.zipCode != nil || newUser.zipCode != "" else {
                 zipCodeLabel.font = UIFont.italicSystemFont(ofSize: zipCodeLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
                 return
             }
-            
             guard newUser.socialSecurityNumber != nil || newUser.socialSecurityNumber != "" else {
                 socialSecurityNumberLabel.font = UIFont.italicSystemFont(ofSize: socialSecurityNumberLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
@@ -915,43 +858,36 @@ class MainViewController: UIViewController {
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            
             guard newUser.firstName != nil || newUser.firstName == "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            
             guard newUser.lastName != nil || newUser.lastName != "" else {
                 lastNameLabel.font = UIFont.italicSystemFont(ofSize: lastNameLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
                 return
             }
-            
             guard newUser.streetAddress != nil || newUser.streetAddress != "" else {
                 streetAddressLabel.font = UIFont.italicSystemFont(ofSize: streetAddressLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
                 return
             }
-            
             guard newUser.city != nil || newUser.city != "" else {
                 cityLabel.font = UIFont.italicSystemFont(ofSize: cityLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your City"))
                 return
             }
-            
             guard newUser.state != nil || newUser.state != "" else {
                 stateLabel.font = UIFont.italicSystemFont(ofSize: stateLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your State"))
                 return
             }
-            
             guard newUser.zipCode != nil || newUser.zipCode != "" else {
                 zipCodeLabel.font = UIFont.italicSystemFont(ofSize: zipCodeLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
                 return
             }
-            
             guard newUser.socialSecurityNumber != nil || newUser.socialSecurityNumber != "" else {
                 socialSecurityNumberLabel.font = UIFont.italicSystemFont(ofSize: socialSecurityNumberLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
@@ -967,43 +903,36 @@ class MainViewController: UIViewController {
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            
             guard newUser.firstName != nil || newUser.firstName == "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            
             guard newUser.lastName != nil || newUser.lastName != "" else {
                 lastNameLabel.font = UIFont.italicSystemFont(ofSize: lastNameLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
                 return
             }
-            
             guard newUser.streetAddress != nil || newUser.streetAddress != "" else {
                 streetAddressLabel.font = UIFont.italicSystemFont(ofSize: streetAddressLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
                 return
             }
-            
             guard newUser.city != nil || newUser.city != "" else {
                 cityLabel.font = UIFont.italicSystemFont(ofSize: cityLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your City"))
                 return
             }
-            
             guard newUser.state != nil || newUser.state != "" else {
                 stateLabel.font = UIFont.italicSystemFont(ofSize: stateLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your State"))
                 return
             }
-            
             guard newUser.zipCode != nil || newUser.zipCode != "" else {
                 zipCodeLabel.font = UIFont.italicSystemFont(ofSize: zipCodeLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
                 return
             }
-            
             guard newUser.socialSecurityNumber != nil || newUser.socialSecurityNumber != "" else {
                 socialSecurityNumberLabel.font = UIFont.italicSystemFont(ofSize: socialSecurityNumberLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
@@ -1017,43 +946,36 @@ class MainViewController: UIViewController {
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            
             guard newUser.firstName != nil || newUser.firstName == "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            
             guard newUser.lastName != nil || newUser.lastName != "" else {
                 lastNameLabel.font = UIFont.italicSystemFont(ofSize: lastNameLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
                 return
             }
-            
             guard newUser.streetAddress != nil || newUser.streetAddress != "" else {
                 streetAddressLabel.font = UIFont.italicSystemFont(ofSize: streetAddressLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
                 return
             }
-            
             guard newUser.city != nil || newUser.city != "" else {
                 cityLabel.font = UIFont.italicSystemFont(ofSize: cityLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your City"))
                 return
             }
-            
             guard newUser.state != nil || newUser.state != "" else {
                 stateLabel.font = UIFont.italicSystemFont(ofSize: stateLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your State"))
                 return
             }
-            
             guard newUser.zipCode != nil || newUser.zipCode != "" else {
                 zipCodeLabel.font = UIFont.italicSystemFont(ofSize: zipCodeLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
                 return
             }
-            
             guard newUser.socialSecurityNumber != nil || newUser.socialSecurityNumber != "" else {
                 socialSecurityNumberLabel.font = UIFont.italicSystemFont(ofSize: socialSecurityNumberLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
@@ -1067,43 +989,36 @@ class MainViewController: UIViewController {
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            
             guard newUser.firstName != nil || newUser.firstName == "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            
             guard newUser.lastName != nil || newUser.lastName != "" else {
                 lastNameLabel.font = UIFont.italicSystemFont(ofSize: lastNameLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
                 return
             }
-            
             guard newUser.streetAddress != nil || newUser.streetAddress != "" else {
                 streetAddressLabel.font = UIFont.italicSystemFont(ofSize: streetAddressLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
                 return
             }
-            
             guard newUser.city != nil || newUser.city != "" else {
                 cityLabel.font = UIFont.italicSystemFont(ofSize: cityLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your City"))
                 return
             }
-            
             guard newUser.state != nil || newUser.state != "" else {
                 stateLabel.font = UIFont.italicSystemFont(ofSize: stateLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your State"))
                 return
             }
-            
             guard newUser.zipCode != nil || newUser.zipCode != "" else {
                 zipCodeLabel.font = UIFont.italicSystemFont(ofSize: zipCodeLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
                 return
             }
-            
             guard newUser.socialSecurityNumber != nil || newUser.socialSecurityNumber != "" else {
                 socialSecurityNumberLabel.font = UIFont.italicSystemFont(ofSize: socialSecurityNumberLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
@@ -1137,13 +1052,11 @@ class MainViewController: UIViewController {
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            
             guard newUser.firstName != nil || newUser.firstName == "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            
             guard newUser.lastName != nil || newUser.lastName != "" else {
                 lastNameLabel.font = UIFont.italicSystemFont(ofSize: lastNameLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
@@ -1157,19 +1070,17 @@ class MainViewController: UIViewController {
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            
             guard newUser.firstName != nil || newUser.firstName == "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            
             guard newUser.lastName != nil || newUser.lastName != "" else {
                 lastNameLabel.font = UIFont.italicSystemFont(ofSize: lastNameLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
                 return
             }
-        
+
         } else if subNavOption4.currentTitle == Vendors.nwElectrical.rawValue && subNavOption4.isSelected == true {
             
             guard let newUser = VendorSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, vendorCompany: Vendors.nwElectrical.rawValue, dateOfVisit: Date()), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
@@ -1177,13 +1088,11 @@ class MainViewController: UIViewController {
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            
             guard newUser.firstName != nil || newUser.firstName == "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            
             guard newUser.lastName != nil || newUser.lastName != "" else {
                 lastNameLabel.font = UIFont.italicSystemFont(ofSize: lastNameLabel.font.pointSize)
                 print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
@@ -1195,13 +1104,38 @@ class MainViewController: UIViewController {
         else {
             labelFontReset()
         }
-        
-        
-        
-        
     }
 
+    
     @IBAction func populateData(_ sender: ButtonDesign) {
+        
+        // test cases to populate app textfields
+        
+        let birthday = "11/12/2013"
+        
+        let ssnExample = "911-23-0987"
+        
+        let nameFirst = "steve"
+        
+        let nameLast = "darcy"
+        
+        let vendorCompany = "acme"
+        
+        let addressStreet = "1919 nowheres dr."
+        
+        let cityName = "whoville"
+        
+        let stateName = "CA"
+        
+        let zipCodeInfo = "01988"
+        
+        
+        let textFields = [ dateOfBirth, socialSecurityNumber, firstName, lastName, company, streetAddress, city, state, zipCode ]
+        
+        let entrants = [ birthday, ssnExample, nameFirst, nameLast, vendorCompany, addressStreet, cityName, stateName, zipCodeInfo ]
+        
+        
+        
     }
 
     
