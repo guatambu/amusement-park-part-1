@@ -484,11 +484,11 @@ class MainViewController: UIViewController {
                 return
             }
             
-        } else if subNavOption1.currentTitle == EntrantTypeSubNav.adult.rawValue && subNavOption1.isSelected == true {
+        } else if subNavOption2.currentTitle == EntrantTypeSubNav.adult.rawValue && subNavOption2.isSelected == true {
             
             //let newUser = GuestClassicSource()
         
-        } else if subNavOption1.currentTitle == EntrantTypeSubNav.senior.rawValue && subNavOption1.isSelected == true {
+        } else if subNavOption3.currentTitle == EntrantTypeSubNav.senior.rawValue && subNavOption3.isSelected == true && guestNavButton.isSelected == true {
             
             guard let newUser = GuestSeniorSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
@@ -509,11 +509,11 @@ class MainViewController: UIViewController {
             }
             
         
-        } else if subNavOption1.currentTitle == EntrantTypeSubNav.vip.rawValue && subNavOption1.isSelected == true {
+        } else if subNavOption4.currentTitle == EntrantTypeSubNav.vip.rawValue && subNavOption4.isSelected == true {
             
             //let newUser = GuestVIPSource()
         
-        } else if subNavOption1.currentTitle == EntrantTypeSubNav.seasonPass.rawValue && subNavOption1.isSelected == true {
+        } else if subNavOption5.currentTitle == EntrantTypeSubNav.seasonPass.rawValue && subNavOption5.isSelected == true {
             
             guard let newUser = GuestSeasonPassSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
@@ -608,7 +608,7 @@ class MainViewController: UIViewController {
             }
 
             
-        } else if subNavOption1.currentTitle == EntrantTypeSubNav.hourlyRide.rawValue && subNavOption1.isSelected == true {
+        } else if subNavOption2.currentTitle == EntrantTypeSubNav.hourlyRide.rawValue && subNavOption2.isSelected == true {
             
             guard let newUser = HourlyRideServicesEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
@@ -658,7 +658,7 @@ class MainViewController: UIViewController {
                 return
             }
         
-        } else if subNavOption1.currentTitle == EntrantTypeSubNav.hourlyMaintenance.rawValue && subNavOption1.isSelected == true {
+        } else if subNavOption3.currentTitle == EntrantTypeSubNav.hourlyMaintenance.rawValue && subNavOption3.isSelected == true {
             
             guard let newUser = HourlyMaintenanceEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
@@ -758,7 +758,7 @@ class MainViewController: UIViewController {
                 return
             }
         
-        } else if subNavOption1.currentTitle == ManagerType.general.rawValue && subNavOption1.isSelected == true {
+        } else if subNavOption2.currentTitle == ManagerType.general.rawValue && subNavOption2.isSelected == true {
             
             guard let newUser = ManagerEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, managementTier: [.general]), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
@@ -808,7 +808,7 @@ class MainViewController: UIViewController {
                 return
             }
         
-        } else if subNavOption1.currentTitle == ManagerType.senior.rawValue && subNavOption1.isSelected == true {
+        } else if subNavOption3.currentTitle == ManagerType.senior.rawValue && subNavOption3.isSelected == true {
         
             guard let newUser = ManagerEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, managementTier: [.senior]), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
@@ -908,7 +908,7 @@ class MainViewController: UIViewController {
                 return
             }
         
-        } else if subNavOption1.currentTitle == ContractorSubNav.proj1002.rawValue && subNavOption1.isSelected == true {
+        } else if subNavOption2.currentTitle == ContractorSubNav.proj1002.rawValue && subNavOption2.isSelected == true {
             
             guard let newUser = ContractEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, projectNumber: ContractorSubNav.proj1002.rawValue), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
@@ -960,7 +960,7 @@ class MainViewController: UIViewController {
             
             
         
-        } else if subNavOption1.currentTitle == ContractorSubNav.proj1003.rawValue && subNavOption1.isSelected == true {
+        } else if subNavOption3.currentTitle == ContractorSubNav.proj1003.rawValue && subNavOption3.isSelected == true {
             
             guard let newUser = ContractEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, projectNumber: ContractorSubNav.proj1003.rawValue), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
@@ -1010,7 +1010,7 @@ class MainViewController: UIViewController {
                 return
             }
         
-        } else if subNavOption1.currentTitle == ContractorSubNav.proj2001.rawValue && subNavOption1.isSelected == true {
+        } else if subNavOption4.currentTitle == ContractorSubNav.proj2001.rawValue && subNavOption4.isSelected == true {
             
             guard let newUser = ContractEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, projectNumber: ContractorSubNav.proj2001.rawValue), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
@@ -1060,7 +1060,7 @@ class MainViewController: UIViewController {
                 return
             }
             
-        } else if subNavOption1.currentTitle == ContractorSubNav.proj2002.rawValue && subNavOption1.isSelected == true {
+        } else if subNavOption5.currentTitle == ContractorSubNav.proj2002.rawValue && subNavOption5.isSelected == true {
             
             guard let newUser = ContractEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, projectNumber: ContractorSubNav.proj2002.rawValue), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
@@ -1130,7 +1130,7 @@ class MainViewController: UIViewController {
                 return
             }
         
-        } else if subNavOption1.currentTitle == Vendors.orkin.rawValue && subNavOption1.isSelected == true {
+        } else if subNavOption2.currentTitle == Vendors.orkin.rawValue && subNavOption2.isSelected == true {
             
             guard let newUser = VendorSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, vendorCompany: Vendors.orkin.rawValue, dateOfVisit: Date()), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
@@ -1150,7 +1150,7 @@ class MainViewController: UIViewController {
                 return
             }
         
-        } else if subNavOption1.currentTitle == Vendors.fedex.rawValue && subNavOption1.isSelected == true {
+        } else if subNavOption3.currentTitle == Vendors.fedex.rawValue && subNavOption3.isSelected == true {
             
             guard let newUser = VendorSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, vendorCompany: Vendors.fedex.rawValue, dateOfVisit: Date()), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
@@ -1170,7 +1170,7 @@ class MainViewController: UIViewController {
                 return
             }
         
-        } else if subNavOption1.currentTitle == Vendors.nwElectrical.rawValue && subNavOption1.isSelected == true {
+        } else if subNavOption4.currentTitle == Vendors.nwElectrical.rawValue && subNavOption4.isSelected == true {
             
             guard let newUser = VendorSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, vendorCompany: Vendors.nwElectrical.rawValue, dateOfVisit: Date()), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
