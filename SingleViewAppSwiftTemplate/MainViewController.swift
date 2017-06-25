@@ -1229,16 +1229,16 @@ class MainViewController: UIViewController {
     
     // function to reset UILabel font to neutral
     func labelFontReset () {
-        dateOfBirthLabel.font = UIFont.systemFont(ofSize: dateOfBirthLabel.font.pointSize)
-        socialSecurityNumberLabel.font = UIFont.systemFont(ofSize: socialSecurityNumberLabel.font.pointSize)
-        projectNumberLabel.font = UIFont.systemFont(ofSize: projectNumberLabel.font.pointSize)
-        firstNameLabel.font = UIFont.systemFont(ofSize: firstNameLabel.font.pointSize)
-        lastNameLabel.font = UIFont.systemFont(ofSize: lastNameLabel.font.pointSize)
-        companyLabel.font = UIFont.systemFont(ofSize: companyLabel.font.pointSize)
-        streetAddressLabel.font = UIFont.systemFont(ofSize: streetAddressLabel.font.pointSize)
-        cityLabel.font = UIFont.systemFont(ofSize: cityLabel.font.pointSize)
-        stateLabel.font = UIFont.systemFont(ofSize: stateLabel.font.pointSize)
-        zipCodeLabel.font = UIFont.systemFont(ofSize: zipCodeLabel.font.pointSize)
+        dateOfBirthLabel.font = UIFont.boldSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
+        socialSecurityNumberLabel.font = UIFont.boldSystemFont(ofSize: socialSecurityNumberLabel.font.pointSize)
+        projectNumberLabel.font = UIFont.boldSystemFont(ofSize: projectNumberLabel.font.pointSize)
+        firstNameLabel.font = UIFont.boldSystemFont(ofSize: firstNameLabel.font.pointSize)
+        lastNameLabel.font = UIFont.boldSystemFont(ofSize: lastNameLabel.font.pointSize)
+        companyLabel.font = UIFont.boldSystemFont(ofSize: companyLabel.font.pointSize)
+        streetAddressLabel.font = UIFont.boldSystemFont(ofSize: streetAddressLabel.font.pointSize)
+        cityLabel.font = UIFont.boldSystemFont(ofSize: cityLabel.font.pointSize)
+        stateLabel.font = UIFont.boldSystemFont(ofSize: stateLabel.font.pointSize)
+        zipCodeLabel.font = UIFont.boldSystemFont(ofSize: zipCodeLabel.font.pointSize)
     }
     
     
