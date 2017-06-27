@@ -1754,6 +1754,11 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.keyboardWillShow(_:)), name: Notification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.keyboardWillHide(_:)), name: Notification.Name.UIKeyboardWillHide, object: nil)
+        
+        
 
         // Do any additional setup after loading the view.
     }
@@ -1817,7 +1822,47 @@ class MainViewController: UIViewController {
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 5.0, options: UIViewAnimationOptions(), animations: {() -> Void in view.isHidden = hidden }, completion: nil)
         
     }
+    
+ // finish up here... you have a bunch of constraints to add to move some textfields around
+    func keyboardWillShow(_ notification: Notification) {
+        print("Keyboard hooray!")
+        if let info = notification.userInfo, let keyboarFrame = info [UIKeyboardFrameEndUserInfoKey] as? NSValue {
+            let frame = keyboarFrame.cgRectValue
+            //UILabelOutlet.constant = frame.size.height + 10
+            
+            UIView.animate(withDuration: 0.8) {
+                self.view.layoutIfNeeded()
+            }
+        }
+        
+    }
+    
+    func keyboardWillHide(_ notification: Notification) {
+        
+        print("Keyboard hidden hooray!")
+        
+            //UILabelOutlet.constant = original value set in interface builder
+            
+            UIView.animate(withDuration: 0.8) {
+                self.view.layoutIfNeeded()
+            }
+        }
+    
+    
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 
 
 
+}
+
+extension MainViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
 }
