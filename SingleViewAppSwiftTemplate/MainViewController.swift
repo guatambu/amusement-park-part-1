@@ -59,6 +59,8 @@ class MainViewController: UIViewController {
     // Navigation Buttons
     @IBAction func guestNavButton(_ sender: UIButton) {
         
+        labelFontReset()
+        
         contractorNavButton.isSelected = false
         guestNavButton.isSelected = true
         employeeNavButton.isSelected = false
@@ -80,7 +82,31 @@ class MainViewController: UIViewController {
         subNavOption4.isHidden = false
         subNavOption5.isHidden = false
         
-        labelFontReset()
+        /* UITextField appearance */
+        dateOfBirth.alpha = 1.0
+        socialSecurityNumber.alpha = 1.0
+        projectNumber.alpha = 1.0
+        firstName.alpha = 1.0
+        lastName.alpha = 1.0
+        company.alpha = 1.0
+        streetAddress.alpha = 1.0
+        city.alpha = 1.0
+        state.alpha = 1.0
+        zipCode.alpha = 1.0
+        
+        /* UITextField Editing active/inactive */
+        dateOfBirth.isUserInteractionEnabled = false
+        socialSecurityNumber.isUserInteractionEnabled = false
+        projectNumber.isUserInteractionEnabled = false
+        firstName.isUserInteractionEnabled = false
+        lastName.isUserInteractionEnabled = false
+        company.isUserInteractionEnabled = false
+        streetAddress.isUserInteractionEnabled = false
+        city.isUserInteractionEnabled = false
+        state.isUserInteractionEnabled = false
+        zipCode.isUserInteractionEnabled = false
+        
+        
         
     }
 
@@ -120,16 +146,18 @@ class MainViewController: UIViewController {
         zipCode.alpha = 1.0
         
         /* UITextField Editing active/inactive */
-        dateOfBirth.isUserInteractionEnabled = true
-        socialSecurityNumber.isUserInteractionEnabled = true
+        dateOfBirth.isUserInteractionEnabled = false
+        socialSecurityNumber.isUserInteractionEnabled = false
         projectNumber.isUserInteractionEnabled = false
-        firstName.isUserInteractionEnabled = true
-        lastName.isUserInteractionEnabled = true
+        firstName.isUserInteractionEnabled = false
+        lastName.isUserInteractionEnabled = false
         company.isUserInteractionEnabled = false
-        streetAddress.isUserInteractionEnabled = true
-        city.isUserInteractionEnabled = true
-        state.isUserInteractionEnabled = true
-        zipCode.isUserInteractionEnabled = true
+        streetAddress.isUserInteractionEnabled = false
+        city.isUserInteractionEnabled = false
+        state.isUserInteractionEnabled = false
+        zipCode.isUserInteractionEnabled = false
+        
+        
         
     }
     
@@ -169,16 +197,16 @@ class MainViewController: UIViewController {
         zipCode.alpha = 1.0
         
         /* UITextField Editing active/inactive */
-        dateOfBirth.isUserInteractionEnabled = true
-        socialSecurityNumber.isUserInteractionEnabled = true
+        dateOfBirth.isUserInteractionEnabled = false
+        socialSecurityNumber.isUserInteractionEnabled = false
         projectNumber.isUserInteractionEnabled = false
-        firstName.isUserInteractionEnabled = true
-        lastName.isUserInteractionEnabled = true
+        firstName.isUserInteractionEnabled = false
+        lastName.isUserInteractionEnabled = false
         company.isUserInteractionEnabled = false
-        streetAddress.isUserInteractionEnabled = true
-        city.isUserInteractionEnabled = true
-        state.isUserInteractionEnabled = true
-        zipCode.isUserInteractionEnabled = true
+        streetAddress.isUserInteractionEnabled = false
+        city.isUserInteractionEnabled = false
+        state.isUserInteractionEnabled = false
+        zipCode.isUserInteractionEnabled = false
         
     }
     
@@ -220,16 +248,16 @@ class MainViewController: UIViewController {
         zipCode.alpha = 1.0
         
         /* UITextField Editing active/inactive */
-        dateOfBirth.isUserInteractionEnabled = true
-        socialSecurityNumber.isUserInteractionEnabled = true
-        projectNumber.isUserInteractionEnabled = true
-        firstName.isUserInteractionEnabled = true
-        lastName.isUserInteractionEnabled = true
+        dateOfBirth.isUserInteractionEnabled = false
+        socialSecurityNumber.isUserInteractionEnabled = false
+        projectNumber.isUserInteractionEnabled = false
+        firstName.isUserInteractionEnabled = false
+        lastName.isUserInteractionEnabled = false
         company.isUserInteractionEnabled = false
-        streetAddress.isUserInteractionEnabled = true
-        city.isUserInteractionEnabled = true
-        state.isUserInteractionEnabled = true
-        zipCode.isUserInteractionEnabled = true
+        streetAddress.isUserInteractionEnabled = false
+        city.isUserInteractionEnabled = false
+        state.isUserInteractionEnabled = false
+        zipCode.isUserInteractionEnabled = false
         
     }
     
@@ -271,12 +299,12 @@ class MainViewController: UIViewController {
         /*MARK: *** dateOfVisit ***   */
         
         /* UITextField Editing active/inactive */
-        dateOfBirth.isUserInteractionEnabled = true
+        dateOfBirth.isUserInteractionEnabled = false
         socialSecurityNumber.isUserInteractionEnabled = false
         projectNumber.isUserInteractionEnabled = false
-        firstName.isUserInteractionEnabled = true
-        lastName.isUserInteractionEnabled = true
-        company.isUserInteractionEnabled = true
+        firstName.isUserInteractionEnabled = false
+        lastName.isUserInteractionEnabled = false
+        company.isUserInteractionEnabled = false
         streetAddress.isUserInteractionEnabled = false
         city.isUserInteractionEnabled = false
         state.isUserInteractionEnabled = false
@@ -320,7 +348,51 @@ class MainViewController: UIViewController {
             city.isUserInteractionEnabled = false
             state.isUserInteractionEnabled = false
             zipCode.isUserInteractionEnabled = false
+            
+        } else if (subNavOption1.currentTitle == EntrantTypeSubNav.hourlyFood.rawValue || subNavOption1.currentTitle == ManagerType.shift.rawValue) && subNavOption1.isSelected == true {
+            
+            /* UITextField Editing active/inactive */
+            dateOfBirth.isUserInteractionEnabled = true
+            socialSecurityNumber.isUserInteractionEnabled = true
+            projectNumber.isUserInteractionEnabled = false
+            firstName.isUserInteractionEnabled = true
+            lastName.isUserInteractionEnabled = true
+            company.isUserInteractionEnabled = false
+            streetAddress.isUserInteractionEnabled = true
+            city.isUserInteractionEnabled = true
+            state.isUserInteractionEnabled = true
+            zipCode.isUserInteractionEnabled = true
+            
+        } else if subNavOption1.currentTitle == ContractorSubNav.proj1001.rawValue && subNavOption1.isSelected == true {
+        
+            /* UITextField Editing active/inactive */
+            dateOfBirth.isUserInteractionEnabled = true
+            socialSecurityNumber.isUserInteractionEnabled = true
+            projectNumber.isUserInteractionEnabled = true
+            firstName.isUserInteractionEnabled = true
+            lastName.isUserInteractionEnabled = true
+            company.isUserInteractionEnabled = false
+            streetAddress.isUserInteractionEnabled = true
+            city.isUserInteractionEnabled = true
+            state.isUserInteractionEnabled = true
+            zipCode.isUserInteractionEnabled = true
+            
+        } else if subNavOption1.currentTitle == Vendors.acme.rawValue && subNavOption1.isSelected == true {
+        
+            /* UITextField Editing active/inactive */
+            dateOfBirth.isUserInteractionEnabled = true
+            socialSecurityNumber.isUserInteractionEnabled = false
+            projectNumber.isUserInteractionEnabled = false
+            firstName.isUserInteractionEnabled = true
+            lastName.isUserInteractionEnabled = true
+            company.isUserInteractionEnabled = true
+            streetAddress.isUserInteractionEnabled = false
+            city.isUserInteractionEnabled = false
+            state.isUserInteractionEnabled = false
+            zipCode.isUserInteractionEnabled = false
+            
         }
+        
         
     }
         
@@ -359,8 +431,52 @@ class MainViewController: UIViewController {
             city.isUserInteractionEnabled = false
             state.isUserInteractionEnabled = false
             zipCode.isUserInteractionEnabled = false
+            
+        } else if (subNavOption2.currentTitle == EntrantTypeSubNav.hourlyRide.rawValue || subNavOption2.currentTitle == ManagerType.general.rawValue) && subNavOption2.isSelected == true {
+            
+            /* UITextField Editing active/inactive */
+            dateOfBirth.isUserInteractionEnabled = true
+            socialSecurityNumber.isUserInteractionEnabled = true
+            projectNumber.isUserInteractionEnabled = false
+            firstName.isUserInteractionEnabled = true
+            lastName.isUserInteractionEnabled = true
+            company.isUserInteractionEnabled = false
+            streetAddress.isUserInteractionEnabled = true
+            city.isUserInteractionEnabled = true
+            state.isUserInteractionEnabled = true
+            zipCode.isUserInteractionEnabled = true
+        
+        } else if subNavOption2.currentTitle == ContractorSubNav.proj1002.rawValue && subNavOption2.isSelected == true {
+            
+            /* UITextField Editing active/inactive */
+            dateOfBirth.isUserInteractionEnabled = true
+            socialSecurityNumber.isUserInteractionEnabled = true
+            projectNumber.isUserInteractionEnabled = true
+            firstName.isUserInteractionEnabled = true
+            lastName.isUserInteractionEnabled = true
+            company.isUserInteractionEnabled = false
+            streetAddress.isUserInteractionEnabled = true
+            city.isUserInteractionEnabled = true
+            state.isUserInteractionEnabled = true
+            zipCode.isUserInteractionEnabled = true
+            
+        } else if subNavOption2.currentTitle == Vendors.orkin.rawValue && subNavOption2.isSelected == true {
+            
+            /* UITextField Editing active/inactive */
+            dateOfBirth.isUserInteractionEnabled = true
+            socialSecurityNumber.isUserInteractionEnabled = false
+            projectNumber.isUserInteractionEnabled = false
+            firstName.isUserInteractionEnabled = true
+            lastName.isUserInteractionEnabled = true
+            company.isUserInteractionEnabled = true
+            streetAddress.isUserInteractionEnabled = false
+            city.isUserInteractionEnabled = false
+            state.isUserInteractionEnabled = false
+            zipCode.isUserInteractionEnabled = false
+            
         }
     }
+    
     @IBAction func subNavOption3Choice(_ sender: UIButton) {
         
         subNavOption1.isSelected = false
@@ -396,8 +512,53 @@ class MainViewController: UIViewController {
             city.isUserInteractionEnabled = false
             state.isUserInteractionEnabled = false
             zipCode.isUserInteractionEnabled = false
+            
+        } else if (subNavOption3.currentTitle == EntrantTypeSubNav.hourlyRide.rawValue || subNavOption3.currentTitle == ManagerType.senior.rawValue) && subNavOption1.isSelected == true {
+            
+            /* UITextField Editing active/inactive */
+            dateOfBirth.isUserInteractionEnabled = true
+            socialSecurityNumber.isUserInteractionEnabled = true
+            projectNumber.isUserInteractionEnabled = false
+            firstName.isUserInteractionEnabled = true
+            lastName.isUserInteractionEnabled = true
+            company.isUserInteractionEnabled = false
+            streetAddress.isUserInteractionEnabled = true
+            city.isUserInteractionEnabled = true
+            state.isUserInteractionEnabled = true
+            zipCode.isUserInteractionEnabled = true
+            
+        } else if subNavOption3.currentTitle == ContractorSubNav.proj1003.rawValue && subNavOption3.isSelected == true {
+            
+            /* UITextField Editing active/inactive */
+            dateOfBirth.isUserInteractionEnabled = true
+            socialSecurityNumber.isUserInteractionEnabled = true
+            projectNumber.isUserInteractionEnabled = true
+            firstName.isUserInteractionEnabled = true
+            lastName.isUserInteractionEnabled = true
+            company.isUserInteractionEnabled = false
+            streetAddress.isUserInteractionEnabled = true
+            city.isUserInteractionEnabled = true
+            state.isUserInteractionEnabled = true
+            zipCode.isUserInteractionEnabled = true
+            
+        } else if subNavOption3.currentTitle == Vendors.fedex.rawValue && subNavOption3.isSelected == true {
+            
+            /* UITextField Editing active/inactive */
+            dateOfBirth.isUserInteractionEnabled = true
+            socialSecurityNumber.isUserInteractionEnabled = false
+            projectNumber.isUserInteractionEnabled = false
+            firstName.isUserInteractionEnabled = true
+            lastName.isUserInteractionEnabled = true
+            company.isUserInteractionEnabled = true
+            streetAddress.isUserInteractionEnabled = false
+            city.isUserInteractionEnabled = false
+            state.isUserInteractionEnabled = false
+            zipCode.isUserInteractionEnabled = false
+            
         }
+
     }
+    
     @IBAction func subNavOption4Choice(_ sender: UIButton) {
         
         subNavOption1.isSelected = false
@@ -433,7 +594,37 @@ class MainViewController: UIViewController {
             city.isUserInteractionEnabled = false
             state.isUserInteractionEnabled = false
             zipCode.isUserInteractionEnabled = false
+            
+        } else if subNavOption4.currentTitle == ContractorSubNav.proj2001.rawValue && subNavOption4.isSelected == true {
+            
+            /* UITextField Editing active/inactive */
+            dateOfBirth.isUserInteractionEnabled = true
+            socialSecurityNumber.isUserInteractionEnabled = true
+            projectNumber.isUserInteractionEnabled = true
+            firstName.isUserInteractionEnabled = true
+            lastName.isUserInteractionEnabled = true
+            company.isUserInteractionEnabled = false
+            streetAddress.isUserInteractionEnabled = true
+            city.isUserInteractionEnabled = true
+            state.isUserInteractionEnabled = true
+            zipCode.isUserInteractionEnabled = true
+            
+        } else if subNavOption4.currentTitle == Vendors.nwElectrical.rawValue && subNavOption4.isSelected == true {
+            
+            /* UITextField Editing active/inactive */
+            dateOfBirth.isUserInteractionEnabled = true
+            socialSecurityNumber.isUserInteractionEnabled = false
+            projectNumber.isUserInteractionEnabled = false
+            firstName.isUserInteractionEnabled = true
+            lastName.isUserInteractionEnabled = true
+            company.isUserInteractionEnabled = true
+            streetAddress.isUserInteractionEnabled = false
+            city.isUserInteractionEnabled = false
+            state.isUserInteractionEnabled = false
+            zipCode.isUserInteractionEnabled = false
+            
         }
+
     }
     
     @IBAction func subNavOption5(_ sender: UIButton) {
@@ -471,7 +662,23 @@ class MainViewController: UIViewController {
             city.isUserInteractionEnabled = true
             state.isUserInteractionEnabled = true
             zipCode.isUserInteractionEnabled = true
+            
+        } else if subNavOption5.currentTitle == ContractorSubNav.proj2002.rawValue && subNavOption5.isSelected == true {
+            
+            /* UITextField Editing active/inactive */
+            dateOfBirth.isUserInteractionEnabled = true
+            socialSecurityNumber.isUserInteractionEnabled = true
+            projectNumber.isUserInteractionEnabled = true
+            firstName.isUserInteractionEnabled = true
+            lastName.isUserInteractionEnabled = true
+            company.isUserInteractionEnabled = false
+            streetAddress.isUserInteractionEnabled = true
+            city.isUserInteractionEnabled = true
+            state.isUserInteractionEnabled = true
+            zipCode.isUserInteractionEnabled = true
+            
         }
+
     }
 
 
