@@ -74,6 +74,7 @@ enum ManagerType: String {
     case shift = "Shift"
     case general = "General"
     case senior = "Senior"
+    case none = "none"
 }
 
 enum ContractorSubNav: String {
@@ -101,6 +102,7 @@ enum RidePrivilege: String {
     case all = "Access All Rides"
     case skip = "Skip All Ride Lines"
     case deferToRules = "See Entrant Access Rules"
+    case none = "none"
 }
 
 

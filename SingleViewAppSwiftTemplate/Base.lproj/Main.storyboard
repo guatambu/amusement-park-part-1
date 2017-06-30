@@ -955,6 +955,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="passEntrantType" destination="rWR-3c-Fb9" id="60d-yd-HaJ"/>
+                        <outlet property="passFullName" destination="spA-Zx-Ix1" id="0Ur-UR-dsk"/>
+                        <outlet property="passPermissions" destination="m7F-US-AiU" id="5Xh-jC-Z20"/>
                         <outlet property="testResults" destination="ks7-aR-9zR" id="GQx-02-pwj"/>
                     </connections>
                 </viewController>

@@ -10,35 +10,12 @@ import Foundation
 
 
 
-class GuestChildSource: GuestClassicSource {
-    
-    var dateOfBirth: String?
-    
-    init (
-        areaAccess: [AreaAccess],
-        ridePrivileges: [RidePrivilege],
-        discountAccess: [DiscountAccess],
-        discountAmount: [DiscountAmount],
-        requiredInformation: [RequiredInformation],
-        dateOfBirth: String?
-        )
-    {
-        self.dateOfBirth = dateOfBirth
-        super.init(
-            areaAccess: areaAccess,
-            ridePrivileges: ridePrivileges,
-            discountAccess: discountAccess,
-            discountAmount: discountAmount,
-            requiredInformation: requiredInformation
-        )
-        
-    }
+class GuestChildSource: PersonSource {    
     
     convenience init? (
         dateOfBirth: String?
         )
     {
-        
         guard dateOfBirth == nil || dateOfBirth == "" else {
             return nil
         }
@@ -49,11 +26,21 @@ class GuestChildSource: GuestClassicSource {
             discountAccess: [.none],
             discountAmount: [.none],
             requiredInformation: [.personal],
-            dateOfBirth: dateOfBirth
+            managementTier: [.none],
+            dateOfBirth: dateOfBirth,
+            firstName: nil,
+            lastName: nil,
+            streetAddress: nil,
+            city: nil,
+            state: nil,
+            zipCode: nil,
+            socialSecurityNumber: nil,
+            company: nil,
+            projectNumber: nil,
+            dateOfVisit: nil
         )
         
     }
 }
-
 
 

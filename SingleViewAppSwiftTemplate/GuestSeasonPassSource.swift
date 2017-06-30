@@ -10,45 +10,7 @@ import Foundation
 
 
 
-class GuestSeasonPassSource: GuestSeniorSource {
-    
-    var streetAddress: String?
-    var city: String?
-    var state: String?
-    var zipCode: String?
-    
-    init (
-        areaAccess: [AreaAccess],
-        ridePrivileges: [RidePrivilege],
-        discountAccess: [DiscountAccess],
-        discountAmount: [DiscountAmount],
-        requiredInformation: [RequiredInformation],
-        dateOfBirth: String?,
-        firstName: String?,
-        lastName: String?,
-        streetAddress: String?,
-        city: String?,
-        state: String?,
-        zipCode: String?
-        )
-    {
-        
-        self.streetAddress = streetAddress
-        self.city = city
-        self.state = state
-        self.zipCode = zipCode
-        
-
-        super.init(
-            areaAccess: areaAccess,
-            ridePrivileges: ridePrivileges,
-            discountAccess: discountAccess,
-            discountAmount: discountAmount,
-            requiredInformation: requiredInformation,
-            dateOfBirth: dateOfBirth,
-            firstName: firstName,
-            lastName: lastName)
-    }
+class GuestSeasonPassSource: PersonSource {
     
     convenience init? (
         dateOfBirth: String?,
@@ -89,13 +51,18 @@ class GuestSeasonPassSource: GuestSeniorSource {
             discountAccess: [.food, .merch],
             discountAmount: [.ten, .twenty],
             requiredInformation: [.personal],
+            managementTier: [.none],
             dateOfBirth: dateOfBirth,
             firstName: firstName,
             lastName: lastName,
             streetAddress: streetAddress,
             city: city,
             state: state,
-            zipCode: zipCode
+            zipCode: zipCode,
+            socialSecurityNumber: nil,
+            company: nil,
+            projectNumber: nil,
+            dateOfVisit: nil
         )
         
     }

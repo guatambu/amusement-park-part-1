@@ -127,16 +127,27 @@ import Foundation
 
 class GuestClassicSource: PersonSource {
     
-    
-    
-    convenience init ()
+    convenience init? ()
     {
         self.init(
             areaAccess: [.amusement],
             ridePrivileges: [.all],
             discountAccess: [.none],
             discountAmount: [.none],
-            requiredInformation: [.none]
+            requiredInformation: [.none],
+            managementTier: [.none],
+            dateOfBirth: nil,
+            firstName: nil,
+            lastName: nil,
+            streetAddress: nil,
+            city: nil,
+            state: nil,
+            zipCode: nil,
+            socialSecurityNumber: nil,
+            company: nil,
+            projectNumber: nil,
+            dateOfVisit: nil
+            
         )
         
     }

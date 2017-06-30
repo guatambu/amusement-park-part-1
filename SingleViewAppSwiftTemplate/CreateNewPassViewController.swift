@@ -10,11 +10,14 @@ import UIKit
 
 class CreateNewPassViewController: UIViewController {
     
+    // passing Entrant instance initialized in MainViewController to CreateNewPassViewController
+    var newEntrant: PersonSource? = nil
+    
     
     /* Pass Display @IBOutlets */
     
     // Pass @IBOutlets
-    @IBOutlet weak var passFullNmae: UILabel!
+    @IBOutlet weak var passFullName: UILabel!
     @IBOutlet weak var passEntrantType: UILabel!
     @IBOutlet weak var passPermissions: UILabel!
     
@@ -61,6 +64,7 @@ class CreateNewPassViewController: UIViewController {
                     testResults.text = "VALID: pass holder may skip line of attractions"
                 case .deferToRules:
                     testResults.text = "INVALID: pass holder must provide permissions"
+                case .none: testResults.text = "INVALID: pass holder has no ride access privileges"
                 }
             }
         }
@@ -101,6 +105,7 @@ class CreateNewPassViewController: UIViewController {
             }
         }
         
+        
     }
 
     
@@ -111,6 +116,10 @@ class CreateNewPassViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        passFullName.text = "\(String(describing: newEntrant?.firstName)) \(String(describing: newEntrant?.lastName))"
+        passEntrantType.text = "\(String(describing: newEntrant))"
+        passPermissions.text = "\(String(describing: newEntrant?.areaAccess))/n\(String(describing: newEntrant?.ridePrivileges))/n\(String(describing: newEntrant?.discountAmount[0]))\(String(describing: newEntrant?.discountAccess[0]))/n\(String(describing: newEntrant?.discountAmount[1]))\(String(describing: newEntrant?.discountAccess[1]))/n\(String(describing: newEntrant?.requiredInformation))"
 
         // Do any additional setup after loading the view.
     }

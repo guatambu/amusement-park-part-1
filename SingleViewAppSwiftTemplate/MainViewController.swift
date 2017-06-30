@@ -693,9 +693,11 @@ class MainViewController: UIViewController {
                 return
             }
             
+        
+            
         } else if subNavOption2.currentTitle == EntrantTypeSubNav.adult.rawValue && subNavOption2.isSelected == true {
             
-            //let newUser = GuestClassicSource()
+            let newUser = GuestClassicSource()
         
         } else if subNavOption3.currentTitle == EntrantTypeSubNav.senior.rawValue && subNavOption3.isSelected == true && guestNavButton.isSelected == true {
             
@@ -721,7 +723,7 @@ class MainViewController: UIViewController {
         
         } else if subNavOption4.currentTitle == EntrantTypeSubNav.vip.rawValue && subNavOption4.isSelected == true {
             
-            //let newUser = GuestVIPSource()
+            let newUser = GuestVIPSource()
         
         } else if subNavOption5.currentTitle == EntrantTypeSubNav.seasonPass.rawValue && subNavOption5.isSelected == true {
             
@@ -769,7 +771,7 @@ class MainViewController: UIViewController {
             }
             
         } else if subNavOption1.currentTitle == EntrantTypeSubNav.hourlyFood.rawValue && subNavOption1.isSelected == true {
-            
+
             guard let newUser = HourlyFoodEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
@@ -872,7 +874,7 @@ class MainViewController: UIViewController {
             }
         
         } else if subNavOption3.currentTitle == EntrantTypeSubNav.hourlyMaintenance.rawValue && subNavOption3.isSelected == true {
-            
+
             guard let newUser = HourlyMaintenanceEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
@@ -924,7 +926,8 @@ class MainViewController: UIViewController {
         
         } else if subNavOption1.currentTitle == ManagerType.shift.rawValue && subNavOption1.isSelected == true {
             
-            guard let newUser = ManagerEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, managementTier: [.shift]), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
+            guard let newUser = ManagerEmployeeSource(areaAccess: [.amusement,.kitchen,.maintenance,.office,.rideControl], ridePrivileges: [.all], discountAccess: [.food,.merch], discountAmount: [.twentyfive,.twentyfive], requiredInformation: [.personal], managementTier: [.shift], dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, company: nil, projectNumber: nil, dateOfVisit: nil), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
+            //newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
@@ -975,7 +978,7 @@ class MainViewController: UIViewController {
         
         } else if subNavOption2.currentTitle == ManagerType.general.rawValue && subNavOption2.isSelected == true {
             
-            guard let newUser = ManagerEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, managementTier: [.general]), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
+            guard let newUser = ManagerEmployeeSource(areaAccess: [.amusement,.kitchen,.maintenance,.office,.rideControl], ridePrivileges: [.all], discountAccess: [.food,.merch], discountAmount: [.twentyfive,.twentyfive], requiredInformation: [.personal], managementTier: [.general], dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, company: nil, projectNumber: nil, dateOfVisit: nil), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
@@ -1026,7 +1029,7 @@ class MainViewController: UIViewController {
         
         } else if subNavOption3.currentTitle == ManagerType.senior.rawValue && subNavOption3.isSelected == true {
         
-            guard let newUser = ManagerEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, managementTier: [.senior]), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
+            guard let newUser = ManagerEmployeeSource(areaAccess: [.amusement,.kitchen,.maintenance,.office,.rideControl], ridePrivileges: [.all], discountAccess: [.food,.merch], discountAmount: [.twentyfive,.twentyfive], requiredInformation: [.personal], managementTier: [.senior], dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, company: nil, projectNumber: nil, dateOfVisit: nil), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
@@ -1077,7 +1080,7 @@ class MainViewController: UIViewController {
             
         } else if subNavOption1.currentTitle == ContractorSubNav.proj1001.rawValue && subNavOption1.isSelected == true {
             
-            guard let newUser = ContractEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, projectNumber: ContractorSubNav.proj1001.rawValue), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
+            guard let newUser = ContractEmployeeSource(areaAccess: [.amusement, .rideControl], ridePrivileges: [.none], discountAccess: [.none], discountAmount: [.none], requiredInformation: [.personal], managementTier: [.none], dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, company: nil, projectNumber: ContractorSubNav.proj1001.rawValue, dateOfVisit: nil), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
@@ -1128,7 +1131,8 @@ class MainViewController: UIViewController {
         
         } else if subNavOption2.currentTitle == ContractorSubNav.proj1002.rawValue && subNavOption2.isSelected == true {
             
-            guard let newUser = ContractEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, projectNumber: ContractorSubNav.proj1002.rawValue), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
+            guard let newUser = ContractEmployeeSource(areaAccess: [.amusement, .rideControl, .maintenance], ridePrivileges: [.none], discountAccess: [.none], discountAmount: [.none], requiredInformation: [.personal], managementTier: [.none], dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, company: nil, projectNumber: ContractorSubNav.proj1002.rawValue, dateOfVisit: nil
+                ), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
@@ -1181,7 +1185,7 @@ class MainViewController: UIViewController {
         
         } else if subNavOption3.currentTitle == ContractorSubNav.proj1003.rawValue && subNavOption3.isSelected == true {
             
-            guard let newUser = ContractEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, projectNumber: ContractorSubNav.proj1003.rawValue), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
+            guard let newUser = ContractEmployeeSource(areaAccess: [.amusement, .kitchen, .rideControl, .maintenance, .office], ridePrivileges: [.none], discountAccess: [.none], discountAmount: [.none], requiredInformation: [.personal], managementTier: [.none], dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, company: nil, projectNumber: ContractorSubNav.proj1003.rawValue, dateOfVisit: nil), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
@@ -1232,7 +1236,7 @@ class MainViewController: UIViewController {
         
         } else if subNavOption4.currentTitle == ContractorSubNav.proj2001.rawValue && subNavOption4.isSelected == true {
             
-            guard let newUser = ContractEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, projectNumber: ContractorSubNav.proj2001.rawValue), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
+            guard let newUser = ContractEmployeeSource(areaAccess: [.office], ridePrivileges: [.none], discountAccess: [.none], discountAmount: [.none], requiredInformation: [.personal], managementTier: [.none], dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, company: nil, projectNumber: ContractorSubNav.proj2001.rawValue, dateOfVisit: nil), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
@@ -1283,7 +1287,7 @@ class MainViewController: UIViewController {
             
         } else if subNavOption5.currentTitle == ContractorSubNav.proj2002.rawValue && subNavOption5.isSelected == true {
             
-            guard let newUser = ContractEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, projectNumber: ContractorSubNav.proj2002.rawValue), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
+            guard let newUser = ContractEmployeeSource(areaAccess: [.kitchen, .maintenance], ridePrivileges: [.none], discountAccess: [.none], discountAmount: [.none], requiredInformation: [.personal], managementTier: [.none], dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, company: nil, projectNumber: ContractorSubNav.proj2002.rawValue, dateOfVisit: nil), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
@@ -1334,7 +1338,7 @@ class MainViewController: UIViewController {
         
         } else if subNavOption1.currentTitle == Vendors.acme.rawValue && subNavOption1.isSelected == true {
             
-            guard let newUser = VendorSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, vendorCompany: Vendors.acme.rawValue, dateOfVisit: Date()), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
+            guard let newUser = VendorSource(areaAccess: [.kitchen], ridePrivileges: [.none], discountAccess: [.none], discountAmount: [.none], requiredInformation: [.business], managementTier: [.none], dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: nil, city: nil, state: nil, zipCode: nil, socialSecurityNumber: nil, company: Vendors.acme.rawValue, projectNumber: nil, dateOfVisit: nil), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
@@ -1357,7 +1361,7 @@ class MainViewController: UIViewController {
         
         } else if subNavOption2.currentTitle == Vendors.orkin.rawValue && subNavOption2.isSelected == true {
             
-            guard let newUser = VendorSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, vendorCompany: Vendors.orkin.rawValue, dateOfVisit: Date()), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
+            guard let newUser = VendorSource(areaAccess: [.amusement, .rideControl, .kitchen], ridePrivileges: [.none], discountAccess: [.none], discountAmount: [.none], requiredInformation: [.business], managementTier: [.none], dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: nil, city: nil, state: nil, zipCode: nil, socialSecurityNumber: nil, company: Vendors.orkin.rawValue, projectNumber: nil, dateOfVisit: nil), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
@@ -1378,7 +1382,7 @@ class MainViewController: UIViewController {
         
         } else if subNavOption3.currentTitle == Vendors.fedex.rawValue && subNavOption3.isSelected == true {
             
-            guard let newUser = VendorSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, vendorCompany: Vendors.fedex.rawValue, dateOfVisit: Date()), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
+            guard let newUser = VendorSource(areaAccess: [.maintenance, .office], ridePrivileges: [.none], discountAccess: [.none], discountAmount: [.none], requiredInformation: [.business], managementTier: [.none], dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: nil, city: nil, state: nil, zipCode: nil, socialSecurityNumber: nil, company: Vendors.fedex.rawValue, projectNumber: nil, dateOfVisit: nil), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
@@ -1399,7 +1403,7 @@ class MainViewController: UIViewController {
 
         } else if subNavOption4.currentTitle == Vendors.nwElectrical.rawValue && subNavOption4.isSelected == true {
             
-            guard let newUser = VendorSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, vendorCompany: Vendors.nwElectrical.rawValue, dateOfVisit: Date()), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
+            guard let newUser = VendorSource(areaAccess: [.amusement, .kitchen, .maintenance, .office, .rideControl], ridePrivileges: [.none], discountAccess: [.none], discountAmount: [.none], requiredInformation: [.business], managementTier: [.none], dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: nil, city: nil, state: nil, zipCode: nil, socialSecurityNumber: nil, company: Vendors.nwElectrical.rawValue, projectNumber: nil, dateOfVisit: nil), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
@@ -1422,6 +1426,7 @@ class MainViewController: UIViewController {
         
         else {
             labelFontReset()
+            
         }
     }
 

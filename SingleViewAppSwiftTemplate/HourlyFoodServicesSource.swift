@@ -10,44 +10,7 @@ import Foundation
 
 
 
-class HourlyFoodEmployeeSource: GuestSeasonPassSource {
-    
-    var socialSecurityNumber: String?
-    
-    init (
-        areaAccess: [AreaAccess],
-        ridePrivileges: [RidePrivilege],
-        discountAccess: [DiscountAccess],
-        discountAmount: [DiscountAmount],
-        requiredInformation: [RequiredInformation],
-        dateOfBirth: String?,
-        firstName: String?,
-        lastName: String?,
-        streetAddress: String?,
-        city: String?,
-        state: String?,
-        zipCode: String?,
-        socialSecurityNumber: String?
-        )
-    {
-    
-        self.socialSecurityNumber = socialSecurityNumber
-        super.init(
-            areaAccess: areaAccess,
-            ridePrivileges: ridePrivileges,
-            discountAccess: discountAccess,
-            discountAmount: discountAmount,
-            requiredInformation: requiredInformation,
-            dateOfBirth: dateOfBirth,
-            firstName: firstName,
-            lastName: lastName,
-            streetAddress: streetAddress,
-            city: city,
-            state: state,
-            zipCode: zipCode
-        )
-        
-    }
+class HourlyFoodEmployeeSource: PersonSource {
     
     convenience init? (
         dateOfBirth: String?,
@@ -92,6 +55,7 @@ class HourlyFoodEmployeeSource: GuestSeasonPassSource {
             discountAccess: [.food, .merch],
             discountAmount: [.fifteen, .twentyfive],
             requiredInformation: [.personal],
+            managementTier: [.none],
             dateOfBirth: dateOfBirth,
             firstName: firstName,
             lastName: lastName,
@@ -99,7 +63,10 @@ class HourlyFoodEmployeeSource: GuestSeasonPassSource {
             city: city,
             state: state,
             zipCode: zipCode,
-            socialSecurityNumber: socialSecurityNumber
+            socialSecurityNumber: socialSecurityNumber,
+            company: nil,
+            projectNumber: nil,
+            dateOfVisit: nil
         )
         
     }

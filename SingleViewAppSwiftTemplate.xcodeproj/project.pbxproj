@@ -210,8 +210,8 @@
 			isa = PBXGroup;
 			children = (
 				FA4B5CAD1EC0108800FEC143 /* PersonSource.swift */,
-				FA41758E1EB2C0CB00E80291 /* EmployeeSources */,
 				FA41758D1EB2C0B900E80291 /* GuestSources */,
+				FA41758E1EB2C0CB00E80291 /* EmployeeSources */,
 			);
 			name = "Entrants Group";
 			sourceTree = "<group>";

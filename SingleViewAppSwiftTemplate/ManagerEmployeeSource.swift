@@ -9,16 +9,34 @@
 import Foundation
 
 
-class ManagerEmployeeSource: HourlyFoodEmployeeSource {
+class ManagerEmployeeSource: EntrantTypeable {
     
+    var areaAccess: [AreaAccess]
+    var ridePrivileges: [RidePrivilege]
+    var discountAccess: [DiscountAccess]
+    var discountAmount: [DiscountAmount]
+    var requiredInformation: [RequiredInformation]
     var managementTier: [ManagerType]
+    var dateOfBirth: String?
+    var firstName: String?
+    var lastName: String?
+    var streetAddress: String?
+    var city: String?
+    var state: String?
+    var zipCode: String?
+    var socialSecurityNumber: String?
+    var company: String?
+    var projectNumber: String?
+    var dateOfVisit: String?
     
-    init (
+    
+    init?(
         areaAccess: [AreaAccess],
         ridePrivileges: [RidePrivilege],
         discountAccess: [DiscountAccess],
         discountAmount: [DiscountAmount],
         requiredInformation: [RequiredInformation],
+        managementTier: [ManagerType],
         dateOfBirth: String?,
         firstName: String?,
         lastName: String?,
@@ -27,88 +45,28 @@ class ManagerEmployeeSource: HourlyFoodEmployeeSource {
         state: String?,
         zipCode: String?,
         socialSecurityNumber: String?,
-        managementTier: [ManagerType]
+        company: String?,
+        projectNumber: String?,
+        dateOfVisit: String?
         )
     {
+        self.areaAccess = areaAccess
+        self.ridePrivileges = ridePrivileges
+        self.discountAccess = discountAccess
+        self.discountAmount = discountAmount
+        self.requiredInformation = requiredInformation
         self.managementTier = managementTier
-        super.init(
-            areaAccess: areaAccess,
-            ridePrivileges: ridePrivileges,
-            discountAccess: discountAccess,
-            discountAmount: discountAmount,
-            requiredInformation: requiredInformation,
-            dateOfBirth: dateOfBirth,
-            firstName: firstName,
-            lastName: lastName,
-            streetAddress: streetAddress,
-            city: city,
-            state: state,
-            zipCode: zipCode,
-            socialSecurityNumber: socialSecurityNumber
-        )
-        //self.areaAccess = [.amusement, .kitchen, .maintenance, .office, .rideControl]
-        //self.discountAmount = [.twentyfive, .twentyfive]
-        
-    }
-    
-    convenience init? (
-        dateOfBirth: String?,
-        firstName: String?,
-        lastName: String?,
-        streetAddress: String?,
-        city: String?,
-        state: String?,
-        zipCode: String?,
-        socialSecurityNumber: String?,
-        managementTier: [ManagerType]
-        )
-    {
-        
-        guard dateOfBirth == nil || dateOfBirth == "" else {
-            return nil
-        }
-        guard firstName == nil || firstName == "" else {
-            return nil
-        }
-        guard lastName == nil || lastName == "" else {
-            return nil
-        }
-        guard streetAddress == nil || streetAddress == "" else {
-            return nil
-        }
-        guard city == nil || city == "" else {
-            return nil
-        }
-        guard state == nil || state == "" else {
-            return nil
-        }
-        guard zipCode == nil || zipCode == "" else {
-            return nil
-        }
-        guard socialSecurityNumber == nil || socialSecurityNumber == "" else {
-            return nil
-        }
-        guard managementTier == [] else {
-            return nil
-        }
-        
-        
-        self.init(
-            areaAccess: [.amusement, .kitchen, .maintenance, .office, .rideControl],
-            ridePrivileges: [.all, .skip],
-            discountAccess: [.food, .merch],
-            discountAmount: [.twentyfive, .twentyfive],
-            requiredInformation: [.personal],
-            dateOfBirth: dateOfBirth,
-            firstName: firstName,
-            lastName: lastName,
-            streetAddress: streetAddress,
-            city: city,
-            state: state,
-            zipCode: zipCode,
-            socialSecurityNumber: socialSecurityNumber,
-            managementTier: managementTier
-        )
-        
+        self.dateOfBirth = dateOfBirth
+        self.firstName = firstName
+        self.lastName = lastName
+        self.streetAddress = streetAddress
+        self.city = city
+        self.state = state
+        self.zipCode = zipCode
+        self.socialSecurityNumber = socialSecurityNumber
+        self.company = company
+        self.projectNumber = projectNumber
+        self.dateOfVisit = dateOfVisit
     }
 }
+

@@ -10,7 +10,7 @@ import Foundation
 
 
 
-class HourlyRideServicesEmployeeSource: HourlyFoodEmployeeSource {
+class HourlyRideServicesEmployeeSource: PersonSource {
     
     convenience init? (
         dateOfBirth: String?,
@@ -55,6 +55,7 @@ class HourlyRideServicesEmployeeSource: HourlyFoodEmployeeSource {
             discountAccess: [.food, .merch],
             discountAmount: [.fifteen, .twentyfive],
             requiredInformation: [.personal],
+            managementTier: [.none],
             dateOfBirth: dateOfBirth,
             firstName: firstName,
             lastName: lastName,
@@ -62,7 +63,10 @@ class HourlyRideServicesEmployeeSource: HourlyFoodEmployeeSource {
             city: city,
             state: state,
             zipCode: zipCode,
-            socialSecurityNumber: socialSecurityNumber
+            socialSecurityNumber: socialSecurityNumber,
+            company: nil,
+            projectNumber: nil,
+            dateOfVisit: nil
         )
         
     }

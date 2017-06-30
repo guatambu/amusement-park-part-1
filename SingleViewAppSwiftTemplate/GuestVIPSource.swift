@@ -9,23 +9,35 @@
 import Foundation
 
 
-class GuestVIPSource: GuestClassicSource {
+class GuestVIPSource: PersonSource {
     
-    convenience init ()
+    convenience init? ()
     {
         self.init(
             areaAccess: [.amusement],
             ridePrivileges: [.all, .skip],
             discountAccess: [.food, .merch],
             discountAmount: [.ten, .twenty],
-            requiredInformation: [.none]
+            requiredInformation: [.personal],
+            managementTier: [.none],
+            dateOfBirth: nil,
+            firstName: nil,
+            lastName: nil,
+            streetAddress: nil,
+            city: nil,
+            state: nil,
+            zipCode: nil,
+            socialSecurityNumber: nil,
+            company: nil,
+            projectNumber: nil,
+            dateOfVisit: nil
         )
         
     }
     
 }
 
-// var newUser = GuestVIPSource()
+
 
 
 

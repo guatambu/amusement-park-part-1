@@ -9,83 +9,66 @@
 import Foundation
 
 
-class VendorSource: GuestSeniorSource {
+class VendorSource: EntrantTypeable {
     
-    var vendorCompany: String?
-    var dateOfVisit: Date
+    var areaAccess: [AreaAccess]
+    var ridePrivileges: [RidePrivilege]
+    var discountAccess: [DiscountAccess]
+    var discountAmount: [DiscountAmount]
+    var requiredInformation: [RequiredInformation]
+    var managementTier: [ManagerType]
+    var dateOfBirth: String?
+    var firstName: String?
+    var lastName: String?
+    var streetAddress: String?
+    var city: String?
+    var state: String?
+    var zipCode: String?
+    var socialSecurityNumber: String?
+    var company: String?
+    var projectNumber: String?
+    var dateOfVisit: String?
     
-    init (
+    
+    init?(
         areaAccess: [AreaAccess],
         ridePrivileges: [RidePrivilege],
         discountAccess: [DiscountAccess],
         discountAmount: [DiscountAmount],
         requiredInformation: [RequiredInformation],
+        managementTier: [ManagerType],
         dateOfBirth: String?,
         firstName: String?,
         lastName: String?,
-        vendorCompany: String?,
-        dateOfVisit: Date
+        streetAddress: String?,
+        city: String?,
+        state: String?,
+        zipCode: String?,
+        socialSecurityNumber: String?,
+        company: String?,
+        projectNumber: String?,
+        dateOfVisit: String?
         )
     {
-        self.vendorCompany = vendorCompany
+        self.areaAccess = areaAccess
+        self.ridePrivileges = ridePrivileges
+        self.discountAccess = discountAccess
+        self.discountAmount = discountAmount
+        self.requiredInformation = requiredInformation
+        self.managementTier = managementTier
+        self.dateOfBirth = dateOfBirth
+        self.firstName = firstName
+        self.lastName = lastName
+        self.streetAddress = streetAddress
+        self.city = city
+        self.state = state
+        self.zipCode = zipCode
+        self.socialSecurityNumber = socialSecurityNumber
+        self.company = company
+        self.projectNumber = projectNumber
         self.dateOfVisit = dateOfVisit
-        super.init(
-            areaAccess: areaAccess,
-            ridePrivileges: ridePrivileges,
-            discountAccess: discountAccess,
-            discountAmount: discountAmount,
-            requiredInformation: requiredInformation,
-            dateOfBirth: dateOfBirth,
-            firstName: firstName,
-            lastName: lastName
-        )
-
-        
-    }
-    
-    convenience init? (
-        dateOfBirth: String?,
-        firstName: String?,
-        lastName: String?,
-        vendorCompany: String?,
-        dateOfVisit: Date
-        
-        )
-    {
-        
-        guard dateOfBirth == nil || dateOfBirth == "" else {
-            return nil
-        }
-        guard firstName == nil || firstName == "" else {
-            return nil
-        }
-        guard lastName == nil || lastName == "" else {
-            return nil
-        }
-        guard vendorCompany == nil || vendorCompany == "" else {
-            return nil
-        }
-        
-        
-        self.init(
-            areaAccess: [.amusement],
-            ridePrivileges: [.deferToRules],
-            discountAccess: [.none],
-            discountAmount: [.none],
-            requiredInformation: [.business],
-            dateOfBirth: dateOfBirth,
-            firstName: firstName,
-            lastName: lastName,
-            vendorCompany: vendorCompany,
-            dateOfVisit: dateOfVisit
-        )
-        
     }
 }
-
-
-
-
 
 
 

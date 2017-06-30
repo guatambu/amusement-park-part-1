@@ -10,36 +10,7 @@ import Foundation
 
 
 
-class GuestSeniorSource: GuestChildSource {
-    
-    var firstName: String?
-    var lastName: String?
-    
-    init (
-        areaAccess: [AreaAccess],
-        ridePrivileges: [RidePrivilege],
-        discountAccess: [DiscountAccess],
-        discountAmount: [DiscountAmount],
-        requiredInformation: [RequiredInformation],
-        dateOfBirth: String?,
-        firstName: String?,
-        lastName: String?
-        )
-    {
-        
-        self.firstName = firstName
-        self.lastName = lastName
-        
-        super.init(
-            areaAccess: areaAccess,
-            ridePrivileges: ridePrivileges,
-            discountAccess: discountAccess,
-            discountAmount: discountAmount,
-            requiredInformation: requiredInformation,
-            dateOfBirth: dateOfBirth
-        )
-        
-    }
+class GuestSeniorSource: PersonSource {
     
     convenience init? (
         dateOfBirth: String?,
@@ -47,7 +18,6 @@ class GuestSeniorSource: GuestChildSource {
         lastName: String?
         )
     {
-        
         guard dateOfBirth == nil || dateOfBirth == "" else {
             return nil
         }
@@ -58,17 +28,24 @@ class GuestSeniorSource: GuestChildSource {
             return nil
         }
         
-        
-        
         self.init(
             areaAccess: [.amusement],
             ridePrivileges: [.all, .skip],
             discountAccess: [.food, .merch],
             discountAmount: [.ten, .ten],
             requiredInformation: [.personal],
+            managementTier: [.none],
             dateOfBirth: dateOfBirth,
             firstName: firstName,
-            lastName: lastName
+            lastName: lastName,
+            streetAddress: nil,
+            city: nil,
+            state: nil,
+            zipCode: nil,
+            socialSecurityNumber: nil,
+            company: nil,
+            projectNumber: nil,
+            dateOfVisit: nil
         )
         
     }
