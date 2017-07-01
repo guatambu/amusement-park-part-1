@@ -6,11 +6,20 @@
 //  Copyright © 2017 Treehouse. All rights reserved.
 //
 
+protocol MainViewControllerDelegate: class {
+    func entrantPassed(entrant: EntrantTypeable)
+}
+
+
 import UIKit
 
 class MainViewController: UIViewController {
     
     var counter = 0
+    var newUser: PersonSource?
+    
+    weak var delegate: MainViewControllerDelegate?
+    
     
     /* Navigation */
     
@@ -685,6 +694,8 @@ class MainViewController: UIViewController {
     // Pass Generators
     @IBAction func generatePass(_ sender: ButtonDesign) {
         
+        
+        
         if subNavOption1.currentTitle == EntrantTypeSubNav.child.rawValue && subNavOption1.isSelected == true {
             
             guard let newUser = GuestChildSource(dateOfBirth: dateOfBirth.text), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
@@ -693,11 +704,17 @@ class MainViewController: UIViewController {
                 return
             }
             
+            delegate?.entrantPassed(entrant: newUser)
+            
         
             
         } else if subNavOption2.currentTitle == EntrantTypeSubNav.adult.rawValue && subNavOption2.isSelected == true {
             
-            let newUser = GuestClassicSource()
+            if let newUser = GuestClassicSource() {
+                delegate?.entrantPassed(entrant: newUser)
+            }
+            
+            
         
         } else if subNavOption3.currentTitle == EntrantTypeSubNav.senior.rawValue && subNavOption3.isSelected == true && guestNavButton.isSelected == true {
             
@@ -720,10 +737,14 @@ class MainViewController: UIViewController {
                 return
             }
             
+            delegate?.entrantPassed(entrant: newUser)
+            
         
         } else if subNavOption4.currentTitle == EntrantTypeSubNav.vip.rawValue && subNavOption4.isSelected == true {
             
-            let newUser = GuestVIPSource()
+            if let newUser = GuestVIPSource() {
+                    delegate?.entrantPassed(entrant: newUser)
+            }
         
         } else if subNavOption5.currentTitle == EntrantTypeSubNav.seasonPass.rawValue && subNavOption5.isSelected == true {
             
@@ -769,6 +790,8 @@ class MainViewController: UIViewController {
                 print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
                 return
             }
+            
+            delegate?.entrantPassed(entrant: newUser)
             
         } else if subNavOption1.currentTitle == EntrantTypeSubNav.hourlyFood.rawValue && subNavOption1.isSelected == true {
 
@@ -820,6 +843,8 @@ class MainViewController: UIViewController {
                 print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
                 return
             }
+            
+            delegate?.entrantPassed(entrant: newUser)
 
             
         } else if subNavOption2.currentTitle == EntrantTypeSubNav.hourlyRide.rawValue && subNavOption2.isSelected == true {
@@ -872,6 +897,8 @@ class MainViewController: UIViewController {
                 print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
                 return
             }
+            
+            delegate?.entrantPassed(entrant: newUser)
         
         } else if subNavOption3.currentTitle == EntrantTypeSubNav.hourlyMaintenance.rawValue && subNavOption3.isSelected == true {
 
@@ -923,6 +950,8 @@ class MainViewController: UIViewController {
                 print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
                 return
             }
+            
+            delegate?.entrantPassed(entrant: newUser)
         
         } else if subNavOption1.currentTitle == ManagerType.shift.rawValue && subNavOption1.isSelected == true {
             
@@ -975,6 +1004,8 @@ class MainViewController: UIViewController {
                 print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
                 return
             }
+            
+            delegate?.entrantPassed(entrant: newUser)
         
         } else if subNavOption2.currentTitle == ManagerType.general.rawValue && subNavOption2.isSelected == true {
             
@@ -1026,6 +1057,8 @@ class MainViewController: UIViewController {
                 print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
                 return
             }
+            
+            delegate?.entrantPassed(entrant: newUser)
         
         } else if subNavOption3.currentTitle == ManagerType.senior.rawValue && subNavOption3.isSelected == true {
         
@@ -1078,6 +1111,8 @@ class MainViewController: UIViewController {
                 return
             }
             
+            delegate?.entrantPassed(entrant: newUser)
+            
         } else if subNavOption1.currentTitle == ContractorSubNav.proj1001.rawValue && subNavOption1.isSelected == true {
             
             guard let newUser = ContractEmployeeSource(areaAccess: [.amusement, .rideControl], ridePrivileges: [.none], discountAccess: [.none], discountAmount: [.none], requiredInformation: [.personal], managementTier: [.none], dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, company: nil, projectNumber: ContractorSubNav.proj1001.rawValue, dateOfVisit: nil), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
@@ -1128,6 +1163,8 @@ class MainViewController: UIViewController {
                 print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
                 return
             }
+            
+            delegate?.entrantPassed(entrant: newUser)
         
         } else if subNavOption2.currentTitle == ContractorSubNav.proj1002.rawValue && subNavOption2.isSelected == true {
             
@@ -1181,8 +1218,8 @@ class MainViewController: UIViewController {
                 return
             }
             
+            delegate?.entrantPassed(entrant: newUser)
             
-        
         } else if subNavOption3.currentTitle == ContractorSubNav.proj1003.rawValue && subNavOption3.isSelected == true {
             
             guard let newUser = ContractEmployeeSource(areaAccess: [.amusement, .kitchen, .rideControl, .maintenance, .office], ridePrivileges: [.none], discountAccess: [.none], discountAmount: [.none], requiredInformation: [.personal], managementTier: [.none], dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, company: nil, projectNumber: ContractorSubNav.proj1003.rawValue, dateOfVisit: nil), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
@@ -1233,6 +1270,8 @@ class MainViewController: UIViewController {
                 print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
                 return
             }
+            
+            delegate?.entrantPassed(entrant: newUser)
         
         } else if subNavOption4.currentTitle == ContractorSubNav.proj2001.rawValue && subNavOption4.isSelected == true {
             
@@ -1285,6 +1324,8 @@ class MainViewController: UIViewController {
                 return
             }
             
+            delegate?.entrantPassed(entrant: newUser)
+            
         } else if subNavOption5.currentTitle == ContractorSubNav.proj2002.rawValue && subNavOption5.isSelected == true {
             
             guard let newUser = ContractEmployeeSource(areaAccess: [.kitchen, .maintenance], ridePrivileges: [.none], discountAccess: [.none], discountAmount: [.none], requiredInformation: [.personal], managementTier: [.none], dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, company: nil, projectNumber: ContractorSubNav.proj2002.rawValue, dateOfVisit: nil), newUser.dateOfBirth != nil || newUser.dateOfBirth != "" else {
@@ -1335,6 +1376,8 @@ class MainViewController: UIViewController {
                 print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
                 return
             }
+            
+            delegate?.entrantPassed(entrant: newUser)
         
         } else if subNavOption1.currentTitle == Vendors.acme.rawValue && subNavOption1.isSelected == true {
             
@@ -1358,6 +1401,8 @@ class MainViewController: UIViewController {
                 print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
                 return
             }
+            
+            delegate?.entrantPassed(entrant: newUser)
         
         } else if subNavOption2.currentTitle == Vendors.orkin.rawValue && subNavOption2.isSelected == true {
             
@@ -1379,6 +1424,8 @@ class MainViewController: UIViewController {
                 print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
                 return
             }
+            
+            delegate?.entrantPassed(entrant: newUser)
         
         } else if subNavOption3.currentTitle == Vendors.fedex.rawValue && subNavOption3.isSelected == true {
             
@@ -1400,6 +1447,8 @@ class MainViewController: UIViewController {
                 print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
                 return
             }
+            
+            delegate?.entrantPassed(entrant: newUser)
 
         } else if subNavOption4.currentTitle == Vendors.nwElectrical.rawValue && subNavOption4.isSelected == true {
             
@@ -1421,6 +1470,8 @@ class MainViewController: UIViewController {
                 print(ErrorSource.missingLastName(description: "Please enter your Last Name"))
                 return
             }
+            
+            delegate?.entrantPassed(entrant: newUser)
         
         }
         
@@ -1767,6 +1818,8 @@ class MainViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -1831,8 +1884,8 @@ class MainViewController: UIViewController {
  // finish up here... you have a bunch of constraints to add to move some textfields around
     func keyboardWillShow(_ notification: Notification) {
         print("Keyboard hooray!")
-        if let info = notification.userInfo, let keyboarFrame = info [UIKeyboardFrameEndUserInfoKey] as? NSValue {
-            let frame = keyboarFrame.cgRectValue
+        if let info = notification.userInfo, let keyboardFrame = info [UIKeyboardFrameEndUserInfoKey] as? NSValue {
+            let frame = keyboardFrame.cgRectValue
             //UILabelOutlet.constant = frame.size.height + 10
             
             UIView.animate(withDuration: 0.8) {
