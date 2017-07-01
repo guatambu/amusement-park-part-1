@@ -127,7 +127,9 @@ import Foundation
 
 class GuestClassicSource: PersonSource {
     
-    convenience init? ()
+    convenience init? (
+        dateOfVisit: Date
+        )
     {
         self.init(
             areaAccess: [.amusement],
@@ -146,7 +148,7 @@ class GuestClassicSource: PersonSource {
             socialSecurityNumber: nil,
             company: nil,
             projectNumber: nil,
-            dateOfVisit: nil
+            dateOfVisit: dateOfVisit
             
         )
         

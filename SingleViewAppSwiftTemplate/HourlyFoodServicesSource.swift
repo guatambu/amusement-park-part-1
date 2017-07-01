@@ -20,7 +20,8 @@ class HourlyFoodEmployeeSource: PersonSource {
         city: String?,
         state: String?,
         zipCode: String?,
-        socialSecurityNumber: String?
+        socialSecurityNumber: String?,
+        dateOfVisit: Date
         )
     {
         
@@ -66,7 +67,7 @@ class HourlyFoodEmployeeSource: PersonSource {
             socialSecurityNumber: socialSecurityNumber,
             company: nil,
             projectNumber: nil,
-            dateOfVisit: nil
+            dateOfVisit: dateOfVisit
         )
         
     }

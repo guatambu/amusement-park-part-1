@@ -11,7 +11,9 @@ import Foundation
 
 class GuestVIPSource: PersonSource {
     
-    convenience init? ()
+    convenience init? (
+        dateOfVisit: Date
+        )
     {
         self.init(
             areaAccess: [.amusement],
@@ -30,7 +32,7 @@ class GuestVIPSource: PersonSource {
             socialSecurityNumber: nil,
             company: nil,
             projectNumber: nil,
-            dateOfVisit: nil
+            dateOfVisit: dateOfVisit
         )
         
     }

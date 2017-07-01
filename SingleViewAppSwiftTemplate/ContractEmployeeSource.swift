@@ -28,7 +28,7 @@ class ContractEmployeeSource: EntrantTypeable {
     var socialSecurityNumber: String?
     var company: String?
     var projectNumber: String?
-    var dateOfVisit: String?
+    var dateOfVisit: Date
     
     
     init?(
@@ -48,7 +48,7 @@ class ContractEmployeeSource: EntrantTypeable {
         socialSecurityNumber: String?,
         company: String?,
         projectNumber: String?,
-        dateOfVisit: String?
+        dateOfVisit: Date
         )
     {
         self.areaAccess = areaAccess

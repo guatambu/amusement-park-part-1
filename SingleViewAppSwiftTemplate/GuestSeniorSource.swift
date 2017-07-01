@@ -15,7 +15,8 @@ class GuestSeniorSource: PersonSource {
     convenience init? (
         dateOfBirth: String?,
         firstName: String?,
-        lastName: String?
+        lastName: String?,
+        dateOfVisit: Date
         )
     {
         guard dateOfBirth == nil || dateOfBirth == "" else {
@@ -45,7 +46,7 @@ class GuestSeniorSource: PersonSource {
             socialSecurityNumber: nil,
             company: nil,
             projectNumber: nil,
-            dateOfVisit: nil
+            dateOfVisit: dateOfVisit
         )
         
     }

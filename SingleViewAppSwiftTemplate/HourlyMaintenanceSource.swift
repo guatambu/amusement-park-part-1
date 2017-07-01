@@ -19,7 +19,8 @@ class HourlyMaintenanceEmployeeSource: PersonSource {
         city: String?,
         state: String?,
         zipCode: String?,
-        socialSecurityNumber: String?
+        socialSecurityNumber: String?,
+        dateOfVisit: Date
         )
     {
         
@@ -65,7 +66,7 @@ class HourlyMaintenanceEmployeeSource: PersonSource {
             socialSecurityNumber: socialSecurityNumber,
             company: nil,
             projectNumber: nil,
-            dateOfVisit: nil
+            dateOfVisit: dateOfVisit
         )
         
     }

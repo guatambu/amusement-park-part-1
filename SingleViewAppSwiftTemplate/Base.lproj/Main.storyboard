@@ -613,7 +613,7 @@
                         <outlet property="company" destination="Zvm-xN-2V2" id="pEe-bq-reO"/>
                         <outlet property="companyLabel" destination="Bmm-4b-PQh" id="biI-TG-cvr"/>
                         <outlet property="contractorNavButton" destination="a63-8c-r3a" id="O1z-jZ-6kJ"/>
-                        <outlet property="dateOfBirth" destination="4DL-cZ-i2R" id="cQq-EG-R5B"/>
+                        <outlet property="dateOfBirth" destination="PKJ-is-ybP" id="bif-mu-UrZ"/>
                         <outlet property="dateOfBirthLabel" destination="4DL-cZ-i2R" id="K5v-IN-qrr"/>
                         <outlet property="employeeNavButton" destination="tE5-uR-Tek" id="dE7-6w-bA8"/>
                         <outlet property="firstName" destination="Ze2-Mq-nnu" id="F6L-tt-oxt"/>

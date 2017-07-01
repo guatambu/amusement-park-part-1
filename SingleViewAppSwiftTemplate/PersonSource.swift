@@ -29,7 +29,7 @@ protocol EntrantTypeable {
     var socialSecurityNumber: String? { get set }
     var company: String? { get set }
     var projectNumber: String? { get set }
-    var dateOfVisit: String? { get set }
+    var dateOfVisit: Date { get set }
     
     
 }
@@ -54,7 +54,7 @@ class PersonSource: EntrantTypeable {
     var socialSecurityNumber: String?
     var company: String?
     var projectNumber: String?
-    var dateOfVisit: String?
+    var dateOfVisit: Date
     
     
     init?(
@@ -74,7 +74,7 @@ class PersonSource: EntrantTypeable {
         socialSecurityNumber: String?,
         company: String?,
         projectNumber: String?,
-        dateOfVisit: String?
+        dateOfVisit: Date
         )
     {
         self.areaAccess = areaAccess

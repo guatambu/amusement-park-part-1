@@ -13,7 +13,8 @@ import Foundation
 class GuestChildSource: PersonSource {    
     
     convenience init? (
-        dateOfBirth: String?
+        dateOfBirth: String?,
+        dateOfVisit: Date
         )
     {
         guard dateOfBirth == nil || dateOfBirth == "" else {
@@ -37,7 +38,7 @@ class GuestChildSource: PersonSource {
             socialSecurityNumber: nil,
             company: nil,
             projectNumber: nil,
-            dateOfVisit: nil
+            dateOfVisit: dateOfVisit
         )
         
     }

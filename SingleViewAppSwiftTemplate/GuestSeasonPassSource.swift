@@ -19,7 +19,8 @@ class GuestSeasonPassSource: PersonSource {
         streetAddress: String?,
         city: String?,
         state: String?,
-        zipCode: String?
+        zipCode: String?,
+        dateOfVisit: Date
         )
     {
         
@@ -62,7 +63,7 @@ class GuestSeasonPassSource: PersonSource {
             socialSecurityNumber: nil,
             company: nil,
             projectNumber: nil,
-            dateOfVisit: nil
+            dateOfVisit: dateOfVisit
         )
         
     }
