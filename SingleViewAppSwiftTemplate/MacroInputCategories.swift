@@ -49,47 +49,32 @@ enum DiscountAmount: String {
     case twentyfive = "25%"
 }
 
-/*
- enum EntrantTypeNav: String {
-    case guest = "Guest"
-    case employee = "Employee"
-    case manager = "Manager"
-    case contractor = "Contractor"
-    case vendor = "Vendor"
-}
-*/
-
-enum EntrantTypeSubNav: String {
-    case adult = "Adult"
-    case child = "Child"
-    case seasonPass = "Season Pass"
-    case senior = "Senior"
-    case vip = "VIP"
-    case hourlyFood = "Food Services"
-    case hourlyRide = "Ride Services"
-    case hourlyMaintenance = "Maintenance"
-}
-
-enum ManagerType: String {
-    case shift = "Shift"
-    case general = "General"
-    case senior = "Senior"
-    case none = "none"
-}
-
-enum ContractorSubNav: String {
-    case proj1001 = "Proj #1001"
-    case proj1002 = "Proj #1002"
-    case proj1003 = "Proj #1003"
-    case proj2001 = "Proj #2001"
-    case proj2002 = "Proj #2002"
-}
-
-enum Vendors: String {
-    case acme = "Acme"
-    case orkin = "Orkin"
-    case fedex = "FedEx"
-    case nwElectrical = "NW Electrical"
+ enum EntrantType: String {
+    // guests
+    case adult = "Adult Guest"
+    case child = "Child Guest"
+    case seasonPass = "Season Pass Guest"
+    case senior = "Senior Guest"
+    case vip = "VIP Guest"
+    // hourly employees
+    case employeeFood = "Employee: Food Services"
+    case employeeRide = "Employee: Ride Services"
+    case employeeMaintenance = "Employee: Maintenance"
+    // managers
+    case managerShift = "Shift Manager"
+    case managerGeneral = "General Manager"
+    case managerSenior = "Senior Manager"
+    // contractors
+    case contractorProj1001 = "Contractor: Proj #1001"
+    case contractorProj1002 = "Contractor: Proj #1002"
+    case contractorProj1003 = "Contractor: Proj #1003"
+    case contractorProj2001 = "Contractor: Proj #2001"
+    case contractorProj2002 = "Contractor: Proj #2002"
+    // vendors
+    case vendorAcme = "Vendor: Acme"
+    case vendorOrkin = "Vendor: Orkin"
+    case vendorFedEx = "Vendor: FedEx"
+    case vendorNWElectrical = "Vendor: NW Electrical"
 }
 
 enum RequiredInformation: String {

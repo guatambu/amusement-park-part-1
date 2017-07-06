@@ -1,17 +1,15 @@
 //
-//  HourlyFoodServicesSource.swift
+//  ManagerSeniorSource.swift
 //  SingleViewAppSwiftTemplate
 //
-//  Created by Michael Guatambu Davis on 4/19/17.
+//  Created by Kelly Johnson on 7/6/17.
 //  Copyright © 2017 Treehouse. All rights reserved.
 //
 
 import Foundation
 
- 
 
-
-class HourlyFoodEmployeeSource: PersonSource {
+class ManagerSeniorSource: PersonSource {
     
     convenience init? (
         dateOfBirth: String?,
@@ -52,8 +50,8 @@ class HourlyFoodEmployeeSource: PersonSource {
         }
         
         self.init(
-            entrantType: [.employeeFood],
-            areaAccess: [.amusement, .kitchen],
+            entrantType: [.managerSenior],
+            areaAccess: [.amusement, .rideControl],
             ridePrivileges: [.all, .skip],
             discountAccess: [.food, .merch],
             discountAmount: [.fifteen, .twentyfive],
@@ -73,5 +71,3 @@ class HourlyFoodEmployeeSource: PersonSource {
         
     }
 }
- 
-

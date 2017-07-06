@@ -2,7 +2,7 @@
 //  PersonSource.swift
 //  SingleViewAppSwiftTemplate
 //
-//  Created by Kelly Johnson on 5/7/17.
+//  Created by Michael Guatambu Davis on 5/7/17.
 //  Copyright © 2017 Treehouse. All rights reserved.
 //
 
@@ -13,12 +13,12 @@ import Foundation
 
 protocol EntrantTypeable {
     
+    var entrantType: [EntrantType] { get set }
     var areaAccess: [AreaAccess] { get set }
     var ridePrivileges: [RidePrivilege] { get set }
     var discountAccess: [DiscountAccess] { get set }
     var discountAmount: [DiscountAmount] { get set }
     var requiredInformation: [RequiredInformation] { get set }
-    var managementTier: [ManagerType] { get set }
     var dateOfBirth: String? { get set }
     var firstName: String? { get set }
     var lastName: String? { get set }
@@ -38,12 +38,12 @@ protocol EntrantTypeable {
 
 class PersonSource: EntrantTypeable {
     
+    var entrantType: [EntrantType]
     var areaAccess: [AreaAccess]
     var ridePrivileges: [RidePrivilege]
     var discountAccess: [DiscountAccess]
     var discountAmount: [DiscountAmount]
     var requiredInformation: [RequiredInformation]
-    var managementTier: [ManagerType]
     var dateOfBirth: String?
     var firstName: String?
     var lastName: String?
@@ -58,12 +58,12 @@ class PersonSource: EntrantTypeable {
     
     
     init?(
+        entrantType: [EntrantType],
         areaAccess: [AreaAccess],
         ridePrivileges: [RidePrivilege],
         discountAccess: [DiscountAccess],
         discountAmount: [DiscountAmount],
         requiredInformation: [RequiredInformation],
-        managementTier: [ManagerType],
         dateOfBirth: String?,
         firstName: String?,
         lastName: String?,
@@ -77,12 +77,12 @@ class PersonSource: EntrantTypeable {
         dateOfVisit: Date
         )
     {
+        self.entrantType = entrantType
         self.areaAccess = areaAccess
         self.ridePrivileges = ridePrivileges
         self.discountAccess = discountAccess
         self.discountAmount = discountAmount
         self.requiredInformation = requiredInformation
-        self.managementTier = managementTier
         self.dateOfBirth = dateOfBirth
         self.firstName = firstName
         self.lastName = lastName

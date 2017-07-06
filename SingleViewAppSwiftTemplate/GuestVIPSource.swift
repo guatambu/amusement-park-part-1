@@ -16,12 +16,12 @@ class GuestVIPSource: PersonSource {
         )
     {
         self.init(
+            entrantType: [.vip],
             areaAccess: [.amusement],
             ridePrivileges: [.all, .skip],
             discountAccess: [.food, .merch],
             discountAmount: [.ten, .twenty],
             requiredInformation: [.personal],
-            managementTier: [.none],
             dateOfBirth: nil,
             firstName: nil,
             lastName: nil,

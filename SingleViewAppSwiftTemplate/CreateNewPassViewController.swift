@@ -8,11 +8,11 @@
 
 import UIKit
 
-class CreateNewPassViewController: UIViewController, MainViewControllerDelegate {
+class CreateNewPassViewController: UIViewController/*, MainViewControllerDelegate*/ {
     
     // passing Entrant instance initialized in MainViewController to CreateNewPassViewController
     
-    
+    var entrant: PersonSource?
     
     /* Pass Display @IBOutlets */
     
@@ -148,6 +148,9 @@ class CreateNewPassViewController: UIViewController, MainViewControllerDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        passFullName.text = "\(String(describing: entrant?.firstName)) \(String(describing: entrant?.lastName))"
+        passEntrantType.text = "\(String(describing: entrant))"
+        passPermissions.text = "\(String(describing: entrant?.areaAccess))/n\(String(describing: entrant?.ridePrivileges))/n\(String(describing: entrant?.discountAmount[0]))\(String(describing: entrant?.discountAccess[0]))/n\(String(describing: entrant?.discountAmount[1]))\(String(describing: entrant?.discountAccess[1]))/n\(String(describing: entrant?.requiredInformation))"
         
 
         // Do any additional setup after loading the view.
@@ -160,17 +163,14 @@ class CreateNewPassViewController: UIViewController, MainViewControllerDelegate 
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let mainViewController = segue.destination as? MainViewController {
-            mainViewController.delegate = self
-        }
-    }
     
-    func entrantPassed(entrant: EntrantTypeable) {
+    
+   /* func entrantPassed(entrant: EntrantTypeable) {
         passFullName.text = "\(String(describing: entrant.firstName)) \(String(describing: entrant.lastName))"
         passEntrantType.text = "\(String(describing: entrant))"
         passPermissions.text = "\(String(describing: entrant.areaAccess))/n\(String(describing: entrant.ridePrivileges))/n\(String(describing: entrant.discountAmount[0]))\(String(describing: entrant.discountAccess[0]))/n\(String(describing: entrant.discountAmount[1]))\(String(describing: entrant.discountAccess[1]))/n\(String(describing: entrant.requiredInformation))"
     }
+ */
     
 
     /*

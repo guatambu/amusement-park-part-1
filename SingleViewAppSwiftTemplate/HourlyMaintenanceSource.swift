@@ -8,7 +8,7 @@
 
 import Foundation
 
-
+/*
 class HourlyMaintenanceEmployeeSource: PersonSource {
     
     convenience init? (
@@ -50,12 +50,12 @@ class HourlyMaintenanceEmployeeSource: PersonSource {
         }
         
         self.init(
+            entrantType: [.employeeMaintenance],
             areaAccess: [.amusement, .kitchen, .maintenance, .rideControl],
             ridePrivileges: [.all, .skip],
             discountAccess: [.food, .merch],
             discountAmount: [.fifteen, .twentyfive],
             requiredInformation: [.personal],
-            managementTier: [.none],
             dateOfBirth: dateOfBirth,
             firstName: firstName,
             lastName: lastName,
@@ -71,3 +71,5 @@ class HourlyMaintenanceEmployeeSource: PersonSource {
         
     }
 }
+ 
+ */

@@ -1,5 +1,5 @@
 //
-//  SeniorGuestSource.swift
+//  VendorSource.swift
 //  SingleViewAppSwiftTemplate
 //
 //  Created by Michael Guatambu Davis on 4/20/17.
@@ -10,15 +10,17 @@ import Foundation
 
 
 
-class GuestSeniorSource: PersonSource {
+class VendorOrkinSource: PersonSource {
     
     convenience init? (
         dateOfBirth: String?,
         firstName: String?,
         lastName: String?,
+        company: String?,
         dateOfVisit: Date
         )
     {
+        
         guard dateOfBirth == nil || dateOfBirth == "" else {
             return nil
         }
@@ -28,15 +30,17 @@ class GuestSeniorSource: PersonSource {
         guard lastName == nil || lastName == "" else {
             return nil
         }
+        guard company == nil || company == "" else {
+            return nil
+        }
         
         self.init(
-            entrantType: [.senior],
-            areaAccess: [.amusement],
-            ridePrivileges: [.all, .skip],
-            discountAccess: [.food, .merch],
-            discountAmount: [.ten, .ten],
-            requiredInformation: [.personal],
-            managementTier: [.none],
+            entrantType: [.vendorOrkin],
+            areaAccess: [.amusement, .ridecontrol, .kitchen],
+            ridePrivileges: [.none],
+            discountAccess: [.none],
+            discountAmount: [.none],
+            requiredInformation: [.business],
             dateOfBirth: dateOfBirth,
             firstName: firstName,
             lastName: lastName,
@@ -45,12 +49,10 @@ class GuestSeniorSource: PersonSource {
             state: nil,
             zipCode: nil,
             socialSecurityNumber: nil,
-            company: nil,
+            company: company,
             projectNumber: nil,
             dateOfVisit: dateOfVisit
         )
         
     }
 }
-
-

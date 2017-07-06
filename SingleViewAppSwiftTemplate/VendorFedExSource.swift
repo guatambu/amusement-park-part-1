@@ -1,24 +1,25 @@
 //
-//  SeniorGuestSource.swift
+//  VendorFedExSource.swift
 //  SingleViewAppSwiftTemplate
 //
-//  Created by Michael Guatambu Davis on 4/20/17.
+//  Created by Kelly Johnson on 7/6/17.
 //  Copyright © 2017 Treehouse. All rights reserved.
 //
 
 import Foundation
 
 
-
-class GuestSeniorSource: PersonSource {
+class VendorFedExSource: PersonSource {
     
     convenience init? (
         dateOfBirth: String?,
         firstName: String?,
         lastName: String?,
+        company: String?,
         dateOfVisit: Date
         )
     {
+        
         guard dateOfBirth == nil || dateOfBirth == "" else {
             return nil
         }
@@ -28,15 +29,17 @@ class GuestSeniorSource: PersonSource {
         guard lastName == nil || lastName == "" else {
             return nil
         }
+        guard company == nil || company == "" else {
+            return nil
+        }
         
         self.init(
-            entrantType: [.senior],
-            areaAccess: [.amusement],
-            ridePrivileges: [.all, .skip],
-            discountAccess: [.food, .merch],
-            discountAmount: [.ten, .ten],
-            requiredInformation: [.personal],
-            managementTier: [.none],
+            entrantType: [.vendorFedEx],
+            areaAccess: [.maintenance, .office],
+            ridePrivileges: [.none],
+            discountAccess: [.none],
+            discountAmount: [.none],
+            requiredInformation: [.business],
             dateOfBirth: dateOfBirth,
             firstName: firstName,
             lastName: lastName,
@@ -45,12 +48,10 @@ class GuestSeniorSource: PersonSource {
             state: nil,
             zipCode: nil,
             socialSecurityNumber: nil,
-            company: nil,
+            company: company,
             projectNumber: nil,
             dateOfVisit: dateOfVisit
         )
         
     }
 }
-
-

@@ -47,12 +47,12 @@ class GuestSeasonPassSource: PersonSource {
         }
         
         self.init(
+            entranttype: [.seasonPass],
             areaAccess: [.amusement],
             ridePrivileges: [.all, .skip],
             discountAccess: [.food, .merch],
             discountAmount: [.ten, .twenty],
             requiredInformation: [.personal],
-            managementTier: [.none],
             dateOfBirth: dateOfBirth,
             firstName: firstName,
             lastName: lastName,
@@ -70,3 +70,4 @@ class GuestSeasonPassSource: PersonSource {
     
     
 }
+ 

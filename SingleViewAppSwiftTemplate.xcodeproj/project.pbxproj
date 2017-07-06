@@ -15,7 +15,7 @@
 		3A8AADE91DF9B85E00A2B931 /* SingleViewAppSwiftTemplateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AADE81DF9B85E00A2B931 /* SingleViewAppSwiftTemplateUITests.swift */; };
 		FA0A6E3C1ED6381600877EDA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0A6E3B1ED6381600877EDA /* MainViewController.swift */; };
 		FA0A6E3E1ED63C2000877EDA /* CreateNewPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0A6E3D1ED63C2000877EDA /* CreateNewPassViewController.swift */; };
-		FA23DADD1EA144180043C063 /* ManagerEmployeeSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23DADC1EA144180043C063 /* ManagerEmployeeSource.swift */; };
+		FA23DADD1EA144180043C063 /* ManagerShiftSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23DADC1EA144180043C063 /* ManagerShiftSource.swift */; };
 		FA23DADF1EA148470043C063 /* MacroInputCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23DADE1EA148470043C063 /* MacroInputCategories.swift */; };
 		FA23DAE31EA812310043C063 /* HourlyMaintenanceSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23DAE21EA812310043C063 /* HourlyMaintenanceSource.swift */; };
 		FA23DAE51EA816E10043C063 /* HourlyRideSerivcesSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23DAE41EA816E10043C063 /* HourlyRideSerivcesSource.swift */; };
@@ -29,12 +29,21 @@
 		FA51EBA31ED4D20500AF541C /* UIViewDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA51EBA21ED4D20500AF541C /* UIViewDesign.swift */; };
 		FA590E9E1EA96AFF0018D398 /* GuestSeasonPassSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA590E9D1EA96AFF0018D398 /* GuestSeasonPassSource.swift */; };
 		FA590EA01EA96BBD0018D398 /* GuestSeniorSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA590E9F1EA96BBD0018D398 /* GuestSeniorSource.swift */; };
-		FA590EA21EA96CB10018D398 /* ContractEmployeeSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA590EA11EA96CB10018D398 /* ContractEmployeeSource.swift */; };
-		FA590EA41EA96D720018D398 /* VendorSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA590EA31EA96D720018D398 /* VendorSource.swift */; };
+		FA590EA21EA96CB10018D398 /* ContractorProj1001Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA590EA11EA96CB10018D398 /* ContractorProj1001Source.swift */; };
+		FA590EA41EA96D720018D398 /* VendorOrkinSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA590EA31EA96D720018D398 /* VendorOrkinSource.swift */; };
 		FA590EA61EAA9B010018D398 /* TestUserSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA590EA51EAA9B010018D398 /* TestUserSource.swift */; };
 		FA661D341ED37BE100DE919F /* FaceImageAsset.png in Resources */ = {isa = PBXBuildFile; fileRef = FA661D331ED37BE100DE919F /* FaceImageAsset.png */; };
 		FA661D371ED4AEBF00DE919F /* Screen1Mockup.png in Resources */ = {isa = PBXBuildFile; fileRef = FA661D351ED4AEBF00DE919F /* Screen1Mockup.png */; };
 		FA661D381ED4AEBF00DE919F /* Screen2Mockup.png in Resources */ = {isa = PBXBuildFile; fileRef = FA661D361ED4AEBF00DE919F /* Screen2Mockup.png */; };
+		FAB4525E1F0EED3500907AF1 /* ManagerGeneralSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4525D1F0EED3500907AF1 /* ManagerGeneralSource.swift */; };
+		FAB452601F0EED7500907AF1 /* ManagerSeniorSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4525F1F0EED7500907AF1 /* ManagerSeniorSource.swift */; };
+		FAB452621F0EEEBC00907AF1 /* ContractorProj1002Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB452611F0EEEBC00907AF1 /* ContractorProj1002Source.swift */; };
+		FAB452641F0EEF8B00907AF1 /* ContractorProj1003Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB452631F0EEF8B00907AF1 /* ContractorProj1003Source.swift */; };
+		FAB452661F0EEFF800907AF1 /* ContractorProj2001Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB452651F0EEFF800907AF1 /* ContractorProj2001Source.swift */; };
+		FAB452681F0EF03800907AF1 /* ContractorProj2002Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB452671F0EF03800907AF1 /* ContractorProj2002Source.swift */; };
+		FAB4526D1F0EF2B800907AF1 /* VendorAcmeSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4526C1F0EF2B800907AF1 /* VendorAcmeSource.swift */; };
+		FAB4526F1F0EF31C00907AF1 /* VendorFedExSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4526E1F0EF31C00907AF1 /* VendorFedExSource.swift */; };
+		FAB452711F0EF39300907AF1 /* VendorNWElectrical.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB452701F0EF39300907AF1 /* VendorNWElectrical.swift */; };
 		FABB68451F02EFB400FE228D /* TextfieldPopulater.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABB68441F02EFB400FE228D /* TextfieldPopulater.swift */; };
 		FACCCACB1EB6B16200E8BD76 /* SwipeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACCCACA1EB6B16200E8BD76 /* SwipeTest.swift */; };
 /* End PBXBuildFile section */
@@ -71,7 +80,7 @@
 		3A8AADEA1DF9B85E00A2B931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA0A6E3B1ED6381600877EDA /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FA0A6E3D1ED63C2000877EDA /* CreateNewPassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewPassViewController.swift; sourceTree = "<group>"; };
-		FA23DADC1EA144180043C063 /* ManagerEmployeeSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerEmployeeSource.swift; sourceTree = "<group>"; };
+		FA23DADC1EA144180043C063 /* ManagerShiftSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerShiftSource.swift; sourceTree = "<group>"; };
 		FA23DADE1EA148470043C063 /* MacroInputCategories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacroInputCategories.swift; sourceTree = "<group>"; };
 		FA23DAE21EA812310043C063 /* HourlyMaintenanceSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourlyMaintenanceSource.swift; sourceTree = "<group>"; };
 		FA23DAE41EA816E10043C063 /* HourlyRideSerivcesSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourlyRideSerivcesSource.swift; sourceTree = "<group>"; };
@@ -85,12 +94,21 @@
 		FA51EBA21ED4D20500AF541C /* UIViewDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewDesign.swift; sourceTree = "<group>"; };
 		FA590E9D1EA96AFF0018D398 /* GuestSeasonPassSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestSeasonPassSource.swift; sourceTree = "<group>"; };
 		FA590E9F1EA96BBD0018D398 /* GuestSeniorSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestSeniorSource.swift; sourceTree = "<group>"; };
-		FA590EA11EA96CB10018D398 /* ContractEmployeeSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractEmployeeSource.swift; sourceTree = "<group>"; };
-		FA590EA31EA96D720018D398 /* VendorSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorSource.swift; sourceTree = "<group>"; };
+		FA590EA11EA96CB10018D398 /* ContractorProj1001Source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractorProj1001Source.swift; sourceTree = "<group>"; };
+		FA590EA31EA96D720018D398 /* VendorOrkinSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorOrkinSource.swift; sourceTree = "<group>"; };
 		FA590EA51EAA9B010018D398 /* TestUserSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUserSource.swift; sourceTree = "<group>"; };
 		FA661D331ED37BE100DE919F /* FaceImageAsset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FaceImageAsset.png; sourceTree = "<group>"; };
 		FA661D351ED4AEBF00DE919F /* Screen1Mockup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screen1Mockup.png; sourceTree = "<group>"; };
 		FA661D361ED4AEBF00DE919F /* Screen2Mockup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screen2Mockup.png; sourceTree = "<group>"; };
+		FAB4525D1F0EED3500907AF1 /* ManagerGeneralSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerGeneralSource.swift; sourceTree = "<group>"; };
+		FAB4525F1F0EED7500907AF1 /* ManagerSeniorSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerSeniorSource.swift; sourceTree = "<group>"; };
+		FAB452611F0EEEBC00907AF1 /* ContractorProj1002Source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractorProj1002Source.swift; sourceTree = "<group>"; };
+		FAB452631F0EEF8B00907AF1 /* ContractorProj1003Source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractorProj1003Source.swift; sourceTree = "<group>"; };
+		FAB452651F0EEFF800907AF1 /* ContractorProj2001Source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractorProj2001Source.swift; sourceTree = "<group>"; };
+		FAB452671F0EF03800907AF1 /* ContractorProj2002Source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractorProj2002Source.swift; sourceTree = "<group>"; };
+		FAB4526C1F0EF2B800907AF1 /* VendorAcmeSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorAcmeSource.swift; sourceTree = "<group>"; };
+		FAB4526E1F0EF31C00907AF1 /* VendorFedExSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorFedExSource.swift; sourceTree = "<group>"; };
+		FAB452701F0EF39300907AF1 /* VendorNWElectrical.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorNWElectrical.swift; sourceTree = "<group>"; };
 		FABB68441F02EFB400FE228D /* TextfieldPopulater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextfieldPopulater.swift; path = ../TextfieldPopulater.swift; sourceTree = "<group>"; };
 		FACCCACA1EB6B16200E8BD76 /* SwipeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -196,12 +214,10 @@
 		FA41758E1EB2C0CB00E80291 /* EmployeeSources */ = {
 			isa = PBXGroup;
 			children = (
-				FA23DAE61EA817300043C063 /* HourlyFoodServicesSource.swift */,
-				FA23DAE21EA812310043C063 /* HourlyMaintenanceSource.swift */,
-				FA23DAE41EA816E10043C063 /* HourlyRideSerivcesSource.swift */,
-				FA23DADC1EA144180043C063 /* ManagerEmployeeSource.swift */,
-				FA590EA11EA96CB10018D398 /* ContractEmployeeSource.swift */,
-				FA590EA31EA96D720018D398 /* VendorSource.swift */,
+				FAB452691F0EF0BB00907AF1 /* employees */,
+				FAB4526A1F0EF0C800907AF1 /* managers */,
+				FAB4526B1F0EF0D700907AF1 /* contractors */,
+				FAB452721F0EF3EA00907AF1 /* vendors */,
 			);
 			name = EmployeeSources;
 			sourceTree = "<group>";
@@ -223,6 +239,49 @@
 				FA51EBA21ED4D20500AF541C /* UIViewDesign.swift */,
 			);
 			name = IBdesignables;
+			sourceTree = "<group>";
+		};
+		FAB452691F0EF0BB00907AF1 /* employees */ = {
+			isa = PBXGroup;
+			children = (
+				FA23DAE61EA817300043C063 /* HourlyFoodServicesSource.swift */,
+				FA23DAE21EA812310043C063 /* HourlyMaintenanceSource.swift */,
+				FA23DAE41EA816E10043C063 /* HourlyRideSerivcesSource.swift */,
+			);
+			name = employees;
+			sourceTree = "<group>";
+		};
+		FAB4526A1F0EF0C800907AF1 /* managers */ = {
+			isa = PBXGroup;
+			children = (
+				FA23DADC1EA144180043C063 /* ManagerShiftSource.swift */,
+				FAB4525D1F0EED3500907AF1 /* ManagerGeneralSource.swift */,
+				FAB4525F1F0EED7500907AF1 /* ManagerSeniorSource.swift */,
+			);
+			name = managers;
+			sourceTree = "<group>";
+		};
+		FAB4526B1F0EF0D700907AF1 /* contractors */ = {
+			isa = PBXGroup;
+			children = (
+				FA590EA11EA96CB10018D398 /* ContractorProj1001Source.swift */,
+				FAB452611F0EEEBC00907AF1 /* ContractorProj1002Source.swift */,
+				FAB452631F0EEF8B00907AF1 /* ContractorProj1003Source.swift */,
+				FAB452651F0EEFF800907AF1 /* ContractorProj2001Source.swift */,
+				FAB452671F0EF03800907AF1 /* ContractorProj2002Source.swift */,
+			);
+			name = contractors;
+			sourceTree = "<group>";
+		};
+		FAB452721F0EF3EA00907AF1 /* vendors */ = {
+			isa = PBXGroup;
+			children = (
+				FAB4526C1F0EF2B800907AF1 /* VendorAcmeSource.swift */,
+				FAB4526E1F0EF31C00907AF1 /* VendorFedExSource.swift */,
+				FAB452701F0EF39300907AF1 /* VendorNWElectrical.swift */,
+				FA590EA31EA96D720018D398 /* VendorOrkinSource.swift */,
+			);
+			name = vendors;
 			sourceTree = "<group>";
 		};
 		FACCCAC91EB6B14D00E8BD76 /* Testing */ = {
@@ -373,26 +432,35 @@
 			files = (
 				FA51EBA31ED4D20500AF541C /* UIViewDesign.swift in Sources */,
 				FA23DAE31EA812310043C063 /* HourlyMaintenanceSource.swift in Sources */,
-				FA590EA21EA96CB10018D398 /* ContractEmployeeSource.swift in Sources */,
+				FA590EA21EA96CB10018D398 /* ContractorProj1001Source.swift in Sources */,
 				FA51EBA11ED4D1D200AF541C /* ButtonDesign.swift in Sources */,
 				FABB68451F02EFB400FE228D /* TextfieldPopulater.swift in Sources */,
+				FAB452641F0EEF8B00907AF1 /* ContractorProj1003Source.swift in Sources */,
 				FA590EA61EAA9B010018D398 /* TestUserSource.swift in Sources */,
 				FA23DAE51EA816E10043C063 /* HourlyRideSerivcesSource.swift in Sources */,
 				FA4B5CAE1EC0108800FEC143 /* PersonSource.swift in Sources */,
+				FAB4526F1F0EF31C00907AF1 /* VendorFedExSource.swift in Sources */,
+				FAB452601F0EED7500907AF1 /* ManagerSeniorSource.swift in Sources */,
 				FA590E9E1EA96AFF0018D398 /* GuestSeasonPassSource.swift in Sources */,
 				FA23DAEB1EA817D20043C063 /* GuestVIPSource.swift in Sources */,
 				FA23DADF1EA148470043C063 /* MacroInputCategories.swift in Sources */,
 				FA590EA01EA96BBD0018D398 /* GuestSeniorSource.swift in Sources */,
 				FA23DAE91EA817610043C063 /* GuestFreeChildSource.swift in Sources */,
 				FA23DAEF1EA935FF0043C063 /* ErrorSource.swift in Sources */,
+				FAB452661F0EEFF800907AF1 /* ContractorProj2001Source.swift in Sources */,
 				FA23DAED1EA8184F0043C063 /* GuestClassicSource.swift in Sources */,
+				FAB4525E1F0EED3500907AF1 /* ManagerGeneralSource.swift in Sources */,
 				FA0A6E3E1ED63C2000877EDA /* CreateNewPassViewController.swift in Sources */,
-				FA590EA41EA96D720018D398 /* VendorSource.swift in Sources */,
+				FAB452681F0EF03800907AF1 /* ContractorProj2002Source.swift in Sources */,
+				FAB452621F0EEEBC00907AF1 /* ContractorProj1002Source.swift in Sources */,
+				FA590EA41EA96D720018D398 /* VendorOrkinSource.swift in Sources */,
 				FACCCACB1EB6B16200E8BD76 /* SwipeTest.swift in Sources */,
-				FA23DADD1EA144180043C063 /* ManagerEmployeeSource.swift in Sources */,
+				FA23DADD1EA144180043C063 /* ManagerShiftSource.swift in Sources */,
 				FA23DAE71EA817300043C063 /* HourlyFoodServicesSource.swift in Sources */,
 				3A8AADC91DF9B85E00A2B931 /* AppDelegate.swift in Sources */,
+				FAB452711F0EF39300907AF1 /* VendorNWElectrical.swift in Sources */,
 				FA0A6E3C1ED6381600877EDA /* MainViewController.swift in Sources */,
+				FAB4526D1F0EF2B800907AF1 /* VendorAcmeSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

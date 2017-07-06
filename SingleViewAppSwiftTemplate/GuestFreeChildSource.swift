@@ -22,12 +22,12 @@ class GuestChildSource: PersonSource {
         }
         
         self.init(
+            entrantType: [.child],
             areaAccess: [.amusement],
             ridePrivileges: [.all],
             discountAccess: [.none],
             discountAmount: [.none],
             requiredInformation: [.personal],
-            managementTier: [.none],
             dateOfBirth: dateOfBirth,
             firstName: nil,
             lastName: nil,
@@ -42,6 +42,7 @@ class GuestChildSource: PersonSource {
         )
         
     }
+    
 }
 
 

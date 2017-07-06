@@ -1,17 +1,15 @@
 //
-//  HourlyFoodServicesSource.swift
+//  ContrctEmployeeSource.swift
 //  SingleViewAppSwiftTemplate
 //
-//  Created by Michael Guatambu Davis on 4/19/17.
+//  Created by Michael Guatambu Davis on 4/20/17.
 //  Copyright © 2017 Treehouse. All rights reserved.
 //
 
 import Foundation
 
- 
 
-
-class HourlyFoodEmployeeSource: PersonSource {
+class ContractorProj1001Source: PersonSource {
     
     convenience init? (
         dateOfBirth: String?,
@@ -52,11 +50,11 @@ class HourlyFoodEmployeeSource: PersonSource {
         }
         
         self.init(
-            entrantType: [.employeeFood],
-            areaAccess: [.amusement, .kitchen],
-            ridePrivileges: [.all, .skip],
-            discountAccess: [.food, .merch],
-            discountAmount: [.fifteen, .twentyfive],
+            entrantType: [.contractorProj1001],
+            areaAccess: [.amusement, .rideControl],
+            ridePrivileges: [.none],
+            discountAccess: [.none],
+            discountAmount: [.none],
             requiredInformation: [.personal],
             dateOfBirth: dateOfBirth,
             firstName: firstName,
@@ -67,11 +65,9 @@ class HourlyFoodEmployeeSource: PersonSource {
             zipCode: zipCode,
             socialSecurityNumber: socialSecurityNumber,
             company: nil,
-            projectNumber: nil,
+            projectNumber: "1001",
             dateOfVisit: dateOfVisit
         )
         
     }
 }
- 
-

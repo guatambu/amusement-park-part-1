@@ -132,12 +132,12 @@ class GuestClassicSource: PersonSource {
         )
     {
         self.init(
+            entrantType: [.adult],
             areaAccess: [.amusement],
             ridePrivileges: [.all],
             discountAccess: [.none],
             discountAmount: [.none],
             requiredInformation: [.none],
-            managementTier: [.none],
             dateOfBirth: nil,
             firstName: nil,
             lastName: nil,
@@ -153,6 +153,7 @@ class GuestClassicSource: PersonSource {
         )
         
     }
+
 }
 
 

@@ -51,12 +51,12 @@ class HourlyRideServicesEmployeeSource: PersonSource {
         }
         
         self.init(
+            entrantType: [.employeeRide],
             areaAccess: [.amusement, .rideControl],
             ridePrivileges: [.all, .skip],
             discountAccess: [.food, .merch],
             discountAmount: [.fifteen, .twentyfive],
             requiredInformation: [.personal],
-            managementTier: [.none],
             dateOfBirth: dateOfBirth,
             firstName: firstName,
             lastName: lastName,
@@ -72,3 +72,5 @@ class HourlyRideServicesEmployeeSource: PersonSource {
         
     }
 }
+ 
+
