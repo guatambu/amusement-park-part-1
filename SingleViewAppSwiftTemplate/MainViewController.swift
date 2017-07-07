@@ -698,7 +698,7 @@ class MainViewController: UIViewController {
         
         if subNavOption1.currentTitle == EntrantType.child.rawValue && subNavOption1.isSelected == true {
             
-            guard let dob = dateOfBirth.text, dob != nil || dob != "" else {
+            guard let dob = dateOfBirth.text, dob != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
@@ -715,19 +715,19 @@ class MainViewController: UIViewController {
             
         } else if subNavOption3.currentTitle == EntrantType.senior.rawValue && subNavOption3.isSelected == true && guestNavButton.isSelected == true {
             
-            guard let dob = dateOfBirth.text, dob != nil || dob != "" else {
+            guard let dob = dateOfBirth.text, dob != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            guard let name1 = firstName.text, name1 != nil || name1 != "" else {
+            guard let name1 = firstName.text, name1 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            guard let name2 = lastName.text, name2 != nil || name2 != "" else {
+            guard let name2 = lastName.text, name2 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your Last Name"))
@@ -746,43 +746,43 @@ class MainViewController: UIViewController {
         
         } else if subNavOption5.currentTitle == EntrantType.seasonPass.rawValue && subNavOption5.isSelected == true {
             
-            guard let dob = dateOfBirth.text, dob != nil || dob != "" else {
+            guard let dob = dateOfBirth.text, dob != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            guard let name1 = firstName.text, name1 != nil || name1 != "" else {
+            guard let name1 = firstName.text, name1 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            guard let name2 = lastName.text, name2 != nil || name2 != "" else {
+            guard let name2 = lastName.text, name2 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your Last Name"))
                 return
             }
-            guard let street = streetAddress.text, street != nil || street != "" else {
+            guard let street = streetAddress.text, street != "" else {
                 streetAddressLabel.font = UIFont.italicSystemFont(ofSize: streetAddressLabel.font.pointSize)
                 streetAddressLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
                 return
             }
-            guard let theCity = city.text, theCity != nil || theCity != "" else {
+            guard let theCity = city.text, theCity != "" else {
                 cityLabel.font = UIFont.italicSystemFont(ofSize: cityLabel.font.pointSize)
                 cityLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your City"))
                 return
             }
-            guard let theState = state.text, theState != nil || theState != "" else {
+            guard let theState = state.text, theState != "" else {
                 stateLabel.font = UIFont.italicSystemFont(ofSize: stateLabel.font.pointSize)
                 stateLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your State"))
                 return
             }
-            guard let zip = zipCode.text, zip != nil || zip != "" else {
+            guard let zip = zipCode.text, zip != "" else {
                 zipCodeLabel.font = UIFont.italicSystemFont(ofSize: zipCodeLabel.font.pointSize)
                 zipCodeLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
@@ -795,43 +795,43 @@ class MainViewController: UIViewController {
             
         } else if subNavOption1.currentTitle == EntrantType.employeeFood.rawValue && subNavOption1.isSelected == true {
 
-            guard let dob = dateOfBirth.text, dob != nil || dob != "" else {
+            guard let dob = dateOfBirth.text, dob != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            guard let name1 = firstName.text, name1 != nil || name1 != "" else {
+            guard let name1 = firstName.text, name1 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            guard let name2 = lastName.text, name2 != nil || name2 != "" else {
+            guard let name2 = lastName.text, name2 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your Last Name"))
                 return
             }
-            guard let street = streetAddress.text, street != nil || street != "" else {
+            guard let street = streetAddress.text, street != "" else {
                 streetAddressLabel.font = UIFont.italicSystemFont(ofSize: streetAddressLabel.font.pointSize)
                 streetAddressLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
                 return
             }
-            guard let theCity = city.text, theCity != nil || theCity != "" else {
+            guard let theCity = city.text, theCity != "" else {
                 cityLabel.font = UIFont.italicSystemFont(ofSize: cityLabel.font.pointSize)
                 cityLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your City"))
                 return
             }
-            guard let theState = state.text, theState != nil || theState != "" else {
+            guard let theState = state.text, theState != "" else {
                 stateLabel.font = UIFont.italicSystemFont(ofSize: stateLabel.font.pointSize)
                 stateLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your State"))
                 return
             }
-            guard let zip = zipCode.text, zip != nil || zip != "" else {
+            guard let zip = zipCode.text, zip != "" else {
                 zipCodeLabel.font = UIFont.italicSystemFont(ofSize: zipCodeLabel.font.pointSize)
                 zipCodeLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
@@ -843,43 +843,43 @@ class MainViewController: UIViewController {
             
         } else if subNavOption2.currentTitle == EntrantType.employeeRide.rawValue && subNavOption2.isSelected == true {
             
-            guard let dob = dateOfBirth.text, dob != nil || dob != "" else {
+            guard let dob = dateOfBirth.text, dob != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            guard let name1 = firstName.text, name1 != nil || name1 != "" else {
+            guard let name1 = firstName.text, name1 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            guard let name2 = lastName.text, name2 != nil || name2 != "" else {
+            guard let name2 = lastName.text, name2 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your Last Name"))
                 return
             }
-            guard let street = streetAddress.text, street != nil || street != "" else {
+            guard let street = streetAddress.text, street != "" else {
                 streetAddressLabel.font = UIFont.italicSystemFont(ofSize: streetAddressLabel.font.pointSize)
                 streetAddressLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
                 return
             }
-            guard let theCity = city.text, theCity != nil || theCity != "" else {
+            guard let theCity = city.text, theCity != "" else {
                 cityLabel.font = UIFont.italicSystemFont(ofSize: cityLabel.font.pointSize)
                 cityLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your City"))
                 return
             }
-            guard let theState = state.text, theState != nil || theState != "" else {
+            guard let theState = state.text, theState != "" else {
                 stateLabel.font = UIFont.italicSystemFont(ofSize: stateLabel.font.pointSize)
                 stateLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your State"))
                 return
             }
-            guard let zip = zipCode.text, zip != nil || zip != "" else {
+            guard let zip = zipCode.text, zip != "" else {
                 zipCodeLabel.font = UIFont.italicSystemFont(ofSize: zipCodeLabel.font.pointSize)
                 zipCodeLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
@@ -891,43 +891,43 @@ class MainViewController: UIViewController {
         
         } else if subNavOption3.currentTitle == EntrantType.employeeMaintenance.rawValue && subNavOption3.isSelected == true {
 
-            guard let dob = dateOfBirth.text, dob != nil || dob != "" else {
+            guard let dob = dateOfBirth.text, dob != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            guard let name1 = firstName.text, name1 != nil || name1 != "" else {
+            guard let name1 = firstName.text, name1 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            guard let name2 = lastName.text, name2 != nil || name2 != "" else {
+            guard let name2 = lastName.text, name2 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your Last Name"))
                 return
             }
-            guard let street = streetAddress.text, street != nil || street != "" else {
+            guard let street = streetAddress.text, street != "" else {
                 streetAddressLabel.font = UIFont.italicSystemFont(ofSize: streetAddressLabel.font.pointSize)
                 streetAddressLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
                 return
             }
-            guard let theCity = city.text, theCity != nil || theCity != "" else {
+            guard let theCity = city.text, theCity != "" else {
                 cityLabel.font = UIFont.italicSystemFont(ofSize: cityLabel.font.pointSize)
                 cityLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your City"))
                 return
             }
-            guard let theState = state.text, theState != nil || theState != "" else {
+            guard let theState = state.text, theState != "" else {
                 stateLabel.font = UIFont.italicSystemFont(ofSize: stateLabel.font.pointSize)
                 stateLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your State"))
                 return
             }
-            guard let zip = zipCode.text, zip != nil || zip != "" else {
+            guard let zip = zipCode.text, zip != "" else {
                 zipCodeLabel.font = UIFont.italicSystemFont(ofSize: zipCodeLabel.font.pointSize)
                 zipCodeLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
@@ -939,49 +939,49 @@ class MainViewController: UIViewController {
         
         } else if subNavOption1.currentTitle == EntrantType.managerShift.rawValue && subNavOption1.isSelected == true {
             
-            guard let dob = dateOfBirth.text, dob != nil || dob != "" else {
+            guard let dob = dateOfBirth.text, dob != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            guard let name1 = firstName.text, name1 != nil || name1 != "" else {
+            guard let name1 = firstName.text, name1 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            guard let name2 = lastName.text, name2 != nil || name2 != "" else {
+            guard let name2 = lastName.text, name2 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your Last Name"))
                 return
             }
-            guard let street = streetAddress.text, street != nil || street != "" else {
+            guard let street = streetAddress.text, street != "" else {
                 streetAddressLabel.font = UIFont.italicSystemFont(ofSize: streetAddressLabel.font.pointSize)
                 streetAddressLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
                 return
             }
-            guard let theCity = city.text, theCity != nil || theCity != "" else {
+            guard let theCity = city.text, theCity != "" else {
                 cityLabel.font = UIFont.italicSystemFont(ofSize: cityLabel.font.pointSize)
                 cityLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your City"))
                 return
             }
-            guard let theState = state.text, theState != nil || theState != "" else {
+            guard let theState = state.text, theState != "" else {
                 stateLabel.font = UIFont.italicSystemFont(ofSize: stateLabel.font.pointSize)
                 stateLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your State"))
                 return
             }
-            guard let zip = zipCode.text, zip != nil || zip != "" else {
+            guard let zip = zipCode.text, zip != "" else {
                 zipCodeLabel.font = UIFont.italicSystemFont(ofSize: zipCodeLabel.font.pointSize)
                 zipCodeLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
                 return
             }
-            guard let ssn = socialSecurityNumber.text, ssn != nil || ssn != "" else {
+            guard let ssn = socialSecurityNumber.text, ssn != "" else {
                 socialSecurityNumberLabel.font = UIFont.italicSystemFont(ofSize: socialSecurityNumberLabel.font.pointSize)
                 socialSecurityNumberLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
@@ -993,49 +993,49 @@ class MainViewController: UIViewController {
         
         } else if subNavOption2.currentTitle == EntrantType.managerGeneral.rawValue && subNavOption2.isSelected == true {
             
-            guard let dob = dateOfBirth.text, dob != nil || dob != "" else {
+            guard let dob = dateOfBirth.text, dob != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            guard let name1 = firstName.text, name1 != nil || name1 != "" else {
+            guard let name1 = firstName.text, name1 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            guard let name2 = lastName.text, name2 != nil || name2 != "" else {
+            guard let name2 = lastName.text, name2 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your Last Name"))
                 return
             }
-            guard let street = streetAddress.text, street != nil || street != "" else {
+            guard let street = streetAddress.text, street != "" else {
                 streetAddressLabel.font = UIFont.italicSystemFont(ofSize: streetAddressLabel.font.pointSize)
                 streetAddressLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
                 return
             }
-            guard let theCity = city.text, theCity != nil || theCity != "" else {
+            guard let theCity = city.text, theCity != "" else {
                 cityLabel.font = UIFont.italicSystemFont(ofSize: cityLabel.font.pointSize)
                 cityLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your City"))
                 return
             }
-            guard let theState = state.text, theState != nil || theState != "" else {
+            guard let theState = state.text, theState != "" else {
                 stateLabel.font = UIFont.italicSystemFont(ofSize: stateLabel.font.pointSize)
                 stateLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your State"))
                 return
             }
-            guard let zip = zipCode.text, zip != nil || zip != "" else {
+            guard let zip = zipCode.text, zip != "" else {
                 zipCodeLabel.font = UIFont.italicSystemFont(ofSize: zipCodeLabel.font.pointSize)
                 zipCodeLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
                 return
             }
-            guard let ssn = socialSecurityNumber.text, ssn != nil || ssn != "" else {
+            guard let ssn = socialSecurityNumber.text, ssn != "" else {
                 socialSecurityNumberLabel.font = UIFont.italicSystemFont(ofSize: socialSecurityNumberLabel.font.pointSize)
                 socialSecurityNumberLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
@@ -1048,49 +1048,49 @@ class MainViewController: UIViewController {
         
         } else if subNavOption3.currentTitle == EntrantType.managerSenior.rawValue && subNavOption3.isSelected == true {
         
-            guard let dob = dateOfBirth.text, dob != nil || dob != "" else {
+            guard let dob = dateOfBirth.text, dob != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            guard let name1 = firstName.text, name1 != nil || name1 != "" else {
+            guard let name1 = firstName.text, name1 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            guard let name2 = lastName.text, name2 != nil || name2 != "" else {
+            guard let name2 = lastName.text, name2 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your Last Name"))
                 return
             }
-            guard let street = streetAddress.text, street != nil || street != "" else {
+            guard let street = streetAddress.text, street != "" else {
                 streetAddressLabel.font = UIFont.italicSystemFont(ofSize: streetAddressLabel.font.pointSize)
                 streetAddressLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
                 return
             }
-            guard let theCity = city.text, theCity != nil || theCity != "" else {
+            guard let theCity = city.text, theCity != "" else {
                 cityLabel.font = UIFont.italicSystemFont(ofSize: cityLabel.font.pointSize)
                 cityLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your City"))
                 return
             }
-            guard let theState = state.text, theState != nil || theState != "" else {
+            guard let theState = state.text, theState != "" else {
                 stateLabel.font = UIFont.italicSystemFont(ofSize: stateLabel.font.pointSize)
                 stateLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your State"))
                 return
             }
-            guard let zip = zipCode.text, zip != nil || zip != "" else {
+            guard let zip = zipCode.text, zip != "" else {
                 zipCodeLabel.font = UIFont.italicSystemFont(ofSize: zipCodeLabel.font.pointSize)
                 zipCodeLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
                 return
             }
-            guard let ssn = socialSecurityNumber.text, ssn != nil || ssn != "" else {
+            guard let ssn = socialSecurityNumber.text, ssn != "" else {
                 socialSecurityNumberLabel.font = UIFont.italicSystemFont(ofSize: socialSecurityNumberLabel.font.pointSize)
                 socialSecurityNumberLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
@@ -1103,49 +1103,51 @@ class MainViewController: UIViewController {
             
         } else if subNavOption1.currentTitle == EntrantType.contractorProj1001.rawValue && subNavOption1.isSelected == true {
             
-            guard let dob = dateOfBirth.text, dob != nil || dob != "" else {
+            projectNumber.text = "1001"
+            
+            guard let dob = dateOfBirth.text, dob != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            guard let name1 = firstName.text, name1 != nil || name1 != "" else {
+            guard let name1 = firstName.text, name1 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            guard let name2 = lastName.text, name2 != nil || name2 != "" else {
+            guard let name2 = lastName.text, name2 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your Last Name"))
                 return
             }
-            guard let street = streetAddress.text, street != nil || street != "" else {
+            guard let street = streetAddress.text, street != "" else {
                 streetAddressLabel.font = UIFont.italicSystemFont(ofSize: streetAddressLabel.font.pointSize)
                 streetAddressLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
                 return
             }
-            guard let theCity = city.text, theCity != nil || theCity != "" else {
+            guard let theCity = city.text, theCity != "" else {
                 cityLabel.font = UIFont.italicSystemFont(ofSize: cityLabel.font.pointSize)
                 cityLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your City"))
                 return
             }
-            guard let theState = state.text, theState != nil || theState != "" else {
+            guard let theState = state.text, theState != "" else {
                 stateLabel.font = UIFont.italicSystemFont(ofSize: stateLabel.font.pointSize)
                 stateLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your State"))
                 return
             }
-            guard let zip = zipCode.text, zip != nil || zip != "" else {
+            guard let zip = zipCode.text, zip != "" else {
                 zipCodeLabel.font = UIFont.italicSystemFont(ofSize: zipCodeLabel.font.pointSize)
                 zipCodeLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
                 return
             }
-            guard let ssn = socialSecurityNumber.text, ssn != nil || ssn != "" else {
+            guard let ssn = socialSecurityNumber.text, ssn != "" else {
                 socialSecurityNumberLabel.font = UIFont.italicSystemFont(ofSize: socialSecurityNumberLabel.font.pointSize)
                 socialSecurityNumberLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
@@ -1158,237 +1160,245 @@ class MainViewController: UIViewController {
         
         } else if subNavOption2.currentTitle == EntrantType.contractorProj1002.rawValue && subNavOption2.isSelected == true {
             
-            guard let dob = dateOfBirth.text, dob != nil || dob != "" else {
+            projectNumber.text = "1002"
+            
+            guard let dob = dateOfBirth.text, dob != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            guard let name1 = firstName.text, name1 != nil || name1 != "" else {
+            guard let name1 = firstName.text, name1 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            guard let name2 = lastName.text, name2 != nil || name2 != "" else {
+            guard let name2 = lastName.text, name2 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your Last Name"))
                 return
             }
-            guard let street = streetAddress.text, street != nil || street != "" else {
+            guard let street = streetAddress.text, street != "" else {
                 streetAddressLabel.font = UIFont.italicSystemFont(ofSize: streetAddressLabel.font.pointSize)
                 streetAddressLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
                 return
             }
-            guard let theCity = city.text, theCity != nil || theCity != "" else {
+            guard let theCity = city.text, theCity != "" else {
                 cityLabel.font = UIFont.italicSystemFont(ofSize: cityLabel.font.pointSize)
                 cityLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your City"))
                 return
             }
-            guard let theState = state.text, theState != nil || theState != "" else {
+            guard let theState = state.text, theState != "" else {
                 stateLabel.font = UIFont.italicSystemFont(ofSize: stateLabel.font.pointSize)
                 stateLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your State"))
                 return
             }
-            guard let zip = zipCode.text, zip != nil || zip != "" else {
+            guard let zip = zipCode.text, zip != "" else {
                 zipCodeLabel.font = UIFont.italicSystemFont(ofSize: zipCodeLabel.font.pointSize)
                 zipCodeLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
                 return
             }
-            guard let ssn = socialSecurityNumber.text, ssn != nil || ssn != "" else {
+            guard let ssn = socialSecurityNumber.text, ssn != "" else {
                 socialSecurityNumberLabel.font = UIFont.italicSystemFont(ofSize: socialSecurityNumberLabel.font.pointSize)
                 socialSecurityNumberLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
                 return
             }
             
-            let contractor1001 = ContractorProj1002Source(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, dateOfVisit: Date())
-            newUser = contractor1001
+            let contractor1002 = ContractorProj1002Source(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, dateOfVisit: Date())
+            newUser = contractor1002
             
         } else if subNavOption3.currentTitle == EntrantType.contractorProj1003.rawValue && subNavOption3.isSelected == true {
             
-            guard let dob = dateOfBirth.text, dob != nil || dob != "" else {
+            projectNumber.text = "1003"
+            
+            guard let dob = dateOfBirth.text, dob != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            guard let name1 = firstName.text, name1 != nil || name1 != "" else {
+            guard let name1 = firstName.text, name1 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            guard let name2 = lastName.text, name2 != nil || name2 != "" else {
+            guard let name2 = lastName.text, name2 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your Last Name"))
                 return
             }
-            guard let street = streetAddress.text, street != nil || street != "" else {
+            guard let street = streetAddress.text, street != "" else {
                 streetAddressLabel.font = UIFont.italicSystemFont(ofSize: streetAddressLabel.font.pointSize)
                 streetAddressLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
                 return
             }
-            guard let theCity = city.text, theCity != nil || theCity != "" else {
+            guard let theCity = city.text, theCity != "" else {
                 cityLabel.font = UIFont.italicSystemFont(ofSize: cityLabel.font.pointSize)
                 cityLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your City"))
                 return
             }
-            guard let theState = state.text, theState != nil || theState != "" else {
+            guard let theState = state.text, theState != "" else {
                 stateLabel.font = UIFont.italicSystemFont(ofSize: stateLabel.font.pointSize)
                 stateLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your State"))
                 return
             }
-            guard let zip = zipCode.text, zip != nil || zip != "" else {
+            guard let zip = zipCode.text, zip != "" else {
                 zipCodeLabel.font = UIFont.italicSystemFont(ofSize: zipCodeLabel.font.pointSize)
                 zipCodeLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
                 return
             }
-            guard let ssn = socialSecurityNumber.text, ssn != nil || ssn != "" else {
+            guard let ssn = socialSecurityNumber.text, ssn != "" else {
                 socialSecurityNumberLabel.font = UIFont.italicSystemFont(ofSize: socialSecurityNumberLabel.font.pointSize)
                 socialSecurityNumberLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
                 return
             }
             
-            let contractor1001 = ContractorProj1003Source(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, dateOfVisit: Date())
-            newUser = contractor1001
+            let contractor1003 = ContractorProj1003Source(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, dateOfVisit: Date())
+            newUser = contractor1003
         
         } else if subNavOption4.currentTitle == EntrantType.contractorProj2001.rawValue && subNavOption4.isSelected == true {
             
-            guard let dob = dateOfBirth.text, dob != nil || dob != "" else {
+            projectNumber.text = "2001"
+            
+            guard let dob = dateOfBirth.text, dob != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            guard let name1 = firstName.text, name1 != nil || name1 != "" else {
+            guard let name1 = firstName.text, name1 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            guard let name2 = lastName.text, name2 != nil || name2 != "" else {
+            guard let name2 = lastName.text, name2 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your Last Name"))
                 return
             }
-            guard let street = streetAddress.text, street != nil || street != "" else {
+            guard let street = streetAddress.text, street != "" else {
                 streetAddressLabel.font = UIFont.italicSystemFont(ofSize: streetAddressLabel.font.pointSize)
                 streetAddressLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
                 return
             }
-            guard let theCity = city.text, theCity != nil || theCity != "" else {
+            guard let theCity = city.text, theCity != "" else {
                 cityLabel.font = UIFont.italicSystemFont(ofSize: cityLabel.font.pointSize)
                 cityLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your City"))
                 return
             }
-            guard let theState = state.text, theState != nil || theState != "" else {
+            guard let theState = state.text, theState != "" else {
                 stateLabel.font = UIFont.italicSystemFont(ofSize: stateLabel.font.pointSize)
                 stateLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your State"))
                 return
             }
-            guard let zip = zipCode.text, zip != nil || zip != "" else {
+            guard let zip = zipCode.text, zip != "" else {
                 zipCodeLabel.font = UIFont.italicSystemFont(ofSize: zipCodeLabel.font.pointSize)
                 zipCodeLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
                 return
             }
-            guard let ssn = socialSecurityNumber.text, ssn != nil || ssn != "" else {
+            guard let ssn = socialSecurityNumber.text, ssn != "" else {
                 socialSecurityNumberLabel.font = UIFont.italicSystemFont(ofSize: socialSecurityNumberLabel.font.pointSize)
                 socialSecurityNumberLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
                 return
             }
             
-            let contractor1001 = ContractorProj2001Source(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, dateOfVisit: Date())
-            newUser = contractor1001
+            let contractor2001 = ContractorProj2001Source(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, dateOfVisit: Date())
+            newUser = contractor2001
             
         } else if subNavOption5.currentTitle == EntrantType.contractorProj2002.rawValue && subNavOption5.isSelected == true {
             
-            guard let dob = dateOfBirth.text, dob != nil || dob != "" else {
+            projectNumber.text = "2002" 
+            
+            guard let dob = dateOfBirth.text, dob != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            guard let name1 = firstName.text, name1 != nil || name1 != "" else {
+            guard let name1 = firstName.text, name1 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            guard let name2 = lastName.text, name2 != nil || name2 != "" else {
+            guard let name2 = lastName.text, name2 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your Last Name"))
                 return
             }
-            guard let street = streetAddress.text, street != nil || street != "" else {
+            guard let street = streetAddress.text, street != "" else {
                 streetAddressLabel.font = UIFont.italicSystemFont(ofSize: streetAddressLabel.font.pointSize)
                 streetAddressLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
                 return
             }
-            guard let theCity = city.text, theCity != nil || theCity != "" else {
+            guard let theCity = city.text, theCity != "" else {
                 cityLabel.font = UIFont.italicSystemFont(ofSize: cityLabel.font.pointSize)
                 cityLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your City"))
                 return
             }
-            guard let theState = state.text, theState != nil || theState != "" else {
+            guard let theState = state.text, theState != "" else {
                 stateLabel.font = UIFont.italicSystemFont(ofSize: stateLabel.font.pointSize)
                 stateLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your State"))
                 return
             }
-            guard let zip = zipCode.text, zip != nil || zip != "" else {
+            guard let zip = zipCode.text, zip != "" else {
                 zipCodeLabel.font = UIFont.italicSystemFont(ofSize: zipCodeLabel.font.pointSize)
                 zipCodeLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
                 return
             }
-            guard let ssn = socialSecurityNumber.text, ssn != nil || ssn != "" else {
+            guard let ssn = socialSecurityNumber.text, ssn != "" else {
                 socialSecurityNumberLabel.font = UIFont.italicSystemFont(ofSize: socialSecurityNumberLabel.font.pointSize)
                 socialSecurityNumberLabel.textColor = UIColor.red
                 print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
                 return
             }
             
-            let contractor1001 = ContractorProj2002Source(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, dateOfVisit: Date())
-            newUser = contractor1001
+            let contractor2002 = ContractorProj2002Source(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, dateOfVisit: Date())
+            newUser = contractor2002
         
         } else if subNavOption1.currentTitle == EntrantType.vendorAcme.rawValue && subNavOption1.isSelected == true {
             
             company.text = "Acme"
             
-            guard let dob = dateOfBirth.text, dob != nil || dob != "" else {
+            guard let dob = dateOfBirth.text, dob != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            guard let name1 = firstName.text, name1 != nil || name1 != "" else {
+            guard let name1 = firstName.text, name1 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            guard let name2 = lastName.text, name2 != nil || name2 != "" else {
+            guard let name2 = lastName.text, name2 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your Last Name"))
@@ -1402,19 +1412,19 @@ class MainViewController: UIViewController {
             
             company.text = "Orkin"
             
-            guard let dob = dateOfBirth.text, dob != nil || dob != "" else {
+            guard let dob = dateOfBirth.text, dob != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            guard let name1 = firstName.text, name1 != nil || name1 != "" else {
+            guard let name1 = firstName.text, name1 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            guard let name2 = lastName.text, name2 != nil || name2 != "" else {
+            guard let name2 = lastName.text, name2 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your Last Name"))
@@ -1429,19 +1439,19 @@ class MainViewController: UIViewController {
             
             company.text = "FedEx"
             
-            guard let dob = dateOfBirth.text, dob != nil || dob != "" else {
+            guard let dob = dateOfBirth.text, dob != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            guard let name1 = firstName.text, name1 != nil || name1 != "" else {
+            guard let name1 = firstName.text, name1 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            guard let name2 = lastName.text, name2 != nil || name2 != "" else {
+            guard let name2 = lastName.text, name2 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your Last Name"))
@@ -1455,19 +1465,19 @@ class MainViewController: UIViewController {
             
             company.text = "NW Electrical"
             
-            guard let dob = dateOfBirth.text, dob != nil || dob != "" else {
+            guard let dob = dateOfBirth.text, dob != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
                 print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
                 return
             }
-            guard let name1 = firstName.text, name1 != nil || name1 != "" else {
+            guard let name1 = firstName.text, name1 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
                 return
             }
-            guard let name2 = lastName.text, name2 != nil || name2 != "" else {
+            guard let name2 = lastName.text, name2 != "" else {
                 firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
                 firstNameLabel.textColor = UIColor.red
                 print(ErrorSource.missingFirstName(description: "Please enter your Last Name"))
