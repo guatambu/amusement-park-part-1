@@ -2,7 +2,7 @@
 //  ContractorProj1003.swift
 //  SingleViewAppSwiftTemplate
 //
-//  Created by Kelly Johnson on 7/6/17.
+//  Created by Michael Guatambu Davis on 7/6/17.
 //  Copyright © 2017 Treehouse. All rights reserved.
 //
 
