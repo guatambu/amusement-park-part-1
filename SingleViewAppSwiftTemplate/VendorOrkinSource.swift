@@ -36,7 +36,7 @@ class VendorOrkinSource: PersonSource {
         
         self.init(
             entrantType: [.vendorOrkin],
-            areaAccess: [.amusement, .ridecontrol, .kitchen],
+            areaAccess: [.amusement, .rideControl, .kitchen],
             ridePrivileges: [.none],
             discountAccess: [.none],
             discountAmount: [.none],
