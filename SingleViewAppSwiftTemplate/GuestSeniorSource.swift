@@ -36,7 +36,6 @@ class GuestSeniorSource: PersonSource {
             discountAccess: [.food, .merch],
             discountAmount: [.ten, .ten],
             requiredInformation: [.personal],
-            managementTier: [.none],
             dateOfBirth: dateOfBirth,
             firstName: firstName,
             lastName: lastName,

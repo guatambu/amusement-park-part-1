@@ -34,7 +34,7 @@ class VendorNWElectricalSource: PersonSource {
         }
         
         self.init(
-            entrantType: [.VendorNWElectrical],
+            entrantType: [.vendorNWElectrical],
             areaAccess: [.amusement, .kitchen, .rideControl, .maintenance, .office],
             ridePrivileges: [.none],
             discountAccess: [.none],

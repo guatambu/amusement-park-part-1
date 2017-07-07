@@ -373,6 +373,8 @@ class MainViewController: UIViewController {
             zipCode.isUserInteractionEnabled = true
             
         } else if subNavOption1.currentTitle == EntrantType.contractorProj1001.rawValue && subNavOption1.isSelected == true {
+            
+            projectNumber.text = "1001"
         
             /* UITextField Editing active/inactive */
             dateOfBirth.isUserInteractionEnabled = true
@@ -387,6 +389,8 @@ class MainViewController: UIViewController {
             zipCode.isUserInteractionEnabled = true
             
         } else if subNavOption1.currentTitle == EntrantType.vendorAcme.rawValue && subNavOption1.isSelected == true {
+            
+            company.text = "Acme"
         
             /* UITextField Editing active/inactive */
             dateOfBirth.isUserInteractionEnabled = true
@@ -457,6 +461,8 @@ class MainViewController: UIViewController {
         
         } else if subNavOption2.currentTitle == EntrantType.contractorProj1002.rawValue && subNavOption2.isSelected == true {
             
+            projectNumber.text = "1002"
+            
             /* UITextField Editing active/inactive */
             dateOfBirth.isUserInteractionEnabled = true
             socialSecurityNumber.isUserInteractionEnabled = true
@@ -470,6 +476,8 @@ class MainViewController: UIViewController {
             zipCode.isUserInteractionEnabled = true
             
         } else if subNavOption2.currentTitle == EntrantType.vendorOrkin.rawValue && subNavOption2.isSelected == true {
+            
+            company.text = "Orkin"
             
             /* UITextField Editing active/inactive */
             dateOfBirth.isUserInteractionEnabled = true
@@ -538,6 +546,8 @@ class MainViewController: UIViewController {
             
         } else if subNavOption3.currentTitle == EntrantType.contractorProj1003.rawValue && subNavOption3.isSelected == true {
             
+            projectNumber.text = "1003"
+            
             /* UITextField Editing active/inactive */
             dateOfBirth.isUserInteractionEnabled = true
             socialSecurityNumber.isUserInteractionEnabled = true
@@ -551,6 +561,8 @@ class MainViewController: UIViewController {
             zipCode.isUserInteractionEnabled = true
             
         } else if subNavOption3.currentTitle == EntrantType.vendorFedEx.rawValue && subNavOption3.isSelected == true {
+            
+            company.text = "FedEx"
             
             /* UITextField Editing active/inactive */
             dateOfBirth.isUserInteractionEnabled = true
@@ -606,6 +618,8 @@ class MainViewController: UIViewController {
             
         } else if subNavOption4.currentTitle == EntrantType.contractorProj2001.rawValue && subNavOption4.isSelected == true {
             
+            projectNumber.text = "2001"
+            
             /* UITextField Editing active/inactive */
             dateOfBirth.isUserInteractionEnabled = true
             socialSecurityNumber.isUserInteractionEnabled = true
@@ -619,6 +633,8 @@ class MainViewController: UIViewController {
             zipCode.isUserInteractionEnabled = true
             
         } else if subNavOption4.currentTitle == EntrantType.vendorNWElectrical.rawValue && subNavOption4.isSelected == true {
+            
+            company.text = "NW Electrical"
             
             /* UITextField Editing active/inactive */
             dateOfBirth.isUserInteractionEnabled = true
@@ -674,6 +690,8 @@ class MainViewController: UIViewController {
             
         } else if subNavOption5.currentTitle == EntrantType.contractorProj2002.rawValue && subNavOption5.isSelected == true {
             
+            projectNumber.text = "2002"
+            
             /* UITextField Editing active/inactive */
             dateOfBirth.isUserInteractionEnabled = true
             socialSecurityNumber.isUserInteractionEnabled = true
@@ -693,8 +711,6 @@ class MainViewController: UIViewController {
 
     // Pass Generators
     @IBAction func generatePass(_ sender: ButtonDesign) {
-        
-        
         
         if subNavOption1.currentTitle == EntrantType.child.rawValue && subNavOption1.isSelected == true {
             
@@ -1103,8 +1119,6 @@ class MainViewController: UIViewController {
             
         } else if subNavOption1.currentTitle == EntrantType.contractorProj1001.rawValue && subNavOption1.isSelected == true {
             
-            projectNumber.text = "1001"
-            
             guard let dob = dateOfBirth.text, dob != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
@@ -1160,8 +1174,6 @@ class MainViewController: UIViewController {
         
         } else if subNavOption2.currentTitle == EntrantType.contractorProj1002.rawValue && subNavOption2.isSelected == true {
             
-            projectNumber.text = "1002"
-            
             guard let dob = dateOfBirth.text, dob != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
@@ -1215,8 +1227,6 @@ class MainViewController: UIViewController {
             newUser = contractor1002
             
         } else if subNavOption3.currentTitle == EntrantType.contractorProj1003.rawValue && subNavOption3.isSelected == true {
-            
-            projectNumber.text = "1003"
             
             guard let dob = dateOfBirth.text, dob != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
@@ -1272,8 +1282,6 @@ class MainViewController: UIViewController {
         
         } else if subNavOption4.currentTitle == EntrantType.contractorProj2001.rawValue && subNavOption4.isSelected == true {
             
-            projectNumber.text = "2001"
-            
             guard let dob = dateOfBirth.text, dob != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
@@ -1327,8 +1335,6 @@ class MainViewController: UIViewController {
             newUser = contractor2001
             
         } else if subNavOption5.currentTitle == EntrantType.contractorProj2002.rawValue && subNavOption5.isSelected == true {
-            
-            projectNumber.text = "2002" 
             
             guard let dob = dateOfBirth.text, dob != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
@@ -1384,8 +1390,6 @@ class MainViewController: UIViewController {
         
         } else if subNavOption1.currentTitle == EntrantType.vendorAcme.rawValue && subNavOption1.isSelected == true {
             
-            company.text = "Acme"
-            
             guard let dob = dateOfBirth.text, dob != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
@@ -1409,8 +1413,6 @@ class MainViewController: UIViewController {
             newUser = acmeVendor
             
         } else if subNavOption2.currentTitle == EntrantType.vendorOrkin.rawValue && subNavOption2.isSelected == true {
-            
-            company.text = "Orkin"
             
             guard let dob = dateOfBirth.text, dob != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
@@ -1437,8 +1439,6 @@ class MainViewController: UIViewController {
         
         } else if subNavOption3.currentTitle == EntrantType.vendorFedEx.rawValue && subNavOption3.isSelected == true {
             
-            company.text = "FedEx"
-            
             guard let dob = dateOfBirth.text, dob != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
                 dateOfBirthLabel.textColor = UIColor.red
@@ -1462,8 +1462,6 @@ class MainViewController: UIViewController {
             newUser = fedexVendor
             
         } else if subNavOption4.currentTitle == EntrantType.vendorNWElectrical.rawValue && subNavOption4.isSelected == true {
-            
-            company.text = "NW Electrical"
             
             guard let dob = dateOfBirth.text, dob != "" else {
                 dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
