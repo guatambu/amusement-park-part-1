@@ -24,25 +24,25 @@ class GuestSeasonPassSource: PersonSource {
         )
     {
         
-        guard dateOfBirth == nil || dateOfBirth == "" else {
+        guard dateOfBirth != "" else {
             return nil
         }
-        guard firstName == nil || firstName == "" else {
+        guard firstName != "" else {
             return nil
         }
-        guard lastName == nil || lastName == "" else {
+        guard lastName != "" else {
             return nil
         }
-        guard streetAddress == nil || streetAddress == "" else {
+        guard streetAddress != "" else {
             return nil
         }
-        guard city == nil || city == "" else {
+        guard city != "" else {
             return nil
         }
-        guard state == nil || state == "" else {
+        guard state != "" else {
             return nil
         }
-        guard zipCode == nil || zipCode == "" else {
+        guard zipCode != "" else {
             return nil
         }
         

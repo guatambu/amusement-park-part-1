@@ -70,6 +70,9 @@ class MainViewController: UIViewController {
         
         labelFontReset()
         
+        projectNumber.text = ""
+        company.text = ""
+        
         contractorNavButton.isSelected = false
         guestNavButton.isSelected = true
         employeeNavButton.isSelected = false
@@ -123,6 +126,9 @@ class MainViewController: UIViewController {
         
         labelFontReset()
         
+        projectNumber.text = ""
+        company.text = ""
+        
         contractorNavButton.isSelected = false
         guestNavButton.isSelected = false
         employeeNavButton.isSelected = true
@@ -174,6 +180,9 @@ class MainViewController: UIViewController {
         
         labelFontReset()
         
+        projectNumber.text = ""
+        company.text = ""
+        
         contractorNavButton.isSelected = false
         guestNavButton.isSelected = false
         employeeNavButton.isSelected = false
@@ -222,6 +231,9 @@ class MainViewController: UIViewController {
     @IBAction func contractorNavButton(_ sender: UIButton) {
         
         labelFontReset()
+        
+        projectNumber.text = ""
+        company.text = ""
         
         contractorNavButton.isSelected = true
         guestNavButton.isSelected = false
@@ -273,6 +285,9 @@ class MainViewController: UIViewController {
     @IBAction func vendorNavButton(_ sender: UIButton) {
         
         labelFontReset()
+        
+        projectNumber.text = ""
+        company.text = ""
         
         contractorNavButton.isSelected = false
         guestNavButton.isSelected = false
@@ -333,6 +348,10 @@ class MainViewController: UIViewController {
         subNavOption5.isSelected = false
         
         if subNavOption1.currentTitle == EntrantType.child.rawValue && subNavOption1.isSelected == true {
+            
+            projectNumber.text = ""
+            company.text = ""
+            
             labelFontReset()
             /* UITextField appearance */
             dateOfBirth.alpha = 1.0
@@ -360,6 +379,9 @@ class MainViewController: UIViewController {
             
         } else if (subNavOption1.currentTitle == EntrantType.employeeFood.rawValue || subNavOption1.currentTitle == EntrantType.managerShift.rawValue) && subNavOption1.isSelected == true {
             
+            projectNumber.text = ""
+            company.text = ""
+            
             /* UITextField Editing active/inactive */
             dateOfBirth.isUserInteractionEnabled = true
             socialSecurityNumber.isUserInteractionEnabled = true
@@ -375,6 +397,7 @@ class MainViewController: UIViewController {
         } else if subNavOption1.currentTitle == EntrantType.contractorProj1001.rawValue && subNavOption1.isSelected == true {
             
             projectNumber.text = "1001"
+            company.text = ""
         
             /* UITextField Editing active/inactive */
             dateOfBirth.isUserInteractionEnabled = true
@@ -390,6 +413,7 @@ class MainViewController: UIViewController {
             
         } else if subNavOption1.currentTitle == EntrantType.vendorAcme.rawValue && subNavOption1.isSelected == true {
             
+            projectNumber.text = ""
             company.text = "Acme"
         
             /* UITextField Editing active/inactive */
@@ -419,6 +443,9 @@ class MainViewController: UIViewController {
         
         if subNavOption2.currentTitle == EntrantType.adult.rawValue && subNavOption2.isSelected == true {
             
+            projectNumber.text = ""
+            company.text = ""
+            
             labelFontReset()
             
             /* UITextField appearance */
@@ -447,6 +474,9 @@ class MainViewController: UIViewController {
             
         } else if (subNavOption2.currentTitle == EntrantType.employeeRide.rawValue || subNavOption2.currentTitle == EntrantType.managerGeneral.rawValue) && subNavOption2.isSelected == true {
             
+            projectNumber.text = ""
+            company.text = ""
+            
             /* UITextField Editing active/inactive */
             dateOfBirth.isUserInteractionEnabled = true
             socialSecurityNumber.isUserInteractionEnabled = true
@@ -462,6 +492,8 @@ class MainViewController: UIViewController {
         } else if subNavOption2.currentTitle == EntrantType.contractorProj1002.rawValue && subNavOption2.isSelected == true {
             
             projectNumber.text = "1002"
+            company.text = ""
+            
             
             /* UITextField Editing active/inactive */
             dateOfBirth.isUserInteractionEnabled = true
@@ -477,6 +509,7 @@ class MainViewController: UIViewController {
             
         } else if subNavOption2.currentTitle == EntrantType.vendorOrkin.rawValue && subNavOption2.isSelected == true {
             
+            projectNumber.text = ""
             company.text = "Orkin"
             
             /* UITextField Editing active/inactive */
@@ -503,6 +536,9 @@ class MainViewController: UIViewController {
         subNavOption5.isSelected = false
         
         if subNavOption3.currentTitle == EntrantType.senior.rawValue && subNavOption3.isSelected == true && guestNavButton.isSelected == true {
+            
+            projectNumber.text = ""
+            company.text = ""
             
             labelFontReset()
             
@@ -532,6 +568,9 @@ class MainViewController: UIViewController {
             
         } else if (subNavOption3.currentTitle == EntrantType.employeeRide.rawValue || subNavOption3.currentTitle == EntrantType.senior.rawValue) && subNavOption1.isSelected == true {
             
+            projectNumber.text = ""
+            company.text = ""
+            
             /* UITextField Editing active/inactive */
             dateOfBirth.isUserInteractionEnabled = true
             socialSecurityNumber.isUserInteractionEnabled = true
@@ -547,6 +586,7 @@ class MainViewController: UIViewController {
         } else if subNavOption3.currentTitle == EntrantType.contractorProj1003.rawValue && subNavOption3.isSelected == true {
             
             projectNumber.text = "1003"
+            company.text = ""
             
             /* UITextField Editing active/inactive */
             dateOfBirth.isUserInteractionEnabled = true
@@ -562,6 +602,7 @@ class MainViewController: UIViewController {
             
         } else if subNavOption3.currentTitle == EntrantType.vendorFedEx.rawValue && subNavOption3.isSelected == true {
             
+            projectNumber.text = ""
             company.text = "FedEx"
             
             /* UITextField Editing active/inactive */
@@ -589,6 +630,9 @@ class MainViewController: UIViewController {
         subNavOption5.isSelected = false
         
         if subNavOption4.currentTitle == EntrantType.vip.rawValue && subNavOption4.isSelected == true {
+            
+            projectNumber.text = ""
+            company.text = ""
             
             labelFontReset()
             
@@ -619,6 +663,8 @@ class MainViewController: UIViewController {
         } else if subNavOption4.currentTitle == EntrantType.contractorProj2001.rawValue && subNavOption4.isSelected == true {
             
             projectNumber.text = "2001"
+            company.text = ""
+            
             
             /* UITextField Editing active/inactive */
             dateOfBirth.isUserInteractionEnabled = true
@@ -634,6 +680,7 @@ class MainViewController: UIViewController {
             
         } else if subNavOption4.currentTitle == EntrantType.vendorNWElectrical.rawValue && subNavOption4.isSelected == true {
             
+            projectNumber.text = ""
             company.text = "NW Electrical"
             
             /* UITextField Editing active/inactive */
@@ -661,6 +708,9 @@ class MainViewController: UIViewController {
         subNavOption5.isSelected = true
         
         if subNavOption5.currentTitle == EntrantType.seasonPass.rawValue && subNavOption5.isSelected == true {
+            
+            projectNumber.text = ""
+            company.text = ""
             
             labelFontReset()
             
@@ -691,6 +741,7 @@ class MainViewController: UIViewController {
         } else if subNavOption5.currentTitle == EntrantType.contractorProj2002.rawValue && subNavOption5.isSelected == true {
             
             projectNumber.text = "2002"
+            company.text = ""
             
             /* UITextField Editing active/inactive */
             dateOfBirth.isUserInteractionEnabled = true
@@ -712,23 +763,25 @@ class MainViewController: UIViewController {
     // Pass Generators
     @IBAction func generatePass(_ sender: ButtonDesign) {
         
+        // child Guest
         if subNavOption1.currentTitle == EntrantType.child.rawValue && subNavOption1.isSelected == true {
-            
-            guard let dob = dateOfBirth.text, dob != "" else {
-                dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
-                dateOfBirthLabel.textColor = UIColor.red
-                print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
-                return
+            birthdayErrorCheck()
+            func childGuestGenerator() -> PersonSource? {
+                let childGuest = GuestChildSource(dateOfBirth: dateOfBirth.text, dateOfVisit: Date())
+                newUser = childGuest
+                print(newUser as Any)
+                return childGuest
             }
+            childGuestGenerator()
             
-            let childGuest = GuestChildSource(dateOfBirth: dateOfBirth.text, dateOfVisit: Date())
-            newUser = childGuest
-            
+        // adult Guest
         } else if subNavOption2.currentTitle == EntrantType.adult.rawValue && subNavOption2.isSelected == true {
             
             let adultGuest = GuestClassicSource(dateOfVisit: Date())
             newUser = adultGuest
-            
+            print(newUser as Any)
+         
+        // senior guest
         } else if subNavOption3.currentTitle == EntrantType.senior.rawValue && subNavOption3.isSelected == true && guestNavButton.isSelected == true {
             
             guard let dob = dateOfBirth.text, dob != "" else {
@@ -752,14 +805,16 @@ class MainViewController: UIViewController {
             
             let seniorGuest = GuestSeniorSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, dateOfVisit: Date())
             newUser = seniorGuest
+            print(newUser as Any)
             
-        
+        // VIP Guest
         } else if subNavOption4.currentTitle == EntrantType.vip.rawValue && subNavOption4.isSelected == true {
             
             let vipGuest = GuestVIPSource(dateOfVisit: Date())
             newUser = vipGuest
+            print(newUser as Any)
             
-        
+        // season pass Guest
         } else if subNavOption5.currentTitle == EntrantType.seasonPass.rawValue && subNavOption5.isSelected == true {
             
             guard let dob = dateOfBirth.text, dob != "" else {
@@ -807,8 +862,9 @@ class MainViewController: UIViewController {
             
             let seasonPassGuest = GuestSeasonPassSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, dateOfVisit: Date())
             newUser = seasonPassGuest
+            print(newUser as Any)
             
-            
+        // food services employee
         } else if subNavOption1.currentTitle == EntrantType.employeeFood.rawValue && subNavOption1.isSelected == true {
 
             guard let dob = dateOfBirth.text, dob != "" else {
@@ -856,7 +912,9 @@ class MainViewController: UIViewController {
             
             let foodEmployee = HourlyFoodEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, dateOfVisit: Date())
             newUser = foodEmployee
-            
+            print(newUser as Any)
+         
+        // ride services Employee
         } else if subNavOption2.currentTitle == EntrantType.employeeRide.rawValue && subNavOption2.isSelected == true {
             
             guard let dob = dateOfBirth.text, dob != "" else {
@@ -904,7 +962,9 @@ class MainViewController: UIViewController {
             
             let rideEmployee = HourlyRideServicesEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, dateOfVisit: Date())
             newUser = rideEmployee
+            print(newUser as Any)
         
+        // maintenance Employee
         } else if subNavOption3.currentTitle == EntrantType.employeeMaintenance.rawValue && subNavOption3.isSelected == true {
 
             guard let dob = dateOfBirth.text, dob != "" else {
@@ -952,7 +1012,9 @@ class MainViewController: UIViewController {
             
             let maintenanceEmployee = HourlyMaintenanceEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, dateOfVisit: Date())
             newUser = maintenanceEmployee
+            print(newUser as Any)
         
+        // shift Manager
         } else if subNavOption1.currentTitle == EntrantType.managerShift.rawValue && subNavOption1.isSelected == true {
             
             guard let dob = dateOfBirth.text, dob != "" else {
@@ -1006,7 +1068,9 @@ class MainViewController: UIViewController {
             
             let shiftManager = ManagerShiftSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, dateOfVisit: Date())
             newUser = shiftManager
+            print(newUser as Any)
         
+        // general Manager
         } else if subNavOption2.currentTitle == EntrantType.managerGeneral.rawValue && subNavOption2.isSelected == true {
             
             guard let dob = dateOfBirth.text, dob != "" else {
@@ -1060,8 +1124,9 @@ class MainViewController: UIViewController {
 
             let generalManager = ManagerGeneralSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, dateOfVisit: Date())
             newUser = generalManager
+            print(newUser as Any)
             
-        
+        // senior Manager
         } else if subNavOption3.currentTitle == EntrantType.managerSenior.rawValue && subNavOption3.isSelected == true {
         
             guard let dob = dateOfBirth.text, dob != "" else {
@@ -1115,8 +1180,9 @@ class MainViewController: UIViewController {
             
             let seniorManager = ManagerSeniorSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, dateOfVisit: Date())
             newUser = seniorManager
+            print(newUser as Any)
             
-            
+        // contractor Proj #1001
         } else if subNavOption1.currentTitle == EntrantType.contractorProj1001.rawValue && subNavOption1.isSelected == true {
             
             guard let dob = dateOfBirth.text, dob != "" else {
@@ -1170,8 +1236,9 @@ class MainViewController: UIViewController {
 
             let contractor1001 = ContractorProj1001Source(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, dateOfVisit: Date())
             newUser = contractor1001
+            print(newUser as Any)
             
-        
+        // contractor Proj #1002
         } else if subNavOption2.currentTitle == EntrantType.contractorProj1002.rawValue && subNavOption2.isSelected == true {
             
             guard let dob = dateOfBirth.text, dob != "" else {
@@ -1225,7 +1292,9 @@ class MainViewController: UIViewController {
             
             let contractor1002 = ContractorProj1002Source(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, dateOfVisit: Date())
             newUser = contractor1002
-            
+            print(newUser as Any)
+         
+        // contractor Proj #1003
         } else if subNavOption3.currentTitle == EntrantType.contractorProj1003.rawValue && subNavOption3.isSelected == true {
             
             guard let dob = dateOfBirth.text, dob != "" else {
@@ -1279,7 +1348,9 @@ class MainViewController: UIViewController {
             
             let contractor1003 = ContractorProj1003Source(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, dateOfVisit: Date())
             newUser = contractor1003
+            print(newUser as Any)
         
+        // contractor Proj #2001
         } else if subNavOption4.currentTitle == EntrantType.contractorProj2001.rawValue && subNavOption4.isSelected == true {
             
             guard let dob = dateOfBirth.text, dob != "" else {
@@ -1333,7 +1404,9 @@ class MainViewController: UIViewController {
             
             let contractor2001 = ContractorProj2001Source(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, dateOfVisit: Date())
             newUser = contractor2001
-            
+            print(newUser as Any)
+        
+        // contractor Proj #2002
         } else if subNavOption5.currentTitle == EntrantType.contractorProj2002.rawValue && subNavOption5.isSelected == true {
             
             guard let dob = dateOfBirth.text, dob != "" else {
@@ -1387,7 +1460,9 @@ class MainViewController: UIViewController {
             
             let contractor2002 = ContractorProj2002Source(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, dateOfVisit: Date())
             newUser = contractor2002
+            print(newUser as Any)
         
+        // vendor Acme
         } else if subNavOption1.currentTitle == EntrantType.vendorAcme.rawValue && subNavOption1.isSelected == true {
             
             guard let dob = dateOfBirth.text, dob != "" else {
@@ -1411,7 +1486,9 @@ class MainViewController: UIViewController {
             
             let acmeVendor = VendorAcmeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, company: company.text, dateOfVisit: Date())
             newUser = acmeVendor
-            
+            print(newUser as Any)
+        
+        // vendor Orkin
         } else if subNavOption2.currentTitle == EntrantType.vendorOrkin.rawValue && subNavOption2.isSelected == true {
             
             guard let dob = dateOfBirth.text, dob != "" else {
@@ -1435,8 +1512,10 @@ class MainViewController: UIViewController {
             
             let orkinVendor = VendorOrkinSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, company: company.text, dateOfVisit: Date())
             newUser = orkinVendor
+            print(newUser as Any)
             
         
+        // vendor FedEx
         } else if subNavOption3.currentTitle == EntrantType.vendorFedEx.rawValue && subNavOption3.isSelected == true {
             
             guard let dob = dateOfBirth.text, dob != "" else {
@@ -1460,7 +1539,9 @@ class MainViewController: UIViewController {
             
             let fedexVendor = VendorFedExSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, company: company.text, dateOfVisit: Date())
             newUser = fedexVendor
-            
+            print(newUser as Any)
+        
+        // vendor NW Electrical
         } else if subNavOption4.currentTitle == EntrantType.vendorNWElectrical.rawValue && subNavOption4.isSelected == true {
             
             guard let dob = dateOfBirth.text, dob != "" else {
@@ -1484,7 +1565,7 @@ class MainViewController: UIViewController {
             
             let nwelectricalVendor = VendorNWElectricalSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, company: company.text, dateOfVisit: Date())
             newUser = nwelectricalVendor
-            
+            print(newUser as Any)
         
         }
         
@@ -1878,15 +1959,22 @@ class MainViewController: UIViewController {
         
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        <#code#>
+    }
     
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+    
+    
+   
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let createNewPassViewController = segue.destination as? CreateNewPassViewController {
-            CreateNewPassViewController.per = personSource
-            //mainViewController.delegate = self
+            let entrant = newUser
+            createNewPassViewController.entrant = entrant
         }
-    }*/
+    }
     
     
     
@@ -1903,6 +1991,111 @@ class MainViewController: UIViewController {
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 5.0, options: UIViewAnimationOptions(), animations: {() -> Void in view.isHidden = hidden }, completion: nil)
         
     }
+    
+    
+    
+// *** textfield error check functions
+    
+    
+    func birthdayErrorCheck() {
+        guard let dob = dateOfBirth.text, dob != "" else {
+            dateOfBirthLabel.font = UIFont.italicSystemFont(ofSize: dateOfBirthLabel.font.pointSize)
+            dateOfBirthLabel.textColor = UIColor.red
+            print(ErrorSource.missingBirthdate(description: "Please enter your Date of Birth"))
+            return
+        }
+        print("date of birth is valid")
+    }
+    
+    
+    func socialSecurityNumberErrorCheck() {
+        guard let ssn = socialSecurityNumber.text, ssn != "" else {
+            socialSecurityNumberLabel.font = UIFont.italicSystemFont(ofSize: socialSecurityNumberLabel.font.pointSize)
+            socialSecurityNumberLabel.textColor = UIColor.red
+            print(ErrorSource.missingLastName(description: "Please enter your Social Security Number"))
+            return
+        }
+        
+        print("ssn is valid")
+        
+    }
+
+
+    func firstNameErrorCheck() {
+        guard let name1 = firstName.text, name1 != "" else {
+            firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
+            firstNameLabel.textColor = UIColor.red
+            print(ErrorSource.missingFirstName(description: "Please enter your First Name"))
+            return
+        }
+        print("first name is valid")
+    }
+    
+    
+    func lastNameErrorCheck() {
+        guard let name2 = lastName.text, name2 != "" else {
+            firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
+            firstNameLabel.textColor = UIColor.red
+            print(ErrorSource.missingFirstName(description: "Please enter your Last Name"))
+            return
+        }
+        print("last nameis valid")
+        
+    }
+    
+    func streetErrorCheck() {
+        guard let street = streetAddress.text, street != "" else {
+            streetAddressLabel.font = UIFont.italicSystemFont(ofSize: streetAddressLabel.font.pointSize)
+            streetAddressLabel.textColor = UIColor.red
+            print(ErrorSource.missingLastName(description: "Please enter your Street Address"))
+            return
+        }
+        
+        print("street address is valid")
+        
+    }
+    
+    
+    func cityErrorCheck() {
+        guard let theCity = city.text, theCity != "" else {
+            cityLabel.font = UIFont.italicSystemFont(ofSize: cityLabel.font.pointSize)
+            cityLabel.textColor = UIColor.red
+            print(ErrorSource.missingLastName(description: "Please enter your City"))
+            return
+        }
+        
+        print("city is valid")
+        
+    }
+    
+    
+    func stateErrorCheck() {
+        guard let theState = state.text, theState != "" else {
+            stateLabel.font = UIFont.italicSystemFont(ofSize: stateLabel.font.pointSize)
+            stateLabel.textColor = UIColor.red
+            print(ErrorSource.missingLastName(description: "Please enter your State"))
+            return
+        }
+        
+        print("state is valid")
+        
+    }
+    
+    
+    func zipErrorCheck() {
+        guard let zip = zipCode.text, zip != "" else {
+            zipCodeLabel.font = UIFont.italicSystemFont(ofSize: zipCodeLabel.font.pointSize)
+            zipCodeLabel.textColor = UIColor.red
+            print(ErrorSource.missingLastName(description: "Please enter your ZIP Code"))
+            return
+        }
+        
+        print("zip code is valid")
+    }
+
+    
+    
+    
     
  // finish up here... you have a bunch of constraints to add to move some textfields around
     func keyboardWillShow(_ notification: Notification) {

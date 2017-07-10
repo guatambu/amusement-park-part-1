@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateNewPassViewController: UIViewController/*, MainViewControllerDelegate*/ {
+class CreateNewPassViewController: UIViewController {
     
     // passing Entrant instance initialized in MainViewController to CreateNewPassViewController
     
@@ -149,7 +149,7 @@ class CreateNewPassViewController: UIViewController/*, MainViewControllerDelegat
         super.viewDidLoad()
         
         passFullName.text = "\(String(describing: entrant?.firstName)) \(String(describing: entrant?.lastName))"
-        passEntrantType.text = "\(String(describing: entrant))"
+        passEntrantType.text = "\(String(describing: entrant?.entrantType))"
         passPermissions.text = "\(String(describing: entrant?.areaAccess))/n\(String(describing: entrant?.ridePrivileges))/n\(String(describing: entrant?.discountAmount[0]))\(String(describing: entrant?.discountAccess[0]))/n\(String(describing: entrant?.discountAmount[1]))\(String(describing: entrant?.discountAccess[1]))/n\(String(describing: entrant?.requiredInformation))"
         
 
@@ -165,22 +165,9 @@ class CreateNewPassViewController: UIViewController/*, MainViewControllerDelegat
     
     
     
-   /* func entrantPassed(entrant: EntrantTypeable) {
-        passFullName.text = "\(String(describing: entrant.firstName)) \(String(describing: entrant.lastName))"
-        passEntrantType.text = "\(String(describing: entrant))"
-        passPermissions.text = "\(String(describing: entrant.areaAccess))/n\(String(describing: entrant.ridePrivileges))/n\(String(describing: entrant.discountAmount[0]))\(String(describing: entrant.discountAccess[0]))/n\(String(describing: entrant.discountAmount[1]))\(String(describing: entrant.discountAccess[1]))/n\(String(describing: entrant.requiredInformation))"
-    }
- */
+
     
 
-    /*
 
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

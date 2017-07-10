@@ -24,30 +24,30 @@ class ManagerShiftSource: PersonSource {
      )
      {
      
-         guard dateOfBirth == nil || dateOfBirth == "" else {
-         return nil
-         }
-         guard firstName == nil || firstName == "" else {
-         return nil
-         }
-         guard lastName == nil || lastName == "" else {
-         return nil
-         }
-         guard streetAddress == nil || streetAddress == "" else {
-         return nil
-         }
-         guard city == nil || city == "" else {
-         return nil
-         }
-         guard state == nil || state == "" else {
-         return nil
-         }
-         guard zipCode == nil || zipCode == "" else {
-         return nil
-         }
-         guard socialSecurityNumber == nil || socialSecurityNumber == "" else {
-         return nil
-         }
+        guard dateOfBirth != "" else {
+            return nil
+        }
+        guard firstName != "" else {
+            return nil
+        }
+        guard lastName != "" else {
+            return nil
+        }
+        guard streetAddress != "" else {
+            return nil
+        }
+        guard city != "" else {
+            return nil
+        }
+        guard state != "" else {
+            return nil
+        }
+        guard zipCode != "" else {
+            return nil
+        }
+        guard socialSecurityNumber != "" else {
+            return nil
+        }
      
          self.init(
              entrantType: [.managerShift],

@@ -17,7 +17,7 @@ class GuestChildSource: PersonSource {
         dateOfVisit: Date
         )
     {
-        guard dateOfBirth == nil || dateOfBirth == "" else {
+        guard dateOfBirth != "" else {
             return nil
         }
         

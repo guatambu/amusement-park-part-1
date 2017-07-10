@@ -20,16 +20,16 @@ class VendorAcmeSource: PersonSource {
         )
     {
         
-        guard dateOfBirth == nil || dateOfBirth == "" else {
+        guard dateOfBirth != "" else {
             return nil
         }
-        guard firstName == nil || firstName == "" else {
+        guard firstName != "" else {
             return nil
         }
-        guard lastName == nil || lastName == "" else {
+        guard lastName != "" else {
             return nil
         }
-        guard company == nil || company == "" else {
+        guard company != "" else {
             return nil
         }
         

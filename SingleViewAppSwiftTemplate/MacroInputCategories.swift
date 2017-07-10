@@ -21,18 +21,14 @@ enum AreaAccess: String {
 }
 
 enum CollectedData: String {
+    case birthdate = "Date of Birth"
+    case ssn = "Social Security Number"
     case firstName = "First Name"
     case lastName = "Last Name"
-    case vendorCompany = "Vendor Company"
     case street = "Street Address"
     case city = "City"
     case state = "State"
     case zip = "ZIP Code"
-    case ssn = "Social Security Number"
-    case birthdate = "Date of Birth"
-    case visitDate = "Date of Visit"
-    case managementTier = "Management Tier"
-    case projectNumber = "Project Number"
 }
 
 enum DiscountAccess: String {
