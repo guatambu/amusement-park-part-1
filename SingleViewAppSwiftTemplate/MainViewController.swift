@@ -6,11 +6,6 @@
 //  Copyright © 2017 Treehouse. All rights reserved.
 //
 
-/*protocol MainViewControllerDelegate: class {
-    func entrantPassed(entrant: EntrantTypeable)
-}*/
-
-
 import UIKit
 
 class MainViewController: UIViewController {
@@ -18,10 +13,7 @@ class MainViewController: UIViewController {
     var counter = 0
     var newUser: PersonSource?
     
-    //weak var delegate: MainViewControllerDelegate?
-    
-    
-    /* Navigation */
+    /* NAVIGATION */
     
     // Navigation @IBOutlets
     @IBOutlet weak var guestNavButton: UIButton!
@@ -62,8 +54,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var state: UITextField!
     @IBOutlet weak var zipCode: UITextField!
     
-    
-    /* Buttons @IBActions  */
+    /* BUTTONS @IBActions  */
     
     // Navigation Buttons
     @IBAction func guestNavButton(_ sender: UIButton) {
@@ -118,8 +109,6 @@ class MainViewController: UIViewController {
         state.isUserInteractionEnabled = false
         zipCode.isUserInteractionEnabled = false
         
-        
-        
     }
 
     @IBAction func employeeNavButton(_ sender: UIButton) {
@@ -171,9 +160,7 @@ class MainViewController: UIViewController {
         city.isUserInteractionEnabled = false
         state.isUserInteractionEnabled = false
         zipCode.isUserInteractionEnabled = false
-        
-        
-        
+
     }
     
     @IBAction func managerNavButton(_ sender: UIButton) {
@@ -320,7 +307,6 @@ class MainViewController: UIViewController {
         city.alpha = 0.2
         state.alpha = 0.2
         zipCode.alpha = 0.2
-        /*MARK: *** dateOfVisit ***   */
         
         /* UITextField Editing active/inactive */
         dateOfBirth.isUserInteractionEnabled = false
@@ -333,10 +319,8 @@ class MainViewController: UIViewController {
         city.isUserInteractionEnabled = false
         state.isUserInteractionEnabled = false
         zipCode.isUserInteractionEnabled = false
-        /*MARK: *** dateOfVisit ***   */
         
     }
-    
     
     // SubNavigation Buttons
     @IBAction func subNavOption1Choice(_ sender: UIButton) {
@@ -427,10 +411,7 @@ class MainViewController: UIViewController {
             city.isUserInteractionEnabled = false
             state.isUserInteractionEnabled = false
             zipCode.isUserInteractionEnabled = false
-            
         }
-        
-        
     }
         
     @IBAction func subNavOption2Choice(_ sender: UIButton) {
@@ -523,7 +504,6 @@ class MainViewController: UIViewController {
             city.isUserInteractionEnabled = false
             state.isUserInteractionEnabled = false
             zipCode.isUserInteractionEnabled = false
-            
         }
     }
     
@@ -616,9 +596,7 @@ class MainViewController: UIViewController {
             city.isUserInteractionEnabled = false
             state.isUserInteractionEnabled = false
             zipCode.isUserInteractionEnabled = false
-            
         }
-
     }
     
     @IBAction func subNavOption4Choice(_ sender: UIButton) {
@@ -694,9 +672,7 @@ class MainViewController: UIViewController {
             city.isUserInteractionEnabled = false
             state.isUserInteractionEnabled = false
             zipCode.isUserInteractionEnabled = false
-            
         }
-
     }
     
     @IBAction func subNavOption5(_ sender: UIButton) {
@@ -754,11 +730,8 @@ class MainViewController: UIViewController {
             city.isUserInteractionEnabled = true
             state.isUserInteractionEnabled = true
             zipCode.isUserInteractionEnabled = true
-            
         }
-
     }
-
 
     // Pass Generators
     @IBAction func generatePass(_ sender: ButtonDesign) {
@@ -768,7 +741,6 @@ class MainViewController: UIViewController {
             
             birthdayErrorCheck()
             childGuestGenerator()
-
             
         // adult Guest
         } else if subNavOption2.currentTitle == EntrantType.adult.rawValue && subNavOption2.isSelected == true {
@@ -776,16 +748,14 @@ class MainViewController: UIViewController {
             let adultGuest = GuestClassicSource(dateOfVisit: Date())
             newUser = adultGuest
             print(newUser as Any)
-            
          
         // senior guest
         } else if subNavOption3.currentTitle == EntrantType.senior.rawValue && subNavOption3.isSelected == true && guestNavButton.isSelected == true {
             
-            birthdayErrorCheck()
             firstNameErrorCheck()
             lastNameErrorCheck()
+            birthdayErrorCheck()
             seniorGuestGenerator()
-            
             
         // VIP Guest
         } else if subNavOption4.currentTitle == EntrantType.vip.rawValue && subNavOption4.isSelected == true {
@@ -797,20 +767,18 @@ class MainViewController: UIViewController {
         // season pass Guest
         } else if subNavOption5.currentTitle == EntrantType.seasonPass.rawValue && subNavOption5.isSelected == true {
             
-            birthdayErrorCheck()
             firstNameErrorCheck()
             lastNameErrorCheck()
             streetErrorCheck()
             cityErrorCheck()
             stateErrorCheck()
             zipErrorCheck()
+            birthdayErrorCheck()
             seasonPassGuestGenerator()
-            
             
         // food services employee
         } else if subNavOption1.currentTitle == EntrantType.employeeFood.rawValue && subNavOption1.isSelected == true {
             
-            birthdayErrorCheck()
             firstNameErrorCheck()
             lastNameErrorCheck()
             streetErrorCheck()
@@ -818,13 +786,12 @@ class MainViewController: UIViewController {
             stateErrorCheck()
             zipErrorCheck()
             socialSecurityNumberErrorCheck()
+            birthdayErrorCheck()
             foodEmployeeGenerator()
-        
          
         // ride services Employee
         } else if subNavOption2.currentTitle == EntrantType.employeeRide.rawValue && subNavOption2.isSelected == true {
             
-            birthdayErrorCheck()
             firstNameErrorCheck()
             lastNameErrorCheck()
             streetErrorCheck()
@@ -832,13 +799,12 @@ class MainViewController: UIViewController {
             stateErrorCheck()
             zipErrorCheck()
             socialSecurityNumberErrorCheck()
+            birthdayErrorCheck()
             rideServicesEmployeeGenerator()
-            
         
         // maintenance Employee
         } else if subNavOption3.currentTitle == EntrantType.employeeMaintenance.rawValue && subNavOption3.isSelected == true {
             
-            birthdayErrorCheck()
             firstNameErrorCheck()
             lastNameErrorCheck()
             streetErrorCheck()
@@ -846,13 +812,12 @@ class MainViewController: UIViewController {
             stateErrorCheck()
             zipErrorCheck()
             socialSecurityNumberErrorCheck()
+            birthdayErrorCheck()
             maintenanceEmployeeGenerator()
-            
         
         // shift Manager
         } else if subNavOption1.currentTitle == EntrantType.managerShift.rawValue && subNavOption1.isSelected == true {
             
-            birthdayErrorCheck()
             firstNameErrorCheck()
             lastNameErrorCheck()
             streetErrorCheck()
@@ -860,13 +825,12 @@ class MainViewController: UIViewController {
             stateErrorCheck()
             zipErrorCheck()
             socialSecurityNumberErrorCheck()
+            birthdayErrorCheck()
             shiftManagerGenerator()
-            
             
         // general Manager
         } else if subNavOption2.currentTitle == EntrantType.managerGeneral.rawValue && subNavOption2.isSelected == true {
             
-            birthdayErrorCheck()
             firstNameErrorCheck()
             lastNameErrorCheck()
             streetErrorCheck()
@@ -874,12 +838,12 @@ class MainViewController: UIViewController {
             stateErrorCheck()
             zipErrorCheck()
             socialSecurityNumberErrorCheck()
+            birthdayErrorCheck()
             generalManagerGenerator()
         
         // senior manager
         } else if subNavOption3.currentTitle == EntrantType.managerSenior.rawValue && subNavOption3.isSelected == true {
             
-            birthdayErrorCheck()
             firstNameErrorCheck()
             lastNameErrorCheck()
             streetErrorCheck()
@@ -887,13 +851,12 @@ class MainViewController: UIViewController {
             stateErrorCheck()
             zipErrorCheck()
             socialSecurityNumberErrorCheck()
+            birthdayErrorCheck()
             seniorManagerGenerator()
-            
             
         // contractor Proj #1001
         } else if subNavOption1.currentTitle == EntrantType.contractorProj1001.rawValue && subNavOption1.isSelected == true {
             
-            birthdayErrorCheck()
             firstNameErrorCheck()
             lastNameErrorCheck()
             streetErrorCheck()
@@ -901,13 +864,12 @@ class MainViewController: UIViewController {
             stateErrorCheck()
             zipErrorCheck()
             socialSecurityNumberErrorCheck()
+            birthdayErrorCheck()
             contractor1001Generator()
-           
             
         // contractor Proj #1002
         } else if subNavOption2.currentTitle == EntrantType.contractorProj1002.rawValue && subNavOption2.isSelected == true {
             
-            birthdayErrorCheck()
             firstNameErrorCheck()
             lastNameErrorCheck()
             streetErrorCheck()
@@ -915,13 +877,12 @@ class MainViewController: UIViewController {
             stateErrorCheck()
             zipErrorCheck()
             socialSecurityNumberErrorCheck()
+            birthdayErrorCheck()
             contractor1002Generator()
-            
          
         // contractor Proj #1003
         } else if subNavOption3.currentTitle == EntrantType.contractorProj1003.rawValue && subNavOption3.isSelected == true {
             
-            birthdayErrorCheck()
             firstNameErrorCheck()
             lastNameErrorCheck()
             streetErrorCheck()
@@ -929,12 +890,12 @@ class MainViewController: UIViewController {
             stateErrorCheck()
             zipErrorCheck()
             socialSecurityNumberErrorCheck()
+            birthdayErrorCheck()
             contractor1003Generator()
             
         // contractor Proj #2001
         } else if subNavOption4.currentTitle == EntrantType.contractorProj2001.rawValue && subNavOption4.isSelected == true {
             
-            birthdayErrorCheck()
             firstNameErrorCheck()
             lastNameErrorCheck()
             streetErrorCheck()
@@ -942,13 +903,12 @@ class MainViewController: UIViewController {
             stateErrorCheck()
             zipErrorCheck()
             socialSecurityNumberErrorCheck()
+            birthdayErrorCheck()
             contractor2001Generator()
-            
             
         // contractor Proj #2002
         } else if subNavOption5.currentTitle == EntrantType.contractorProj2002.rawValue && subNavOption5.isSelected == true {
             
-            birthdayErrorCheck()
             firstNameErrorCheck()
             lastNameErrorCheck()
             streetErrorCheck()
@@ -956,54 +916,49 @@ class MainViewController: UIViewController {
             stateErrorCheck()
             zipErrorCheck()
             socialSecurityNumberErrorCheck()
+            birthdayErrorCheck()
             contractor2002Generator()
             
-        
         // vendor Acme
         } else if subNavOption1.currentTitle == EntrantType.vendorAcme.rawValue && subNavOption1.isSelected == true {
             
-            birthdayErrorCheck()
             firstNameErrorCheck()
             lastNameErrorCheck()
+            birthdayErrorCheck()
             acmeVendorGenerator()
-            
         
         // vendor Orkin
         } else if subNavOption2.currentTitle == EntrantType.vendorOrkin.rawValue && subNavOption2.isSelected == true {
             
-            birthdayErrorCheck()
             firstNameErrorCheck()
             lastNameErrorCheck()
+            birthdayErrorCheck()
             orkinVendorGenerator()
-            
         
         // vendor FedEx
         } else if subNavOption3.currentTitle == EntrantType.vendorFedEx.rawValue && subNavOption3.isSelected == true {
             
-            birthdayErrorCheck()
             firstNameErrorCheck()
             lastNameErrorCheck()
+            birthdayErrorCheck()
             fedexVendorGenerator()
         
         // vendor NW Electrical
         } else if subNavOption4.currentTitle == EntrantType.vendorNWElectrical.rawValue && subNavOption4.isSelected == true {
             
-            birthdayErrorCheck()
             firstNameErrorCheck()
             lastNameErrorCheck()
+            birthdayErrorCheck()
             nwelectricalVendorGenerator()
         
-        }
-        
-        else {
-            labelFontReset()
+        } else {
             
+            labelFontReset()
         }
     }
 
     
     @IBAction func populateData(_ sender: ButtonDesign) {
-        
         
         func increment () {
             counter += 1
@@ -1013,7 +968,6 @@ class MainViewController: UIViewController {
         // test cases to populate app textfields
         
         func textFieldPopulater () {
-            
             
             if counter == 0 {
                 // basic employee
@@ -1051,8 +1005,6 @@ class MainViewController: UIViewController {
                 city.text = "whoville"
                 state.text = "CA"
                 zipCode.text = "01988"
-                
-                
             
             } else if counter == 1 {
                 // child guest
@@ -1098,8 +1050,6 @@ class MainViewController: UIViewController {
                 state.text = ""
                 zipCode.text = ""
                 
-                
-                
             } else if counter == 2 {
                 // senior guest
                 
@@ -1113,7 +1063,6 @@ class MainViewController: UIViewController {
                 city.alpha = 0.2
                 state.alpha = 0.2
                 zipCode.alpha = 0.2
-                
                 
                 contractorNavButton.isSelected = false
                 guestNavButton.isSelected = true
@@ -1136,11 +1085,9 @@ class MainViewController: UIViewController {
                 state.text = ""
                 zipCode.text = ""
                 
-            
-                
             } else if counter == 3 {
+
                 // vendor
-                
                 dateOfBirth.alpha = 1.0
                 socialSecurityNumber.alpha = 0.2
                 projectNumber.alpha = 0.2
@@ -1182,11 +1129,9 @@ class MainViewController: UIViewController {
                 state.text = ""
                 zipCode.text = ""
                 
-                
-                
             } else if counter == 4 {
-                // contractor
                 
+                // contractor
                 dateOfBirth.alpha = 1.0
                 socialSecurityNumber.alpha = 1.0
                 projectNumber.alpha = 1.0
@@ -1230,11 +1175,9 @@ class MainViewController: UIViewController {
                 state.text = "CA"
                 zipCode.text = "27365"
                 
-                
-                
             } else if  counter == 5 {
-                // manager
                 
+                // manager
                 dateOfBirth.alpha = 1.0
                 socialSecurityNumber.alpha = 1.0
                 projectNumber.alpha = 0.2
@@ -1276,8 +1219,6 @@ class MainViewController: UIViewController {
                 state.text = "CA"
                 zipCode.text = "01988"
                 
-                
-                
             } else {
                 counter = -1
                 
@@ -1314,20 +1255,15 @@ class MainViewController: UIViewController {
                 city.text = ""
                 state.text = ""
                 zipCode.text = ""
-                
             }
-            
         }
         
         textFieldPopulater()
         increment()
         print(counter)
-        
     }
 
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         /*
@@ -1339,12 +1275,12 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     
     // alert function for user data input errors
     func createAlert (title: String, message: String) {
@@ -1384,38 +1320,6 @@ class MainViewController: UIViewController {
         cityLabel.textColor = UIColor.black
         stateLabel.textColor = UIColor.black
         zipCodeLabel.textColor = UIColor.black
-        
-        
-    }
-
-    
-    /* ALL THINGS SEGUE RELATED */
-    
-    // error check abort segue segue
-
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if let createNewPassViewController = segue.destination as? CreateNewPassViewController {
-            let entrant = newUser
-            createNewPassViewController.entrant = entrant
-        }
-    }
-    
-    
-    
-    
-
-
- 
- 
-
-    /* STACKVIEW ANUIMATION (if used) */
-
-    // allows me to animate stack views and their display
-    private func animateView(view: UIView, toHidden hidden: Bool) {
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 5.0, options: UIViewAnimationOptions(), animations: {() -> Void in view.isHidden = hidden }, completion: nil)
-        
     }
     
     
@@ -1424,116 +1328,147 @@ class MainViewController: UIViewController {
     func childGuestGenerator() -> PersonSource? {
         let childGuest = GuestChildSource(dateOfBirth: dateOfBirth.text, dateOfVisit: Date())
         newUser = childGuest
+        childGuestPrint()
+        print(newUser as Any)
         return childGuest
+    }
+    
+    func childGuestPrint() {
+        guard let newUserBirthday = newUser?.dateOfBirth  else {
+            print("oops")
+            return
+        }
+        
+        guard let newUserDateOfVisit = newUser?.dateOfVisit else {
+            print("whoopsie")
+            return
+        }
+        
+        print("this is newUser's Birthday: \(newUserBirthday)")
+        print("this is newUSer's Date of Visit: \(newUserDateOfVisit)")
     }
     
     func seniorGuestGenerator() -> PersonSource? {
         let seniorGuest = GuestSeniorSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, dateOfVisit: Date())
         newUser = seniorGuest
+        print(newUser as Any)
         return seniorGuest
     }
     
     func seasonPassGuestGenerator() -> PersonSource? {
         let seasonPassGuest = GuestSeasonPassSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, dateOfVisit: Date())
         newUser = seasonPassGuest
+        print(newUser as Any)
         return seasonPassGuest
     }
     
     func foodEmployeeGenerator() -> PersonSource? {
         let foodEmployee = HourlyFoodEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, dateOfVisit: Date())
         newUser = foodEmployee
+        print(newUser as Any)
         return foodEmployee
     }
     
     func rideServicesEmployeeGenerator() -> PersonSource? {
         let rideEmployee = HourlyRideServicesEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, dateOfVisit: Date())
         newUser = rideEmployee
+        print(newUser as Any)
         return rideEmployee
     }
     
     func maintenanceEmployeeGenerator() -> PersonSource? {
         let maintenanceEmployee = HourlyMaintenanceEmployeeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, dateOfVisit: Date())
         newUser = maintenanceEmployee
+        print(newUser as Any)
         return maintenanceEmployee
     }
     
     func shiftManagerGenerator() -> PersonSource? {
         let shiftManager = ManagerShiftSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, dateOfVisit: Date())
         newUser = shiftManager
+        print(newUser as Any)
         return shiftManager
     }
     
     func generalManagerGenerator() -> PersonSource? {
         let generalManager = ManagerGeneralSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, dateOfVisit: Date())
         newUser = generalManager
+        print(newUser as Any)
         return generalManager
     }
     
     func seniorManagerGenerator() -> PersonSource? {
         let seniorManager = ManagerSeniorSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, dateOfVisit: Date())
         newUser = seniorManager
+        print(newUser as Any)
         return seniorManager
     }
     
     func contractor1001Generator() -> PersonSource? {
         let contractor1001 = ContractorProj1001Source(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, dateOfVisit: Date())
         newUser = contractor1001
+        print(newUser as Any)
         return contractor1001
     }
     
     func contractor1002Generator() -> PersonSource? {
         let contractor1002 = ContractorProj1002Source(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, dateOfVisit: Date())
         newUser = contractor1002
+        print(newUser as Any)
         return contractor1002
     }
     
     func contractor1003Generator() -> PersonSource? {
         let contractor1003 = ContractorProj1003Source(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, dateOfVisit: Date())
         newUser = contractor1003
+        print(newUser as Any)
         return contractor1003
     }
     
     func contractor2001Generator() -> PersonSource? {
         let contractor2001 = ContractorProj2001Source(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, dateOfVisit: Date())
         newUser = contractor2001
+        print(newUser as Any)
         return contractor2001
     }
     
     func contractor2002Generator() -> PersonSource? {
         let contractor2002 = ContractorProj2002Source(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, streetAddress: streetAddress.text, city: city.text, state: state.text, zipCode: zipCode.text, socialSecurityNumber: socialSecurityNumber.text, dateOfVisit: Date())
         newUser = contractor2002
+        print(newUser as Any)
         return contractor2002
     }
     
     func acmeVendorGenerator() -> PersonSource? {
         let acmeVendor = VendorAcmeSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, company: company.text, dateOfVisit: Date())
         newUser = acmeVendor
+        print(newUser as Any)
         return acmeVendor
     }
     
     func orkinVendorGenerator() -> PersonSource? {
         let orkinVendor = VendorOrkinSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, company: company.text, dateOfVisit: Date())
         newUser = orkinVendor
+        print(newUser as Any)
         return orkinVendor
     }
     
     func fedexVendorGenerator() -> PersonSource? {
         let fedexVendor = VendorFedExSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, company: company.text, dateOfVisit: Date())
         newUser = fedexVendor
+        print(newUser as Any)
         return fedexVendor
     }
     
     func nwelectricalVendorGenerator() -> PersonSource? {
         let nwelectricalVendor = VendorNWElectricalSource(dateOfBirth: dateOfBirth.text, firstName: firstName.text, lastName: lastName.text, company: company.text, dateOfVisit: Date())
         newUser = nwelectricalVendor
+        print(newUser as Any)
         return nwelectricalVendor
     }
     
     
-    
-    
     /* TEXTFIELD ERROR CHECKS */
-    
     
     func birthdayErrorCheck() {
         guard let dob = dateOfBirth.text, dob != "" else {
@@ -1543,10 +1478,10 @@ class MainViewController: UIViewController {
             print("\(birthdayErrorMessage)")
             return
         }
-        performSegue(withIdentifier: "genPass", sender: self)
         print("date of birth is valid")
+        performSegue(withIdentifier: "genPass", sender: self)
+        
     }
-    
     
     func socialSecurityNumberErrorCheck() {
         guard let ssn = socialSecurityNumber.text, ssn != "" else {
@@ -1556,10 +1491,9 @@ class MainViewController: UIViewController {
             print("\(ssnErrorMessage)")
             return
         }
-        performSegue(withIdentifier: "genPass", sender: self)
+        
         print("ssn is valid")
     }
-
 
     func firstNameErrorCheck() {
         guard let name1 = firstName.text, name1 != "" else {
@@ -1569,10 +1503,9 @@ class MainViewController: UIViewController {
             print("\(firstNameErrorMessage)")
             return
         }
-        performSegue(withIdentifier: "genPass", sender: self)
+        
         print("first name is valid")
     }
-    
     
     func lastNameErrorCheck() {
         guard let name2 = lastName.text, name2 != "" else {
@@ -1582,8 +1515,8 @@ class MainViewController: UIViewController {
             print("\(lastNameErrorMessage)")
             return
         }
-        performSegue(withIdentifier: "genPass", sender: self)
-        print("last nameis valid")
+        
+        print("last name is valid")
     }
     
     func streetErrorCheck() {
@@ -1594,10 +1527,9 @@ class MainViewController: UIViewController {
             print("\(streetErrorMessage)")
             return
         }
-        performSegue(withIdentifier: "genPass", sender: self)
+        
         print("street address is valid")
     }
-    
     
     func cityErrorCheck() {
         guard let theCity = city.text, theCity != "" else {
@@ -1607,10 +1539,9 @@ class MainViewController: UIViewController {
             print("\(cityErrorMessage)")
             return
         }
-        performSegue(withIdentifier: "genPass", sender: self)
+        
         print("city is valid")
     }
-    
     
     func stateErrorCheck() {
         guard let theState = state.text, theState != "" else {
@@ -1620,10 +1551,9 @@ class MainViewController: UIViewController {
             print("\(stateErrorMessage)")
             return
         }
-        performSegue(withIdentifier: "genPass", sender: self)
+        
         print("state is valid")
     }
-    
     
     func zipErrorCheck() {
         guard let zip = zipCode.text, zip != "" else {
@@ -1633,15 +1563,39 @@ class MainViewController: UIViewController {
             print("\(zipCodeErrorMessage)")
             return
         }
-        performSegue(withIdentifier: "genPass", sender: self)
+        
         print("zip code is valid")
     }
-
     
     
- /* EVERYTHING KEYBOARD ACTIVITY SETUP RELATED */
+    /* ALL THINGS SEGUE RELATED */
     
- // finish up here... you have a bunch of constraints to add to move some textfields around
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {        
+        if let createNewPassViewController = segue.destination as? CreateNewPassViewController {
+            let entrant = newUser
+            createNewPassViewController.entrant = entrant
+            
+            
+            print("this is entrant's value after successful segue: \(String(describing: entrant))")
+            
+    
+            createNewPassViewController.viewDidLoad()
+        }
+    }
+    
+    
+    /* STACKVIEW ANUIMATION (if used) */
+    
+    // allows me to animate stack views and their display
+    private func animateView(view: UIView, toHidden hidden: Bool) {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 5.0, options: UIViewAnimationOptions(), animations: {() -> Void in view.isHidden = hidden }, completion: nil)
+        
+    }
+    
+    
+    /* EVERYTHING KEYBOARD ACTIVITY SETUP RELATED */
+    
+    // finish up here... you have a bunch of constraints to add to move some textfields around
     func keyboardWillShow(_ notification: Notification) {
         print("Keyboard hooray!")
         if let info = notification.userInfo, let keyboardFrame = info [UIKeyboardFrameEndUserInfoKey] as? NSValue {
@@ -1652,7 +1606,6 @@ class MainViewController: UIViewController {
                 self.view.layoutIfNeeded()
             }
         }
-        
     }
     
     func keyboardWillHide(_ notification: Notification) {
@@ -1666,14 +1619,9 @@ class MainViewController: UIViewController {
             }
         }
     
-    
-    
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
-
-
-
 }
 
 extension MainViewController: UITextFieldDelegate {
@@ -1684,3 +1632,14 @@ extension MainViewController: UITextFieldDelegate {
     }
     
 }
+
+
+
+
+
+
+
+
+
+
+

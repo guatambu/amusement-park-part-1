@@ -148,11 +148,11 @@ class CreateNewPassViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        passFullName.text = "\(String(describing: entrant?.firstName)) \(String(describing: entrant?.lastName))"
-        passEntrantType.text = "\(String(describing: entrant?.entrantType))"
-        passPermissions.text = "\(String(describing: entrant?.areaAccess))/n\(String(describing: entrant?.ridePrivileges))/n\(String(describing: entrant?.discountAmount[0]))\(String(describing: entrant?.discountAccess[0]))/n\(String(describing: entrant?.discountAmount[1]))\(String(describing: entrant?.discountAccess[1]))/n\(String(describing: entrant?.requiredInformation))"
+        print("hello this is CreateNewPassViewController")
+        print("this is entrant's current value: \(entrant as Any)")
         
-
+        guestPassPrint()
+        
         // Do any additional setup after loading the view.
     }
     
@@ -163,11 +163,56 @@ class CreateNewPassViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func guestPassPrint() {
+        
+        nameIsValid()
+        entrantTypeIsValid()
+        permissionsAreValid()
+
+    }
     
     
-
     
-
-
-
+    func nameIsValid() {
+        guard let entrantFirstName = entrant?.firstName, let entrantLastName = entrant?.lastName  else {
+            print("oops no name in CreateNewPassViewController")
+            return
+        }
+        print("YAY name in CreateNewPassViewController")
+        print("\(entrantFirstName) \(entrantLastName)")
+        passFullName?.text = "\(entrantFirstName) \(entrantLastName))"
+        
+    }
+    
+    func entrantTypeIsValid() {
+        guard let entrantType = entrant?.entrantType else {
+            print("oops no entrant in CreateNewPassViewController")
+            return
+        }
+        print("YAY Entrant Type in CreateNewPassViewController")
+        print("\(entrantType)")
+        passEntrantType?.text = "\(entrantType[0].rawValue))"
+    }
+    
+    func permissionsAreValid() {
+        guard let areaAccess = entrant?.areaAccess, let ridePrivileges = entrant?.ridePrivileges, let discountAmount = entrant?.discountAccess, let discountAccess = entrant?.discountAmount, let requiredInformation = entrant?.requiredInformation  else {
+            print("oops no permissions in CreateNewPassViewController")
+            return
+        }
+        print("YAY permissions are in CreateNewPassViewController")
+        print("\(areaAccess)\n\(ridePrivileges)\n\(discountAccess)\n\(discountAmount)\n\(requiredInformation)")
+        passPermissions?.text = "- \(areaAccess)\n- \(ridePrivileges)\n- \(discountAmount[0].rawValue) off \(discountAccess[0].rawValue)\n- \(discountAmount[1].rawValue) off \(discountAccess[1].rawValue)\n- \(requiredInformation[0].rawValue))"
+    }
+    
+    
 }
+
+
+
+
+
+
+
+
+
+
