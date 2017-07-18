@@ -87,6 +87,18 @@ class MainViewController: UIViewController {
         subNavOption4.setTitle(EntrantType.vip.rawValue, for: .normal)
         subNavOption5.setTitle(EntrantType.seasonPass.rawValue, for: .normal)
         
+        subNavOption1.isEnabled = true
+        subNavOption2.isEnabled = true
+        subNavOption3.isEnabled = true
+        subNavOption4.isEnabled = true
+        subNavOption5.isEnabled = true
+        
+        subNavOption1.alpha = 1.0
+        subNavOption2.alpha = 1.0
+        subNavOption3.alpha = 1.0
+        subNavOption4.alpha = 1.0
+        subNavOption5.alpha = 1.0
+        
         subNavOption4.isHidden = false
         subNavOption5.isHidden = false
         
@@ -139,6 +151,16 @@ class MainViewController: UIViewController {
         subNavOption2.setTitle(EntrantType.employeeRide.rawValue, for: .normal)
         subNavOption3.setTitle(EntrantType.employeeMaintenance.rawValue, for: .normal)
         
+        subNavOption1.isEnabled = true
+        subNavOption2.isEnabled = true
+        subNavOption3.isEnabled = true
+        subNavOption4.isEnabled = false
+        subNavOption5.isEnabled = false
+        
+        subNavOption1.alpha = 1.0
+        subNavOption2.alpha = 1.0
+        subNavOption3.alpha = 1.0
+        
         subNavOption4.isHidden = true
         subNavOption5.isHidden = true
         
@@ -190,6 +212,16 @@ class MainViewController: UIViewController {
         subNavOption1.setTitle(EntrantType.managerShift.rawValue, for: .normal)
         subNavOption2.setTitle(EntrantType.managerGeneral.rawValue, for: .normal)
         subNavOption3.setTitle(EntrantType.managerSenior.rawValue, for: .normal)
+        
+        subNavOption1.isEnabled = true
+        subNavOption2.isEnabled = true
+        subNavOption3.isEnabled = true
+        subNavOption4.isEnabled = false
+        subNavOption5.isEnabled = false
+        
+        subNavOption1.alpha = 1.0
+        subNavOption2.alpha = 1.0
+        subNavOption3.alpha = 1.0
         
         subNavOption4.isHidden = true
         subNavOption5.isHidden = true
@@ -245,6 +277,16 @@ class MainViewController: UIViewController {
         subNavOption4.setTitle(EntrantType.contractorProj2001.rawValue, for: .normal)
         subNavOption5.setTitle(EntrantType.contractorProj2002.rawValue, for: .normal)
         
+        subNavOption1.isEnabled = true
+        subNavOption2.isEnabled = true
+        subNavOption3.isEnabled = true
+        subNavOption4.isEnabled = true
+        subNavOption5.isEnabled = true
+        
+        subNavOption1.alpha = 1.0
+        subNavOption2.alpha = 1.0
+        subNavOption3.alpha = 1.0
+        
         subNavOption4.isHidden = false
         subNavOption5.isHidden = false
         
@@ -297,6 +339,17 @@ class MainViewController: UIViewController {
         subNavOption2.setTitle(EntrantType.vendorOrkin.rawValue, for: .normal)
         subNavOption3.setTitle(EntrantType.vendorFedEx.rawValue, for: .normal)
         subNavOption4.setTitle(EntrantType.vendorNWElectrical.rawValue, for: .normal)
+        
+        subNavOption1.isEnabled = true
+        subNavOption2.isEnabled = true
+        subNavOption3.isEnabled = true
+        subNavOption4.isEnabled = true
+        subNavOption5.isEnabled = false
+        
+        subNavOption1.alpha = 1.0
+        subNavOption2.alpha = 1.0
+        subNavOption3.alpha = 1.0
+        subNavOption4.alpha = 1.0
         
         subNavOption4.isHidden = false
         subNavOption5.isHidden = true
@@ -1276,6 +1329,43 @@ class MainViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.keyboardWillShow(_:)), name: Notification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.keyboardWillHide(_:)), name: Notification.Name.UIKeyboardWillHide, object: nil)
         
+        /* subNavigations Buttons turned off at load... require Navigation button selected */
+        subNavOption1.isEnabled = false
+        subNavOption2.isEnabled = false
+        subNavOption3.isEnabled = false
+        subNavOption4.isEnabled = false
+        subNavOption5.isEnabled = false
+        
+        /* turned off and appearance is "turned off" */
+        subNavOption1.alpha = 0.2
+        subNavOption2.alpha = 0.2
+        subNavOption3.alpha = 0.2
+        subNavOption4.alpha = 0.2
+        subNavOption5.alpha = 0.2
+        
+        /* UITextField Editing active/inactive */
+        dateOfBirth.isUserInteractionEnabled = false
+        socialSecurityNumber.isUserInteractionEnabled = false
+        projectNumber.isUserInteractionEnabled = false
+        firstName.isUserInteractionEnabled = false
+        lastName.isUserInteractionEnabled = false
+        company.isUserInteractionEnabled = false
+        streetAddress.isUserInteractionEnabled = false
+        city.isUserInteractionEnabled = false
+        state.isUserInteractionEnabled = false
+        zipCode.isUserInteractionEnabled = false
+        
+        /* UITextfields inactive without selection at time of view load */
+        dateOfBirth.alpha = 0.2
+        socialSecurityNumber.alpha = 0.2
+        projectNumber.alpha = 0.2
+        firstName.alpha = 0.2
+        lastName.alpha = 0.2
+        company.alpha = 0.2
+        streetAddress.alpha = 0.2
+        city.alpha = 0.2
+        state.alpha = 0.2
+        zipCode.alpha = 0.2
         
 
         // Do any additional setup after loading the view.
