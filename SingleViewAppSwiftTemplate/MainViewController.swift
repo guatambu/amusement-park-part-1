@@ -59,6 +59,11 @@ class MainViewController: UIViewController {
     @IBOutlet weak var state: UITextField!
     @IBOutlet weak var zipCode: UITextField!
     
+    // Bottom Action Button IBOutlets
+    @IBOutlet weak var genPass: ButtonDesign!
+    @IBOutlet weak var popData: ButtonDesign!
+    
+    
     /* BUTTONS @IBActions  */
     
     // Navigation Buttons
@@ -126,6 +131,13 @@ class MainViewController: UIViewController {
         state.isUserInteractionEnabled = false
         zipCode.isUserInteractionEnabled = false
         
+        /* Action Buttons inactive */
+        genPass.alpha = 0.4
+        popData.alpha = 0.4
+        
+        genPass.isEnabled = false
+        popData.isEnabled = false
+        
     }
 
     @IBAction func employeeNavButton(_ sender: UIButton) {
@@ -187,6 +199,13 @@ class MainViewController: UIViewController {
         city.isUserInteractionEnabled = false
         state.isUserInteractionEnabled = false
         zipCode.isUserInteractionEnabled = false
+        
+        /* Action Buttons inactive */
+        genPass.alpha = 0.4
+        popData.alpha = 0.4
+        
+        genPass.isEnabled = false
+        popData.isEnabled = false
 
     }
     
@@ -249,6 +268,13 @@ class MainViewController: UIViewController {
         city.isUserInteractionEnabled = false
         state.isUserInteractionEnabled = false
         zipCode.isUserInteractionEnabled = false
+        
+        /* Action Buttons inactive */
+        genPass.alpha = 0.4
+        popData.alpha = 0.4
+        
+        genPass.isEnabled = false
+        popData.isEnabled = false
         
     }
     
@@ -314,6 +340,13 @@ class MainViewController: UIViewController {
         state.isUserInteractionEnabled = false
         zipCode.isUserInteractionEnabled = false
         
+        /* Action Buttons inactive */
+        genPass.alpha = 0.4
+        popData.alpha = 0.4
+        
+        genPass.isEnabled = false
+        popData.isEnabled = false
+        
     }
     
     @IBAction func vendorNavButton(_ sender: UIButton) {
@@ -377,6 +410,13 @@ class MainViewController: UIViewController {
         city.isUserInteractionEnabled = false
         state.isUserInteractionEnabled = false
         zipCode.isUserInteractionEnabled = false
+        
+        /* Action Buttons inactive */
+        genPass.alpha = 0.4
+        popData.alpha = 0.4
+        
+        genPass.isEnabled = false
+        popData.isEnabled = false
         
     }
     
@@ -470,6 +510,14 @@ class MainViewController: UIViewController {
             state.isUserInteractionEnabled = false
             zipCode.isUserInteractionEnabled = false
         }
+        
+        /* Action Buttons active */
+        genPass.alpha = 1.0
+        popData.alpha = 1.0
+        
+        genPass.isEnabled = true
+        popData.isEnabled = true
+        
     }
         
     @IBAction func subNavOption2Choice(_ sender: UIButton) {
@@ -563,6 +611,14 @@ class MainViewController: UIViewController {
             state.isUserInteractionEnabled = false
             zipCode.isUserInteractionEnabled = false
         }
+        
+        /* Action Buttons active */
+        genPass.alpha = 1.0
+        popData.alpha = 1.0
+        
+        genPass.isEnabled = true
+        popData.isEnabled = true
+        
     }
     
     @IBAction func subNavOption3Choice(_ sender: UIButton) {
@@ -655,6 +711,14 @@ class MainViewController: UIViewController {
             state.isUserInteractionEnabled = false
             zipCode.isUserInteractionEnabled = false
         }
+        
+        /* Action Buttons active */
+        genPass.alpha = 1.0
+        popData.alpha = 1.0
+        
+        genPass.isEnabled = true
+        popData.isEnabled = true
+        
     }
     
     @IBAction func subNavOption4Choice(_ sender: UIButton) {
@@ -731,6 +795,14 @@ class MainViewController: UIViewController {
             state.isUserInteractionEnabled = false
             zipCode.isUserInteractionEnabled = false
         }
+        
+        /* Action Buttons active */
+        genPass.alpha = 1.0
+        popData.alpha = 1.0
+        
+        genPass.isEnabled = true
+        popData.isEnabled = true
+        
     }
     
     @IBAction func subNavOption5(_ sender: UIButton) {
@@ -789,6 +861,14 @@ class MainViewController: UIViewController {
             state.isUserInteractionEnabled = true
             zipCode.isUserInteractionEnabled = true
         }
+        
+        /* Action Buttons active */
+        genPass.alpha = 1.0
+        popData.alpha = 1.0
+        
+        genPass.isEnabled = true
+        popData.isEnabled = true
+        
     }
 
     // Pass Generators
@@ -1366,6 +1446,9 @@ class MainViewController: UIViewController {
         city.alpha = 0.2
         state.alpha = 0.2
         zipCode.alpha = 0.2
+        
+        genPass.alpha = 0.4
+        popData.alpha = 0.4
         
 
         // Do any additional setup after loading the view.

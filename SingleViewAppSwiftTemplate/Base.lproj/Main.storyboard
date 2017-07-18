@@ -654,10 +654,12 @@
                         <outlet property="entrantMacroInputStackViewBottomConstraint" destination="Kb1-bh-G3G" id="diJ-ai-tzp"/>
                         <outlet property="firstName" destination="Ze2-Mq-nnu" id="F6L-tt-oxt"/>
                         <outlet property="firstNameLabel" destination="d1e-Oc-dog" id="tgW-Op-mKK"/>
+                        <outlet property="genPass" destination="ipI-oH-hij" id="HLb-Vd-lsi"/>
                         <outlet property="guestNavButton" destination="mfE-hN-2JW" id="E6G-dH-MsV"/>
                         <outlet property="lastName" destination="2OJ-CH-DkG" id="hWg-io-xJu"/>
                         <outlet property="lastNameLabel" destination="oMa-l4-FqT" id="u1F-7P-lbr"/>
                         <outlet property="managerNavButton" destination="Ni2-i3-sbp" id="oPy-bd-iwa"/>
+                        <outlet property="popData" destination="ARH-ww-LiE" id="TTW-I9-Hvq"/>
                         <outlet property="projectNumber" destination="sRF-Cm-RFK" id="SxJ-Tx-Odp"/>
                         <outlet property="projectNumberLabel" destination="T0F-0o-TOU" id="CwJ-hN-9nu"/>
                         <outlet property="socialSecurityNumber" destination="OY9-Mb-xGv" id="RbR-wh-XTO"/>
