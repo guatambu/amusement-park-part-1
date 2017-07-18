@@ -1604,30 +1604,23 @@ class MainViewController: UIViewController {
     // finish up here... you have a bunch of constraints to add to move some textfields around
     func keyboardWillShow(_ notification: Notification) {
         print("Keyboard hooray!")
-        if let info = notification.userInfo, let keyboardFrame = info [UIKeyboardFrameEndUserInfoKey] as? NSValue {
-            let frame = keyboardFrame.cgRectValue
-            entrantMacroInputStackViewBottomConstraint.constant = frame.size.height + 10
-            stateTextfieldViewBottomContraint.constant = frame.size.height + 10
-            stateEtcTextfieldViewBottomConstraint.constant = frame.size.height + 10
-            
-            UIView.animate(withDuration: 0.8) {
-                self.view.layoutIfNeeded()
-            }
-        }
+        
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+        
+            self.view.frame = CGRect(x: 0, y: -100, width: self.view.frame.width, height: self.view.frame.height)
+        
+        }, completion: nil)
     }
     
     func keyboardWillHide(_ notification: Notification) {
-        
         print("Keyboard hidden hooray!")
         
-            entrantMacroInputStackViewBottomConstraint.constant = 0
-            stateTextfieldViewBottomContraint.constant = 0
-            stateEtcTextfieldViewBottomConstraint.constant = 0
-        
-            UIView.animate(withDuration: 0.8) {
-                self.view.layoutIfNeeded()
-            }
-        }
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            
+            self.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+            
+        }, completion: nil)
+    }
     
     deinit {
         NotificationCenter.default.removeObserver(self)
