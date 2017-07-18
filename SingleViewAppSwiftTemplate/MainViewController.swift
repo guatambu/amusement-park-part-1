@@ -12,6 +12,7 @@ class MainViewController: UIViewController {
     
     var counter = 0
     var newUser: PersonSource?
+    var greenLightMeansGo: Bool = false
     
     /* NAVIGATION */
     
@@ -70,6 +71,7 @@ class MainViewController: UIViewController {
     @IBAction func guestNavButton(_ sender: UIButton) {
         
         labelFontReset()
+        greenLightMeansGo = false
         
         projectNumber.text = ""
         company.text = ""
@@ -138,11 +140,14 @@ class MainViewController: UIViewController {
         genPass.isEnabled = false
         popData.isEnabled = false
         
+        
+        
     }
 
     @IBAction func employeeNavButton(_ sender: UIButton) {
         
         labelFontReset()
+        greenLightMeansGo = false
         
         projectNumber.text = ""
         company.text = ""
@@ -212,6 +217,7 @@ class MainViewController: UIViewController {
     @IBAction func managerNavButton(_ sender: UIButton) {
         
         labelFontReset()
+        greenLightMeansGo = false
         
         projectNumber.text = ""
         company.text = ""
@@ -281,6 +287,7 @@ class MainViewController: UIViewController {
     @IBAction func contractorNavButton(_ sender: UIButton) {
         
         labelFontReset()
+        greenLightMeansGo = false
         
         projectNumber.text = ""
         company.text = ""
@@ -352,6 +359,7 @@ class MainViewController: UIViewController {
     @IBAction func vendorNavButton(_ sender: UIButton) {
         
         labelFontReset()
+        greenLightMeansGo = false
         
         projectNumber.text = ""
         company.text = ""
@@ -422,6 +430,8 @@ class MainViewController: UIViewController {
     
     // SubNavigation Buttons
     @IBAction func subNavOption1Choice(_ sender: UIButton) {
+        
+        greenLightMeansGo = false
         
         subNavOption1.isSelected = true
         subNavOption2.isSelected = false
@@ -521,6 +531,8 @@ class MainViewController: UIViewController {
     }
         
     @IBAction func subNavOption2Choice(_ sender: UIButton) {
+        
+        greenLightMeansGo = false
         
         subNavOption1.isSelected = false
         subNavOption2.isSelected = true
@@ -623,6 +635,8 @@ class MainViewController: UIViewController {
     
     @IBAction func subNavOption3Choice(_ sender: UIButton) {
         
+        greenLightMeansGo = false
+        
         subNavOption1.isSelected = false
         subNavOption2.isSelected = false
         subNavOption3.isSelected = true
@@ -723,6 +737,8 @@ class MainViewController: UIViewController {
     
     @IBAction func subNavOption4Choice(_ sender: UIButton) {
         
+        greenLightMeansGo = false
+        
         subNavOption1.isSelected = false
         subNavOption2.isSelected = false
         subNavOption3.isSelected = false
@@ -807,6 +823,8 @@ class MainViewController: UIViewController {
     
     @IBAction func subNavOption5(_ sender: UIButton) {
         
+        greenLightMeansGo = false
+        
         subNavOption1.isSelected = false
         subNavOption2.isSelected = false
         subNavOption3.isSelected = false
@@ -879,13 +897,17 @@ class MainViewController: UIViewController {
             
             birthdayErrorCheck()
             childGuestGenerator()
+            greenMeansGoForSegue()
+            
             
         // adult Guest
         } else if subNavOption2.currentTitle == EntrantType.adult.rawValue && subNavOption2.isSelected == true {
             
             let adultGuest = GuestClassicSource(dateOfVisit: Date())
             newUser = adultGuest
+            greenLightMeansGo = true
             print(newUser as Any)
+            greenMeansGoForSegue()
          
         // senior guest
         } else if subNavOption3.currentTitle == EntrantType.senior.rawValue && subNavOption3.isSelected == true && guestNavButton.isSelected == true {
@@ -894,6 +916,7 @@ class MainViewController: UIViewController {
             lastNameErrorCheck()
             birthdayErrorCheck()
             seniorGuestGenerator()
+            greenMeansGoForSegue()
             
         // VIP Guest
         } else if subNavOption4.currentTitle == EntrantType.vip.rawValue && subNavOption4.isSelected == true {
@@ -901,6 +924,8 @@ class MainViewController: UIViewController {
             let vipGuest = GuestVIPSource(dateOfVisit: Date())
             newUser = vipGuest
             print(newUser as Any)
+            greenLightMeansGo = true
+            greenMeansGoForSegue()
             
         // season pass Guest
         } else if subNavOption5.currentTitle == EntrantType.seasonPass.rawValue && subNavOption5.isSelected == true {
@@ -913,6 +938,7 @@ class MainViewController: UIViewController {
             zipErrorCheck()
             birthdayErrorCheck()
             seasonPassGuestGenerator()
+            greenMeansGoForSegue()
             
         // food services employee
         } else if subNavOption1.currentTitle == EntrantType.employeeFood.rawValue && subNavOption1.isSelected == true {
@@ -926,6 +952,7 @@ class MainViewController: UIViewController {
             socialSecurityNumberErrorCheck()
             birthdayErrorCheck()
             foodEmployeeGenerator()
+            
          
         // ride services Employee
         } else if subNavOption2.currentTitle == EntrantType.employeeRide.rawValue && subNavOption2.isSelected == true {
@@ -939,6 +966,7 @@ class MainViewController: UIViewController {
             socialSecurityNumberErrorCheck()
             birthdayErrorCheck()
             rideServicesEmployeeGenerator()
+            greenMeansGoForSegue()
         
         // maintenance Employee
         } else if subNavOption3.currentTitle == EntrantType.employeeMaintenance.rawValue && subNavOption3.isSelected == true {
@@ -952,6 +980,7 @@ class MainViewController: UIViewController {
             socialSecurityNumberErrorCheck()
             birthdayErrorCheck()
             maintenanceEmployeeGenerator()
+            greenMeansGoForSegue()
         
         // shift Manager
         } else if subNavOption1.currentTitle == EntrantType.managerShift.rawValue && subNavOption1.isSelected == true {
@@ -965,6 +994,7 @@ class MainViewController: UIViewController {
             socialSecurityNumberErrorCheck()
             birthdayErrorCheck()
             shiftManagerGenerator()
+            greenMeansGoForSegue()
             
         // general Manager
         } else if subNavOption2.currentTitle == EntrantType.managerGeneral.rawValue && subNavOption2.isSelected == true {
@@ -978,6 +1008,7 @@ class MainViewController: UIViewController {
             socialSecurityNumberErrorCheck()
             birthdayErrorCheck()
             generalManagerGenerator()
+            greenMeansGoForSegue()
         
         // senior manager
         } else if subNavOption3.currentTitle == EntrantType.managerSenior.rawValue && subNavOption3.isSelected == true {
@@ -991,6 +1022,7 @@ class MainViewController: UIViewController {
             socialSecurityNumberErrorCheck()
             birthdayErrorCheck()
             seniorManagerGenerator()
+            greenMeansGoForSegue()
             
         // contractor Proj #1001
         } else if subNavOption1.currentTitle == EntrantType.contractorProj1001.rawValue && subNavOption1.isSelected == true {
@@ -1004,6 +1036,7 @@ class MainViewController: UIViewController {
             socialSecurityNumberErrorCheck()
             birthdayErrorCheck()
             contractor1001Generator()
+            greenMeansGoForSegue()
             
         // contractor Proj #1002
         } else if subNavOption2.currentTitle == EntrantType.contractorProj1002.rawValue && subNavOption2.isSelected == true {
@@ -1017,6 +1050,7 @@ class MainViewController: UIViewController {
             socialSecurityNumberErrorCheck()
             birthdayErrorCheck()
             contractor1002Generator()
+            greenMeansGoForSegue()
          
         // contractor Proj #1003
         } else if subNavOption3.currentTitle == EntrantType.contractorProj1003.rawValue && subNavOption3.isSelected == true {
@@ -1030,6 +1064,7 @@ class MainViewController: UIViewController {
             socialSecurityNumberErrorCheck()
             birthdayErrorCheck()
             contractor1003Generator()
+            greenMeansGoForSegue()
             
         // contractor Proj #2001
         } else if subNavOption4.currentTitle == EntrantType.contractorProj2001.rawValue && subNavOption4.isSelected == true {
@@ -1043,6 +1078,7 @@ class MainViewController: UIViewController {
             socialSecurityNumberErrorCheck()
             birthdayErrorCheck()
             contractor2001Generator()
+            greenMeansGoForSegue()
             
         // contractor Proj #2002
         } else if subNavOption5.currentTitle == EntrantType.contractorProj2002.rawValue && subNavOption5.isSelected == true {
@@ -1056,6 +1092,7 @@ class MainViewController: UIViewController {
             socialSecurityNumberErrorCheck()
             birthdayErrorCheck()
             contractor2002Generator()
+            greenMeansGoForSegue()
             
         // vendor Acme
         } else if subNavOption1.currentTitle == EntrantType.vendorAcme.rawValue && subNavOption1.isSelected == true {
@@ -1064,6 +1101,7 @@ class MainViewController: UIViewController {
             lastNameErrorCheck()
             birthdayErrorCheck()
             acmeVendorGenerator()
+            greenMeansGoForSegue()
         
         // vendor Orkin
         } else if subNavOption2.currentTitle == EntrantType.vendorOrkin.rawValue && subNavOption2.isSelected == true {
@@ -1072,6 +1110,7 @@ class MainViewController: UIViewController {
             lastNameErrorCheck()
             birthdayErrorCheck()
             orkinVendorGenerator()
+            greenMeansGoForSegue()
         
         // vendor FedEx
         } else if subNavOption3.currentTitle == EntrantType.vendorFedEx.rawValue && subNavOption3.isSelected == true {
@@ -1080,6 +1119,7 @@ class MainViewController: UIViewController {
             lastNameErrorCheck()
             birthdayErrorCheck()
             fedexVendorGenerator()
+            greenMeansGoForSegue()
         
         // vendor NW Electrical
         } else if subNavOption4.currentTitle == EntrantType.vendorNWElectrical.rawValue && subNavOption4.isSelected == true {
@@ -1088,6 +1128,7 @@ class MainViewController: UIViewController {
             lastNameErrorCheck()
             birthdayErrorCheck()
             nwelectricalVendorGenerator()
+            greenMeansGoForSegue()
         
         } else {
             
@@ -1406,6 +1447,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        greenLightMeansGo = false
+        
         NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.keyboardWillShow(_:)), name: Notification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.keyboardWillHide(_:)), name: Notification.Name.UIKeyboardWillHide, object: nil)
         
@@ -1503,6 +1546,12 @@ class MainViewController: UIViewController {
     
     
     /* ENTRANT GENERATOR FUNCTIONS */
+    
+    func greenMeansGoForSegue() {
+        if greenLightMeansGo == true {
+            performSegue(withIdentifier: "genPass", sender: self)
+        }
+    }
     
     func childGuestGenerator() -> PersonSource? {
         let childGuest = GuestChildSource(dateOfBirth: dateOfBirth.text, dateOfVisit: Date())
@@ -1658,8 +1707,7 @@ class MainViewController: UIViewController {
             return
         }
         print("date of birth is valid")
-        performSegue(withIdentifier: "genPass", sender: self)
-        
+        greenLightMeansGo = true
     }
     
     func socialSecurityNumberErrorCheck() {
@@ -1670,8 +1718,8 @@ class MainViewController: UIViewController {
             print("\(ssnErrorMessage)")
             return
         }
-        
         print("ssn is valid")
+        
     }
 
     func firstNameErrorCheck() {
