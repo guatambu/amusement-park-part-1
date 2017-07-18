@@ -30,6 +30,11 @@ class MainViewController: UIViewController {
     @IBOutlet weak var subNavOption4: UIButton!
     @IBOutlet weak var subNavOption5: UIButton!
     
+    // UIStackView Constraints @IBOutlets
+    @IBOutlet weak var entrantMacroInputStackViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var stateTextfieldViewBottomContraint: NSLayoutConstraint!
+    @IBOutlet weak var stateEtcTextfieldViewBottomConstraint: NSLayoutConstraint!
+    
     // Labels for User Data Textfields
     @IBOutlet weak var dateOfBirthLabel: UILabel!
     @IBOutlet weak var socialSecurityNumberLabel: UILabel!
@@ -1263,13 +1268,14 @@ class MainViewController: UIViewController {
         print(counter)
     }
 
-
+    /* VIEWDIDLOAD */
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*
+        
         NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.keyboardWillShow(_:)), name: Notification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.keyboardWillHide(_:)), name: Notification.Name.UIKeyboardWillHide, object: nil)
-        */
+        
         
 
         // Do any additional setup after loading the view.
@@ -1600,7 +1606,9 @@ class MainViewController: UIViewController {
         print("Keyboard hooray!")
         if let info = notification.userInfo, let keyboardFrame = info [UIKeyboardFrameEndUserInfoKey] as? NSValue {
             let frame = keyboardFrame.cgRectValue
-            //UILabelOutlet.constant = frame.size.height + 10
+            entrantMacroInputStackViewBottomConstraint.constant = frame.size.height + 10
+            stateTextfieldViewBottomContraint.constant = frame.size.height + 10
+            stateEtcTextfieldViewBottomConstraint.constant = frame.size.height + 10
             
             UIView.animate(withDuration: 0.8) {
                 self.view.layoutIfNeeded()
@@ -1612,8 +1620,10 @@ class MainViewController: UIViewController {
         
         print("Keyboard hidden hooray!")
         
-            //UILabelOutlet.constant = original value set in interface builder
-            
+            entrantMacroInputStackViewBottomConstraint.constant = 0
+            stateTextfieldViewBottomContraint.constant = 0
+            stateEtcTextfieldViewBottomConstraint.constant = 0
+        
             UIView.animate(withDuration: 0.8) {
                 self.view.layoutIfNeeded()
             }
@@ -1627,7 +1637,16 @@ class MainViewController: UIViewController {
 extension MainViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+        dateOfBirth.resignFirstResponder()
+        socialSecurityNumber.resignFirstResponder()
+        projectNumber.resignFirstResponder()
+        firstName.resignFirstResponder()
+        lastName.resignFirstResponder()
+        company.resignFirstResponder()
+        streetAddress.resignFirstResponder()
+        city.resignFirstResponder()
+        state.resignFirstResponder()
+        zipCode.resignFirstResponder()
         return true
     }
     
