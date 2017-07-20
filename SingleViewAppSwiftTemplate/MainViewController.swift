@@ -177,6 +177,8 @@ class MainViewController: UIViewController {
         subNavOption1.alpha = 1.0
         subNavOption2.alpha = 1.0
         subNavOption3.alpha = 1.0
+        subNavOption4.alpha = 1.0
+        subNavOption5.alpha = 1.0
         
         subNavOption4.isHidden = true
         subNavOption5.isHidden = true
@@ -247,6 +249,8 @@ class MainViewController: UIViewController {
         subNavOption1.alpha = 1.0
         subNavOption2.alpha = 1.0
         subNavOption3.alpha = 1.0
+        subNavOption4.alpha = 1.0
+        subNavOption5.alpha = 1.0
         
         subNavOption4.isHidden = true
         subNavOption5.isHidden = true
@@ -319,6 +323,8 @@ class MainViewController: UIViewController {
         subNavOption1.alpha = 1.0
         subNavOption2.alpha = 1.0
         subNavOption3.alpha = 1.0
+        subNavOption4.alpha = 1.0
+        subNavOption5.alpha = 1.0
         
         subNavOption4.isHidden = false
         subNavOption5.isHidden = false
@@ -391,6 +397,7 @@ class MainViewController: UIViewController {
         subNavOption2.alpha = 1.0
         subNavOption3.alpha = 1.0
         subNavOption4.alpha = 1.0
+        subNavOption5.alpha = 1.0
         
         subNavOption4.isHidden = false
         subNavOption5.isHidden = true
@@ -1139,6 +1146,12 @@ class MainViewController: UIViewController {
     
     @IBAction func populateData(_ sender: ButtonDesign) {
         
+        subNavOption1.alpha = 1.0
+        subNavOption2.alpha = 1.0
+        subNavOption3.alpha = 1.0
+        subNavOption4.alpha = 1.0
+        subNavOption5.alpha = 1.0
+        
         func increment () {
             counter += 1
         }
@@ -1289,6 +1302,7 @@ class MainViewController: UIViewController {
                 subNavOption3.setTitle(EntrantType.vendorFedEx.rawValue, for: .normal)
                 subNavOption4.setTitle(EntrantType.vendorNWElectrical.rawValue, for: .normal)
                 
+                
                 subNavOption4.isHidden = false
                 subNavOption5.isHidden = true
                 
@@ -1434,6 +1448,7 @@ class MainViewController: UIViewController {
                 city.text = ""
                 state.text = ""
                 zipCode.text = ""
+                
             }
         }
         
@@ -1441,6 +1456,60 @@ class MainViewController: UIViewController {
         increment()
         print(counter)
     }
+    
+    /* Clear All Fields Button */
+    
+    
+    @IBAction func clearForm(_ sender: UIButton) {
+        
+        /* UITextField Editing active/inactive */
+        dateOfBirth.isUserInteractionEnabled = false
+        socialSecurityNumber.isUserInteractionEnabled = false
+        projectNumber.isUserInteractionEnabled = false
+        firstName.isUserInteractionEnabled = false
+        lastName.isUserInteractionEnabled = false
+        company.isUserInteractionEnabled = false
+        streetAddress.isUserInteractionEnabled = false
+        city.isUserInteractionEnabled = false
+        state.isUserInteractionEnabled = false
+        zipCode.isUserInteractionEnabled = false
+        
+        dateOfBirth.alpha = 0.2
+        socialSecurityNumber.alpha = 0.2
+        projectNumber.alpha = 0.2
+        firstName.alpha = 0.2
+        lastName.alpha = 0.2
+        company.alpha = 0.2
+        streetAddress.alpha = 0.2
+        city.alpha = 0.2
+        state.alpha = 0.2
+        zipCode.alpha = 0.2
+        
+        contractorNavButton.isSelected = false
+        guestNavButton.isSelected = false
+        employeeNavButton.isSelected = false
+        managerNavButton.isSelected = false
+        vendorNavButton.isSelected = false
+        
+        subNavOption1.isSelected = false
+        subNavOption2.isSelected = false
+        subNavOption3.isSelected = false
+        subNavOption4.isSelected = false
+        subNavOption5.isSelected = false
+        
+        dateOfBirth.text = ""
+        socialSecurityNumber.text = ""
+        projectNumber.text = ""
+        firstName.text = ""
+        lastName.text = ""
+        company.text = ""
+        streetAddress.text = ""
+        city.text = ""
+        state.text = ""
+        zipCode.text = ""
+        
+    }
+    
 
     /* VIEWDIDLOAD */
     
@@ -1491,7 +1560,9 @@ class MainViewController: UIViewController {
         zipCode.alpha = 0.2
         
         genPass.alpha = 0.4
-        popData.alpha = 0.4
+        popData.alpha = 1.0
+        
+        popData.isEnabled = true
         
 
         // Do any additional setup after loading the view.

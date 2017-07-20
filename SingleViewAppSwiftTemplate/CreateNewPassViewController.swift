@@ -180,7 +180,7 @@ class CreateNewPassViewController: UIViewController {
         }
         print("YAY name in CreateNewPassViewController")
         print("\(entrantFirstName) \(entrantLastName)")
-        passFullName?.text = "\(entrantFirstName) \(entrantLastName))"
+        passFullName?.text = "\(entrantFirstName) \(entrantLastName)"
         
     }
     
@@ -191,7 +191,7 @@ class CreateNewPassViewController: UIViewController {
         }
         print("YAY Entrant Type in CreateNewPassViewController")
         print("\(entrantType)")
-        passEntrantType?.text = "\(entrantType[0].rawValue))"
+        passEntrantType?.text = "\(entrantType[0].rawValue)"
     }
     
     func permissionsAreValid() {
@@ -201,7 +201,7 @@ class CreateNewPassViewController: UIViewController {
         }
         print("YAY permissions are in CreateNewPassViewController")
         print("\(areaAccess)\n\(ridePrivileges)\n\(discountAccess)\n\(discountAmount)\n\(requiredInformation)")
-        passPermissions?.text = "- \(areaAccess)\n- \(ridePrivileges)\n- \(discountAmount[0].rawValue) off \(discountAccess[0].rawValue)\n- \(discountAmount[1].rawValue) off \(discountAccess[1].rawValue)\n- \(requiredInformation[0].rawValue))"
+        passPermissions?.text = "- \(areaAccess)\n- \(ridePrivileges)\n- \(discountAmount[0].rawValue) off \(discountAccess[0].rawValue)\n- \(discountAmount[1].rawValue) off \(discountAccess[1].rawValue)\n- \(requiredInformation[0].rawValue)"
     }
     
     

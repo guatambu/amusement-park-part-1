@@ -611,12 +611,24 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rec-Ft-eJr">
+                                                <rect key="frame" x="332.5" y="164" width="103" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <state key="normal" title="Clear Form">
+                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="clearForm:" destination="ZLT-ai-B4a" eventType="touchUpInside" id="OaN-eZ-NwG"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.93740326169999999" green="0.92513066529999999" blue="0.94564527269999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstItem="Rec-Ft-eJr" firstAttribute="centerX" secondItem="6FN-8g-JdX" secondAttribute="centerX" id="3tG-SP-Xgk"/>
                                             <constraint firstItem="ezl-id-qgn" firstAttribute="top" secondItem="6FN-8g-JdX" secondAttribute="top" constant="60" id="A8O-5W-A6J"/>
                                             <constraint firstItem="ezl-id-qgn" firstAttribute="leading" secondItem="6FN-8g-JdX" secondAttribute="leading" constant="40" id="ARn-xc-ugc"/>
                                             <constraint firstAttribute="bottom" secondItem="ezl-id-qgn" secondAttribute="bottom" constant="100" id="Leh-0r-oxL"/>
+                                            <constraint firstAttribute="bottom" secondItem="Rec-Ft-eJr" secondAttribute="bottom" constant="40" id="XcI-1r-uzp"/>
                                             <constraint firstAttribute="trailing" secondItem="ezl-id-qgn" secondAttribute="trailing" constant="40" id="jxJ-PZ-zL9"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
