@@ -1152,6 +1152,9 @@ class MainViewController: UIViewController {
         subNavOption4.alpha = 1.0
         subNavOption5.alpha = 1.0
         
+        genPass.alpha = 1.0
+        genPass.isEnabled = true
+        
         func increment () {
             counter += 1
         }

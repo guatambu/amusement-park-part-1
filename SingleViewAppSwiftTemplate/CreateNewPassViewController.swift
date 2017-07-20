@@ -19,7 +19,12 @@ class CreateNewPassViewController: UIViewController {
     // Pass @IBOutlets
     @IBOutlet weak var passFullName: UILabel!
     @IBOutlet weak var passEntrantType: UILabel!
-    @IBOutlet weak var passPermissions: UILabel!
+    @IBOutlet weak var accessPermisions: UILabel!    
+    @IBOutlet weak var ridePermissions: UILabel!
+    @IBOutlet weak var foodPermissions: UILabel!
+    @IBOutlet weak var merchPermissions: UILabel!
+    @IBOutlet weak var requiredInfo: UILabel!
+
     
     // Access Testing @IBOutlets
     @IBOutlet weak var testResults: UILabel!
@@ -195,14 +200,22 @@ class CreateNewPassViewController: UIViewController {
     }
     
     func permissionsAreValid() {
-        guard let areaAccess = entrant?.areaAccess, let ridePrivileges = entrant?.ridePrivileges, let discountAmount = entrant?.discountAccess, let discountAccess = entrant?.discountAmount, let requiredInformation = entrant?.requiredInformation  else {
+        guard let areaAccess = entrant?.areaAccess, let ridePrivileges = entrant?.ridePrivileges, let discountAmount = entrant?.discountAmount, let discountAccess = entrant?.discountAccess, let requiredInformation = entrant?.requiredInformation  else {
             print("oops no permissions in CreateNewPassViewController")
             return
         }
         print("YAY permissions are in CreateNewPassViewController")
         print("\(areaAccess)\n\(ridePrivileges)\n\(discountAccess)\n\(discountAmount)\n\(requiredInformation)")
-        passPermissions?.text = "- \(areaAccess)\n- \(ridePrivileges)\n- \(discountAmount[0].rawValue) off \(discountAccess[0].rawValue)\n- \(discountAmount[1].rawValue) off \(discountAccess[1].rawValue)\n- \(requiredInformation[0].rawValue)"
+        
+        accessPermisions?.text = "- \(areaAccess)"
+        ridePermissions?.text = "- \(ridePrivileges)"
+        foodPermissions?.text = "- \(discountAmount[0].rawValue) \(discountAccess[0].rawValue)"
+        merchPermissions?.text = "- \(discountAmount[1].rawValue) \(discountAccess[1].rawValue)"
+        requiredInfo?.text = "- \(requiredInformation[0].rawValue)"
+        
     }
+    
+    // function to pull out permissions inof as strings and save to variable to pass in to above passPermissions?.textfield
     
     
 }
