@@ -681,7 +681,7 @@ class MainViewController: UIViewController {
             state.isUserInteractionEnabled = false
             zipCode.isUserInteractionEnabled = false
             
-        } else if (subNavOption3.currentTitle == EntrantType.employeeRide.rawValue || subNavOption3.currentTitle == EntrantType.senior.rawValue) && subNavOption1.isSelected == true {
+        } else if (subNavOption3.currentTitle == EntrantType.employeeRide.rawValue || subNavOption3.currentTitle == EntrantType.senior.rawValue) && subNavOption3.isSelected == true {
             
             projectNumber.text = ""
             company.text = ""
@@ -1511,6 +1511,12 @@ class MainViewController: UIViewController {
         state.text = ""
         zipCode.text = ""
         
+        popData.isEnabled = true
+        popData.alpha = 1.0
+        
+        genPass.isEnabled = false
+        genPass.alpha = 0.2
+        
     }
     
 
@@ -1521,8 +1527,7 @@ class MainViewController: UIViewController {
         
         greenLightMeansGo = false
         
-        NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.keyboardWillShow(_:)), name: Notification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.keyboardWillHide(_:)), name: Notification.Name.UIKeyboardWillHide, object: nil)
+        
         
         /* subNavigations Buttons turned off at load... require Navigation button selected */
         subNavOption1.isEnabled = false
@@ -1539,6 +1544,7 @@ class MainViewController: UIViewController {
         subNavOption5.alpha = 0.2
         
         /* UITextField Editing active/inactive */
+        
         dateOfBirth.isUserInteractionEnabled = false
         socialSecurityNumber.isUserInteractionEnabled = false
         projectNumber.isUserInteractionEnabled = false
@@ -1566,6 +1572,9 @@ class MainViewController: UIViewController {
         popData.alpha = 1.0
         
         popData.isEnabled = true
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.keyboardWillShow(_:)), name: Notification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.keyboardWillHide(_:)), name: Notification.Name.UIKeyboardWillHide, object: nil)
         
 
         // Do any additional setup after loading the view.
@@ -1885,7 +1894,7 @@ class MainViewController: UIViewController {
     }
     
     
-    /* STACKVIEW ANUIMATION (if used) */
+    /* STACKVIEW ANIMATION (if used) */
     
     // allows me to animate stack views and their display
     private func animateView(view: UIView, toHidden hidden: Bool) {
@@ -1896,7 +1905,7 @@ class MainViewController: UIViewController {
     
     /* EVERYTHING KEYBOARD ACTIVITY SETUP RELATED */
     
-    // finish up here... you have a bunch of constraints to add to move some textfields around
+    
     func keyboardWillShow(_ notification: Notification) {
         print("Keyboard hooray!")
         

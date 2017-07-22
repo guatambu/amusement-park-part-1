@@ -12,11 +12,11 @@ import Foundation
 
 
 enum AreaAccess: String {
-    case amusement = "Amusement Areas"
-    case kitchen = "Kitchen Areas"
-    case rideControl =  "Ride Control Areas"
-    case maintenance = "Maintenance Areas"
-    case office = "Office Areas"
+    case amusement = "Amusement"
+    case kitchen = "Kitchen"
+    case rideControl =  "Ride Control"
+    case maintenance = "Maintenance"
+    case office = "Office"
     
 }
 
@@ -80,8 +80,8 @@ enum RequiredInformation: String {
 }
 
 enum RidePrivilege: String {
-    case all = "Access All Rides"
-    case skip = "Skip All Ride Lines"
+    case all = "All Rides"
+    case skip = "Skip Ride Lines"
     case deferToRules = "See Entrant Access Rules"
     case none = "none"
 }

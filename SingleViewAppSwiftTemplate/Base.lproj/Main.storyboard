@@ -759,40 +759,43 @@
                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="sdr-gJ-VhZ">
-                                                                <rect key="frame" x="283.5" y="160" width="218.5" height="158"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sdr-gJ-VhZ">
+                                                                <rect key="frame" x="283.5" y="160" width="320" height="158"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Access Permissions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7F-US-AiU">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="218.5" height="31.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Access Permissions" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7F-US-AiU">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="31.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ride Permissions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fln-Kf-zuH">
-                                                                        <rect key="frame" x="0.0" y="31.5" width="218.5" height="31.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                        <rect key="frame" x="0.0" y="31.5" width="320" height="31.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Permissions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvD-Qn-G6H">
-                                                                        <rect key="frame" x="0.0" y="63" width="218.5" height="32"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                        <rect key="frame" x="0.0" y="63" width="320" height="32"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Merch Permissions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTz-QF-6cN">
-                                                                        <rect key="frame" x="0.0" y="95" width="218.5" height="31.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                        <rect key="frame" x="0.0" y="95" width="320" height="31.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Required Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELa-m6-kBd">
-                                                                        <rect key="frame" x="0.0" y="126.5" width="218.5" height="31.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                        <rect key="frame" x="0.0" y="126.5" width="320" height="31.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="320" id="GoL-nh-wen"/>
+                                                                </constraints>
                                                             </stackView>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RfK-6K-XtL" customClass="UIViewDesign" customModule="SingleViewAppSwiftTemplate" customModuleProvider="target">
                                                                 <rect key="frame" x="282" y="30" width="80" height="20"/>
@@ -812,7 +815,7 @@
                                                         <constraints>
                                                             <constraint firstItem="RfK-6K-XtL" firstAttribute="centerX" secondItem="YPU-q8-rdo" secondAttribute="centerX" id="ArH-oi-0Hy"/>
                                                             <constraint firstItem="Bpk-Tf-sGD" firstAttribute="leading" secondItem="YPU-q8-rdo" secondAttribute="leading" constant="40" id="MJy-dp-dDt"/>
-                                                            <constraint firstAttribute="trailing" secondItem="sdr-gJ-VhZ" secondAttribute="trailing" constant="142" id="UNr-93-tei"/>
+                                                            <constraint firstAttribute="trailing" secondItem="sdr-gJ-VhZ" secondAttribute="trailing" constant="40" id="UNr-93-tei"/>
                                                             <constraint firstAttribute="bottom" secondItem="sdr-gJ-VhZ" secondAttribute="bottom" constant="25" id="Xpb-Lf-mC7"/>
                                                             <constraint firstItem="Bpk-Tf-sGD" firstAttribute="top" secondItem="YPU-q8-rdo" secondAttribute="top" constant="85" id="fgu-Si-cxt"/>
                                                             <constraint firstItem="sdr-gJ-VhZ" firstAttribute="top" secondItem="YPU-q8-rdo" secondAttribute="top" constant="160" id="fwx-st-jeA"/>
@@ -860,7 +863,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYl-P2-3lq" userLabel="Testing View Design" customClass="UIViewDesign" customModule="SingleViewAppSwiftTemplate" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="411" width="768" height="513"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FfZ-C8-Mat">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FfZ-C8-Mat">
                                                         <rect key="frame" x="40" y="30" width="688" height="443"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ctD-PK-n1H">
@@ -887,10 +890,10 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4WE-sI-9PW">
-                                                                <rect key="frame" x="22" y="80.5" width="644" height="50.5"/>
+                                                                <rect key="frame" x="22" y="80.5" width="644" height="52"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1N-d6-d74" customClass="ButtonDesign" customModule="SingleViewAppSwiftTemplate" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="146" height="50.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="146" height="52"/>
                                                                         <color key="backgroundColor" red="0.93740326169999999" green="0.92513066529999999" blue="0.94564527269999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                                         <inset key="contentEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
@@ -907,7 +910,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWO-23-Ghq" customClass="ButtonDesign" customModule="SingleViewAppSwiftTemplate" customModuleProvider="target">
-                                                                        <rect key="frame" x="166" y="0.0" width="146" height="50.5"/>
+                                                                        <rect key="frame" x="166" y="0.0" width="146" height="52"/>
                                                                         <color key="backgroundColor" red="0.93740326169999999" green="0.92513066529999999" blue="0.94564527269999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                                         <inset key="contentEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
@@ -924,7 +927,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVX-fv-hXl" customClass="ButtonDesign" customModule="SingleViewAppSwiftTemplate" customModuleProvider="target">
-                                                                        <rect key="frame" x="332" y="0.0" width="146" height="50.5"/>
+                                                                        <rect key="frame" x="332" y="0.0" width="146" height="52"/>
                                                                         <color key="backgroundColor" red="0.93740326169999999" green="0.92513066529999999" blue="0.94564527269999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                                         <inset key="contentEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
@@ -941,7 +944,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tdk-JO-XdN" customClass="ButtonDesign" customModule="SingleViewAppSwiftTemplate" customModuleProvider="target">
-                                                                        <rect key="frame" x="498" y="0.0" width="146" height="50.5"/>
+                                                                        <rect key="frame" x="498" y="0.0" width="146" height="52"/>
                                                                         <color key="backgroundColor" red="0.93740326169999999" green="0.92513066529999999" blue="0.94564527269999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                                         <inset key="contentEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
@@ -961,7 +964,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H5Y-GO-zgn" userLabel="Test Results View Design" customClass="UIViewDesign" customModule="SingleViewAppSwiftTemplate" customModuleProvider="target">
-                                                                <rect key="frame" x="22" y="151" width="644" height="192"/>
+                                                                <rect key="frame" x="22" y="152.5" width="644" height="192"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test Results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ks7-aR-9zR">
                                                                         <rect key="frame" x="8" y="6" width="628" height="180"/>
@@ -979,7 +982,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="463-6a-RVc" customClass="ButtonDesign" customModule="SingleViewAppSwiftTemplate" customModuleProvider="target">
-                                                                <rect key="frame" x="219.5" y="363" width="249" height="80"/>
+                                                                <rect key="frame" x="219.5" y="364.5" width="249" height="78.5"/>
                                                                 <color key="backgroundColor" red="0.79639607670000001" green="0.77576333279999998" blue="0.81285625699999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="RUI-3z-vrk"/>
@@ -1003,6 +1006,8 @@
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstItem="H5Y-GO-zgn" firstAttribute="width" secondItem="4WE-sI-9PW" secondAttribute="width" id="GSF-qv-gSB"/>
+                                                            <constraint firstItem="H5Y-GO-zgn" firstAttribute="top" secondItem="4WE-sI-9PW" secondAttribute="bottom" constant="20" id="LUt-Gg-2WB"/>
+                                                            <constraint firstItem="463-6a-RVc" firstAttribute="top" secondItem="H5Y-GO-zgn" secondAttribute="bottom" constant="20" id="Qoe-8Z-Uxu"/>
                                                         </constraints>
                                                     </stackView>
                                                 </subviews>
@@ -1047,6 +1052,7 @@
                         <outlet property="requiredInfo" destination="ELa-m6-kBd" id="n4p-V5-u14"/>
                         <outlet property="ridePermissions" destination="fln-Kf-zuH" id="xgf-JZ-Ad2"/>
                         <outlet property="testResults" destination="ks7-aR-9zR" id="GQx-02-pwj"/>
+                        <outlet property="testResultsView" destination="H5Y-GO-zgn" id="VNl-YP-6Pm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zq6-9N-n8J" userLabel="First Responder" sceneMemberID="firstResponder"/>

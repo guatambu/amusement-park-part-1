@@ -13,6 +13,8 @@ class CreateNewPassViewController: UIViewController {
     // passing Entrant instance initialized in MainViewController to CreateNewPassViewController
     
     var entrant: PersonSource?
+    var areaAccessPermission: String = ""
+    var ridePrivileges: String = ""
     
     /* Pass Display @IBOutlets */
     
@@ -28,119 +30,34 @@ class CreateNewPassViewController: UIViewController {
     
     // Access Testing @IBOutlets
     @IBOutlet weak var testResults: UILabel!
+    @IBOutlet weak var testResultsView: UIView!
     
     /* Access Testing @IBAction Buttons */
+    
+    
     
     // Testing Buttons
     @IBAction func areaAccessButton(_ sender: ButtonDesign) {
         
-        func swipeAreaAccess(check entrant: EntrantTypeable) {
-            
-            for area in entrant.areaAccess {
-                switch area {
-                case .amusement:
-                    testResults.text = "VALID: amusement areas"
-                    testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
-                    testResults.textColor = UIColor.green
-                case .office:
-                    testResults.text = "VALID: office"
-                    testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
-                    testResults.textColor = UIColor.green
-                    break
-                case .maintenance:
-                    testResults.text = "VALID: maintenance"
-                    testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
-                    testResults.textColor = UIColor.green
-                    break
-                case .kitchen:
-                    testResults.text = "VALID: kitchen"
-                    testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
-                    testResults.textColor = UIColor.green
-                    break
-                case .rideControl:
-                    testResults.text = "VALID: ride control"
-                    testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
-                    testResults.textColor = UIColor.green
-                }
-            }
-        }
+        swipeAreaAccess()
         
     }
     
     @IBAction func rideAccessButton(_ sender: ButtonDesign) {
         
-        func swipeRidePrivileges(check entrant: EntrantTypeable) {
-            
-            for privilege in entrant.ridePrivileges {
-                switch privilege {
-                case .all:
-                    testResults.text = "VALID: pass holder may ride the attraction"
-                    testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
-                    testResults.textColor = UIColor.green
-                case .skip:
-                    testResults.text = "VALID: pass holder may skip line of attractions"
-                    testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
-                    testResults.textColor = UIColor.green
-                case .deferToRules:
-                    testResults.text = "INVALID: pass holder must provide permissions"
-                    testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
-                    testResults.textColor = UIColor.green
-                case .none:
-                    testResults.text = "INVALID: pass holder has no ride access privileges"
-                    testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
-                    testResults.textColor = UIColor.red
-                }
-            }
-        }
+        swipeRidePrivileges(entrant!)
         
     }
     
     @IBAction func discountAccessButton(_ sender: ButtonDesign) {
         
-        func swipeDiscount(check entrant: EntrantTypeable) {
-            
-            for discount in entrant.discountAccess {
-                switch discount {
-                case .food:
-                    testResults.text = "VALID: pass holder receives food discount"
-                    testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
-                    testResults.textColor = UIColor.green
-                case .merch:
-                    testResults.text = "VALID: pass holder receives merch discount"
-                    testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
-                    testResults.textColor = UIColor.green
-                case .none:
-                    testResults.text = "INVALID: no discounts"
-                    testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
-                    testResults.textColor = UIColor.red
-                }
-            }
-        }
+        swipeDiscount(entrant!)
         
     }
     
     @IBAction func requiredInfoButton(_ sender: ButtonDesign) {
         
-        func swipeRequiredInfo(check entrant: EntrantTypeable) {
-            
-            for person in entrant.requiredInformation {
-                switch person {
-                case .business:
-                    testResults.text = "pass holder must provide required business information"
-                    testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
-                    testResults.textColor = UIColor.black
-                case .personal:
-                    testResults.text = "pass holder must provide required personal information"
-                    testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
-                    testResults.textColor = UIColor.black
-                case .none:
-                    testResults.text = "none"
-                    testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
-                    testResults.textColor = UIColor.black
-                }
-            }
-        }
-        
+        swipeRequiredInfo(entrant!)
         
     }
 
@@ -200,6 +117,10 @@ class CreateNewPassViewController: UIViewController {
     }
     
     func permissionsAreValid() {
+        
+        var areaArray = [String]()
+        var rideArray = [String]()
+        
         guard let areaAccess = entrant?.areaAccess, let ridePrivileges = entrant?.ridePrivileges, let discountAmount = entrant?.discountAmount, let discountAccess = entrant?.discountAccess, let requiredInformation = entrant?.requiredInformation  else {
             print("oops no permissions in CreateNewPassViewController")
             return
@@ -207,17 +128,114 @@ class CreateNewPassViewController: UIViewController {
         print("YAY permissions are in CreateNewPassViewController")
         print("\(areaAccess)\n\(ridePrivileges)\n\(discountAccess)\n\(discountAmount)\n\(requiredInformation)")
         
-        accessPermisions?.text = "- \(areaAccess)"
-        ridePermissions?.text = "- \(ridePrivileges)"
+        for area in areaAccess {
+            areaArray.append(area.rawValue)
+            accessPermisions?.text = "- \(areaArray.joined(separator: ", ")) Areas"
+        }
+                
+        for ride in ridePrivileges {
+            rideArray.append(ride.rawValue)
+            ridePermissions?.text = "- \(rideArray.joined(separator: ", "))"
+        }
+
         foodPermissions?.text = "- \(discountAmount[0].rawValue) \(discountAccess[0].rawValue)"
         merchPermissions?.text = "- \(discountAmount[1].rawValue) \(discountAccess[1].rawValue)"
-        requiredInfo?.text = "- \(requiredInformation[0].rawValue)"
+        requiredInfo?.text = "- Required: \(requiredInformation[0].rawValue)"
         
     }
     
     // function to pull out permissions inof as strings and save to variable to pass in to above passPermissions?.textfield
     
+    func swipeRequiredInfo(_ entrant: EntrantTypeable) {
+        
+        for info in entrant.requiredInformation {
+            switch info {
+            case .business:
+                testResults.text = "must provide required business information"
+                testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
+                testResultsView.backgroundColor = UIColor(red:0.80, green:0.78, blue:0.81, alpha:1.0)
+                testResults.textColor = UIColor.black
+            case .personal:
+                testResults.text = "must provide required personal information"
+                testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
+                testResultsView.backgroundColor = UIColor(red:0.80, green:0.78, blue:0.81, alpha:1.0)
+                testResults.textColor = UIColor.black
+            case .none:
+                testResults.text = "none"
+                testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
+                testResultsView.backgroundColor = UIColor(red:0.80, green:0.78, blue:0.81, alpha:1.0)
+                testResults.textColor = UIColor.black
+            }
+        }
+    }
     
+    func swipeDiscount(_ entrant: EntrantTypeable) {
+        
+        for discount in entrant.discountAccess {
+            switch discount {
+                
+            case .food, .merch:
+                testResults.text = "VALID: pass holder receives food & merch discount"
+                testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
+                testResultsView.backgroundColor = UIColor(red:0.00, green:0.50, blue:0.00, alpha:1.0)
+                testResults.textColor = UIColor.white
+
+            case .none:
+                testResults.text = "INVALID: no discounts"
+                testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
+                testResultsView.backgroundColor = UIColor(red:1.00, green:0.00, blue:0.00, alpha:1.0)
+                testResults.textColor = UIColor.white
+            
+            }
+        }
+    }
+    
+    func swipeRidePrivileges(_ entrant: EntrantTypeable) {
+        
+        for privilege in entrant.ridePrivileges {
+            switch privilege {
+            case .all:
+                testResults.text = "VALID: pass holder may ride the attraction"
+                testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
+                testResultsView.backgroundColor = UIColor(red:0.00, green:0.50, blue:0.00, alpha:1.0)
+                testResults.textColor = UIColor.white
+            case .skip:
+                testResults.text = "VALID: pass holder may skip line of attractions"
+                testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
+                testResultsView.backgroundColor = UIColor(red:0.00, green:0.50, blue:0.00, alpha:1.0)
+                testResults.textColor = UIColor.white
+            case .deferToRules:
+                testResults.text = "INVALID: pass holder must provide permissions"
+                testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
+                testResultsView.backgroundColor = UIColor(red:0.00, green:0.50, blue:0.00, alpha:1.0)
+                testResults.textColor = UIColor.white
+            case .none:
+                testResults.text = "INVALID: pass holder has no ride access privileges"
+                testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
+                testResultsView.backgroundColor = UIColor(red:1.00, green:0.00, blue:0.00, alpha:1.0)
+                testResults.textColor = UIColor.white
+            }
+        }
+    }
+    
+    func swipeAreaAccess() {
+        
+        var areaArray = [String]()
+        
+        guard let areaAccess = entrant?.areaAccess else {
+            print("oops no area permissions in CreateNewPassViewController")
+            return
+        }
+        print("YAY permissions are in CreateNewPassViewController")
+        print("\(areaAccess)")
+        for area in areaAccess {
+            areaArray.append(area.rawValue)
+            testResults?.text = "VALID: \(areaArray.joined(separator: ", ")) Areas"
+            testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
+            testResultsView.backgroundColor = UIColor(red:0.00, green:0.50, blue:0.00, alpha:1.0)
+            testResults.textColor = UIColor.white
+        }
+    }
 }
 
 
