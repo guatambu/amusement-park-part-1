@@ -10,6 +10,8 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    //MARK: Basic Setup
+    
     var counter = 0
     var newUser: PersonSource?
     var greenLightMeansGo: Bool = false
@@ -67,7 +69,7 @@ class MainViewController: UIViewController {
     
     /* BUTTONS @IBActions  */
     
-    // Navigation Buttons
+    //MARK: Navigation Buttons
     @IBAction func guestNavButton(_ sender: UIButton) {
         
         labelFontReset()
@@ -435,7 +437,7 @@ class MainViewController: UIViewController {
         
     }
     
-    // SubNavigation Buttons
+    //MARK: SubNavigation Buttons
     @IBAction func subNavOption1Choice(_ sender: UIButton) {
         
         greenLightMeansGo = false
@@ -896,7 +898,7 @@ class MainViewController: UIViewController {
         
     }
 
-    // Pass Generators
+    //MARK: Pass Generators
     @IBAction func generatePass(_ sender: ButtonDesign) {
         
         // child Guest
@@ -1143,7 +1145,7 @@ class MainViewController: UIViewController {
         }
     }
 
-    
+    //MARK: Populate Data
     @IBAction func populateData(_ sender: ButtonDesign) {
         
         subNavOption1.alpha = 1.0
@@ -1520,7 +1522,7 @@ class MainViewController: UIViewController {
     }
     
 
-    /* VIEWDIDLOAD */
+    /* MARK: VIEWDIDLOAD */
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -1597,9 +1599,9 @@ class MainViewController: UIViewController {
     }
     
     
-    /* FONT DIPLAY RESET */
+    /* MARK: FONT DIPLAY RESET */
     
-    // function to reset UILabel font to neutral
+    // Reset UILabel font to neutral
     func labelFontReset () {
         
         // font style reset
@@ -1628,7 +1630,7 @@ class MainViewController: UIViewController {
     }
     
     
-    /* ENTRANT GENERATOR FUNCTIONS */
+    /* MARK: ENTRANT GENERATOR FUNCTIONS */
     
     func greenMeansGoForSegue() {
         if greenLightMeansGo == true {
@@ -1779,7 +1781,7 @@ class MainViewController: UIViewController {
     }
     
     
-    /* TEXTFIELD ERROR CHECKS */
+    /* MARK: TEXTFIELD ERROR CHECKS */
     
     func birthdayErrorCheck() {
         guard let dob = dateOfBirth.text, dob != "" else {
@@ -1878,7 +1880,7 @@ class MainViewController: UIViewController {
     }
     
     
-    /* ALL THINGS SEGUE RELATED */
+    /* MARK: ALL THINGS SEGUE RELATED */
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {        
         if let createNewPassViewController = segue.destination as? CreateNewPassViewController {
@@ -1894,7 +1896,7 @@ class MainViewController: UIViewController {
     }
     
     
-    /* STACKVIEW ANIMATION (if used) */
+    /* MARK: STACKVIEW ANIMATION (if used) */
     
     // allows me to animate stack views and their display
     private func animateView(view: UIView, toHidden hidden: Bool) {
@@ -1903,8 +1905,7 @@ class MainViewController: UIViewController {
     }
     
     
-    /* EVERYTHING KEYBOARD ACTIVITY SETUP RELATED */
-    
+    /* MARK: EVERYTHING KEYBOARD ACTIVITY SETUP RELATED */
     
     func keyboardWillShow(_ notification: Notification) {
         print("Keyboard hooray!")
