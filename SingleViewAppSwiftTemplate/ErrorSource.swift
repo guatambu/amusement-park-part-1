@@ -13,6 +13,7 @@ import UIKit
 
 enum ErrorSource: Error {
     
+    case missingGeneralInformation(description:String)// = "Whoops! You are missing some information"
     case missingFirstName(description: String)// = "Please enter your First Name"
     case missingLastName(description: String)// = "Please enter your Last Name"
     case missingStreet(description: String)// = "Please enter your Street Address"
@@ -39,6 +40,9 @@ enum ErrorSource: Error {
     
     func errorMessage () -> String {
         switch self {
+            
+        case .missingGeneralInformation(let errorDescription):
+            return String(errorDescription)
             
         case .missingBirthdate(let errorDescription):
             return String(errorDescription)

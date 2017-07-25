@@ -906,7 +906,7 @@ class MainViewController: UIViewController {
             
             birthdayErrorCheck()
             childGuestGenerator()
-            greenMeansGoForSegue()
+            greenLightMeansGoForSegue()
             
             
         // adult Guest
@@ -916,7 +916,7 @@ class MainViewController: UIViewController {
             newUser = adultGuest
             greenLightMeansGo = true
             print(newUser as Any)
-            greenMeansGoForSegue()
+            greenLightMeansGoForSegue()
          
         // senior guest
         } else if subNavOption3.currentTitle == EntrantType.senior.rawValue && subNavOption3.isSelected == true && guestNavButton.isSelected == true {
@@ -925,7 +925,7 @@ class MainViewController: UIViewController {
             lastNameErrorCheck()
             birthdayErrorCheck()
             seniorGuestGenerator()
-            greenMeansGoForSegue()
+            greenLightMeansGoForSegue()
             
         // VIP Guest
         } else if subNavOption4.currentTitle == EntrantType.vip.rawValue && subNavOption4.isSelected == true {
@@ -934,7 +934,7 @@ class MainViewController: UIViewController {
             newUser = vipGuest
             print(newUser as Any)
             greenLightMeansGo = true
-            greenMeansGoForSegue()
+            greenLightMeansGoForSegue()
             
         // season pass Guest
         } else if subNavOption5.currentTitle == EntrantType.seasonPass.rawValue && subNavOption5.isSelected == true {
@@ -947,7 +947,7 @@ class MainViewController: UIViewController {
             zipErrorCheck()
             birthdayErrorCheck()
             seasonPassGuestGenerator()
-            greenMeansGoForSegue()
+            greenLightMeansGoForSegue()
             
         // food services employee
         } else if subNavOption1.currentTitle == EntrantType.employeeFood.rawValue && subNavOption1.isSelected == true {
@@ -975,7 +975,7 @@ class MainViewController: UIViewController {
             socialSecurityNumberErrorCheck()
             birthdayErrorCheck()
             rideServicesEmployeeGenerator()
-            greenMeansGoForSegue()
+            greenLightMeansGoForSegue()
         
         // maintenance Employee
         } else if subNavOption3.currentTitle == EntrantType.employeeMaintenance.rawValue && subNavOption3.isSelected == true {
@@ -989,7 +989,7 @@ class MainViewController: UIViewController {
             socialSecurityNumberErrorCheck()
             birthdayErrorCheck()
             maintenanceEmployeeGenerator()
-            greenMeansGoForSegue()
+            greenLightMeansGoForSegue()
         
         // shift Manager
         } else if subNavOption1.currentTitle == EntrantType.managerShift.rawValue && subNavOption1.isSelected == true {
@@ -1003,7 +1003,7 @@ class MainViewController: UIViewController {
             socialSecurityNumberErrorCheck()
             birthdayErrorCheck()
             shiftManagerGenerator()
-            greenMeansGoForSegue()
+            greenLightMeansGoForSegue()
             
         // general Manager
         } else if subNavOption2.currentTitle == EntrantType.managerGeneral.rawValue && subNavOption2.isSelected == true {
@@ -1017,7 +1017,7 @@ class MainViewController: UIViewController {
             socialSecurityNumberErrorCheck()
             birthdayErrorCheck()
             generalManagerGenerator()
-            greenMeansGoForSegue()
+            greenLightMeansGoForSegue()
         
         // senior manager
         } else if subNavOption3.currentTitle == EntrantType.managerSenior.rawValue && subNavOption3.isSelected == true {
@@ -1031,7 +1031,7 @@ class MainViewController: UIViewController {
             socialSecurityNumberErrorCheck()
             birthdayErrorCheck()
             seniorManagerGenerator()
-            greenMeansGoForSegue()
+            greenLightMeansGoForSegue()
             
         // contractor Proj #1001
         } else if subNavOption1.currentTitle == EntrantType.contractorProj1001.rawValue && subNavOption1.isSelected == true {
@@ -1045,7 +1045,7 @@ class MainViewController: UIViewController {
             socialSecurityNumberErrorCheck()
             birthdayErrorCheck()
             contractor1001Generator()
-            greenMeansGoForSegue()
+            greenLightMeansGoForSegue()
             
         // contractor Proj #1002
         } else if subNavOption2.currentTitle == EntrantType.contractorProj1002.rawValue && subNavOption2.isSelected == true {
@@ -1059,7 +1059,7 @@ class MainViewController: UIViewController {
             socialSecurityNumberErrorCheck()
             birthdayErrorCheck()
             contractor1002Generator()
-            greenMeansGoForSegue()
+            greenLightMeansGoForSegue()
          
         // contractor Proj #1003
         } else if subNavOption3.currentTitle == EntrantType.contractorProj1003.rawValue && subNavOption3.isSelected == true {
@@ -1073,7 +1073,7 @@ class MainViewController: UIViewController {
             socialSecurityNumberErrorCheck()
             birthdayErrorCheck()
             contractor1003Generator()
-            greenMeansGoForSegue()
+            greenLightMeansGoForSegue()
             
         // contractor Proj #2001
         } else if subNavOption4.currentTitle == EntrantType.contractorProj2001.rawValue && subNavOption4.isSelected == true {
@@ -1087,7 +1087,7 @@ class MainViewController: UIViewController {
             socialSecurityNumberErrorCheck()
             birthdayErrorCheck()
             contractor2001Generator()
-            greenMeansGoForSegue()
+            greenLightMeansGoForSegue()
             
         // contractor Proj #2002
         } else if subNavOption5.currentTitle == EntrantType.contractorProj2002.rawValue && subNavOption5.isSelected == true {
@@ -1101,7 +1101,7 @@ class MainViewController: UIViewController {
             socialSecurityNumberErrorCheck()
             birthdayErrorCheck()
             contractor2002Generator()
-            greenMeansGoForSegue()
+            greenLightMeansGoForSegue()
             
         // vendor Acme
         } else if subNavOption1.currentTitle == EntrantType.vendorAcme.rawValue && subNavOption1.isSelected == true {
@@ -1110,7 +1110,7 @@ class MainViewController: UIViewController {
             lastNameErrorCheck()
             birthdayErrorCheck()
             acmeVendorGenerator()
-            greenMeansGoForSegue()
+            greenLightMeansGoForSegue()
         
         // vendor Orkin
         } else if subNavOption2.currentTitle == EntrantType.vendorOrkin.rawValue && subNavOption2.isSelected == true {
@@ -1119,7 +1119,7 @@ class MainViewController: UIViewController {
             lastNameErrorCheck()
             birthdayErrorCheck()
             orkinVendorGenerator()
-            greenMeansGoForSegue()
+            greenLightMeansGoForSegue()
         
         // vendor FedEx
         } else if subNavOption3.currentTitle == EntrantType.vendorFedEx.rawValue && subNavOption3.isSelected == true {
@@ -1128,7 +1128,7 @@ class MainViewController: UIViewController {
             lastNameErrorCheck()
             birthdayErrorCheck()
             fedexVendorGenerator()
-            greenMeansGoForSegue()
+            greenLightMeansGoForSegue()
         
         // vendor NW Electrical
         } else if subNavOption4.currentTitle == EntrantType.vendorNWElectrical.rawValue && subNavOption4.isSelected == true {
@@ -1137,7 +1137,7 @@ class MainViewController: UIViewController {
             lastNameErrorCheck()
             birthdayErrorCheck()
             nwelectricalVendorGenerator()
-            greenMeansGoForSegue()
+            greenLightMeansGoForSegue()
         
         } else {
             
@@ -1587,17 +1587,6 @@ class MainViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    
-    // alert function for user data input errors
-    func createAlert (title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-        
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action) in alert.dismiss(animated: true, completion: nil)}))
-        
-        self.present(alert, animated: true, completion: nil)
-    }
-    
     
     /* MARK: FONT DIPLAY RESET */
     
@@ -1631,12 +1620,6 @@ class MainViewController: UIViewController {
     
     
     /* MARK: ENTRANT GENERATOR FUNCTIONS */
-    
-    func greenMeansGoForSegue() {
-        if greenLightMeansGo == true {
-            performSegue(withIdentifier: "genPass", sender: self)
-        }
-    }
     
     func childGuestGenerator() -> PersonSource? {
         let childGuest = GuestChildSource(dateOfBirth: dateOfBirth.text, dateOfVisit: Date())
@@ -1882,16 +1865,35 @@ class MainViewController: UIViewController {
     
     /* MARK: ALL THINGS SEGUE RELATED */
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {        
-        if let createNewPassViewController = segue.destination as? CreateNewPassViewController {
-            let entrant = newUser
-            createNewPassViewController.entrant = entrant
-            
-            
-            print("this is entrant's value after successful segue: \(String(describing: entrant))")
-            
+    func greenLightMeansGoForSegue() {
+        if greenLightMeansGo == true {
+            performSegue(withIdentifier: "genPass", sender: self)
+        }
+    }
     
-            createNewPassViewController.viewDidLoad()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {        
+        if segue.identifier == "genPass" {
+            do {
+                if greenLightMeansGo == false {
+                    throw ErrorSource.missingGeneralInformation(description: "Whoops! You are missing something.")
+                } else {
+                    if let createNewPassViewController = segue.destination as? CreateNewPassViewController {
+                        let entrant = newUser
+                        createNewPassViewController.entrant = entrant
+                        
+                        print("this is entrant's value after successful segue: \(String(describing: entrant))")
+                        
+                        createNewPassViewController.viewDidLoad()
+                    }
+                }
+            } catch ErrorSource.missingGeneralInformation {
+                let alertController = UIAlertController(title: "Whoops! Something is missing.", message: "Please complete the necessary information marked in Red.", preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alertController.addAction(action)
+                present(alertController, animated: true, completion: nil)
+            } catch let error {
+                fatalError("\(error.localizedDescription)")
+            }            
         }
     }
     

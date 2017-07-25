@@ -114,6 +114,9 @@ class CreateNewPassViewController: UIViewController {
         print("YAY Entrant Type in CreateNewPassViewController")
         print("\(entrantType)")
         passEntrantType?.text = "\(entrantType[0].rawValue)"
+        if entrantType.contains(.child) || entrantType.contains(.adult) || entrantType.contains(.vip){
+            passFullName?.text = "General Pass"
+        }
     }
     
     func permissionsAreValid() {

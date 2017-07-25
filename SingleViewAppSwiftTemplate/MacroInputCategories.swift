@@ -48,7 +48,7 @@ enum DiscountAmount: String {
  enum EntrantType: String {
     // guests
     case adult = "Adult"
-    case child = "Child"
+    case child = "Free Child"
     case seasonPass = "Season Pass"
     case senior = "Senior"
     case vip = "VIP"
