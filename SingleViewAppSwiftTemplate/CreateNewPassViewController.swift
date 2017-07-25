@@ -137,10 +137,16 @@ class CreateNewPassViewController: UIViewController {
             rideArray.append(ride.rawValue)
             ridePermissions?.text = "- \(rideArray.joined(separator: ", "))"
         }
-
-        foodPermissions?.text = "- \(discountAmount[0].rawValue) \(discountAccess[0].rawValue)"
-        merchPermissions?.text = "- \(discountAmount[1].rawValue) \(discountAccess[1].rawValue)"
-        requiredInfo?.text = "- Required: \(requiredInformation[0].rawValue)"
+        
+        if discountAccess.contains(.none) {
+            foodPermissions?.text = "- Food Discount: \(discountAccess[0].rawValue)"
+            merchPermissions?.text = "- Merchandise Discount: \(discountAccess[0].rawValue)"
+        } else if discountAccess.contains(.food) {
+            foodPermissions?.text = "- \(discountAmount[0].rawValue) \(discountAccess[0].rawValue)"
+            merchPermissions?.text = "- \(discountAmount[1].rawValue) \(discountAccess[1].rawValue)"
+        }
+        
+        requiredInfo?.text = "- Required Information: \(requiredInformation[0].rawValue)"
         
     }
     

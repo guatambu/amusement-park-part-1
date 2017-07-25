@@ -75,8 +75,8 @@ enum DiscountAmount: String {
 
 enum RequiredInformation: String {
     case none = "none"
-    case personal = "Personal Information"
-    case business = "Business Information"
+    case personal = "Personal"
+    case business = "Business"
 }
 
 enum RidePrivilege: String {
