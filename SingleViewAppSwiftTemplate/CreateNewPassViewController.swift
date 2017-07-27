@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AudioToolbox
+import AVFoundation
 
 class CreateNewPassViewController: UIViewController {
     
@@ -15,6 +17,7 @@ class CreateNewPassViewController: UIViewController {
     var entrant: PersonSource?
     var areaAccessPermission: String = ""
     var ridePrivileges: String = ""
+    var audioPlayer = AVAudioPlayer()
     
     /* Pass Display @IBOutlets */
     
@@ -64,6 +67,7 @@ class CreateNewPassViewController: UIViewController {
     
     // Create New Pass @IBOutlet
     @IBAction func createNewPass(_ sender: ButtonDesign) {
+        
     }
     
     
@@ -188,12 +192,14 @@ class CreateNewPassViewController: UIViewController {
                 testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
                 testResultsView.backgroundColor = UIColor(red:0.00, green:0.50, blue:0.00, alpha:1.0)
                 testResults.textColor = UIColor.white
+                playAccessGranted()
 
             case .none:
                 testResults.text = "INVALID: no discounts"
                 testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
                 testResultsView.backgroundColor = UIColor(red:1.00, green:0.00, blue:0.00, alpha:1.0)
                 testResults.textColor = UIColor.white
+                playAccessDenied()
             
             }
         }
@@ -208,21 +214,26 @@ class CreateNewPassViewController: UIViewController {
                 testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
                 testResultsView.backgroundColor = UIColor(red:0.00, green:0.50, blue:0.00, alpha:1.0)
                 testResults.textColor = UIColor.white
+                playAccessGranted()
+                
             case .skip:
                 testResults.text = "VALID: pass holder may skip line of attractions"
                 testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
                 testResultsView.backgroundColor = UIColor(red:0.00, green:0.50, blue:0.00, alpha:1.0)
                 testResults.textColor = UIColor.white
+                playAccessGranted()
             case .deferToRules:
                 testResults.text = "INVALID: pass holder must provide permissions"
                 testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
-                testResultsView.backgroundColor = UIColor(red:0.00, green:0.50, blue:0.00, alpha:1.0)
+                testResultsView.backgroundColor = UIColor(red:1.00, green:0.00, blue:0.00, alpha:1.0)
                 testResults.textColor = UIColor.white
+                playAccessDenied()
             case .none:
                 testResults.text = "INVALID: pass holder has no ride access privileges"
                 testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
                 testResultsView.backgroundColor = UIColor(red:1.00, green:0.00, blue:0.00, alpha:1.0)
                 testResults.textColor = UIColor.white
+                playAccessDenied()
             }
         }
     }
@@ -243,6 +254,29 @@ class CreateNewPassViewController: UIViewController {
             testResults.font = UIFont.boldSystemFont(ofSize: testResults.font.pointSize)
             testResultsView.backgroundColor = UIColor(red:0.00, green:0.50, blue:0.00, alpha:1.0)
             testResults.textColor = UIColor.white
+            playAccessGranted()
+        }
+    }
+    
+    
+    // incorrect button tap sound effects
+    func playAccessDenied() {
+        let accessDenied = Bundle.main.path(forResource: "AccessDenied", ofType: "wav")
+        do {
+            try audioPlayer = AVAudioPlayer(contentsOf: URL(fileURLWithPath: accessDenied!))
+            audioPlayer.play()
+        } catch {
+            
+        }
+    }
+    // correct button tap sound effects
+    func playAccessGranted() {
+        let accessGranted = Bundle.main.path(forResource: "AccessGranted", ofType: "wav")
+        do {
+            try audioPlayer = AVAudioPlayer(contentsOf: URL(fileURLWithPath: accessGranted!))
+            audioPlayer.play()
+        } catch {
+            
         }
     }
 }

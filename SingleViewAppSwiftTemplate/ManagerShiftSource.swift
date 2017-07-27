@@ -51,7 +51,7 @@ class ManagerShiftSource: PersonSource {
      
          self.init(
              entrantType: [.managerShift],
-             areaAccess: [.amusement, .rideControl],
+             areaAccess: [.amusement, .kitchen, .maintenance, .office, .rideControl],
              ridePrivileges: [.all, .skip],
              discountAccess: [.food, .merch],
              discountAmount: [.fifteen, .twentyfive],

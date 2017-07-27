@@ -196,7 +196,7 @@
                                                                         <rect key="frame" x="0.0" y="40.5" width="194.5" height="40"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                                         <connections>
                                                                             <outlet property="delegate" destination="ZLT-ai-B4a" id="Dhs-HS-qgE"/>
                                                                         </connections>
@@ -216,7 +216,7 @@
                                                                         <rect key="frame" x="0.0" y="40.5" width="197.5" height="40"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                                         <connections>
                                                                             <outlet property="delegate" destination="ZLT-ai-B4a" id="Oko-Rw-9rX"/>
                                                                         </connections>
@@ -236,7 +236,7 @@
                                                                         <rect key="frame" x="0.0" y="40.5" width="242.5" height="40"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                                         <connections>
                                                                             <outlet property="delegate" destination="ZLT-ai-B4a" id="NrY-qw-zjW"/>
                                                                         </connections>
@@ -296,7 +296,7 @@
                                                                         <rect key="frame" x="0.0" y="40" width="354" height="40"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                                         <connections>
                                                                             <outlet property="delegate" destination="ZLT-ai-B4a" id="aA0-ya-6pJ"/>
                                                                         </connections>
@@ -316,7 +316,7 @@
                                                                         <rect key="frame" x="0.0" y="40" width="354" height="40"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                                         <connections>
                                                                             <outlet property="delegate" destination="ZLT-ai-B4a" id="HDe-Fo-rPO"/>
                                                                         </connections>
@@ -373,7 +373,7 @@
                                                                 <rect key="frame" x="0.0" y="36" width="728" height="44.5"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                                 <connections>
                                                                     <outlet property="delegate" destination="ZLT-ai-B4a" id="gIX-Jp-Duf"/>
                                                                 </connections>
@@ -428,7 +428,7 @@
                                                                 <rect key="frame" x="0.0" y="35.5" width="728" height="44"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                                 <connections>
                                                                     <outlet property="delegate" destination="ZLT-ai-B4a" id="K9M-Sd-ev2"/>
                                                                 </connections>
@@ -471,7 +471,7 @@
                                                                         <rect key="frame" x="0.0" y="40" width="229.5" height="40"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                                         <connections>
                                                                             <outlet property="delegate" destination="ZLT-ai-B4a" id="YkH-QH-0SQ"/>
                                                                         </connections>
@@ -491,7 +491,7 @@
                                                                         <rect key="frame" x="0.0" y="40" width="229" height="40"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                                         <connections>
                                                                             <outlet property="delegate" destination="ZLT-ai-B4a" id="Jma-kW-FDR"/>
                                                                         </connections>
@@ -511,7 +511,7 @@
                                                                         <rect key="frame" x="0.0" y="40" width="229.5" height="40"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                                         <connections>
                                                                             <outlet property="delegate" destination="ZLT-ai-B4a" id="yoa-Z2-zJ0"/>
                                                                         </connections>
@@ -762,7 +762,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sdr-gJ-VhZ">
                                                                 <rect key="frame" x="283.5" y="160" width="320" height="158"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Access Permissions" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7F-US-AiU">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Access Permissions" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="m7F-US-AiU">
                                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="31.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -957,7 +957,6 @@
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                         <connections>
-                                                                            <action selector="discountAccessButton:" destination="12V-6h-t0W" eventType="touchUpInside" id="52p-xi-FYP"/>
                                                                             <action selector="requiredInfoButton:" destination="12V-6h-t0W" eventType="touchUpInside" id="KzV-Ej-qRY"/>
                                                                         </connections>
                                                                     </button>
@@ -966,7 +965,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H5Y-GO-zgn" userLabel="Test Results View Design" customClass="UIViewDesign" customModule="SingleViewAppSwiftTemplate" customModuleProvider="target">
                                                                 <rect key="frame" x="22" y="152.5" width="644" height="192"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test Results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ks7-aR-9zR">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test Results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="ks7-aR-9zR">
                                                                         <rect key="frame" x="8" y="6" width="628" height="180"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>

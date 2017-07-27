@@ -15,6 +15,7 @@ class MainViewController: UIViewController {
     var counter = 0
     var newUser: PersonSource?
     var greenLightMeansGo: Bool = false
+    var textfieldsValidArray = [Bool]()
     
     /* NAVIGATION */
     
@@ -683,7 +684,7 @@ class MainViewController: UIViewController {
             state.isUserInteractionEnabled = false
             zipCode.isUserInteractionEnabled = false
             
-        } else if (subNavOption3.currentTitle == EntrantType.employeeRide.rawValue || subNavOption3.currentTitle == EntrantType.senior.rawValue) && subNavOption3.isSelected == true {
+        } else if (subNavOption3.currentTitle == EntrantType.employeeRide.rawValue || subNavOption3.currentTitle == EntrantType.managerSenior.rawValue) && subNavOption3.isSelected == true {
             
             projectNumber.text = ""
             company.text = ""
@@ -900,7 +901,7 @@ class MainViewController: UIViewController {
 
     //MARK: Pass Generators
     @IBAction func generatePass(_ sender: ButtonDesign) {
-        
+        textfieldsValidArray = []
         // child Guest
         if subNavOption1.currentTitle == EntrantType.child.rawValue && subNavOption1.isSelected == true {
             
@@ -1528,8 +1529,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         greenLightMeansGo = false
-        
-        
+        textfieldsValidArray = []
         
         /* subNavigations Buttons turned off at load... require Navigation button selected */
         subNavOption1.isEnabled = false
@@ -1772,10 +1772,12 @@ class MainViewController: UIViewController {
             dateOfBirthLabel.textColor = UIColor.red
             let birthdayErrorMessage = ErrorSource.missingBirthdate(description: "Please enter your Date of Birth").errorMessage()
             print("\(birthdayErrorMessage)")
+            textfieldsValidArray.append(false)
             return
         }
+        textfieldsValidArray.append(true)
         print("date of birth is valid")
-        greenLightMeansGo = true
+        
     }
     
     func socialSecurityNumberErrorCheck() {
@@ -1784,8 +1786,10 @@ class MainViewController: UIViewController {
             socialSecurityNumberLabel.textColor = UIColor.red
             let ssnErrorMessage = ErrorSource.missingSsn(description: "Please enter your Social Security Number").errorMessage()
             print("\(ssnErrorMessage)")
+            textfieldsValidArray.append(false)
             return
         }
+        textfieldsValidArray.append(true)
         print("ssn is valid")
         
     }
@@ -1796,21 +1800,23 @@ class MainViewController: UIViewController {
             firstNameLabel.textColor = UIColor.red
             let firstNameErrorMessage = ErrorSource.missingFirstName(description: "Please enter your First Name").errorMessage()
             print("\(firstNameErrorMessage)")
+            textfieldsValidArray.append(false)
             return
         }
-        
+        textfieldsValidArray.append(true)
         print("first name is valid")
     }
     
     func lastNameErrorCheck() {
         guard let name2 = lastName.text, name2 != "" else {
-            firstNameLabel.font = UIFont.italicSystemFont(ofSize: firstNameLabel.font.pointSize)
-            firstNameLabel.textColor = UIColor.red
+            lastNameLabel.font = UIFont.italicSystemFont(ofSize: lastNameLabel.font.pointSize)
+            lastNameLabel.textColor = UIColor.red
             let lastNameErrorMessage = ErrorSource.missingLastName(description: "Please enter your Last Name").errorMessage()
             print("\(lastNameErrorMessage)")
+            textfieldsValidArray.append(false)
             return
         }
-        
+        textfieldsValidArray.append(true)
         print("last name is valid")
     }
     
@@ -1820,9 +1826,10 @@ class MainViewController: UIViewController {
             streetAddressLabel.textColor = UIColor.red
             let streetErrorMessage = ErrorSource.missingStreet(description: "Please enter your Street Address").errorMessage()
             print("\(streetErrorMessage)")
+            textfieldsValidArray.append(false)
             return
         }
-        
+        textfieldsValidArray.append(true)
         print("street address is valid")
     }
     
@@ -1832,9 +1839,10 @@ class MainViewController: UIViewController {
             cityLabel.textColor = UIColor.red
             let cityErrorMessage = ErrorSource.missingCity(description: "Please enter your City").errorMessage()
             print("\(cityErrorMessage)")
+            textfieldsValidArray.append(false)
             return
         }
-        
+        textfieldsValidArray.append(true)
         print("city is valid")
     }
     
@@ -1844,9 +1852,10 @@ class MainViewController: UIViewController {
             stateLabel.textColor = UIColor.red
             let stateErrorMessage = ErrorSource.missingState(description: "Please enter your State").errorMessage()
             print("\(stateErrorMessage)")
+            textfieldsValidArray.append(false)
             return
         }
-        
+        textfieldsValidArray.append(true)
         print("state is valid")
     }
     
@@ -1856,9 +1865,10 @@ class MainViewController: UIViewController {
             zipCodeLabel.textColor = UIColor.red
             let zipCodeErrorMessage = ErrorSource.missingZip(description: "Please enter your ZIP Code").errorMessage()
             print("\(zipCodeErrorMessage)")
+            textfieldsValidArray.append(false)
             return
         }
-        
+        textfieldsValidArray.append(true)
         print("zip code is valid")
     }
     
@@ -1866,7 +1876,10 @@ class MainViewController: UIViewController {
     /* MARK: ALL THINGS SEGUE RELATED */
     
     func greenLightMeansGoForSegue() {
-        if greenLightMeansGo == true {
+        if textfieldsValidArray.contains(false) {
+            greenLightMeansGo = false
+        } else {
+            greenLightMeansGo = true
             performSegue(withIdentifier: "genPass", sender: self)
         }
     }

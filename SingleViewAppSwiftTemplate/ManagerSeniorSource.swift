@@ -51,7 +51,7 @@ class ManagerSeniorSource: PersonSource {
         
         self.init(
             entrantType: [.managerSenior],
-            areaAccess: [.amusement, .rideControl],
+            areaAccess: [.amusement, .kitchen, .maintenance, .office, .rideControl],
             ridePrivileges: [.all, .skip],
             discountAccess: [.food, .merch],
             discountAmount: [.fifteen, .twentyfive],

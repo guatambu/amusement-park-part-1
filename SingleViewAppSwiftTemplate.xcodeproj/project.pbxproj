@@ -24,6 +24,8 @@
 		FA23DAEB1EA817D20043C063 /* GuestVIPSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23DAEA1EA817D20043C063 /* GuestVIPSource.swift */; };
 		FA23DAED1EA8184F0043C063 /* GuestClassicSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23DAEC1EA8184F0043C063 /* GuestClassicSource.swift */; };
 		FA23DAEF1EA935FF0043C063 /* ErrorSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23DAEE1EA935FF0043C063 /* ErrorSource.swift */; };
+		FA3B91411F2A931500577A66 /* AccessDenied.wav in Resources */ = {isa = PBXBuildFile; fileRef = FA3B913F1F2A931500577A66 /* AccessDenied.wav */; };
+		FA3B91421F2A931500577A66 /* AccessGranted.wav in Resources */ = {isa = PBXBuildFile; fileRef = FA3B91401F2A931500577A66 /* AccessGranted.wav */; };
 		FA4B5CAE1EC0108800FEC143 /* PersonSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B5CAD1EC0108800FEC143 /* PersonSource.swift */; };
 		FA51EBA11ED4D1D200AF541C /* ButtonDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA51EBA01ED4D1D200AF541C /* ButtonDesign.swift */; };
 		FA51EBA31ED4D20500AF541C /* UIViewDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA51EBA21ED4D20500AF541C /* UIViewDesign.swift */; };
@@ -89,6 +91,8 @@
 		FA23DAEA1EA817D20043C063 /* GuestVIPSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestVIPSource.swift; sourceTree = "<group>"; };
 		FA23DAEC1EA8184F0043C063 /* GuestClassicSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestClassicSource.swift; sourceTree = "<group>"; };
 		FA23DAEE1EA935FF0043C063 /* ErrorSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorSource.swift; sourceTree = "<group>"; };
+		FA3B913F1F2A931500577A66 /* AccessDenied.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = AccessDenied.wav; sourceTree = "<group>"; };
+		FA3B91401F2A931500577A66 /* AccessGranted.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = AccessGranted.wav; sourceTree = "<group>"; };
 		FA4B5CAD1EC0108800FEC143 /* PersonSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonSource.swift; sourceTree = "<group>"; };
 		FA51EBA01ED4D1D200AF541C /* ButtonDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonDesign.swift; sourceTree = "<group>"; };
 		FA51EBA21ED4D20500AF541C /* UIViewDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewDesign.swift; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 				FA661D331ED37BE100DE919F /* FaceImageAsset.png */,
 				FA661D351ED4AEBF00DE919F /* Screen1Mockup.png */,
 				FA661D361ED4AEBF00DE919F /* Screen2Mockup.png */,
+				FA3B913F1F2A931500577A66 /* AccessDenied.wav */,
+				FA3B91401F2A931500577A66 /* AccessGranted.wav */,
 				3A8AADCF1DF9B85E00A2B931 /* Assets.xcassets */,
 				3A8AADD11DF9B85E00A2B931 /* LaunchScreen.storyboard */,
 				3A8AADD41DF9B85E00A2B931 /* Info.plist */,
@@ -404,8 +410,10 @@
 				FA661D371ED4AEBF00DE919F /* Screen1Mockup.png in Resources */,
 				3A8AADD01DF9B85E00A2B931 /* Assets.xcassets in Resources */,
 				3A8AADCE1DF9B85E00A2B931 /* Main.storyboard in Resources */,
+				FA3B91421F2A931500577A66 /* AccessGranted.wav in Resources */,
 				FA661D341ED37BE100DE919F /* FaceImageAsset.png in Resources */,
 				FA661D381ED4AEBF00DE919F /* Screen2Mockup.png in Resources */,
+				FA3B91411F2A931500577A66 /* AccessDenied.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

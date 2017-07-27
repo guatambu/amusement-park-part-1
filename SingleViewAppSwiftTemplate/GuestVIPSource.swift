@@ -21,7 +21,7 @@ class GuestVIPSource: PersonSource {
             ridePrivileges: [.all, .skip],
             discountAccess: [.food, .merch],
             discountAmount: [.ten, .twenty],
-            requiredInformation: [.personal],
+            requiredInformation: [.none],
             dateOfBirth: nil,
             firstName: nil,
             lastName: nil,
